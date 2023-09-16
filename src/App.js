@@ -6,144 +6,40 @@ class App extends React.Component {
     this.state = {
       homeClicked: true,
       selectedKlasa1: false,
-      clickedKlasa1Podstawa: false,
-      clickedKlasa1Rozszerzenie: false,
       selectedKlasa2: false,
-      clickedKlasa2Podstawa: false,
-      clickedKlasa2Rozszerzenie: false,
       selectedKlasa3: false,
-      clickedKlasa3Podstawa: false,
-      clickedKlasa3Rozszerzenie: false,
       selectedKlasa4: false,
-      clickedKlasa4Podstawa: false,
-      clickedKlasa4Rozszerzenie: false,
+      clicked: "",
+      dzial: "1",
     };
-    this.falseOnOtherClickers = this.falseOnOtherClickers.bind(this);
-  }
-  falseOnOtherClickers = (event) => {
-    switch (event.target.id) {
-      case "podstawa1":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: true,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "rozszerzenie1":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: true,
-          clickedKlasa1Rozszerzenie: true,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "podstawa2":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: true,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "rozszerzenie2":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: true,
-          clickedKlasa2Rozszerzenie: true,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "podstawa3":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: true,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "rozszerzenie3":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: true,
-          clickedKlasa3Rozszerzenie: true,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "podstawa4":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: true,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      case "rozszerzenie4":
-        this.setState({
-          homeClicked: false,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: true,
-          clickedKlasa4Rozszerzenie: true,
-        });
-        break;
-      case "home-button":
-        this.setState({
-          homeClicked: true,
-          clickedKlasa1Podstawa: false,
-          clickedKlasa1Rozszerzenie: false,
-          clickedKlasa2Podstawa: false,
-          clickedKlasa2Rozszerzenie: false,
-          clickedKlasa3Podstawa: false,
-          clickedKlasa3Rozszerzenie: false,
-          clickedKlasa4Podstawa: false,
-          clickedKlasa4Rozszerzenie: false,
-        });
-        break;
-      default:
-        break;
-    }
-  };
+  }  
   render() {
+    const filmyYTLinki = [
+      [
+        "https://www.youtube.com/embed/naq9D6jvnhA",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Matematyka - Wielomiany jednej zmiennej (część I)",
+        "8",
+      ],
+      [
+        "https://www.youtube.com/embed/ev_-R-3W_yo",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Co to jest wielomian? #1 [ Wielomiany ]",
+        "8",
+      ],
+      [
+        "https://www.youtube.com/embed/V2D8wYNpAk8",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Dodawanie i odejmowanie wielomianów",
+        "8",
+      ],
+      [
+        "https://www.youtube.com/embed/VZA09ymFcV4",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Szybko i na temat. Dzielenie Wielomianów Krok po Kroku",
+        "8",
+      ],
+    ];
     return (
       <div id="website">
         <nav id="navbar-top">
@@ -160,7 +56,7 @@ class App extends React.Component {
         </nav>
         <div id="left-side">
           <div id="home">
-            <button id="home-button" onClick={this.falseOnOtherClickers}>
+            <button id="home-button" onClick={()=>this.setState({homeClicked:true, clicked: ''})}>
               Home
             </button>
           </div>
@@ -189,7 +85,9 @@ class App extends React.Component {
                 <div
                   className="podstawa-i-rozszerzenie podstawa"
                   id="podstawa1"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({ clicked: "podstawa1", homeClicked: false })
+                  }
                 >
                   Podstawa
                 </div>
@@ -197,7 +95,12 @@ class App extends React.Component {
                 <div
                   className="podstawa-i-rozszerzenie"
                   id="rozszerzenie1"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({
+                      clicked: "rozszerzenie1",
+                      homeClicked: false,
+                    })
+                  }
                 >
                   Rozszerzenie
                 </div>
@@ -229,14 +132,21 @@ class App extends React.Component {
                 <div
                   className="podstawa-i-rozszerzenie podstawa"
                   id="podstawa2"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({ clicked: "podstawa2", homeClicked: false })
+                  }
                 >
                   Podstawa
                 </div>
                 <div
                   className="podstawa-i-rozszerzenie"
                   id="rozszerzenie2"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({
+                      clicked: "rozszerzenie2",
+                      homeClicked: false,
+                    })
+                  }
                 >
                   Rozszerzenie
                 </div>
@@ -268,14 +178,21 @@ class App extends React.Component {
                 <div
                   className="podstawa-i-rozszerzenie podstawa"
                   id="podstawa3"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({ clicked: "podstawa3", homeClicked: false })
+                  }
                 >
                   Podstawa
                 </div>
                 <div
                   className="podstawa-i-rozszerzenie"
                   id="rozszerzenie3"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({
+                      clicked: "rozszerzenie3",
+                      homeClicked: false,
+                    })
+                  }
                 >
                   Rozszerzenie
                 </div>
@@ -307,14 +224,21 @@ class App extends React.Component {
                 <div
                   className="podstawa-i-rozszerzenie podstawa"
                   id="podstawa4"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({ clicked: "podstawa4", homeClicked: false })
+                  }
                 >
                   Podstawa
                 </div>
                 <div
                   className="podstawa-i-rozszerzenie"
                   id="rozszerzenie4"
-                  onClick={this.falseOnOtherClickers}
+                  onClick={() =>
+                    this.setState({
+                      clicked: "rozszerzenie4",
+                      homeClicked: false,
+                    })
+                  }
                 >
                   Rozszerzenie
                 </div>
@@ -327,102 +251,62 @@ class App extends React.Component {
         <div id="content-picker">
           <div id="dzial-select">
             <div>Dział:</div>
-            <select >
-              <option>I</option>
-              <option>II</option>
-              <option>III</option>
-              <option>IV</option>
-              <option>V</option>
-              <option>VI</option>
-              <option>VII</option>
-              <option>VIII</option>
+            <select
+              onChange={(event) => {
+                this.setState({ dzial: event.target.value });
+              }}
+            >
+              <option value="1">I</option>
+              <option value="2">II</option>
+              <option value="3">III</option>
+              <option value="4">IV</option>
+              <option value="5">V</option>
+              <option value="6">VI</option>
+              <option value="7">VII</option>
+              <option value="8">VIII</option>
             </select>
           </div>
           <div id="zrodlo-select">
             <div>Źródło:</div>
-            <select >
+            <select>
               <option>Youtube</option>
               <option>Artykuł</option>
             </select>
           </div>
-          <button>Karta wzorów</button>
+          <button>Karta wzorów</button>          
         </div>
         <div id="content">
-          {this.state.homeClicked ? <div>Witam na stronie</div> : ""}
-
-          {this.state.clickedKlasa1Podstawa ? (
-            <div>Filmiki dla podstawy klasa 1:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa1Rozszerzenie ? (
-            <div>Filmiki dla rozszerzenie klasa 1:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa2Podstawa ? (
-            <div className="na-stronie">
-              <div>Filmiki dla podstawy klasa 2:</div>
-              <div className="filmy">
-                <iframe
-                  id="video"
-                  src="https://www.youtube.com/embed/naq9D6jvnhA"
-                  title="Matematyka - Wielomiany jednej zmiennej (część I)"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <iframe
-                  src="https://www.youtube.com/embed/ev_-R-3W_yo"
-                  title="Co to jest wielomian? #1 [ Wielomiany ]"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <iframe
-                  src="https://www.youtube.com/embed/V2D8wYNpAk8"
-                  title="Dodawanie i odejmowanie wielomianów"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <iframe
-                  src="https://www.youtube.com/embed/VZA09ymFcV4"
-                  title="Szybko i na temat. Dzielenie Wielomianów Krok po Kroku"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
+          {this.state.homeClicked ? (
+            <div id="home-page">
+              <button></button>
+              <button></button>
+              <button></button>
             </div>
           ) : (
             ""
           )}
-          {this.state.clickedKlasa2Rozszerzenie ? (
-            <div>Filmiki dla rozszerzenie klasa 2:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa3Podstawa ? (
-            <div>Filmiki dla podstawy klasa 3:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa3Rozszerzenie ? (
-            <div>Filmiki dla rozszerzenie klasa 3:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa4Podstawa ? (
-            <div>Filmiki dla podstawy klasa 4:</div>
-          ) : (
-            ""
-          )}
-          {this.state.clickedKlasa4Rozszerzenie ? (
-            <div>Filmiki dla rozszerzenie klasa 4:</div>
-          ) : (
-            ""
-          )}
+
+          <div className="na-stronie">
+            
+            <div className="filmy">
+              {filmyYTLinki
+                .filter(
+                  (x) =>
+                    x[1].indexOf("film-" + this.state.clicked) !== -1 &&
+                    x[3] === this.state.dzial
+                )
+                .map((x) => (
+                  <iframe
+                    className={x[1].join(' ')}
+                    src={x[0]}
+                    title={x[2]}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen="true"
+                  ></iframe>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     );
