@@ -348,7 +348,7 @@ class App extends React.Component {
           <button>Karta wzorów</button>
         </div>
         <div id="content">
-          {this.state.homeClicked ? <div>Witam na stronce</div> : ""}
+          {this.state.homeClicked ? <div>Witam na stronie</div> : ""}
 
           {this.state.clickedKlasa1Podstawa ? (
             <div>Filmiki dla podstawy klasa 1:</div>
