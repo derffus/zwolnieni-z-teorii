@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,8 +12,22 @@ class App extends React.Component {
       selectedKlasa4: false,
       clicked: "",
       dzial: "1",
+      zrodlo: "youtube",
     };
-  }  
+  }
+  navtopShow = () => {
+    $(".website").addClass("website-with-videos");
+  };
+  navtopHide = () => {
+    $(".website").removeClass("website-with-videos");
+  };
+  componentDidUpdate() {
+    if (this.state.homeClicked === true) {
+      this.navtopShow();
+    } else {
+      this.navtopHide();
+    }
+  }
   render() {
     const filmyYTLinki = [
       [
@@ -20,28 +35,32 @@ class App extends React.Component {
         ["film-podstawa2", "film-rozszerzenie2"],
         "Matematyka - Wielomiany jednej zmiennej (część I)",
         "8",
+        "youtube",
       ],
       [
         "https://www.youtube.com/embed/ev_-R-3W_yo",
         ["film-podstawa2", "film-rozszerzenie2"],
         "Co to jest wielomian? #1 [ Wielomiany ]",
         "8",
+        "youtube",
       ],
       [
         "https://www.youtube.com/embed/V2D8wYNpAk8",
         ["film-podstawa2", "film-rozszerzenie2"],
         "Dodawanie i odejmowanie wielomianów",
         "8",
+        "youtube",
       ],
       [
         "https://www.youtube.com/embed/VZA09ymFcV4",
         ["film-podstawa2", "film-rozszerzenie2"],
         "Szybko i na temat. Dzielenie Wielomianów Krok po Kroku",
         "8",
+        "youtube",
       ],
     ];
     return (
-      <div id="website">
+      <div className="website website-with-videos">
         <nav id="navbar-top">
           <div id="top-buttons">
             <button>Korepetycje</button>
@@ -56,7 +75,10 @@ class App extends React.Component {
         </nav>
         <div id="left-side">
           <div id="home">
-            <button id="home-button" onClick={()=>this.setState({homeClicked:true, clicked: ''})}>
+            <button
+              id="home-button"
+              onClick={() => this.setState({ homeClicked: true, clicked: "" })}
+            >
               Home
             </button>
           </div>
@@ -251,29 +273,86 @@ class App extends React.Component {
         <div id="content-picker">
           <div id="dzial-select">
             <div>Dział:</div>
-            <select
-              onChange={(event) => {
-                this.setState({ dzial: event.target.value });
-              }}
-            >
-              <option value="1">I</option>
-              <option value="2">II</option>
-              <option value="3">III</option>
-              <option value="4">IV</option>
-              <option value="5">V</option>
-              <option value="6">VI</option>
-              <option value="7">VII</option>
-              <option value="8">VIII</option>
-            </select>
+            {this.state.clicked.indexOf("1") !== -1 ? (
+              <select
+                onChange={(event) => {
+                  this.setState({ dzial: event.target.value });
+                }}
+              >
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+                <option value="5">V</option>
+                <option value="6">VI</option>
+                <option value="7">VII</option>
+                <option value="8">VIII</option>
+              </select>
+            ) : this.state.clicked.indexOf("2") !== -1 ? (
+              <select
+                onChange={(event) => {
+                  this.setState({ dzial: event.target.value });
+                }}
+              >
+                <option value="1">Przekształcenia wykresów funkcji</option>
+                <option value="2">
+                  Równania i nierówności z wartością bezwzględną
+                </option>
+                <option value="3">Funkcja kwadratowa</option>
+                <option value="4">Geometria płaska - okręgi i koła</option>
+                <option value="5">Trygonometria</option>
+                <option value="6">Geometria analityczna</option>
+                <option value="7">
+                  Geometria płaska - rozwiązywanie trójkątów
+                </option>
+                <option value="8">Wielomiany</option>
+              </select>
+            ) : this.state.clicked.indexOf("3") !== -1 ? (
+              <select
+                onChange={(event) => {
+                  this.setState({ dzial: event.target.value });
+                }}
+              >
+                <option value="1">Ułamki algebraiczne</option>
+                <option value="2">Ciągi</option>
+                <option value="3">Kombinatoryka</option>
+                <option value="4">Geometria płaska - czworokąty</option>
+                <option value="5">Geometria płaska - pole czworokąta</option>
+                <option value="6">Elementaż analizy matematycznej</option>
+                <option value="7">Trygonometria</option>
+                <option value="8">Geometria analityczna</option>
+              </select>
+            ) : this.state.clicked.indexOf("4") !== -1 ? (
+              <select
+                onChange={(event) => {
+                  this.setState({ dzial: event.target.value });
+                }}
+              >
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+                <option value="5">V</option>
+                <option value="6">VI</option>
+                <option value="7">VII</option>
+                <option value="8">VIII</option>
+              </select>
+            ) : (
+              ""
+            )}
           </div>
           <div id="zrodlo-select">
             <div>Źródło:</div>
-            <select>
-              <option>Youtube</option>
-              <option>Artykuł</option>
+            <select
+              onChange={(event) =>
+                this.setState({ zrodlo: event.target.value })
+              }
+            >
+              <option value="youtube">Youtube</option>
+              <option value="artykul">Artykuł</option>
             </select>
           </div>
-          <button>Karta wzorów</button>          
+          <button>Karta wzorów</button>
         </div>
         <div id="content">
           {this.state.homeClicked ? (
@@ -287,17 +366,17 @@ class App extends React.Component {
           )}
 
           <div className="na-stronie">
-            
             <div className="filmy">
               {filmyYTLinki
                 .filter(
                   (x) =>
                     x[1].indexOf("film-" + this.state.clicked) !== -1 &&
-                    x[3] === this.state.dzial
+                    x[3] === this.state.dzial &&
+                    x[4] === this.state.zrodlo
                 )
                 .map((x) => (
                   <iframe
-                    className={x[1].join(' ')}
+                    className={x[1].join(" ")}
                     src={x[0]}
                     title={x[2]}
                     frameborder="0"

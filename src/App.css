@@ -6,7 +6,7 @@
   --buttonclicked: hsl(219, 48%, 33%);
 }
 
-#website {
+.website {
   font-family: "Lato", sans-serif;
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -21,6 +21,9 @@
     "leftside navtop"
     "leftside content-picker"
     "leftside content";
+}
+.website-with-videos{
+  grid-template-rows: 15% 10% 1fr;
 }
 #left-side {
   background-color: var(--background);
@@ -166,7 +169,7 @@
 }
 #dzial-select {
   margin-left: 3%;
-  width: 10%;
+  min-width: 10%;
   height: 50%;
   display: flex;
   flex-direction: row;
@@ -180,7 +183,8 @@
   border-radius: 5px;
   appearance: none;
   padding: 0 30px 0 15px;
-  width: 70%;
+  width:fit-content;
+  margin-left: 10px;
 }
 #dzial-select select:focus {
   outline: none;
