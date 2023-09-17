@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/zwolnieni-z-teorii/static/css/main.21c2545a.css",
+    "main.js": "/zwolnieni-z-teorii/static/js/main.26f614d8.js",
+    "static/js/787.4abb971b.chunk.js": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js",
+    "index.html": "/zwolnieni-z-teorii/index.html",
+    "main.21c2545a.css.map": "/zwolnieni-z-teorii/static/css/main.21c2545a.css.map",
+    "main.26f614d8.js.map": "/zwolnieni-z-teorii/static/js/main.26f614d8.js.map",
+    "787.4abb971b.chunk.js.map": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21c2545a.css",
+    "static/js/main.26f614d8.js"
+  ]
+}
