@@ -7,6 +7,7 @@
 }
 
 .website {
+  transition: all 0.4s;
   font-family: "Lato", sans-serif;
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -166,6 +167,10 @@
   margin-left: 3%;
   height: 35%;
   width: 7%;
+  transition: all 0.5s;
+}
+#content-picker button:hover{
+  border-color: var(--background);
 }
 #dzial-select {
   margin-left: 3%;
@@ -185,6 +190,10 @@
   padding: 0 30px 0 15px;
   width:fit-content;
   margin-left: 10px;
+  transition: all 0.5s;
+}
+#dzial-select select:hover{
+  border-color: var(--background);
 }
 #dzial-select select:focus {
   outline: none;
@@ -207,6 +216,10 @@
   appearance: none;
   padding: 0 30px 0 15px;
   width: 70%;
+  transition: all 0.5s;
+}
+#zrodlo-select select:hover{
+  border-color: var(--background);
 }
 #zrodlo-select select:focus {
   outline: none;
