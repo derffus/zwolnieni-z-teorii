@@ -15,8 +15,8 @@
   max-width: 100%;
   background-color: var(--content);
   display: grid;
-  grid-template-columns: 18% 82%;
-  grid-template-rows: 15% 10% 1fr;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 10% 10% 1fr;
   grid-template-areas:
     "leftside navtop"
     "leftside content-picker"
@@ -125,7 +125,7 @@
   color: white;
   background-color: var(--background);
   border-bottom: 2px solid black;
-  height: 100px;
+  height: 80px;
 }
 #navbar-left div:hover {
   background-color: var(--buttonclicked);
