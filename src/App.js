@@ -272,7 +272,7 @@ class App extends React.Component {
         </div>
         <div id="content-picker">
           <div id="dzial-select">
-            <div>Dział:</div>
+            <div id="dzial">Dział:</div>
             {this.state.clicked.indexOf("1") !== -1 ? (
               <select
                 onChange={(event) => {

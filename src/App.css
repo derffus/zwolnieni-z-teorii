@@ -23,19 +23,20 @@
     "leftside content-picker"
     "leftside content";
 }
-.website-with-videos{
+.website-with-videos {
   grid-template-rows: 15% 10% 1fr;
 }
 #left-side {
   background-color: var(--background);
   grid-area: leftside;
   position: sticky;
-  height: 100%;
+  min-height: 100%;
   top: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 #home {
   position: sticky;
   top: 0;
@@ -49,6 +50,7 @@
   align-items: center;
   max-height: 25vh;
 }
+
 #home button {
   border: none;
   background-color: var(--content);
@@ -166,10 +168,10 @@
   border-radius: 5px;
   margin-left: 3%;
   height: 35%;
-  width: 7%;
+  width: fit-content;
   transition: all 0.5s;
 }
-#content-picker button:hover{
+#content-picker button:hover {
   border-color: var(--background);
 }
 #dzial-select {
@@ -188,11 +190,12 @@
   border-radius: 5px;
   appearance: none;
   padding: 0 30px 0 15px;
-  width:fit-content;
+  min-width: fit-content;
+  width: 50%;
   margin-left: 10px;
   transition: all 0.5s;
 }
-#dzial-select select:hover{
+#dzial-select select:hover {
   border-color: var(--background);
 }
 #dzial-select select:focus {
@@ -215,10 +218,10 @@
   border-radius: 5px;
   appearance: none;
   padding: 0 30px 0 15px;
-  width: 70%;
+  width: fit-content;
   transition: all 0.5s;
 }
-#zrodlo-select select:hover{
+#zrodlo-select select:hover {
   border-color: var(--background);
 }
 #zrodlo-select select:focus {
@@ -276,5 +279,45 @@ iframe {
 @media (max-width: 1200px) {
   .filmy {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .website {
+    max-width: 100vw;
+    grid-template-rows: 10% 20% 1fr;
+  }
+  #home{
+    height: 10px;
+  }
+  #content-picker {
+    flex-direction: column;
+    height:fit-content;
+  }
+  #navbar-left div {
+    text-align: center;
+    height: 30px;
+    font-size: 0.9em;
+  }
+  .podstawa-i-rozszerzenie {
+    border-top: 1px solid black;
+    width: calc(100% + 10px) !important;
+    font-size: 0.6em !important;
+  }
+  #dzial-select{
+    flex-direction: column;
+  }
+  #zrodlo-select{
+    flex-direction: column;
+  }
+  #content-picker button{
+    margin-top: 15px;
+    
+  }
+  .filmy{
+    margin-left: -150px;
+  }
+  iframe {
+    width: 280px;
+    height: 200px;
   }
 }
