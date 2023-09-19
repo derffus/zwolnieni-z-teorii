@@ -115,7 +115,7 @@ class App extends React.Component {
                 </div>
 
                 <div
-                  className="podstawa-i-rozszerzenie"
+                  className="podstawa-i-rozszerzenie rozszerzenie"
                   id="rozszerzenie1"
                   onClick={() =>
                     this.setState({
@@ -161,7 +161,7 @@ class App extends React.Component {
                   Podstawa
                 </div>
                 <div
-                  className="podstawa-i-rozszerzenie"
+                  className="podstawa-i-rozszerzenie rozszerzenie"
                   id="rozszerzenie2"
                   onClick={() =>
                     this.setState({
@@ -207,7 +207,7 @@ class App extends React.Component {
                   Podstawa
                 </div>
                 <div
-                  className="podstawa-i-rozszerzenie"
+                  className="podstawa-i-rozszerzenie rozszerzenie"
                   id="rozszerzenie3"
                   onClick={() =>
                     this.setState({
@@ -253,7 +253,7 @@ class App extends React.Component {
                   Podstawa
                 </div>
                 <div
-                  className="podstawa-i-rozszerzenie"
+                  className="podstawa-i-rozszerzenie rozszerzenie"
                   id="rozszerzenie4"
                   onClick={() =>
                     this.setState({
