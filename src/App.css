@@ -70,32 +70,31 @@
   cursor: pointer;
   background-color: hsl(235, 26%, 92%);
 }
-#show-nav{
+#show-nav {
   display: flex;
-  height:100%;
-  width:8%;
+  height: 100%;
+  width: 8%;
   justify-content: center;
   align-items: center;
 }
-#show-nav:hover{
+#show-nav:hover {
   background-color: hsl(235, 26%, 92%);
 }
-#show-nav button{
+#show-nav button {
   height: 100%;
   width: 100%;
-  border:none;
-  background-color:inherit;
+  border: none;
+  background-color: inherit;
 }
-#show-nav button i{
-  
+#show-nav button i {
   color: var(--background);
-  font-size:4em;
+  font-size: 4em;
 }
 #klasa-picker {
   position: fixed;
   opacity: 90%;
-  right:0;
-  top:15vh;
+  right: 0;
+  top: 15vh;
   width: 300px;
   height: 85vh;
   background-color: var(--background);
@@ -103,8 +102,8 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-
-#klasa-picker div {
+.klasa {
+  border-radius: 5px;
   font-family: inherit;
   align-self: center;
   font-size: 1.6em;
@@ -117,36 +116,43 @@
   border: 2px solid var(--content);
   height: min(10vh, fit-content);
   width: 70%;
-  padding: 10px;
   margin-top: 10px;
 }
-#klasa-picker div:hover {
+.klasa-name:hover {
   background-color: var(--buttonclicked);
   cursor: pointer;
 }
-
-.klasa-zakres-div {
-  margin-bottom: 10px;
+.klasa div {
+  text-align: center;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+.klasa-div {
   display: flex;
   flex-direction: column;
 }
 .podstawa-i-rozszerzenie {
-  border-top: 1px solid black;
-  padding: 5px !important;
-  width: 103% !important;
+  width:100% !important;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 5px 10px 5px 10px !important;
   font-size: 0.8em !important;
-  min-height: 50% !important;
-  margin-top: 0 !important;
 }
-.podstawa {
-  border-bottom: none !important;
+.podstawa{
+  margin-top: -10px;
 }
-
+.rozszerzenie{
+  margin-bottom: -10px;
+}
+.podstawa-i-rozszerzenie:hover{
+  background-color: var(--buttonclicked);
+  cursor: pointer;
+}
 #content-picker {
   margin-top: 15vh;
   color: black;
   width: 100%;
-  height:300px;
+  height: 300px;
   background-color: var(--content);
   display: flex;
   flex-direction: row;

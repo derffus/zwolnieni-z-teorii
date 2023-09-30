@@ -101,21 +101,10 @@ class App extends React.Component {
 
         {this.state.showNavbar ? (
           <nav id="klasa-picker">
-            <div>
-            <div
-              id="klasa1"
-              onMouseOver={() => {
-                this.setState({ selectedKlasa1: true });
-              }}
-              onMouseOut={() => {
-                this.setState({ selectedKlasa1: false });
-              }}
-            >
-              Klasa I
-            </div>
-            {this.state.selectedKlasa1 === true ? (
+            <div className="klasa">
               <div
-                className="klasa-div"
+                id="klasa1"
+                className="klasa-name"
                 onMouseOver={() => {
                   this.setState({ selectedKlasa1: true });
                 }}
@@ -123,48 +112,52 @@ class App extends React.Component {
                   this.setState({ selectedKlasa1: false });
                 }}
               >
-                <div
-                  className="podstawa-i-rozszerzenie podstawa"
-                  id="podstawa1"
-                  onClick={() =>
-                    this.setState({ clicked: "podstawa1", homeClicked: false })
-                  }
-                >
-                  Podstawa
-                </div>
-
-                <div
-                  className="podstawa-i-rozszerzenie rozszerzenie"
-                  id="rozszerzenie1"
-                  onClick={() =>
-                    this.setState({
-                      clicked: "rozszerzenie1",
-                      homeClicked: false,
-                    })
-                  }
-                >
-                  Rozszerzenie
-                </div>
+                Klasa I
               </div>
-            ) : (
-              ""
-            )}
+              {this.state.selectedKlasa1 === true ? (
+                <div
+                  className="klasa-div"
+                  onMouseOver={() => {
+                    this.setState({ selectedKlasa1: true });
+                  }}
+                  onMouseOut={() => {
+                    this.setState({ selectedKlasa1: false });
+                  }}
+                >
+                  <div
+                    className="podstawa-i-rozszerzenie podstawa"
+                    id="podstawa1"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "podstawa1",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Podstawa
+                  </div>
+
+                  <div
+                    className="podstawa-i-rozszerzenie rozszerzenie"
+                    id="rozszerzenie1"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "rozszerzenie1",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Rozszerzenie
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-            <div>
-            <div
-              id="klasa2"
-              onMouseOver={() => {
-                this.setState({ selectedKlasa2: true });
-              }}
-              onMouseOut={() => {
-                this.setState({ selectedKlasa2: false });
-              }}
-            >
-              Klasa II
-            </div>
-            {this.state.selectedKlasa2 === true ? (
+            <div className="klasa">
               <div
-                className="klasa-div"
+                id="klasa2"
+                className="klasa-name"
                 onMouseOver={() => {
                   this.setState({ selectedKlasa2: true });
                 }}
@@ -172,47 +165,51 @@ class App extends React.Component {
                   this.setState({ selectedKlasa2: false });
                 }}
               >
-                <div
-                  className="podstawa-i-rozszerzenie podstawa"
-                  id="podstawa2"
-                  onClick={() =>
-                    this.setState({ clicked: "podstawa2", homeClicked: false })
-                  }
-                >
-                  Podstawa
-                </div>
-                <div
-                  className="podstawa-i-rozszerzenie rozszerzenie"
-                  id="rozszerzenie2"
-                  onClick={() =>
-                    this.setState({
-                      clicked: "rozszerzenie2",
-                      homeClicked: false,
-                    })
-                  }
-                >
-                  Rozszerzenie
-                </div>
+                Klasa II
               </div>
-            ) : (
-              ""
-            )}
+              {this.state.selectedKlasa2 === true ? (
+                <div
+                  className="klasa-div"
+                  onMouseOver={() => {
+                    this.setState({ selectedKlasa2: true });
+                  }}
+                  onMouseOut={() => {
+                    this.setState({ selectedKlasa2: false });
+                  }}
+                >
+                  <div
+                    className="podstawa-i-rozszerzenie podstawa"
+                    id="podstawa2"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "podstawa2",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Podstawa
+                  </div>
+                  <div
+                    className="podstawa-i-rozszerzenie rozszerzenie"
+                    id="rozszerzenie2"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "rozszerzenie2",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Rozszerzenie
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-            <div>
-            <div
-              id="klasa3"
-              onMouseOver={() => {
-                this.setState({ selectedKlasa3: true });
-              }}
-              onMouseOut={() => {
-                this.setState({ selectedKlasa3: false });
-              }}
-            >
-              Klasa III
-            </div>
-            {this.state.selectedKlasa3 === true ? (
+            <div className="klasa">
               <div
-                className="klasa-div"
+                id="klasa3"
+                className="klasa-name"
                 onMouseOver={() => {
                   this.setState({ selectedKlasa3: true });
                 }}
@@ -220,46 +217,51 @@ class App extends React.Component {
                   this.setState({ selectedKlasa3: false });
                 }}
               >
-                <div
-                  className="podstawa-i-rozszerzenie podstawa"
-                  id="podstawa3"
-                  onClick={() =>
-                    this.setState({ clicked: "podstawa3", homeClicked: false })
-                  }
-                >
-                  Podstawa
-                </div>
-                <div
-                  className="podstawa-i-rozszerzenie rozszerzenie"
-                  id="rozszerzenie3"
-                  onClick={() =>
-                    this.setState({
-                      clicked: "rozszerzenie3",
-                      homeClicked: false,
-                    })
-                  }
-                >
-                  Rozszerzenie
-                </div>
+                Klasa III
               </div>
-            ) : (
-              ""
-            )}</div>
-            <div>
-            <div
-              id="klasa4"
-              onMouseOver={() => {
-                this.setState({ selectedKlasa4: true });
-              }}
-              onMouseOut={() => {
-                this.setState({ selectedKlasa4: false });
-              }}
-            >
-              Klasa IV
+              {this.state.selectedKlasa3 === true ? (
+                <div
+                  className="klasa-div"
+                  onMouseOver={() => {
+                    this.setState({ selectedKlasa3: true });
+                  }}
+                  onMouseOut={() => {
+                    this.setState({ selectedKlasa3: false });
+                  }}
+                >
+                  <div
+                    className="podstawa-i-rozszerzenie podstawa"
+                    id="podstawa3"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "podstawa3",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Podstawa
+                  </div>
+                  <div
+                    className="podstawa-i-rozszerzenie rozszerzenie"
+                    id="rozszerzenie3"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "rozszerzenie3",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Rozszerzenie
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-            {this.state.selectedKlasa4 === true ? (
+            <div className="klasa">
               <div
-                className="klasa-div"
+                id="klasa4"
+                className="klasa-name"
                 onMouseOver={() => {
                   this.setState({ selectedKlasa4: true });
                 }}
@@ -267,31 +269,47 @@ class App extends React.Component {
                   this.setState({ selectedKlasa4: false });
                 }}
               >
-                <div
-                  className="podstawa-i-rozszerzenie podstawa"
-                  id="podstawa4"
-                  onClick={() =>
-                    this.setState({ clicked: "podstawa4", homeClicked: false })
-                  }
-                >
-                  Podstawa
-                </div>
-                <div
-                  className="podstawa-i-rozszerzenie rozszerzenie"
-                  id="rozszerzenie4"
-                  onClick={() =>
-                    this.setState({
-                      clicked: "rozszerzenie4",
-                      homeClicked: false,
-                    })
-                  }
-                >
-                  Rozszerzenie
-                </div>
+                Klasa IV
               </div>
-            ) : (
-              ""
-            )}</div>
+              {this.state.selectedKlasa4 === true ? (
+                <div
+                  className="klasa-div"
+                  onMouseOver={() => {
+                    this.setState({ selectedKlasa4: true });
+                  }}
+                  onMouseOut={() => {
+                    this.setState({ selectedKlasa4: false });
+                  }}
+                >
+                  <div
+                    className="podstawa-i-rozszerzenie podstawa"
+                    id="podstawa4"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "podstawa4",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Podstawa
+                  </div>
+                  <div
+                    className="podstawa-i-rozszerzenie rozszerzenie"
+                    id="rozszerzenie4"
+                    onClick={() =>
+                      this.setState({
+                        clicked: "rozszerzenie4",
+                        homeClicked: false,
+                      })
+                    }
+                  >
+                    Rozszerzenie
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </nav>
         ) : (
           ""
