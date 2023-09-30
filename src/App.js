@@ -13,6 +13,7 @@ class App extends React.Component {
       clicked: "",
       dzial: "1",
       zrodlo: "youtube",
+      showNavbar: false,
     };
   }
   navtopShow = () => {
@@ -62,18 +63,6 @@ class App extends React.Component {
     return (
       <div className="website website-with-videos">
         <nav id="navbar-top">
-          <div id="top-buttons">
-            <button>Korepetycje</button>
-            <button>Studia</button>
-            <button>Arkusze</button>
-            <button>Korepetycje</button>
-          </div>
-          <div id="logowanie">
-            <button>Zaloguj się</button>
-            <button>Zarejestruj się</button>
-          </div>
-        </nav>
-        <div id="left-side">
           <div id="home">
             <button
               id="home-button"
@@ -82,7 +71,37 @@ class App extends React.Component {
               Home
             </button>
           </div>
-          <nav id="navbar-left">
+          <div id="top-buttons">
+            <button>Korepetycje</button>
+            <button>Studia</button>
+            <button>Arkusze</button>
+            <button>Zaloguj się</button>
+            <button>Zarejestruj się</button>
+          </div>
+          <div id="show-nav">
+            {!this.state.showNavbar ? (
+              <button
+                onClick={() => {
+                  this.setState({ showNavbar: true });
+                }}
+              >
+                <i className="fa fa-bars"></i>
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  this.setState({ showNavbar: false });
+                }}
+              >
+                <i className="fa fa-bars"></i>
+              </button>
+            )}
+          </div>
+        </nav>
+
+        {this.state.showNavbar ? (
+          <nav id="klasa-picker">
+            <div>
             <div
               id="klasa1"
               onMouseOver={() => {
@@ -130,6 +149,8 @@ class App extends React.Component {
             ) : (
               ""
             )}
+            </div>
+            <div>
             <div
               id="klasa2"
               onMouseOver={() => {
@@ -176,6 +197,8 @@ class App extends React.Component {
             ) : (
               ""
             )}
+            </div>
+            <div>
             <div
               id="klasa3"
               onMouseOver={() => {
@@ -221,7 +244,8 @@ class App extends React.Component {
               </div>
             ) : (
               ""
-            )}
+            )}</div>
+            <div>
             <div
               id="klasa4"
               onMouseOver={() => {
@@ -267,9 +291,11 @@ class App extends React.Component {
               </div>
             ) : (
               ""
-            )}
+            )}</div>
           </nav>
-        </div>
+        ) : (
+          ""
+        )}
         <div id="content-picker">
           <div id="dzial-select">
             <div id="dzial">Dział:</div>

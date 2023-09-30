@@ -1,74 +1,111 @@
 :root {
-  background-color: var(--content);
-  color: white;
-  --background: hsl(219, 48%, 30%);
-  --content: hsl(209, 44%, 85%);
-  --buttonclicked: hsl(219, 48%, 33%);
-}
-
-.website {
-  transition: grid-template-rows 0.4s;
   font-family: "Lato", sans-serif;
   font-family: "M PLUS 1p", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
+  color: white;
+  --background: hsl(235, 26%, 62%);
+  --content: #f3f3f3;
+  --buttonclicked: hsl(235, 26%, 68%);
+  background-color: var(--content);
+}
+.website {
   height: 100%;
   min-height: 100vh;
   max-width: 100%;
   background-color: var(--content);
-  width: calc(85% - 20px);
+  width: 100%;
   position: absolute;
   right: 0;
 }
-.website-with-videos {
-  grid-template-rows: 15% 10% 1fr;
-}
-#left-side {
-  border-radius: 40px;
-  background-color: var(--background);
-  grid-area: leftside;
+#navbar-top {
+  background-color: inherit;
+  width: 100%;
+  height: min(100%, 15vh);
   position: fixed;
-  height: 98vh;
-  width: 15%;
   top: 0;
-  left: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 10px;
-  margin-bottom: 20px;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid black;
 }
-
+#top-buttons {
+  margin-left: 7%;
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#top-buttons button {
+  font-size: 1.5em;
+  font-family: inherit;
+  border: none;
+  background-color: var(--content);
+  width: 19%;
+  height: 100%;
+}
+#navbar-top button:hover {
+  cursor: pointer;
+  background-color: hsl(235, 26%, 92%);
+}
 #home {
-  border-radius: 40px 40px 0px 0px;
-  height: 20vh;
+  height: 100%;
+  width: 40%;
   box-sizing: border-box;
-  background-color: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #home button {
+  font-family: inherit;
+  font-size: 1.5em;
   border: none;
   background-color: var(--content);
-  border-radius: 5px;
-  height: 65%;
-  width: 65%;
+  height: 100%;
+  width: 100%;
 }
 #home button:hover {
   cursor: pointer;
-  background-color: var(--content);
+  background-color: hsl(235, 26%, 92%);
 }
-#navbar-left {
+#show-nav{
+  display: flex;
+  height:100%;
+  width:8%;
+  justify-content: center;
+  align-items: center;
+}
+#show-nav:hover{
+  background-color: hsl(235, 26%, 92%);
+}
+#show-nav button{
+  height: 100%;
+  width: 100%;
+  border:none;
+  background-color:inherit;
+}
+#show-nav button i{
+  
+  color: var(--background);
+  font-size:4em;
+}
+#klasa-picker {
+  position: fixed;
+  opacity: 90%;
+  right:0;
+  top:15vh;
+  width: 300px;
+  height: 85vh;
   background-color: var(--background);
-  border-right: 2px solid black;
-  border-left: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-#navbar-left div {
+#klasa-picker div {
+  font-family: inherit;
   align-self: center;
   font-size: 1.6em;
   display: flex;
@@ -78,12 +115,12 @@
   color: white;
   background-color: var(--background);
   border: 2px solid var(--content);
-  height: min(10vh,fit-content);
+  height: min(10vh, fit-content);
   width: 70%;
-  padding:10px;
+  padding: 10px;
   margin-top: 10px;
 }
-#navbar-left div:hover {
+#klasa-picker div:hover {
   background-color: var(--buttonclicked);
   cursor: pointer;
 }
@@ -104,57 +141,12 @@
 .podstawa {
   border-bottom: none !important;
 }
-#navbar-top {
-  grid-area: navtop;
-  height: min(100%, 15vh);
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#top-buttons {
-  margin-left: 7%;
-  height: 100%;
-  width: 55%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#top-buttons button {
-  border: 3px solid var(--background);
-  border-radius: 5px;
-  background-color: var(--content);
-  width: 19%;
-  height: 50%;
-}
-#navbar-top button:hover {
-  cursor: pointer;
-  background-color: var(--content);
-}
-#logowanie {
-  height: 100%;
-  width: 25%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-#logowanie button {
-  border: 3px solid var(--background);
-  background-color: var(--content);
-  border-radius: 5px;
-  height: 50%;
-  width: 40%;
-}
 
 #content-picker {
+  margin-top: 15vh;
   color: black;
-  grid-area: content-picker;
   width: 100%;
-  height: 100%;
+  height:300px;
   background-color: var(--content);
   display: flex;
   flex-direction: row;
@@ -162,6 +154,7 @@
   align-items: center;
 }
 #content-picker button {
+  font-family: inherit;
   background-color: var(--content);
   border: 2px solid black;
   border-radius: 5px;
@@ -183,6 +176,7 @@
   justify-content: space-around;
 }
 #dzial-select select {
+  font-family: inherit;
   background-color: var(--content);
   height: 70%;
   border: 2px solid black;
@@ -210,6 +204,7 @@
   justify-content: space-around;
 }
 #zrodlo-select select {
+  font-family: inherit;
   margin-left: 3%;
   height: 70%;
   border: 2px solid black;
@@ -227,11 +222,11 @@
   outline: none;
 }
 #content {
+  font-family: inherit;
   border-top: 1px solid black;
   margin-top: -2px;
   padding: 100px;
   color: black;
-  grid-area: content;
   background-color: var(--content);
 }
 #content div::selection {
@@ -281,10 +276,6 @@ iframe {
   }
 }
 @media (max-width: 1000px) {
-  .website {
-    max-width: 100vw;
-    grid-template-rows: 10% 20% 1fr;
-  }
   #content-picker {
     flex-direction: column;
     height: fit-content;
