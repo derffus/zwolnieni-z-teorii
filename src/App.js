@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import $ from "jquery";
+// $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +14,6 @@ class App extends React.Component {
       clicked: "",
       dzial: "1",
       zrodlo: "youtube",
-      
     };
   }
   render() {
@@ -49,7 +48,7 @@ class App extends React.Component {
       ],
     ];
     return (
-      <div className="website website-with-videos">
+      <div className="website">
         <nav id="navbar-top">
           <div id="home">
             <button
@@ -393,20 +392,20 @@ class App extends React.Component {
           ""
         )}
         <div id="content">
-          {this.state.homeClicked ? (
-            <div id="home-page">
-              <div id="welcome">
-                Cała wiedza w <br/> <span>jednym miejscu!</span>
-              </div>
-              <div id="big-buttons">
-                <button>Korki logo</button>
-                <button>Studia logo</button>
-                <button>Arkusze logo</button>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
+          {this.state.homeClicked
+            ? 
+                <div id="home-page">
+                  <div id="welcome">
+                    Cała wiedza w <br /> <span>jednym miejscu!</span>
+                  </div>
+                  <div id="big-buttons">
+                    <button>Korki logo</button>
+                    <button>Studia logo</button>
+                    <button>Arkusze logo</button>
+                  </div>
+                </div>
+              
+            : ""}
 
           <div className="na-stronie">
             <div className="filmy">

@@ -103,6 +103,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  animation: show-from-right 0.4s;
+}
+@keyframes show-from-right{
+  from{
+    margin-right:-300px;
+  }
+  to{
+    margin-right:0;
+  }
 }
 #klasa-picker{
   margin-top:50px;
@@ -160,12 +169,21 @@
   margin-top: 15vh;
   color: black;
   width: 100%;
-  height: 100px;
+  height: 75px;
   background-color: var(--content);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  animation: show-content-picker 0.8s;
+}
+@keyframes show-content-picker{
+  from{
+    margin-top: 10vh;
+  }
+  to{
+    margin-top: 15vh;
+  }
 }
 #content-picker button {
   font-family: inherit;
@@ -238,23 +256,28 @@
 #content {
   font-family: inherit;
   border-top: 1px solid black;
-  margin-top: -2px;
   color: black;
   background-color: var(--content);
-  height:calc(85vh - 1px);
-  margin-top: 15vh;
+  max-height:calc(85vh - 76px);
+  height:100%;
   display: flex;
 }
 #home-page {
+  margin-top:25vh;
   width:100vw;
   display: flex;
   flex-direction: column;
   gap: 100px;
   align-items: center;
-  justify-content: space-around;
-  gap:50px;
+  
+}
+@keyframes show-welcome-page{
+  from{
+    margin-top: -30vh;
+  }
 }
 #welcome{
+  animation: show-welcome-page 1s;
   align-self: flex-start;
   margin-left: 190px;
   font-size: 5em;
@@ -274,10 +297,10 @@
 }
 #big-buttons button {
   font-family: inherit;
-  font-size: 1.3em;
+  font-size: 1.4em;
   background-color: var(--content);
   border-radius: 100%;
-  border: 2px solid black;
+  border: 3px solid black;
   width: 20%;
   aspect-ratio: 1/1;
 }
