@@ -55,7 +55,8 @@ class App extends React.Component {
               id="home-button"
               onClick={() => this.setState({ homeClicked: true, clicked: "" })}
             >
-              Home
+              <img src={require("./images/LogoStrony.jpg")} alt="Strona główna"/>
+              <div id="mat-zone">MATZONE</div>
             </button>
           </div>
           <div id="top-buttons">
