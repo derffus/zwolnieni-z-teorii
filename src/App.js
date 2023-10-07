@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-// $ from "jquery";
+import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ class App extends React.Component {
   }
   render() {
     const filmyYTLinki = [
-      [
+      [ 
         "https://www.youtube.com/embed/naq9D6jvnhA",
         ["film-podstawa2", "film-rozszerzenie2"],
         "Matematyka - Wielomiany jednej zmiennej (część I)",
@@ -46,6 +46,83 @@ class App extends React.Component {
         "8",
         "youtube",
       ],
+      [
+        "https://www.youtube.com/embed/77CgfPFONWE",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Sprawdzian na 5!WIELOMIANY (rozkład na czynniki, dzielenie, Horner, równania, TW o reszcie/Bézouta)",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/KLjji_I3XvA",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Liceum. Klasa II. Wielomiany. Nierówności wielomianowe",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/vQgrdSAjYaE",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Dodawanie, odejmowanie i mnożenie wielomianów #3 [ Wielomiany ]",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/f_Kv7-oiMLw",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "WSZYSTKO o: NIERÓWNOŚCI WIELOMIANOWE. Jak rysować wykres wielomianu?Co to jest krotność pierwiastka?",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/5UaDP_fF8hY",
+        ["film-rozszerzenie2"],
+        "Wielomiany co trzeba ogarniać? Matura Matematyka Rozszerzenie",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/eQTEXfqLQYE",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Wzory skróconego mnożenia - sześcian sumy i różnicy.",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/ehRXj3GEpIw",
+        ["film-rozszerzenie2"],
+        "Matura rozszerzona - kurs - wzory skróconego mnożenia",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/Q-lkLAeKtlA",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Jak dzielić (pisemnie) WIELOMIAN przez DWUMIAN na MATURZE PODSTAWOWEJ?",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/9piOqP5jcw4",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Dzielenie wielomianów #4 [ Wielomiany ]",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/msfZ8_eHIoM",
+        ["film-podstawa2", "film-rozszerzenie2"],
+        "Pierwiastki całkowite oraz wymierne wielomianu #8 [ Wielomiany ]",
+        "8",
+        "youtube",
+      ],
+      [
+        "https://www.youtube.com/embed/5ywgT7USp4Y",
+        ["film-rozszerzenie2"],
+        "Wielomiany na poziomie rozszerzonym",
+        "8",
+        "youtube",
+      ],
     ];
     return (
       <div className="website">
@@ -55,16 +132,17 @@ class App extends React.Component {
               id="home-button"
               onClick={() => this.setState({ homeClicked: true, clicked: "" })}
             >
-              <img src={require("./images/LogoStrony.jpg")} alt="Strona główna"/>
-              <div id="mat-zone">MATZONE</div>
+              <img
+                src={require("./images/LogoStrony.jpg")}
+                alt="Strona główna"
+              />
+              <div id="mat-zone">MatZone</div>
             </button>
           </div>
           <div id="top-buttons">
             <button>Korepetycje</button>
             <button>Studia</button>
             <button>Arkusze</button>
-            <button>Zaloguj się</button>
-            <button>Zarejestruj się</button>
           </div>
           <div id="show-nav">
             {!this.state.showNavbar ? (
@@ -393,20 +471,20 @@ class App extends React.Component {
           ""
         )}
         <div id="content">
-          {this.state.homeClicked
-            ? 
-                <div id="home-page">
-                  <div id="welcome">
-                    Cała wiedza w <br /> <span>jednym miejscu!</span>
-                  </div>
-                  <div id="big-buttons">
-                    <button>Korki logo</button>
-                    <button>Studia logo</button>
-                    <button>Arkusze logo</button>
-                  </div>
-                </div>
-              
-            : ""}
+          {this.state.homeClicked ? (
+            <div id="home-page">
+              <div id="welcome">
+                Cała wiedza w <br /> <span>jednym miejscu!</span>
+              </div>
+              <div id="big-buttons">
+                <button>Korki logo</button>
+                <button>Studia logo</button>
+                <button>Arkusze logo</button>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
 
           <div className="na-stronie">
             <div className="filmy">

@@ -4,9 +4,10 @@
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
   color: white;
-  --background: hsl(235, 26%, 62%);
-  --content: #f3f3f3;
-  --buttonclicked: hsl(235, 26%, 68%);
+  --purple: hsl(235, 26%, 62%);
+  --purpleChosen: hsl(235, 26%, 58%);
+  --content: white;
+  --purpleClicked: hsl(235, 26%, 68%);
   background-color: var(--content);
 }
 .website {
@@ -26,7 +27,6 @@
   top: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
   border-bottom: 1px solid black;
 }
 #top-buttons {
@@ -35,6 +35,7 @@
   width: 55%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
 }
 #top-buttons button {
@@ -42,7 +43,7 @@
   font-family: inherit;
   border: none;
   background-color: var(--content);
-  width: 19%;
+  width: 25%;
   min-width: fit-content;
   height: 100%;
 }
@@ -55,11 +56,13 @@
   width: 40%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-#home img{
-  display:block;
+#home img {
+  border-radius: 80px;
+  display: block;
+  position: absolute;
+  top: 0;
   height: 100%;
   aspect-ratio: 1/1;
 }
@@ -69,24 +72,22 @@
   border: none;
   background-color: var(--content);
   height: 100%;
-  width: 100%;
+  width: 80%;
 }
 #home button:hover {
   cursor: pointer;
   background-color: hsl(235, 26%, 92%);
 }
-#mat-zone{
-  color:var(--background);
+#mat-zone {
+  margin-left: 120px;
+  color: var(--purple);
   font-weight: bold;
-  position:absolute;
   font-size: 3em;
-  top:10px;
-  left:200px;
 }
 #show-nav {
-  display: flex;
   height: 100%;
-  width: 8%;
+  aspect-ratio: 1/1;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -100,33 +101,33 @@
   background-color: inherit;
 }
 #show-nav button i {
-  color: var(--background);
+  color: var(--purple);
   font-size: 4em;
 }
 #right-nav {
-  overflow:auto;
+  overflow: auto;
   position: fixed;
   opacity: 95%;
   right: 0;
   top: 15vh;
   width: 300px;
-  height: 85vh;
-  background-color: var(--background);
+  height: max(85vh, 100%);
+  background-color: var(--purple);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   animation: show-from-right 0.4s;
 }
-@keyframes show-from-right{
-  from{
-    margin-right:-300px;
+@keyframes show-from-right {
+  from {
+    margin-right: -300px;
   }
-  to{
-    margin-right:0;
+  to {
+    margin-right: 0;
   }
 }
-#klasa-picker{
-  margin-top:50px;
+#klasa-picker {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -141,14 +142,14 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: var(--background);
+  background-color: var(--purple);
   border: 2px solid var(--content);
   height: min(10vh, fit-content);
   width: 70%;
   margin-top: 10px;
 }
 .klasa-name:hover {
-  background-color: var(--buttonclicked);
+  background-color: var(--purpleClicked);
   cursor: pointer;
 }
 .klasa div {
@@ -161,23 +162,27 @@
   flex-direction: column;
 }
 .podstawa-i-rozszerzenie {
-  width:100% !important;
+  width: 100% !important;
   margin-left: -10px;
   margin-right: -10px;
   padding: 5px 10px 5px 10px !important;
   font-size: 0.8em !important;
 }
-.podstawa{
+.podstawa {
   margin-top: -10px;
 }
-.rozszerzenie{
+.rozszerzenie {
   margin-bottom: -10px;
 }
-.podstawa-i-rozszerzenie:hover{
-  background-color: var(--buttonclicked);
+.podstawa-i-rozszerzenie:hover {
+  background-color: var(--purpleClicked);
   cursor: pointer;
 }
+.this-is-chosen{
+  background-color: var(--purpleChosen) !important;
+}
 #content-picker {
+  border-bottom: 1px solid black;
   margin-top: 15vh;
   color: black;
   width: 100%;
@@ -189,11 +194,11 @@
   align-items: center;
   animation: show-content-picker 0.8s;
 }
-@keyframes show-content-picker{
-  from{
+@keyframes show-content-picker {
+  from {
     margin-top: 10vh;
   }
-  to{
+  to {
     margin-top: 15vh;
   }
 }
@@ -208,7 +213,7 @@
   transition: border 0.5s;
 }
 #content-picker button:hover {
-  border-color: var(--background);
+  border-color: var(--purple);
 }
 #dzial-select {
   margin-left: 3%;
@@ -233,7 +238,7 @@
   transition: all 0.5s;
 }
 #dzial-select select:hover {
-  border-color: var(--background);
+  border-color: var(--purple);
 }
 #dzial-select select:focus {
   outline: none;
@@ -260,35 +265,31 @@
   transition: all 0.5s;
 }
 #zrodlo-select select:hover {
-  border-color: var(--background);
+  border-color: var(--purple);
 }
 #zrodlo-select select:focus {
   outline: none;
 }
 #content {
   font-family: inherit;
-  border-top: 1px solid black;
   color: black;
   background-color: var(--content);
-  max-height:calc(85vh - 76px);
-  height:100%;
+  margin-top: calc(15vh + 65px);
   display: flex;
 }
 #home-page {
-  margin-top:25vh;
-  width:100vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   gap: 100px;
   align-items: center;
-  
 }
-@keyframes show-welcome-page{
-  from{
+@keyframes show-welcome-page {
+  from {
     margin-top: -30vh;
   }
 }
-#welcome{
+#welcome {
   animation: show-welcome-page 1s;
   align-self: flex-start;
   margin-left: 190px;
@@ -296,12 +297,12 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-#welcome span{
+#welcome span {
   margin-left: 150px;
   align-self: center;
-  color:var(--background);
+  color: var(--purple);
 }
-#big-buttons{
+#big-buttons {
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -326,7 +327,7 @@ iframe {
   justify-content: center;
 }
 .filmy {
-  margin-top: 25px;
+  margin-top: calc(-15vh - 59px);
   margin-left: -100px;
   width: 80%;
   align-self: center;
@@ -349,16 +350,6 @@ iframe {
     flex-direction: column;
     height: fit-content;
   }
-  #navbar-left div {
-    text-align: center;
-    height: 30px;
-    font-size: 0.9em;
-  }
-  .podstawa-i-rozszerzenie {
-    border-top: 1px solid black;
-    width: calc(100% + 10px) !important;
-    font-size: 0.6em !important;
-  }
   #dzial-select {
     flex-direction: column;
   }
@@ -367,9 +358,6 @@ iframe {
   }
   #content-picker button {
     margin-top: 15px;
-  }
-  .filmy {
-    margin-left: -150px;
   }
   iframe {
     width: 280px;
