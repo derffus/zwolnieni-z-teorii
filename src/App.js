@@ -136,7 +136,7 @@ class App extends React.Component {
                 src={require("./images/LogoStrony.jpg")}
                 alt="Strona główna"
               />
-              <div id="mat-zone">MatZone</div>
+              <div id="mat-zone"><span>Mat</span>Zone</div>
             </button>
           </div>
           <div id="top-buttons">
