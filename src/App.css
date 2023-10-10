@@ -8,7 +8,7 @@
   --purpleChosen: hsl(235, 26%, 58%);
   --content: white;
   --purpleClicked: hsl(235, 26%, 68%);
-  --color-font: #24475A;
+  --color-font: #24475a;
   background-color: var(--content);
 }
 .website {
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid black;
+  z-index: 2;
 }
 #top-buttons {
   margin-left: 7%;
@@ -84,12 +85,13 @@
   letter-spacing: -1px;
   color: var(--color-font);
   font-family: open sans;
-  margin-left:-170px;
+  margin-left: -170px;
   font-weight: bold;
   font-size: 1.9em;
 }
-#mat-zone span{
+#mat-zone span {
   color: var(--purple);
+  margin-right: 6px;
 }
 #show-nav {
   height: 100%;
@@ -124,6 +126,7 @@
   flex-direction: column;
   justify-content: flex-start;
   animation: show-from-right 0.4s;
+  z-index: 1;
 }
 @keyframes show-from-right {
   from {
@@ -185,12 +188,14 @@
   background-color: var(--purpleClicked);
   cursor: pointer;
 }
-.this-is-chosen{
+.this-is-chosen {
   background-color: var(--purpleChosen) !important;
 }
 #content-picker {
   border-bottom: 1px solid black;
-  margin-top: 10vh;
+  border-top: 1px solid black;
+  position: fixed;
+  top: 10vh;
   color: black;
   width: 100%;
   height: 75px;
@@ -203,10 +208,10 @@
 }
 @keyframes show-content-picker {
   from {
-    margin-top: 5vh;
+    top: 5vh;
   }
   to {
-    margin-top: 10vh;
+    top: 10vh;
   }
 }
 #content-picker button {
@@ -281,10 +286,13 @@
   font-family: inherit;
   color: black;
   background-color: var(--content);
-  margin-top: calc(10vh + 65px);
+  margin-top: calc(10vh + 20px);
+  min-height: calc(90vh - 20px);
   display: flex;
+  justify-content: center;
 }
 #home-page {
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -298,7 +306,6 @@
 }
 #welcome {
   color: var(--color-font);
-  margin-top:-3vh;
   animation: show-welcome-page 1s;
   align-self: flex-start;
   margin-left: 190px;
@@ -306,7 +313,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-#welcome br{
+#welcome br {
   content: "";
   margin: -25px;
   display: block;
@@ -317,6 +324,7 @@
   color: var(--purple);
 }
 #big-buttons {
+  height: fit-content;
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -328,7 +336,7 @@
   background-color: var(--content);
   border-radius: 100%;
   border: 3px solid black;
-  width: 20%;
+  height: 300px;
   aspect-ratio: 1/1;
 }
 iframe {
@@ -341,13 +349,13 @@ iframe {
   justify-content: center;
 }
 .filmy {
-  margin-top: calc(-10vh - 59px);
-  margin-left: -100px;
-  width: 80%;
+  margin-top: 95px;
+  width: 100%;
   align-self: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 55px;
 }
 @media (max-width: 1750px) {
   .filmy {

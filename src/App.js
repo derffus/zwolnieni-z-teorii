@@ -18,7 +18,7 @@ class App extends React.Component {
   }
   render() {
     const filmyYTLinki = [
-      [ 
+      [
         "https://www.youtube.com/embed/naq9D6jvnhA",
         ["film-podstawa2", "film-rozszerzenie2"],
         "Matematyka - Wielomiany jednej zmiennej (część I)",
@@ -136,7 +136,9 @@ class App extends React.Component {
                 src={require("./images/LogoStrony.jpg")}
                 alt="Strona główna"
               />
-              <div id="mat-zone"><span>Mat</span>Zone</div>
+              <div id="mat-zone">
+                <span>Mat</span>Zone
+              </div>
             </button>
           </div>
           <div id="top-buttons">
