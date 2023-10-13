@@ -14,116 +14,160 @@ class App extends React.Component {
       clicked: "",
       dzial: "1",
       zrodlo: "youtube",
+      shuffled: true,
     };
+    this.shuffleFilmy = this.shuffleFilmy.bind(this);
   }
+
+  shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
+    while (currentIndex > 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+    return array;
+  }
+  shuffleFilmy() {
+    this.filmyYTLinki = this.shuffle(this.filmyYTLinki);
+    this.setState({
+      shuffled: true,
+    });
+  }
+  wypiszFilmy() {
+    return this.filmyYTLinki
+      .filter(
+        (x) =>
+          x[1].indexOf("film-" + this.state.clicked) !== -1 &&
+          x[3] === this.state.dzial &&
+          x[4] === this.state.zrodlo
+      )
+      .map((x) => (
+        <iframe
+          className={x[1].join(" ")}
+          src={x[0]}
+          title={x[2]}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen="true"
+        ></iframe>
+      ));
+  }
+  componentDidMount() {
+    this.filmyYTLinki = this.shuffle(this.filmyYTLinki);
+  }
+  filmyYTLinki = [
+    [
+      "https://www.youtube.com/embed/naq9D6jvnhA",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Matematyka - Wielomiany jednej zmiennej (część I)",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/ev_-R-3W_yo",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Co to jest wielomian? #1 [ Wielomiany ]",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/V2D8wYNpAk8",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Dodawanie i odejmowanie wielomianów",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/VZA09ymFcV4",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Szybko i na temat. Dzielenie Wielomianów Krok po Kroku",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/77CgfPFONWE",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Sprawdzian na 5!WIELOMIANY (rozkład na czynniki, dzielenie, Horner, równania, TW o reszcie/Bézouta)",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/KLjji_I3XvA",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Liceum. Klasa II. Wielomiany. Nierówności wielomianowe",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/vQgrdSAjYaE",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Dodawanie, odejmowanie i mnożenie wielomianów #3 [ Wielomiany ]",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/f_Kv7-oiMLw",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "WSZYSTKO o: NIERÓWNOŚCI WIELOMIANOWE. Jak rysować wykres wielomianu?Co to jest krotność pierwiastka?",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/5UaDP_fF8hY",
+      ["film-rozszerzenie2"],
+      "Wielomiany co trzeba ogarniać? Matura Matematyka Rozszerzenie",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/eQTEXfqLQYE",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Wzory skróconego mnożenia - sześcian sumy i różnicy.",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/ehRXj3GEpIw",
+      ["film-rozszerzenie2"],
+      "Matura rozszerzona - kurs - wzory skróconego mnożenia",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/Q-lkLAeKtlA",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Jak dzielić (pisemnie) WIELOMIAN przez DWUMIAN na MATURZE PODSTAWOWEJ?",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/9piOqP5jcw4",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Dzielenie wielomianów #4 [ Wielomiany ]",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/msfZ8_eHIoM",
+      ["film-podstawa2", "film-rozszerzenie2"],
+      "Pierwiastki całkowite oraz wymierne wielomianu #8 [ Wielomiany ]",
+      "8",
+      "youtube",
+    ],
+    [
+      "https://www.youtube.com/embed/5ywgT7USp4Y",
+      ["film-rozszerzenie2"],
+      "Wielomiany na poziomie rozszerzonym",
+      "8",
+      "youtube",
+    ],
+  ];
   render() {
-    const filmyYTLinki = [
-      [
-        "https://www.youtube.com/embed/naq9D6jvnhA",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Matematyka - Wielomiany jednej zmiennej (część I)",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/ev_-R-3W_yo",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Co to jest wielomian? #1 [ Wielomiany ]",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/V2D8wYNpAk8",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Dodawanie i odejmowanie wielomianów",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/VZA09ymFcV4",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Szybko i na temat. Dzielenie Wielomianów Krok po Kroku",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/77CgfPFONWE",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Sprawdzian na 5!WIELOMIANY (rozkład na czynniki, dzielenie, Horner, równania, TW o reszcie/Bézouta)",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/KLjji_I3XvA",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Liceum. Klasa II. Wielomiany. Nierówności wielomianowe",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/vQgrdSAjYaE",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Dodawanie, odejmowanie i mnożenie wielomianów #3 [ Wielomiany ]",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/f_Kv7-oiMLw",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "WSZYSTKO o: NIERÓWNOŚCI WIELOMIANOWE. Jak rysować wykres wielomianu?Co to jest krotność pierwiastka?",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/5UaDP_fF8hY",
-        ["film-rozszerzenie2"],
-        "Wielomiany co trzeba ogarniać? Matura Matematyka Rozszerzenie",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/eQTEXfqLQYE",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Wzory skróconego mnożenia - sześcian sumy i różnicy.",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/ehRXj3GEpIw",
-        ["film-rozszerzenie2"],
-        "Matura rozszerzona - kurs - wzory skróconego mnożenia",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/Q-lkLAeKtlA",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Jak dzielić (pisemnie) WIELOMIAN przez DWUMIAN na MATURZE PODSTAWOWEJ?",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/9piOqP5jcw4",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Dzielenie wielomianów #4 [ Wielomiany ]",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/msfZ8_eHIoM",
-        ["film-podstawa2", "film-rozszerzenie2"],
-        "Pierwiastki całkowite oraz wymierne wielomianu #8 [ Wielomiany ]",
-        "8",
-        "youtube",
-      ],
-      [
-        "https://www.youtube.com/embed/5ywgT7USp4Y",
-        ["film-rozszerzenie2"],
-        "Wielomiany na poziomie rozszerzonym",
-        "8",
-        "youtube",
-      ],
-    ];
     return (
       <div className="website">
         <nav id="navbar-top">
@@ -132,10 +176,13 @@ class App extends React.Component {
               id="home-button"
               onClick={() => this.setState({ homeClicked: true, clicked: "" })}
             >
-              <img
-                src={require("./images/LogoStrony.jpg")}
-                alt="Strona główna"
-              />
+              {" "}
+              <div>
+                <img
+                  src={require("./images/LogoStrony.jpg")}
+                  alt="Strona główna"
+                />
+              </div>
               <div id="mat-zone">
                 <span>Mat</span>Zone
               </div>
@@ -388,7 +435,7 @@ class App extends React.Component {
           <div id="content-picker">
             <div id="dzial-select">
               <div id="dzial">Dział:</div>
-              {this.state.clicked.indexOf("1") !== -1 ? (
+              {this.state.clicked === "podstawa1" ? (
                 <select
                   onChange={(event) => {
                     this.setState({ dzial: event.target.value });
@@ -403,7 +450,39 @@ class App extends React.Component {
                   <option value="7">VII</option>
                   <option value="8">VIII</option>
                 </select>
-              ) : this.state.clicked.indexOf("2") !== -1 ? (
+              ) : this.state.clicked === "rozszerzenie1" ? (
+                <select
+                  onChange={(event) => {
+                    this.setState({ dzial: event.target.value });
+                  }}
+                >
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                  <option value="3">III</option>
+                  <option value="4">IV</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                </select>
+              ) : this.state.clicked === "podstawa2" ? (
+                <select
+                  onChange={(event) => {
+                    this.setState({ dzial: event.target.value });
+                  }}
+                >
+                  <option value="1">Przekształcenia wykresów funkcji</option>
+                  <option value="2">
+                    Równania i nierówności z wartością bezwzględną
+                  </option>
+                  <option value="3">Funkcja kwadratowa</option>
+                  <option value="4">Geometria płaska - okręgi i koła</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                </select>
+              ) : this.state.clicked === "rozszerzenie2" ? (
                 <select
                   onChange={(event) => {
                     this.setState({ dzial: event.target.value });
@@ -422,7 +501,22 @@ class App extends React.Component {
                   </option>
                   <option value="8">Wielomiany</option>
                 </select>
-              ) : this.state.clicked.indexOf("3") !== -1 ? (
+              ) : this.state.clicked === "podstawa3" ? (
+                <select
+                  onChange={(event) => {
+                    this.setState({ dzial: event.target.value });
+                  }}
+                >
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                  <option value="3">III</option>
+                  <option value="4">IV</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                </select>
+              ) : this.state.clicked === "rozszerzenie3" ? (
                 <select
                   onChange={(event) => {
                     this.setState({ dzial: event.target.value });
@@ -437,7 +531,22 @@ class App extends React.Component {
                   <option value="7">Trygonometria</option>
                   <option value="8">Geometria analityczna</option>
                 </select>
-              ) : this.state.clicked.indexOf("4") !== -1 ? (
+              ) : this.state.clicked === "podstawa4" ? (
+                <select
+                  onChange={(event) => {
+                    this.setState({ dzial: event.target.value });
+                  }}
+                >
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                  <option value="3">III</option>
+                  <option value="4">IV</option>
+                  <option value="5">V</option>
+                  <option value="6">VI</option>
+                  <option value="7">VII</option>
+                  <option value="8">VIII</option>
+                </select>
+              ) : this.state.clicked === "rozszerzenie4" ? (
                 <select
                   onChange={(event) => {
                     this.setState({ dzial: event.target.value });
@@ -485,30 +594,27 @@ class App extends React.Component {
               </div>
             </div>
           ) : (
-            ""
-          )}
-
-          <div className="na-stronie">
-            <div className="filmy">
-              {filmyYTLinki
-                .filter(
-                  (x) =>
-                    x[1].indexOf("film-" + this.state.clicked) !== -1 &&
-                    x[3] === this.state.dzial &&
-                    x[4] === this.state.zrodlo
-                )
-                .map((x) => (
-                  <iframe
-                    className={x[1].join(" ")}
-                    src={x[0]}
-                    title={x[2]}
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen="true"
-                  ></iframe>
-                ))}
+            <div className="na-stronie">
+              <div id="shuffle-button">
+                <button onClick={this.shuffleFilmy}>
+                  Wymieszaj
+                  <br />
+                  filmy (na razie testowe)
+                </button>
+              </div>
+              <div id="pokaz-klase">
+                Klasa {this.state.clicked.match(/\d/)} poziom {' '}
+                {/podstawa/.test(this.state.clicked)
+                  ? "podstawowy"
+                  : /rozszerzenie/.test(this.state.clicked)
+                  ? "rozszerzony"
+                  : ""}
+              </div>
+              <div className="filmy">
+                {this.state.shuffled ? this.wypiszFilmy() : ""}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     );

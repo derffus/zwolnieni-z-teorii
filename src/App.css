@@ -192,13 +192,13 @@
   background-color: var(--purpleChosen) !important;
 }
 #content-picker {
+  color: inherit;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   position: fixed;
   top: 10vh;
-  color: black;
   width: 100%;
-  height: 75px;
+  height: 50px;
   background-color: var(--content);
   display: flex;
   flex-direction: row;
@@ -215,12 +215,13 @@
   }
 }
 #content-picker button {
+  color: inherit;
   font-family: inherit;
   background-color: var(--content);
   border: 2px solid black;
   border-radius: 5px;
   margin-left: 3%;
-  height: 35%;
+  height: 50%;
   width: fit-content;
   transition: border 0.5s;
 }
@@ -239,7 +240,7 @@
 #dzial-select select {
   font-family: inherit;
   background-color: var(--content);
-  height: 70%;
+  height: 100%;
   border: 2px solid black;
   border-radius: 5px;
   appearance: none;
@@ -267,7 +268,7 @@
 #zrodlo-select select {
   font-family: inherit;
   margin-left: 3%;
-  height: 70%;
+  height: 100%;
   border: 2px solid black;
   background-color: var(--content);
   border-radius: 5px;
@@ -282,9 +283,10 @@
 #zrodlo-select select:focus {
   outline: none;
 }
+
 #content {
+  color:var(--color-font);
   font-family: inherit;
-  color: black;
   background-color: var(--content);
   margin-top: calc(10vh + 20px);
   min-height: calc(90vh - 20px);
@@ -339,17 +341,23 @@
   height: 300px;
   aspect-ratio: 1/1;
 }
-iframe {
-  width: 400px;
-  height: 270px;
-}
 .na-stronie {
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+#pokaz-klase {
+  align-self: center;
+  font-size: 3.2em;
+  font-weight: 600;
+}
+iframe {
+  width: 400px;
+  height: 270px;
+}
 .filmy {
-  margin-top: 95px;
+  margin-top: 50px;
   width: 100%;
   align-self: center;
   display: grid;
