@@ -335,12 +335,24 @@
   justify-content: space-around;
 }
 #big-buttons button {
+  box-shadow:15px 15px 1px 1px var(--purpleHovered);
   font-family: inherit;
   font-size: 1.4em;
   background-color: var(--content);
   border-radius: 100%;
   border: 3px solid black;
   height: 300px;
+  aspect-ratio: 1/1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#big-buttons button:hover{
+  cursor: pointer;
+}
+#big-buttons button img{
+  display:block;
+  width:70%;
   aspect-ratio: 1/1;
 }
 .na-stronie {
@@ -414,5 +426,13 @@ iframe {
   iframe {
     width: 280px;
     height: 200px;
+  }
+  #big-buttons{
+    flex-direction: column;
+  }
+  #big-buttons button{
+    align-self: center;
+    height:150px;
+    width: 150px;
   }
 }

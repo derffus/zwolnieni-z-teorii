@@ -6,9 +6,9 @@ function HomePage(props) {
         Cała wiedza w <br /> <span>jednym miejscu!</span>
       </div>
       <div id="big-buttons">
-        <button>Korki logo</button>
-        <button>Studia logo</button>
-        <button>Arkusze logo</button>
+        <button><img src={require("../images/Korepetycje.png")} alt="korepetycje"/></button>
+        <button><img src={require("../images/Studia.png")} alt="studia"/></button>
+        <button><img src={require("../images/Arkusze.png")} alt="arkusze"/></button>
       </div>
     </div>
   );
