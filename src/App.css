@@ -6,6 +6,7 @@
   font-family: open sans;
   --purple: hsl(235, 26%, 62%);
   --purpleChosen: hsl(235, 26%, 58%);
+  --purpleHovered: hsl(235, 26%, 92%);
   --content: white;
   --purpleClicked: hsl(235, 26%, 68%);
   --color-font: #24475a;
@@ -29,7 +30,7 @@
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid black;
-  z-index: 2;
+  z-index: 3;
 }
 #top-buttons {
   margin-left: 7%;
@@ -52,7 +53,7 @@
 }
 #navbar-top button:hover {
   cursor: pointer;
-  background-color: hsl(235, 26%, 92%);
+  background-color: var(--purpleHovered);
 }
 #home {
   height: 100%;
@@ -79,7 +80,7 @@
 }
 #home button:hover {
   cursor: pointer;
-  background-color: hsl(235, 26%, 92%);
+  background-color: var(--purpleHovered);
 }
 #mat-zone {
   letter-spacing: -1px;
@@ -101,7 +102,7 @@
   align-items: center;
 }
 #show-nav:hover {
-  background-color: hsl(235, 26%, 92%);
+  background-color: var(--purpleHovered);
 }
 #show-nav button {
   height: 100%;
@@ -126,7 +127,7 @@
   flex-direction: column;
   justify-content: flex-start;
   animation: show-from-right 0.4s;
-  z-index: 1;
+  z-index: 2;
 }
 @keyframes show-from-right {
   from {
@@ -192,6 +193,7 @@
   background-color: var(--purpleChosen) !important;
 }
 #content-picker {
+  z-index: 1;
   color: inherit;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
@@ -342,10 +344,30 @@
   aspect-ratio: 1/1;
 }
 .na-stronie {
+  position: relative;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#shuffle-button{
+  position:fixed;
+  left:5%;
+  top:20vh;
+}
+#shuffle-button button{
+  font-size: 1.5em;
+  height:90px;
+  aspect-ratio: 3/2;
+  color: inherit;
+  font-family: inherit;
+  background-color: var(--content);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+#shuffle-button button:hover{
+  cursor: pointer;
+  background-color: var(--purpleHovered);
 }
 #pokaz-klase {
   align-self: center;
