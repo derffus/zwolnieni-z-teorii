@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/zwolnieni-z-teorii/static/css/main.05bdd8fa.css",
-    "main.js": "/zwolnieni-z-teorii/static/js/main.ecfd9643.js",
+    "main.css": "/zwolnieni-z-teorii/static/css/main.3221effc.css",
+    "main.js": "/zwolnieni-z-teorii/static/js/main.a03ebbf7.js",
     "static/js/787.4abb971b.chunk.js": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js",
     "static/media/LogoStrony.jpg": "/zwolnieni-z-teorii/static/media/LogoStrony.b03db216c0ffad72283f.jpg",
+    "static/media/Studia.png": "/zwolnieni-z-teorii/static/media/Studia.3c4da9377c612e993ed0.png",
+    "static/media/Korepetycje.png": "/zwolnieni-z-teorii/static/media/Korepetycje.8d2756c27391ec4c7578.png",
+    "static/media/Arkusze.png": "/zwolnieni-z-teorii/static/media/Arkusze.0ac233c21e9f4dd815f8.png",
     "index.html": "/zwolnieni-z-teorii/index.html",
-    "main.05bdd8fa.css.map": "/zwolnieni-z-teorii/static/css/main.05bdd8fa.css.map",
-    "main.ecfd9643.js.map": "/zwolnieni-z-teorii/static/js/main.ecfd9643.js.map",
+    "main.3221effc.css.map": "/zwolnieni-z-teorii/static/css/main.3221effc.css.map",
+    "main.a03ebbf7.js.map": "/zwolnieni-z-teorii/static/js/main.a03ebbf7.js.map",
     "787.4abb971b.chunk.js.map": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05bdd8fa.css",
-    "static/js/main.ecfd9643.js"
+    "static/css/main.3221effc.css",
+    "static/js/main.a03ebbf7.js"
   ]
 }
