@@ -5,8 +5,11 @@ import RightNav from "./app-components/RightNav";
 import ContentPicker from "./app-components/ContentPicker";
 import HomePage from "./app-components/HomePage";
 import VideoPlayer from "./app-components/VideoPlayer";
-import filmyYtLInki from "./filmyYTLinki";
-import $ from "jquery";
+import Korepetycje from "./app-components/Korepetycje";
+import Studia from "./app-components/Studia";
+import Arkusze from "./app-components/Arkusze";
+import filmyYtLinki from "./filmyYTLinki";
+//import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +24,9 @@ class App extends React.Component {
       dzial: "1",
       zrodlo: "youtube",
       shuffled: true,
+      korepetycje: false,
+      studia: false,
+      arkusze: false,
     };
     this.updateState = this.updateState.bind(this);
     this.shuffleFilmy = this.shuffleFilmy.bind(this);
@@ -49,7 +55,7 @@ class App extends React.Component {
       shuffled: true,
     });
   }
-  wypiszFilmy(filmy,clicked,dzial,zrodlo) {
+  wypiszFilmy(filmy, clicked, dzial, zrodlo) {
     return filmy
       .filter(
         (x) =>
@@ -71,7 +77,7 @@ class App extends React.Component {
   componentDidMount() {
     this.filmyYTLinki = this.shuffle(this.filmyYTLinki);
   }
-  filmyYTLinki = filmyYtLInki;
+  filmyYTLinki = filmyYtLinki;
   render() {
     return (
       <div className="website">
@@ -90,7 +96,7 @@ class App extends React.Component {
         ) : (
           ""
         )}
-        {!this.state.homeClicked ? (
+        {this.state.clicked !== "" ? (
           <ContentPicker
             updateState={this.updateState}
             clicked={this.state.clicked}
@@ -100,8 +106,8 @@ class App extends React.Component {
         )}
         <div id="content">
           {this.state.homeClicked ? (
-            <HomePage />
-          ) : (
+            <HomePage updateState={this.updateState} />
+          ) : this.state.clicked !== "" ? (
             <VideoPlayer
               updateState={this.updateState}
               clicked={this.state.clicked}
@@ -112,7 +118,13 @@ class App extends React.Component {
               wypiszFilmy={this.wypiszFilmy}
               filmyYTLinki={this.filmyYTLinki}
             />
-          )}
+          ) : this.state.korepetycje ?(
+            <Korepetycje updateState={this.updateState}/>
+          ) : this.state.studia ? (
+            <Studia updateState={this.updateState}/>
+          ): this.state.arkusze ? (
+            <Arkusze updateState={this.updateState}/>
+          ):null}
         </div>
       </div>
     );

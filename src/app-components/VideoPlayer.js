@@ -1,14 +1,14 @@
 import React from "react";
 function VideoPlayer(props) {
   return (
-    <div className="na-stronie">
-      <div id="shuffle-button">
+    <div className="filmy-i-artykuly">
+      {props.zrodlo==="youtube" ?<div id="shuffle-button">
         <button onClick={props.shuffleFilmy}>
           Wymieszaj
           <br />
           filmy
         </button>
-      </div>
+      </div>:null}
       <div id="pokaz-klase">
         Klasa {props.clicked.match(/\d/)} poziom{" "}
         {/podstawa/.test(props.clicked)

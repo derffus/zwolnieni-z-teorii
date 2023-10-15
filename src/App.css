@@ -355,7 +355,7 @@
   width:70%;
   aspect-ratio: 1/1;
 }
-.na-stronie {
+.filmy-i-artykuly {
   position: relative;
   margin-top: 75px;
   display: flex;
@@ -398,6 +398,48 @@ iframe {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 30px;
   column-gap: 55px;
+}
+#korepetycje{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 8%;
+}
+#wpisz-lokalizacje{
+  border:2px solid black;
+  border-radius:5px;
+  font-size:2em;
+  height:100%;
+  width:fit-content;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#wpisz-lokalizacje input{
+  font-size: inherit;
+  color:inherit;
+  box-sizing: border-box;
+  height:100%;
+  border:none;
+}
+#wpisz-lokalizacje input:focus{
+  border:none;
+}
+#wpisz-lokalizacje button {
+  border:none;
+  display: block;
+  border-radius: inherit;
+  background-color: var(--content);
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#wpisz-lokalizacje button:hover {
+  cursor: pointer;
+  background-color: var(--purpleHovered);
+}
+#wpisz-lokalizacje button i{
+  color:var(--color-font);
+  font-size:4em;
 }
 @media (max-width: 1750px) {
   .filmy {

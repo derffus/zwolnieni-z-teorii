@@ -33,6 +33,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "podstawa1");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Podstawa
@@ -44,6 +47,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "rozszerzenie1");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Rozszerzenie
@@ -82,6 +88,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "podstawa2");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Podstawa
@@ -92,6 +101,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "rozszerzenie2");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Rozszerzenie
@@ -130,6 +142,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "podstawa3");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Podstawa
@@ -140,6 +155,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "rozszerzenie3");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Rozszerzenie
@@ -178,6 +196,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "podstawa4");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Podstawa
@@ -188,6 +209,9 @@ function RightNav(props) {
                 onClick={() => {
                   props.updateState("clicked", "rozszerzenie4");
                   props.updateState("homeClicked", false);
+                  props.updateState("korepetycje",false);
+                  props.updateState("studia",false);
+                  props.updateState("arkusze",false);
                 }}
               >
                 Rozszerzenie

@@ -1,4 +1,4 @@
-const filmyYtLInki = [
+const filmyYtLinki = [
   [
     "https://www.youtube.com/embed/naq9D6jvnhA",
     ["film-podstawa2", "film-rozszerzenie2"],
@@ -105,4 +105,4 @@ const filmyYtLInki = [
     "youtube",
   ],
 ];
-export default filmyYtLInki;
+export default filmyYtLinki;

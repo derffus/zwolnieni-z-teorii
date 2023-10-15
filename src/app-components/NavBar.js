@@ -8,6 +8,9 @@ function NavBar(props) {
           onClick={() => {
             props.updateState("homeClicked", true);
             props.updateState("clicked", "");
+            props.updateState("korepetycje", false);
+            props.updateState("studia", false);
+            props.updateState("arkusze", false);
           }}
         >
           {" "}
@@ -23,9 +26,39 @@ function NavBar(props) {
         </button>
       </div>
       <div id="top-buttons">
-        <button>Korepetycje</button>
-        <button>Studia</button>
-        <button>Arkusze</button>
+        <button
+          onClick={() => {
+            props.updateState("homeClicked", false);
+            props.updateState("clicked", "");
+            props.updateState("korepetycje", true);
+            props.updateState("studia", false);
+            props.updateState("arkusze", false);
+          }}
+        >
+          Korepetycje
+        </button>
+        <button
+          onClick={() => {
+            props.updateState("homeClicked", false);
+            props.updateState("clicked", "");
+            props.updateState("korepetycje", false);
+            props.updateState("studia", true);
+            props.updateState("arkusze", false);
+          }}
+        >
+          Studia
+        </button>
+        <button
+          onClick={() => {
+            props.updateState("homeClicked", false);
+            props.updateState("clicked", "");
+            props.updateState("korepetycje", false);
+            props.updateState("studia", false);
+            props.updateState("arkusze", true);
+          }}
+        >
+          Arkusze
+        </button>
       </div>
       <div id="show-nav">
         {!props.showNavbar ? (
