@@ -2,7 +2,7 @@ import React from "react";
 function HomePage(props) {
   return (
     <div id="home-page">
-      <div id="welcome">
+      <div id="welcome-home-page">
         Cała wiedza w <br /> <span>jednym miejscu!</span>
       </div>
       <div id="big-buttons">

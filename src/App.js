@@ -27,6 +27,8 @@ class App extends React.Component {
       korepetycje: false,
       studia: false,
       arkusze: false,
+      lokalizacjaInput: "",
+      lokalizacjaSubmit: "",
     };
     this.updateState = this.updateState.bind(this);
     this.shuffleFilmy = this.shuffleFilmy.bind(this);
@@ -118,13 +120,17 @@ class App extends React.Component {
               wypiszFilmy={this.wypiszFilmy}
               filmyYTLinki={this.filmyYTLinki}
             />
-          ) : this.state.korepetycje ?(
-            <Korepetycje updateState={this.updateState}/>
+          ) : this.state.korepetycje ? (
+            <Korepetycje
+              updateState={this.updateState}
+              lokalizacjaInput={this.state.lokalizacjaInput}
+              lokalizacjaSubmit={this.state.lokalizacjaSubmit}
+            />
           ) : this.state.studia ? (
-            <Studia updateState={this.updateState}/>
-          ): this.state.arkusze ? (
-            <Arkusze updateState={this.updateState}/>
-          ):null}
+            <Studia updateState={this.updateState} />
+          ) : this.state.arkusze ? (
+            <Arkusze updateState={this.updateState} />
+          ) : null}
         </div>
       </div>
     );

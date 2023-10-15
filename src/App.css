@@ -308,7 +308,7 @@
     margin-top: -30vh;
   }
 }
-#welcome {
+#welcome-home-page {
   color: var(--color-font);
   animation: show-welcome-page 1s;
   align-self: flex-start;
@@ -317,12 +317,12 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-#welcome br {
+#welcome-home-page br {
   content: "";
   margin: -25px;
   display: block;
 }
-#welcome span {
+#welcome-home-page span {
   margin-left: 150px;
   align-self: center;
   color: var(--purple);
@@ -402,30 +402,49 @@ iframe {
 #korepetycje{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 8%;
+  grid-template-rows: 8% 1fr;
+  grid-template-areas: 
+  "lokalizacja . ."
+  "welcome . .";
+  row-gap: 12%;
+  margin-left:15px;
 }
 #wpisz-lokalizacje{
+  animation: show-lokalizacja 1s;
+  justify-self: center;
+  grid-area: lokalizacja;
+  padding-left: 5px;
   border:2px solid black;
   border-radius:5px;
+  box-shadow:10px 10px 1px var(--purpleHovered);
   font-size:2em;
   height:100%;
-  width:fit-content;
+  width:85%;
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
-#wpisz-lokalizacje input{
+#wpisz-lokalizacje form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+#wpisz-lokalizacje form input{
   font-size: inherit;
   color:inherit;
   box-sizing: border-box;
   height:100%;
+  width:75%;
+  border:none;
+  outline: none;
+}
+#wpisz-lokalizacje form input:focus{
   border:none;
 }
-#wpisz-lokalizacje input:focus{
-  border:none;
-}
-#wpisz-lokalizacje button {
+#wpisz-lokalizacje form button {
   border:none;
   display: block;
   border-radius: inherit;
@@ -433,13 +452,39 @@ iframe {
   height: 100%;
   aspect-ratio: 1/1;
 }
-#wpisz-lokalizacje button:hover {
+#wpisz-lokalizacje form button:hover {
   cursor: pointer;
   background-color: var(--purpleHovered);
 }
-#wpisz-lokalizacje button i{
+#wpisz-lokalizacje form button i{
   color:var(--color-font);
+  font-size:3.5em;
+}
+#welcome-korepetycje{
+  animation: show-welcome-korepetycje 1s;
+  text-align: center;
+  grid-area:welcome;
   font-size:4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#welcome-korepetycje br {
+  content: "";
+  margin: -20px;
+  display: block;
+}
+#welcome-korepetycje span{
+  color: var(--purple);
+}
+@keyframes show-lokalizacja {
+  from {
+    margin-top: -30vh;
+  }
+}
+@keyframes show-welcome-korepetycje {
+  from {
+    margin-top: -30vh;
+  }
 }
 @media (max-width: 1750px) {
   .filmy {
