@@ -46,10 +46,10 @@ function ContentPicker(props) {
             </option>
             <option value="3">Funkcja kwadratowa</option>
             <option value="4">Geometria płaska - okręgi i koła</option>
-            <option value="5">V</option>
-            <option value="6">VI</option>
-            <option value="7">VII</option>
-            <option value="8">VIII</option>
+            <option value="5">Trygonometria</option>
+            <option value="6">Geometria analityczna</option>
+            <option value="7">Geometria płaska - rozwiązywanie trójkątów</option>
+            <option value="8">Wielomiany</option>
           </select>
         ) : props.clicked === "rozszerzenie2" ? (
           <select
