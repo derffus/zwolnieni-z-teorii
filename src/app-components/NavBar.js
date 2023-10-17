@@ -27,6 +27,7 @@ function NavBar(props) {
       </div>
       <div id="top-buttons">
         <button
+          id="korepetycje"
           onClick={() => {
             props.updateState("homeClicked", false);
             props.updateState("clicked", "");
@@ -38,6 +39,7 @@ function NavBar(props) {
           Korepetycje
         </button>
         <button
+          id="studia"
           onClick={() => {
             props.updateState("homeClicked", false);
             props.updateState("clicked", "");
@@ -49,6 +51,7 @@ function NavBar(props) {
           Studia
         </button>
         <button
+          id="arkusze"
           onClick={() => {
             props.updateState("homeClicked", false);
             props.updateState("clicked", "");

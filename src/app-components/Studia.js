@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 function Studia(props) {
-  return (
-    <div id="studia">
-        Tu studia
-    </div>
-  )
+  useEffect(() => {
+    props.segmentOpened("studia");
+    return () => {
+      props.segmentClosed("studia");
+    };
+  });
+  return <div id="studia-segment">Tu studia</div>;
 }
 export default Studia;

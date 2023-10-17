@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 function Arkusze(props) {
-  return (
-    <div id="arkusze">
-        Tu arkusze
-    </div>
-  )
+  useEffect(() => {
+    props.segmentOpened("arkusze");
+    return () => {
+      props.segmentClosed("arkusze");
+    };
+  });
+  return <div id="arkusze-segment">Tu arkusze</div>;
 }
 export default Arkusze;

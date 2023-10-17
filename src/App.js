@@ -9,7 +9,7 @@ import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze";
 import filmyYtLinki from "./filmyYTLinki";
-//import $ from "jquery";
+import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -37,6 +37,12 @@ class App extends React.Component {
     this.setState({
       [prop]: newValue,
     });
+  }
+  segmentOpened(segment) {
+    $(`#${segment}`).addClass("nav-clicked");
+  }
+  segmentClosed(segment) {
+    $(`#${segment}`).removeClass("nav-clicked");
   }
   shuffle(array) {
     let currentIndex = array.length,
@@ -108,10 +114,16 @@ class App extends React.Component {
         )}
         <div id="content">
           {this.state.homeClicked ? (
-            <HomePage updateState={this.updateState} />
+            <HomePage
+              updateState={this.updateState}
+              segmentOpened={this.segmentOpened}
+              segmentClosed={this.segmentClosed}
+            />
           ) : this.state.clicked !== "" ? (
             <VideoPlayer
               updateState={this.updateState}
+              segmentOpened={this.segmentOpened}
+              segmentClosed={this.segmentClosed}
               clicked={this.state.clicked}
               dzial={this.state.dzial}
               zrodlo={this.state.zrodlo}
@@ -123,13 +135,23 @@ class App extends React.Component {
           ) : this.state.korepetycje ? (
             <Korepetycje
               updateState={this.updateState}
+              segmentOpened={this.segmentOpened}
+              segmentClosed={this.segmentClosed}
               lokalizacjaInput={this.state.lokalizacjaInput}
               lokalizacjaSubmit={this.state.lokalizacjaSubmit}
             />
           ) : this.state.studia ? (
-            <Studia updateState={this.updateState} />
+            <Studia
+              updateState={this.updateState}
+              segmentOpened={this.segmentOpened}
+              segmentClosed={this.segmentClosed}
+            />
           ) : this.state.arkusze ? (
-            <Arkusze updateState={this.updateState} />
+            <Arkusze
+              updateState={this.updateState}
+              segmentOpened={this.segmentOpened}
+              segmentClosed={this.segmentClosed}
+            />
           ) : null}
         </div>
       </div>

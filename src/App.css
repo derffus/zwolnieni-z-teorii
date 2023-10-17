@@ -44,6 +44,7 @@
   align-items: center;
 }
 #top-buttons button {
+  transition: background-color 0.3s;
   color: var(--color-font);
   font-size: 1.5em;
   font-family: inherit;
@@ -52,6 +53,9 @@
   width: 25%;
   min-width: fit-content;
   height: 100%;
+}
+.nav-clicked {
+  background-color: var(--purpleHovered) !important;
 }
 #navbar-top button:hover {
   cursor: pointer;
@@ -71,6 +75,7 @@
   aspect-ratio: 1/1;
 }
 #home button {
+  transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -98,6 +103,7 @@
   margin-right: 6px;
 }
 #show-nav {
+  transition: background-color 0.3s;
   justify-self: flex-end;
   height: 100%;
   aspect-ratio: 1/1;
@@ -291,10 +297,11 @@
 }
 
 #content {
+  overflow-x: hidden;
   color: var(--color-font);
   font-family: inherit;
   background-color: var(--content);
-  margin-top: calc(10vh + 20px);
+  padding-top: calc(10vh + 20px);
   min-height: calc(90vh - 20px);
   display: flex;
   justify-content: center;
@@ -353,6 +360,9 @@
 }
 #big-buttons button:hover {
   cursor: pointer;
+  border-color: var(--purple);
+  box-shadow: 15px 15px 1px 1px var(--purple);
+  transition: all 0.3s;
 }
 #big-buttons button img {
   display: block;
@@ -403,17 +413,17 @@ iframe {
   row-gap: 30px;
   column-gap: 55px;
 }
-#korepetycje {
-  width:100%;
+#korepetycje-segment {
+  width: 100%;
   position: relative;
   margin-left: 70px;
   margin-right: 70px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 #wpisz-lokalizacje {
-  position:fixed;
+  position: fixed;
   animation: show-lokalizacja 1s;
   justify-self: center;
   grid-area: lokalizacja;
@@ -423,8 +433,8 @@ iframe {
   box-shadow: 10px 10px 1px var(--purpleHovered);
   font-size: 2em;
   height: 10vh;
-  width:30vw;
-  left:70px;
+  width: 30vw;
+  left: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -446,6 +456,10 @@ iframe {
   border: none;
   outline: none;
 }
+#wpisz-lokalizacje form input::placeholder {
+  opacity: 0.8;
+  color: var(--color-font);
+}
 #wpisz-lokalizacje form input:focus {
   border: none;
 }
@@ -466,9 +480,9 @@ iframe {
   font-size: 3.5em;
 }
 #welcome-korepetycje {
-  position:fixed;
-  top:40vh;
-  left:70px;
+  position: fixed;
+  top: 40vh;
+  left: 70px;
   animation: show-welcome-korepetycje 1s;
   text-align: center;
   grid-area: welcome;
@@ -485,38 +499,38 @@ iframe {
   color: var(--purple);
 }
 #korepetytorzy {
-  height:fit-content;
-  width:30%;
-  display:flex;
+  height: fit-content;
+  width: 30%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   animation: korepetytorzy 1s;
 }
 @keyframes korepetytorzy {
-  from{
-    margin-right:-50vh;
+  from {
+    margin-right: -50vh;
   }
 }
 #korepetytor-div {
-  padding:20px;
+  padding: 20px;
   font-size: 2.5em;
   border-left: 3px solid var(--color-font);
   border-right: 3px solid var(--color-font);
-  width:100%;
-  height:25vh;
+  width: 100%;
+  height: 25vh;
   margin-bottom: 20%;
 }
-#imie-i-nazwisko{
+#imie-i-nazwisko {
   font-size: 1.5em;
 }
-#miejscowosc{
-  font-size:0.8em;
+#miejscowosc {
+  font-size: 0.8em;
 }
-#numerTelefonu{
-  font-size:0.8em;
+#numerTelefonu {
+  font-size: 0.8em;
 }
-#mail{
-  font-size:0.8em;
+#mail {
+  font-size: 0.8em;
 }
 @keyframes show-lokalizacja {
   from {
