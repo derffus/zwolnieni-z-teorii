@@ -517,8 +517,13 @@ iframe {
   border-left: 3px solid var(--color-font);
   border-right: 3px solid var(--color-font);
   width: 100%;
+  min-width: fit-content;
   height: 25vh;
   margin-bottom: 20%;
+}
+#korepetytor-div input {
+  position: absolute;
+  visibility: hidden;
 }
 #imie-i-nazwisko {
   font-size: 1.5em;
@@ -527,10 +532,36 @@ iframe {
   font-size: 0.8em;
 }
 #numerTelefonu {
+  position: relative;
   font-size: 0.8em;
 }
+#numerTelefonu:hover{
+  cursor: pointer;
+  color:black;
+}
+#numerTelefonu:hover::after{
+  content: "skopiuj";
+  position: absolute;
+  top:30%;
+  margin-left:3%;
+  font-size:0.5em;
+  color:var(--color-font);
+}
 #mail {
+  position: relative;
   font-size: 0.8em;
+}
+#mail:hover{
+  cursor: pointer;
+  color:black;
+}
+#mail:hover::after{
+  content: "skopiuj";
+  position: absolute;
+  top:30%;
+  margin-left:3%;
+  font-size:0.5em;
+  color:var(--color-font);
 }
 @keyframes show-lokalizacja {
   from {
@@ -552,7 +583,7 @@ iframe {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   #content-picker {
     flex-direction: column;
     height: fit-content;
@@ -570,12 +601,19 @@ iframe {
     width: 280px;
     height: 200px;
   }
-  #big-buttons {
-    flex-direction: column;
+  #welcome-home-page {
+    text-align: center;
+    font-size: 4em;
+  }
+  #welcome-home-page br {
+    margin: 0;
   }
   #big-buttons button {
     align-self: center;
-    height: 150px;
-    width: 150px;
+    height: 28vw;
+    aspect-ratio: 1/1;
+  }
+  #big-buttons button:hover {
+    transition: all 0s;
   }
 }

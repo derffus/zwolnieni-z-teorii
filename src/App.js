@@ -73,6 +73,7 @@ class App extends React.Component {
       )
       .map((x) => (
         <iframe
+          key={x}
           className={x[1].join(" ")}
           src={x[0]}
           title={x[2]}

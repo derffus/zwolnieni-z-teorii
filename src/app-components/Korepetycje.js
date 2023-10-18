@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
+import ClipboardJS from "clipboard";
 import korepetytorzy from "../korepetytorzy";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
@@ -8,7 +9,7 @@ function Korepetycje(props) {
       props.segmentClosed("korepetycje");
     };
   });
-
+  const clipboard = new ClipboardJS(".copy");
   function handleLokalizacjaInput(event) {
     props.updateState("lokalizacjaInput", event.target.value);
   }
@@ -24,14 +25,9 @@ function Korepetycje(props) {
     let restOfArr = array.filter((x) => x.miejscowosc !== lokalizacja);
     return filteredArr.concat(restOfArr);
   }
-  const mailToCopy = useRef(null);
-  function copyMail() {
-    if (mailToCopy && mailToCopy.current) {
-      mailToCopy.current.select();
-      document.execCommand("copy");
-      alert("Tekst skopiowany");
-    }
-  }
+  clipboard.on("success", (e) => {
+    e.clearSelection();
+  });
   return (
     <div id="korepetycje-segment">
       <div id="wpisz-lokalizacje">
@@ -59,12 +55,11 @@ function Korepetycje(props) {
             <br />
             <span id="miejscowosc">{x.miejscowosc}</span>
             <br />
-            <span id="numerTelefonu" onClick={copyMail} ref={copyMail}>
-              {x.numerTelefonu}
+            <span id="numerTelefonu" class="copy" data-clipboard-text={x.numerTelefonu}>{x.numerTelefonu}</span>
+            <br />
+            <span id="mail" class="copy" data-clipboard-text={x.mail}>
+              {x.mail}
             </span>
-            <br />
-            <span id="mail">{x.mail}</span>
-            <br />
           </div>
         ))}
       </div>
