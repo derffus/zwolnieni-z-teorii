@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/zwolnieni-z-teorii/static/css/main.4b318fd0.css",
-    "main.js": "/zwolnieni-z-teorii/static/js/main.e44c4006.js",
+    "main.css": "/zwolnieni-z-teorii/static/css/main.5c78e42d.css",
+    "main.js": "/zwolnieni-z-teorii/static/js/main.f9d10ae5.js",
     "static/js/787.4abb971b.chunk.js": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js",
     "static/media/fa-solid-900.ttf": "/zwolnieni-z-teorii/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/zwolnieni-z-teorii/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -16,12 +16,12 @@
     "static/media/fa-v4compatibility.ttf": "/zwolnieni-z-teorii/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/zwolnieni-z-teorii/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/zwolnieni-z-teorii/index.html",
-    "main.4b318fd0.css.map": "/zwolnieni-z-teorii/static/css/main.4b318fd0.css.map",
-    "main.e44c4006.js.map": "/zwolnieni-z-teorii/static/js/main.e44c4006.js.map",
+    "main.5c78e42d.css.map": "/zwolnieni-z-teorii/static/css/main.5c78e42d.css.map",
+    "main.f9d10ae5.js.map": "/zwolnieni-z-teorii/static/js/main.f9d10ae5.js.map",
     "787.4abb971b.chunk.js.map": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b318fd0.css",
-    "static/js/main.e44c4006.js"
+    "static/css/main.5c78e42d.css",
+    "static/js/main.f9d10ae5.js"
   ]
 }
