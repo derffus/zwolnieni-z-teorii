@@ -406,7 +406,6 @@ iframe {
 }
 .filmy {
   margin-top: 50px;
-  width: 100%;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -584,9 +583,16 @@ iframe {
   }
 }
 @media (max-width: 700px) {
+  #navbar-top{
+    height: 6vh;
+  }
+  #right-nav{
+    width:100%;
+  }
   #content-picker {
     flex-direction: column;
     height: fit-content;
+    margin-top:-;
   }
   #dzial-select {
     flex-direction: column;
