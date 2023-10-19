@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/zwolnieni-z-teorii/static/css/main.cdba475a.css",
-    "main.js": "/zwolnieni-z-teorii/static/js/main.319f586d.js",
-    "static/js/787.4abb971b.chunk.js": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js",
-    "static/media/fa-solid-900.ttf": "/zwolnieni-z-teorii/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
-    "static/media/fa-brands-400.ttf": "/zwolnieni-z-teorii/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
-    "static/media/fa-solid-900.woff2": "/zwolnieni-z-teorii/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
-    "static/media/fa-brands-400.woff2": "/zwolnieni-z-teorii/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
-    "static/media/fa-regular-400.ttf": "/zwolnieni-z-teorii/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
-    "static/media/LogoStrony.jpg": "/zwolnieni-z-teorii/static/media/LogoStrony.b03db216c0ffad72283f.jpg",
-    "static/media/fa-regular-400.woff2": "/zwolnieni-z-teorii/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-    "static/media/Studia.png": "/zwolnieni-z-teorii/static/media/Studia.3c4da9377c612e993ed0.png",
-    "static/media/Korepetycje.png": "/zwolnieni-z-teorii/static/media/Korepetycje.8d2756c27391ec4c7578.png",
-    "static/media/Arkusze.png": "/zwolnieni-z-teorii/static/media/Arkusze.0ac233c21e9f4dd815f8.png",
-    "static/media/fa-v4compatibility.ttf": "/zwolnieni-z-teorii/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
-    "static/media/fa-v4compatibility.woff2": "/zwolnieni-z-teorii/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
-    "index.html": "/zwolnieni-z-teorii/index.html",
-    "main.cdba475a.css.map": "/zwolnieni-z-teorii/static/css/main.cdba475a.css.map",
-    "main.319f586d.js.map": "/zwolnieni-z-teorii/static/js/main.319f586d.js.map",
-    "787.4abb971b.chunk.js.map": "/zwolnieni-z-teorii/static/js/787.4abb971b.chunk.js.map"
+    "main.css": "/matzone/static/css/main.f11e9a1b.css",
+    "main.js": "/matzone/static/js/main.c2050869.js",
+    "static/js/787.4abb971b.chunk.js": "/matzone/static/js/787.4abb971b.chunk.js",
+    "static/media/fa-solid-900.ttf": "/matzone/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/fa-brands-400.ttf": "/matzone/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/fa-solid-900.woff2": "/matzone/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "/matzone/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/fa-regular-400.ttf": "/matzone/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/LogoStrony.jpg": "/matzone/static/media/LogoStrony.b03db216c0ffad72283f.jpg",
+    "static/media/fa-regular-400.woff2": "/matzone/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/Studia.png": "/matzone/static/media/Studia.3c4da9377c612e993ed0.png",
+    "static/media/Korepetycje.png": "/matzone/static/media/Korepetycje.8d2756c27391ec4c7578.png",
+    "static/media/Arkusze.png": "/matzone/static/media/Arkusze.0ac233c21e9f4dd815f8.png",
+    "static/media/fa-v4compatibility.ttf": "/matzone/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/fa-v4compatibility.woff2": "/matzone/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/matzone/index.html",
+    "main.f11e9a1b.css.map": "/matzone/static/css/main.f11e9a1b.css.map",
+    "main.c2050869.js.map": "/matzone/static/js/main.c2050869.js.map",
+    "787.4abb971b.chunk.js.map": "/matzone/static/js/787.4abb971b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdba475a.css",
-    "static/js/main.319f586d.js"
+    "static/css/main.f11e9a1b.css",
+    "static/js/main.c2050869.js"
   ]
 }
