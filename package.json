@@ -1,7 +1,7 @@
 {
   "name": "zwolnieni-z-teorii",
   "version": "0.1.0",
-  "homepage": "https://derffus.github.io/zwolnieni-z-teorii",
+  "homepage": "https://derffus.github.io/matzone",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
