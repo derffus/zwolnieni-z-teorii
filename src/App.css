@@ -37,11 +37,12 @@
 #top-buttons {
   margin-left: 7%;
   height: 100%;
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
 }
 #top-buttons button {
   transition: background-color 0.3s;
@@ -71,7 +72,7 @@
 #home img {
   border-radius: 80px;
   display: block;
-  width: 10vh;
+  height: 10vh;
   aspect-ratio: 1/1;
 }
 #home button {
@@ -85,7 +86,7 @@
   border: none;
   background-color: var(--content);
   height: 100%;
-  width: 80%;
+  width: 100%;
 }
 #home button:hover {
   cursor: pointer;
@@ -203,99 +204,44 @@
   background-color: var(--purpleChosen) !important;
 }
 #content-picker {
-  z-index: 1;
-  color: inherit;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  position: fixed;
-  top: 10vh;
+  margin-top: 30px;
+  color: var(--color-font);
   width: 100%;
-  height: 50px;
-  background-color: var(--content);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  animation: show-content-picker 0.8s;
 }
-@keyframes show-content-picker {
-  from {
-    top: 5vh;
-  }
-  to {
-    top: 10vh;
-  }
+.content-picker-select:hover {
+  cursor: pointer;
+  background-color: var(--purpleClicked);
 }
-#content-picker button {
-  color: inherit;
+.content-picker-select {
+  align-self: center;
+  text-align: center;
   font-family: inherit;
-  background-color: var(--content);
-  border: 2px solid black;
+  font-size: 1em;
+  text-wrap: wrap;
+  color: var(--content);
+  background-color: var(--purple);
+  border: 2px solid var(--content);
   border-radius: 5px;
-  margin-left: 3%;
-  height: 50%;
-  width: fit-content;
-  transition: border 0.5s;
-}
-#content-picker button:hover {
-  border-color: var(--purple);
+  appearance: none;
+  width: 70%;
+  height: 7vh;
+  margin-top: 10px;
+  outline: none;
 }
 #dzial-select {
-  margin-left: 3%;
-  min-width: 10%;
-  height: 50%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-#dzial-select select {
-  font-family: inherit;
-  background-color: var(--content);
-  height: 100%;
-  border: 2px solid black;
-  border-radius: 5px;
-  appearance: none;
-  padding: 0 30px 0 15px;
-  min-width: fit-content;
-  width: 50%;
-  margin-left: 10px;
-  transition: all 0.5s;
-}
-#dzial-select select:hover {
-  border-color: var(--purple);
-}
-#dzial-select select:focus {
-  outline: none;
+  flex-direction: column;
 }
 #zrodlo-select {
-  margin-left: 3%;
-  width: 10%;
-  height: 50%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
 }
-#zrodlo-select select {
-  font-family: inherit;
-  margin-left: 3%;
-  height: 100%;
-  border: 2px solid black;
-  background-color: var(--content);
-  border-radius: 5px;
-  appearance: none;
-  padding: 0 30px 0 15px;
-  width: fit-content;
-  transition: all 0.5s;
-}
-#zrodlo-select select:hover {
-  border-color: var(--purple);
-}
-#zrodlo-select select:focus {
-  outline: none;
-}
-
 #content {
   overflow-x: hidden;
   color: var(--color-font);
@@ -534,33 +480,33 @@ iframe {
   position: relative;
   font-size: 0.8em;
 }
-#numerTelefonu:hover{
+#numerTelefonu:hover {
   cursor: pointer;
-  color:black;
+  color: black;
 }
-#numerTelefonu:hover::after{
+#numerTelefonu:hover::after {
   content: "skopiuj";
   position: absolute;
-  top:30%;
-  margin-left:3%;
-  font-size:0.5em;
-  color:var(--color-font);
+  top: 30%;
+  margin-left: 3%;
+  font-size: 0.5em;
+  color: var(--color-font);
 }
 #mail {
   position: relative;
   font-size: 0.8em;
 }
-#mail:hover{
+#mail:hover {
   cursor: pointer;
-  color:black;
+  color: black;
 }
-#mail:hover::after{
+#mail:hover::after {
   content: "skopiuj";
   position: absolute;
-  top:30%;
-  margin-left:3%;
-  font-size:0.5em;
-  color:var(--color-font);
+  top: 30%;
+  margin-left: 3%;
+  font-size: 0.5em;
+  color: var(--color-font);
 }
 @keyframes show-lokalizacja {
   from {
@@ -583,16 +529,39 @@ iframe {
   }
 }
 @media (max-width: 700px) {
-  #navbar-top{
+  #navbar-top {
     height: 6vh;
   }
-  #right-nav{
-    width:100%;
+  #top-buttons {
+    margin-left: 0;
+  }
+  #top-buttons button {
+    font-size: 1em;
+  }
+  #show-nav button {
+    width: fit-content;
+    font-size: 0.5em;
+  }
+  #right-nav {
+    margin-top: -4vh;
+    width: 100%;
+  }
+  #home button {
+    width: fit-content;
+  }
+  #home img {
+    height: 6vh;
+  }
+  #mat-zone {
+    font-size: 0.6em;
+  }
+  #mat-zone span {
+    margin: 0;
   }
   #content-picker {
     flex-direction: column;
     height: fit-content;
-    margin-top:-;
+    margin-top: -4vh;
   }
   #dzial-select {
     flex-direction: column;
@@ -608,10 +577,15 @@ iframe {
     height: 200px;
   }
   #welcome-home-page {
+    width: 100%;
     text-align: center;
-    font-size: 4em;
+    font-size: 2.5em;
+    margin: 0;
   }
   #welcome-home-page br {
+    margin: 0;
+  }
+  #welcome-home-page span {
     margin: 0;
   }
   #big-buttons button {

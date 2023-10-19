@@ -8,8 +8,8 @@ function HomePage(props) {
       <div id="big-buttons">
         <button
           onClick={() => {
-            props.updateState("homeClicked", false);
-            props.updateState("clicked", "");
+            props.updateState("home", false);
+            props.updateState("materialy", false);
             props.updateState("korepetycje", true);
             props.updateState("studia", false);
             props.updateState("arkusze", false);
@@ -19,8 +19,8 @@ function HomePage(props) {
         </button>
         <button
           onClick={() => {
-            props.updateState("homeClicked", false);
-            props.updateState("clicked", "");
+            props.updateState("home", false);
+            props.updateState("materialy", false);
             props.updateState("korepetycje", false);
             props.updateState("studia", true);
             props.updateState("arkusze", false);
@@ -30,8 +30,8 @@ function HomePage(props) {
         </button>
         <button
           onClick={() => {
-            props.updateState("homeClicked", false);
-            props.updateState("clicked", "");
+            props.updateState("home", false);
+            props.updateState("materialy", false);
             props.updateState("korepetycje", false);
             props.updateState("studia", false);
             props.updateState("arkusze", true);

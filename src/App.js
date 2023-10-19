@@ -14,7 +14,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      homeClicked: true,
+      home: true,
+      materialy: false,
+      korepetycje: false,
+      studia: false,
+      arkusze: false,
       showNavbar: false,
       selectedKlasa1: false,
       selectedKlasa2: false,
@@ -24,9 +28,6 @@ class App extends React.Component {
       dzial: "1",
       zrodlo: "youtube",
       shuffled: true,
-      korepetycje: false,
-      studia: false,
-      arkusze: false,
       lokalizacjaInput: "",
       lokalizacjaSubmit: "",
     };
@@ -93,34 +94,33 @@ class App extends React.Component {
         <NavBar
           updateState={this.updateState}
           showNavbar={this.state.showNavbar}
+          home={this.state.home}
         />
-        {this.state.showNavbar ? (
+        {this.state.showNavbar && !this.state.home ? (
           <RightNav
             updateState={this.updateState}
+            home={this.state.home}
+            materialy={this.state.materialy}
+            korepetycje={this.state.korepetycje}
+            studia={this.state.studia}
+            arkusze={this.state.arkusze}
             selectedKlasa1={this.state.selectedKlasa1}
             selectedKlasa2={this.state.selectedKlasa2}
             selectedKlasa3={this.state.selectedKlasa3}
             selectedKlasa4={this.state.selectedKlasa4}
-          />
-        ) : (
-          ""
-        )}
-        {this.state.clicked !== "" ? (
-          <ContentPicker
-            updateState={this.updateState}
             clicked={this.state.clicked}
           />
         ) : (
           ""
         )}
         <div id="content">
-          {this.state.homeClicked ? (
+          {this.state.home ? (
             <HomePage
               updateState={this.updateState}
               segmentOpened={this.segmentOpened}
               segmentClosed={this.segmentClosed}
             />
-          ) : this.state.clicked !== "" ? (
+          ) : this.state.materialy ? (
             <VideoPlayer
               updateState={this.updateState}
               segmentOpened={this.segmentOpened}

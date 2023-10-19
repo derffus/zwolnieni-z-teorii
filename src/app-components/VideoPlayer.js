@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 function VideoPlayer(props) {
   useEffect(() => {
-    props.segmentOpened("show-nav");
+    props.segmentOpened("materialy");
     return () => {
-      props.segmentClosed("show-nav");
+      props.segmentClosed("materialy");
     };
   });
   return (
