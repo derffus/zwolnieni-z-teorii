@@ -2,10 +2,37 @@ import React from "react";
 function ContentPicker(props) {
   return (
     <div id="content-picker">
-      <div id="dzial-select">
+      <div id="klasa-select" className="content-picker-section">
+        <div id="dzial">Klasa:</div>
+        <select
+          className="content-picker-select"
+          onChange={(event) => {
+            props.updateState("klasa", event.target.value);
+          }}
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div id="zakres-select" className="content-picker-section">
+        <div id="dzial">Zakres:</div>
+        <select
+          className="content-picker-select"
+          onChange={(event) => {
+            props.updateState("zakres", event.target.value);
+          }}
+        >
+          <option value="podstawa">Podstawa</option>
+          <option value="rozszerzenie">Rozszerzenie</option>
+        </select>
+      </div>
+      <div id="dzial-select" className="content-picker-section">
         <div id="dzial">Dział:</div>
         {props.clicked === "podstawa1" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -21,6 +48,7 @@ function ContentPicker(props) {
           </select>
         ) : props.clicked === "rozszerzenie1" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -29,13 +57,18 @@ function ContentPicker(props) {
             <option value="2">Wyrażenia algebraiczne</option>
             <option value="3">Funkcja i jej własności</option>
             <option value="4">Funkcja linowa</option>
-            <option value="5">Układy równań liniowych z dwiema niewiadomymi</option>
+            <option value="5">
+              Układy równań liniowych z dwiema niewiadomymi
+            </option>
             <option value="6">Podstawowe własności wybranych funkcji</option>
-            <option value="7">Geometria płaska - pojęcia wstępne. Trójkąty</option>
+            <option value="7">
+              Geometria płaska - pojęcia wstępne. Trójkąty
+            </option>
             <option value="8">Trygonometria kąta ostrego</option>
           </select>
         ) : props.clicked === "podstawa2" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -48,11 +81,14 @@ function ContentPicker(props) {
             <option value="4">Geometria płaska - okręgi i koła</option>
             <option value="5">Trygonometria</option>
             <option value="6">Geometria analityczna</option>
-            <option value="7">Geometria płaska - rozwiązywanie trójkątów</option>
+            <option value="7">
+              Geometria płaska - rozwiązywanie trójkątów
+            </option>
             <option value="8">Wielomiany</option>
           </select>
         ) : props.clicked === "rozszerzenie2" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -72,6 +108,7 @@ function ContentPicker(props) {
           </select>
         ) : props.clicked === "podstawa3" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -87,6 +124,7 @@ function ContentPicker(props) {
           </select>
         ) : props.clicked === "rozszerzenie3" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -102,6 +140,7 @@ function ContentPicker(props) {
           </select>
         ) : props.clicked === "podstawa4" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -117,6 +156,7 @@ function ContentPicker(props) {
           </select>
         ) : props.clicked === "rozszerzenie4" ? (
           <select
+            className="content-picker-select"
             onChange={(event) => {
               props.updateState("dzial", event.target.value);
             }}
@@ -132,16 +172,16 @@ function ContentPicker(props) {
           ""
         )}
       </div>
-      <div id="zrodlo-select">
+      <div id="zrodlo-select" className="content-picker-section">
         <div>Źródło:</div>
         <select
-          onChange={(event) => props.updateState( 'zrodlo', event.target.value )}
+          className="content-picker-select"
+          onChange={(event) => props.updateState("zrodlo", event.target.value)}
         >
           <option value="youtube">Youtube</option>
           <option value="artykul">Artykuł</option>
         </select>
       </div>
-      <button>Karta wzorów</button>
     </div>
   );
 }

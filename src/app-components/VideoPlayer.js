@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ContentPicker from "./ContentPicker";
 function VideoPlayer(props) {
   useEffect(() => {
     props.segmentOpened("materialy");
@@ -8,15 +9,7 @@ function VideoPlayer(props) {
   });
   return (
     <div className="filmy-i-artykuly">
-      {props.zrodlo === "youtube" ? (
-        <div id="shuffle-button">
-          <button onClick={props.shuffleFilmy}>
-            Wymieszaj
-            <br />
-            filmy
-          </button>
-        </div>
-      ) : null}
+      <ContentPicker updateState={props.updateState} clicked={props.clicked} />
       <div id="pokaz-klase">
         Klasa {props.clicked.match(/\d/)} poziom{" "}
         {/podstawa/.test(props.clicked)

@@ -204,43 +204,52 @@
   background-color: var(--purpleChosen) !important;
 }
 #content-picker {
-  margin-top: 30px;
+  position: fixed;
+  top:10vh;
+  left:0;
   color: var(--color-font);
+  border:1px solid black;
+  background-color: var(--content);
+  height:5vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-.content-picker-select:hover {
-  cursor: pointer;
-  background-color: var(--purpleClicked);
-}
 .content-picker-select {
-  align-self: center;
   text-align: center;
   font-family: inherit;
   font-size: 1em;
-  text-wrap: wrap;
-  color: var(--content);
-  background-color: var(--purple);
-  border: 2px solid var(--content);
+  color: var(--color-font);
+  background-color: var(--content);
+  border: 2px solid var(--purpleHovered);
   border-radius: 5px;
   appearance: none;
-  width: 70%;
-  height: 7vh;
-  margin-top: 10px;
+  width: fit-content;
   outline: none;
+  transition: border 0.5s;
 }
-#dzial-select{
-  width: 100%;
+.content-picker-section{
+  height: 100%;
+  margin-left: 4%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-#zrodlo-select {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.content-picker-select{
+  color:inherit;
+  margin-left: 5px;
+  padding:3px;
+}
+.content-picker-select option{
+  background-color: var(--purpleHovered);
+  color:inherit;
+}
+.content-picker-select:hover {
+  cursor: pointer;
+  border-color: var(--purple);
 }
 #content {
   overflow-x: hidden;

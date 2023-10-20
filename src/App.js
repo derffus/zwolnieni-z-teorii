@@ -25,6 +25,8 @@ class App extends React.Component {
       selectedKlasa3: false,
       selectedKlasa4: false,
       clicked: "",
+      klasa: "1",
+      zakres: "podstawa",
       dzial: "1",
       zrodlo: "youtube",
       shuffled: true,
@@ -32,7 +34,6 @@ class App extends React.Component {
       lokalizacjaSubmit: "",
     };
     this.updateState = this.updateState.bind(this);
-    this.shuffleFilmy = this.shuffleFilmy.bind(this);
   }
   updateState(prop, newValue) {
     this.setState({
@@ -57,12 +58,6 @@ class App extends React.Component {
       ];
     }
     return array;
-  }
-  shuffleFilmy() {
-    this.filmyYTLinki = this.shuffle(this.filmyYTLinki);
-    this.setState({
-      shuffled: true,
-    });
   }
   wypiszFilmy(filmy, clicked, dzial, zrodlo) {
     return filmy
@@ -128,8 +123,6 @@ class App extends React.Component {
               clicked={this.state.clicked}
               dzial={this.state.dzial}
               zrodlo={this.state.zrodlo}
-              shuffled={this.state.shuffled}
-              shuffleFilmy={this.shuffleFilmy}
               wypiszFilmy={this.wypiszFilmy}
               filmyYTLinki={this.filmyYTLinki}
             />
