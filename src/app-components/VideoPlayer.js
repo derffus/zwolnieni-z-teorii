@@ -16,6 +16,7 @@ function VideoPlayer(props) {
           props.klasa,
           props.zakres,
           props.dzial,
+          props.temat,
           props.zrodlo
         )}
       </div>
