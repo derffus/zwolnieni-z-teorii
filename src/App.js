@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import NavBar from "./app-components/NavBar";
 import RightNav from "./app-components/RightNav";
-import ContentPicker from "./app-components/ContentPicker";
 import HomePage from "./app-components/HomePage";
 import VideoPlayer from "./app-components/VideoPlayer";
 import Korepetycje from "./app-components/Korepetycje";
@@ -20,16 +19,12 @@ class App extends React.Component {
       studia: false,
       arkusze: false,
       showNavbar: false,
-      selectedKlasa1: false,
-      selectedKlasa2: false,
-      selectedKlasa3: false,
-      selectedKlasa4: false,
-      clicked: "",
+      darkMode: false,
       klasa: "1",
       zakres: "podstawa",
       dzial: "1",
+      temat: "",
       zrodlo: "youtube",
-      shuffled: true,
       lokalizacjaInput: "",
       lokalizacjaSubmit: "",
     };
@@ -59,11 +54,11 @@ class App extends React.Component {
     }
     return array;
   }
-  wypiszFilmy(filmy, clicked, dzial, zrodlo) {
+  wypiszFilmy(filmy, klasa, zakres, dzial, temat, zrodlo) {
     return filmy
       .filter(
         (x) =>
-          x[1].indexOf("film-" + clicked) !== -1 &&
+          x[1].indexOf("film-" + zakres + klasa) !== -1 &&
           x[3] === dzial &&
           x[4] === zrodlo
       )
@@ -91,19 +86,10 @@ class App extends React.Component {
           showNavbar={this.state.showNavbar}
           home={this.state.home}
         />
-        {this.state.showNavbar && !this.state.home ? (
+        {this.state.showNavbar ? (
           <RightNav
             updateState={this.updateState}
-            home={this.state.home}
-            materialy={this.state.materialy}
-            korepetycje={this.state.korepetycje}
-            studia={this.state.studia}
-            arkusze={this.state.arkusze}
-            selectedKlasa1={this.state.selectedKlasa1}
-            selectedKlasa2={this.state.selectedKlasa2}
-            selectedKlasa3={this.state.selectedKlasa3}
-            selectedKlasa4={this.state.selectedKlasa4}
-            clicked={this.state.clicked}
+            darkMode={this.state.darkMode}
           />
         ) : (
           ""
@@ -120,7 +106,8 @@ class App extends React.Component {
               updateState={this.updateState}
               segmentOpened={this.segmentOpened}
               segmentClosed={this.segmentClosed}
-              clicked={this.state.clicked}
+              klasa={this.state.klasa}
+              zakres={this.state.zakres}
               dzial={this.state.dzial}
               zrodlo={this.state.zrodlo}
               wypiszFilmy={this.wypiszFilmy}

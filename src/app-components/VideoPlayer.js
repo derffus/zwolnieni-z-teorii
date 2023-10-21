@@ -9,19 +9,12 @@ function VideoPlayer(props) {
   });
   return (
     <div className="filmy-i-artykuly">
-      <ContentPicker updateState={props.updateState} clicked={props.clicked} />
-      <div id="pokaz-klase">
-        Klasa {props.clicked.match(/\d/)} poziom{" "}
-        {/podstawa/.test(props.clicked)
-          ? "podstawowy"
-          : /rozszerzenie/.test(props.clicked)
-          ? "rozszerzony"
-          : ""}
-      </div>
+      <ContentPicker updateState={props.updateState} klasa={props.klasa} zakres={props.zakres}/>
       <div className="filmy">
         {props.wypiszFilmy(
           props.filmyYTLinki,
-          props.clicked,
+          props.klasa,
+          props.zakres,
           props.dzial,
           props.zrodlo
         )}

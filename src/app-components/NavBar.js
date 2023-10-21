@@ -7,7 +7,7 @@ function NavBar(props) {
           id="home-button"
           onClick={() => {
             props.updateState("home", true);
-            props.updateState("materialy",false);
+            props.updateState("materialy", false);
             props.updateState("korepetycje", false);
             props.updateState("studia", false);
             props.updateState("arkusze", false);
@@ -31,7 +31,8 @@ function NavBar(props) {
           onClick={() => {
             props.updateState("home", false);
             props.updateState("materialy", true);
-            props.updateState("clicked", "podstawa1");
+            props.updateState("klasa", "1");
+            props.updateState("zakres", "podstawa");
             props.updateState("korepetycje", false);
             props.updateState("studia", false);
             props.updateState("arkusze", false);
@@ -76,8 +77,8 @@ function NavBar(props) {
           Arkusze
         </button>
       </div>
-      
-        {!props.home ? (!props.showNavbar ? (
+
+      {!props.showNavbar ? (
         <div id="show-nav">
           <button
             onClick={() => {
@@ -86,9 +87,9 @@ function NavBar(props) {
           >
             <i className="fa fa-bars"></i>
           </button>
-          </div>
-        ) : (
-          <div id="show-nav">
+        </div>
+      ) : (
+        <div id="show-nav">
           <button
             onClick={() => {
               props.updateState("showNavbar", false);
@@ -96,8 +97,8 @@ function NavBar(props) {
           >
             <i className="fa fa-bars"></i>
           </button>
-          </div>
-        )):""}
+        </div>
+      )}
     </nav>
   );
 }

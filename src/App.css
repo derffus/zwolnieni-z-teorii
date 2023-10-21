@@ -5,12 +5,18 @@
   font-family: "Poppins", sans-serif;
   font-family: open sans;
   --purple: hsl(235, 26%, 62%);
-  --purpleChosen: hsl(235, 26%, 58%);
   --purpleHovered: hsl(235, 26%, 92%);
   --content: white;
   --purpleClicked: hsl(235, 26%, 68%);
-  --color-font: #24475a;
+  --color-font: hsl(201, 43%, 25%);
   background-color: var(--content);
+}
+.website-dark-mode {
+  --content: black;
+  --purple: hsl(235, 26%, 25%);
+  --purpleClicked: hsl(235, 26%, 38%);
+  --purpleHovered: hsl(235, 26%, 12%);
+  --color-font: hsl(201, 43%, 30%);
 }
 .website {
   font-size: 1em;
@@ -21,7 +27,9 @@
   width: 100%;
   position: absolute;
   right: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 #navbar-top {
   background-color: inherit;
   width: 100%;
@@ -45,7 +53,7 @@
   flex-wrap: wrap;
 }
 #top-buttons button {
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   color: var(--color-font);
   font-size: 1.5em;
   font-family: inherit;
@@ -76,7 +84,7 @@
   aspect-ratio: 1/1;
 }
 #home button {
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -104,7 +112,7 @@
   margin-right: 6px;
 }
 #show-nav {
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   justify-self: flex-end;
   height: 100%;
   aspect-ratio: 1/1;
@@ -126,6 +134,7 @@
   font-size: 4em;
 }
 #right-nav {
+  color: var(--color-font);
   overflow: auto;
   position: fixed;
   opacity: 95%;
@@ -137,6 +146,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   animation: show-from-right 0.4s;
   z-index: 2;
 }
@@ -144,73 +154,36 @@
   from {
     margin-right: -300px;
   }
-  to {
-    margin-right: 0;
-  }
 }
-#klasa-picker {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.klasa {
-  border-radius: 5px;
+#zmien-motyw {
   font-family: inherit;
-  align-self: center;
-  font-size: 1.6em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: var(--purple);
-  border: 2px solid var(--content);
-  height: min(10vh, fit-content);
-  width: 70%;
-  margin-top: 10px;
+  color: inherit;
+  height: 5%;
+  width: 65%;
+  margin-top: 5px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  border: 3px solid var(--purple);
+  font-size: 1.5em;
 }
-.klasa-name:hover {
-  background-color: var(--purpleClicked);
+#zmien-motyw:hover {
   cursor: pointer;
 }
-.klasa div {
-  text-align: center;
-  padding: 10px;
-  width: calc(100% - 20px);
-}
-.klasa-div {
-  display: flex;
-  flex-direction: column;
-}
-.podstawa-i-rozszerzenie {
-  width: 100% !important;
-  margin-left: -10px;
-  margin-right: -10px;
-  padding: 5px 10px 5px 10px !important;
-  font-size: 0.8em !important;
-}
-.podstawa {
-  margin-top: -10px;
-}
-.rozszerzenie {
-  margin-bottom: -10px;
-}
-.podstawa-i-rozszerzenie:hover {
+.zmien-na-ciemny {
   background-color: var(--purpleClicked);
-  cursor: pointer;
 }
-.this-is-chosen {
-  background-color: var(--purpleChosen) !important;
+.zmien-na-jasny {
+  background-color: var(--purpleHovered);
 }
 #content-picker {
   position: fixed;
-  top:10vh;
-  left:0;
+  top: 10vh;
+  left: 0;
   color: var(--color-font);
-  border:1px solid black;
+  border: 1px solid black;
   background-color: var(--content);
-  height:5vh;
+  transition: background-color 0.3s, color 0.3s;
+  height: 7vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -228,30 +201,30 @@
   appearance: none;
   width: fit-content;
   outline: none;
-  transition: border 0.5s;
+  transition: border 0.3s,background-color 0.3s, color 0.3s;
 }
-.content-picker-section{
+.content-picker-section {
   height: 100%;
   margin-left: 4%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
-.content-picker-select{
-  color:inherit;
+.content-picker-select {
+  color: inherit;
   margin-left: 5px;
-  padding:3px;
+  padding: 3px;
 }
-.content-picker-select option{
+.content-picker-select option {
   background-color: var(--purpleHovered);
-  color:inherit;
+  color: inherit;
 }
 .content-picker-select:hover {
   cursor: pointer;
   border-color: var(--purple);
 }
 #content {
+  transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
   color: var(--color-font);
   font-family: inherit;
@@ -276,7 +249,7 @@
 }
 #welcome-home-page {
   color: var(--color-font);
-  animation: show-welcome-page 1s;
+  animation: show-welcome-page 0.8s;
   align-self: flex-start;
   margin-left: 10vw;
   font-size: 5.5em;
@@ -306,7 +279,7 @@
   font-size: 1.4em;
   background-color: var(--content);
   border-radius: 100%;
-  border: 3px solid black;
+  border: 3px solid var(--purpleHovered);
   height: 31vh;
   aspect-ratio: 1/1;
   display: flex;
@@ -329,31 +302,6 @@
   margin-top: 75px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-#shuffle-button {
-  position: fixed;
-  left: 5%;
-  top: 20vh;
-}
-#shuffle-button button {
-  font-size: 1.5em;
-  height: 90px;
-  aspect-ratio: 3/2;
-  color: inherit;
-  font-family: inherit;
-  background-color: var(--content);
-  border: 2px solid black;
-  border-radius: 5px;
-}
-#shuffle-button button:hover {
-  cursor: pointer;
-  background-color: var(--purpleHovered);
-}
-#pokaz-klase {
-  align-self: center;
-  font-size: 3.2em;
-  font-weight: 600;
 }
 iframe {
   width: 400px;
@@ -368,23 +316,23 @@ iframe {
   column-gap: 55px;
 }
 #korepetycje-segment {
-  width: 100%;
-  position: relative;
-  margin-left: 70px;
-  margin-right: 70px;
+  overflow-x: hidden;
+  width: 70vw;
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 }
 #wpisz-lokalizacje {
   position: fixed;
-  animation: show-lokalizacja 1s;
+  animation: show-lokalizacja 0.8s;
   justify-self: center;
   grid-area: lokalizacja;
   padding-left: 5px;
-  border: 2px solid black;
+  border: 2px solid var(--color-font);
   border-radius: 5px;
-  box-shadow: 10px 10px 1px var(--purpleHovered);
+  box-shadow: 10px 10px 1px 0 var(--color-font);
   font-size: 2em;
   height: 10vh;
   width: 30vw;
@@ -405,6 +353,8 @@ iframe {
   font-size: inherit;
   color: inherit;
   box-sizing: border-box;
+  background-color: var(--content);
+  transition: background-color 0.3s, color 0.3s;
   height: 100%;
   width: 75%;
   border: none;
@@ -424,6 +374,7 @@ iframe {
   background-color: var(--content);
   height: 100%;
   aspect-ratio: 1/1;
+  transition: background-color 0.3s, color 0.3s;
 }
 #wpisz-lokalizacje form button:hover {
   cursor: pointer;
@@ -437,7 +388,7 @@ iframe {
   position: fixed;
   top: 40vh;
   left: 70px;
-  animation: show-welcome-korepetycje 1s;
+  animation: show-welcome-korepetycje 0.8s;
   text-align: center;
   grid-area: welcome;
   font-size: 4em;
@@ -454,11 +405,11 @@ iframe {
 }
 #korepetytorzy {
   height: fit-content;
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: korepetytorzy 1s;
+  animation: korepetytorzy 0.8s;
 }
 @keyframes korepetytorzy {
   from {
@@ -467,13 +418,14 @@ iframe {
 }
 #korepetytor-div {
   padding: 20px;
+  box-sizing: border-box;
   font-size: 2.5em;
   border-left: 3px solid var(--color-font);
   border-right: 3px solid var(--color-font);
-  width: 100%;
+  width: 50%;
   min-width: fit-content;
-  height: 25vh;
-  margin-bottom: 20%;
+  height: fit-content;
+  margin-bottom: 10%;
 }
 #korepetytor-div input {
   position: absolute;
@@ -597,9 +549,14 @@ iframe {
   #welcome-home-page span {
     margin: 0;
   }
+  #big-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+  }
   #big-buttons button {
-    align-self: center;
-    height: 28vw;
+    height: 40vw;
     aspect-ratio: 1/1;
   }
   #big-buttons button:hover {

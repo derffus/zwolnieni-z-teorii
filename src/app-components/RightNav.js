@@ -1,20 +1,37 @@
-import React from "react";
-import MaterialyRightNav from "./RightNavFolder/MaterialyRightNav";
+import React, { useEffect } from "react";
+import $ from "jquery";
 function RightNav(props) {
+  useEffect(() => {
+    if(props.darkMode){
+      $(".website").addClass("website-dark-mode");
+    }
+    else{
+      $(".website").removeClass("website-dark-mode");
+    }
+  });
   return (
     <nav id="right-nav">
-      {props.home ? (
-        <div>Home</div>
-      ) : props.materialy ? (
-        <MaterialyRightNav
-          updateState={props.updateState}
-          clicked={props.clicked}
-          selectedKlasa1={props.selectedKlasa1}
-          selectedKlasa2={props.selectedKlasa2}
-          selectedKlasa3={props.selectedKlasa3}
-          selectedKlasa4={props.selectedKlasa4}
-        />
-      ) : null}
+      {!props.darkMode ? (
+        <button
+          id="zmien-motyw"
+          className="zmien-na-ciemny"
+          onClick={() => {
+            props.updateState("darkMode", true);
+          }}
+        >
+          Ciemny motyw
+        </button>
+      ) : (
+        <button
+          id="zmien-motyw"
+          className="zmien-na-jasny"
+          onClick={() => {
+            props.updateState("darkMode", false);
+          }}
+        >
+          Jasny motyw
+        </button>
+      )}
     </nav>
   );
 }

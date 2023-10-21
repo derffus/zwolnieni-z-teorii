@@ -3,7 +3,7 @@ function ContentPicker(props) {
   return (
     <div id="content-picker">
       <div id="klasa-select" className="content-picker-section">
-        <div id="dzial">Klasa:</div>
+        <div id="klasa">Klasa:</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
@@ -17,7 +17,7 @@ function ContentPicker(props) {
         </select>
       </div>
       <div id="zakres-select" className="content-picker-section">
-        <div id="dzial">Zakres:</div>
+        <div id="zakres">Zakres:</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
@@ -28,9 +28,21 @@ function ContentPicker(props) {
           <option value="rozszerzenie">Rozszerzenie</option>
         </select>
       </div>
+      <div id="temat-select" className="content-picker-section">
+        <div id="temat">Temat:</div>
+        <select
+          className="content-picker-select"
+          onChange={(event) => {
+            props.updateState("temat", event.target.value);
+          }}
+        >
+          <option value="jakistemat">jakistemat</option>
+          <option value="innytemat">innytemat</option>
+        </select>
+      </div>
       <div id="dzial-select" className="content-picker-section">
         <div id="dzial">Dział:</div>
-        {props.clicked === "podstawa1" ? (
+        {props.klasa === "1" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -46,7 +58,7 @@ function ContentPicker(props) {
             <option value="7">VII</option>
             <option value="8">VIII</option>
           </select>
-        ) : props.clicked === "rozszerzenie1" ? (
+        ) : props.klasa === "1" && props.zakres === "rozszerzenie" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -66,7 +78,7 @@ function ContentPicker(props) {
             </option>
             <option value="8">Trygonometria kąta ostrego</option>
           </select>
-        ) : props.clicked === "podstawa2" ? (
+        ) : props.klasa === "2" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -86,7 +98,7 @@ function ContentPicker(props) {
             </option>
             <option value="8">Wielomiany</option>
           </select>
-        ) : props.clicked === "rozszerzenie2" ? (
+        ) : props.klasa === "2" && props.zakres === "rozszerzenie" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -106,7 +118,7 @@ function ContentPicker(props) {
             </option>
             <option value="8">Wielomiany</option>
           </select>
-        ) : props.clicked === "podstawa3" ? (
+        ) : props.klasa === "3" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -122,7 +134,7 @@ function ContentPicker(props) {
             <option value="7">VII</option>
             <option value="8">VIII</option>
           </select>
-        ) : props.clicked === "rozszerzenie3" ? (
+        ) : props.klasa === "3" && props.zakres === "rozszerzenie" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -138,7 +150,7 @@ function ContentPicker(props) {
             <option value="7">Trygonometria</option>
             <option value="8">Geometria analityczna</option>
           </select>
-        ) : props.clicked === "podstawa4" ? (
+        ) : props.klasa === "4" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -154,7 +166,7 @@ function ContentPicker(props) {
             <option value="7">VII</option>
             <option value="8">VIII</option>
           </select>
-        ) : props.clicked === "rozszerzenie4" ? (
+        ) : props.klasa === "4" && props.zakres === "rozszerzenie" ? (
           <select
             className="content-picker-select"
             onChange={(event) => {
@@ -173,7 +185,7 @@ function ContentPicker(props) {
         )}
       </div>
       <div id="zrodlo-select" className="content-picker-section">
-        <div>Źródło:</div>
+        <div id="zrodlo">Źródło:</div>
         <select
           className="content-picker-select"
           onChange={(event) => props.updateState("zrodlo", event.target.value)}

@@ -9,6 +9,17 @@ function HomePage(props) {
         <button
           onClick={() => {
             props.updateState("home", false);
+            props.updateState("materialy", true);
+            props.updateState("korepetycje", false);
+            props.updateState("studia", false);
+            props.updateState("arkusze", false);
+          }}
+        >
+          <img src={require("../images/Materialy.png")} alt="korepetycje" />
+        </button>
+        <button
+          onClick={() => {
+            props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", true);
             props.updateState("studia", false);
