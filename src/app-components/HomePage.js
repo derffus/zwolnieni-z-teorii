@@ -7,6 +7,7 @@ function HomePage(props) {
       </div>
       <div id="big-buttons">
         <button
+          data-content="Materiały"
           onClick={() => {
             props.updateState("home", false);
             props.updateState("materialy", true);
@@ -18,6 +19,7 @@ function HomePage(props) {
           <img src={require("../images/Materialy.png")} alt="korepetycje" />
         </button>
         <button
+          data-content="Korepetycje"
           onClick={() => {
             props.updateState("home", false);
             props.updateState("materialy", false);
@@ -29,6 +31,7 @@ function HomePage(props) {
           <img src={require("../images/Korepetycje.png")} alt="korepetycje" />
         </button>
         <button
+          data-content="Studia"
           onClick={() => {
             props.updateState("home", false);
             props.updateState("materialy", false);
@@ -40,6 +43,7 @@ function HomePage(props) {
           <img src={require("../images/Studia.png")} alt="studia" />
         </button>
         <button
+          data-content="Arkusze"
           onClick={() => {
             props.updateState("home", false);
             props.updateState("materialy", false);

@@ -155,25 +155,50 @@
     margin-right: -300px;
   }
 }
-#zmien-motyw {
-  font-family: inherit;
-  color: inherit;
-  height: 5%;
-  width: 65%;
+#zmien-motyw-div {
+  width: 35%;
+  height: 50px;
   margin-top: 5px;
   border-radius: 50px;
-  box-sizing: border-box;
-  border: 3px solid var(--purple);
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.zmien-motyw {
+  position: absolute;
+  height: 47px;
+  margin-left: 3px;
+  aspect-ratio: 1/1;
+
+  border-radius: 50px;
+  border: none;
   font-size: 1.5em;
 }
-#zmien-motyw:hover {
-  cursor: pointer;
-}
-.zmien-na-ciemny {
+.jasny-motyw {
   background-color: var(--purpleClicked);
+  animation: slide-jasny 0.4s;
+  left: 32.5%;
 }
-.zmien-na-jasny {
+@keyframes slide-jasny {
+  from {
+    background-color: hsl(235, 26%, 12%);
+    left: calc(67.5% - 53px);
+  }
+}
+.ciemny-motyw {
   background-color: var(--purpleHovered);
+  animation: slide-ciemny 0.4s;
+  left: calc(67.5% - 53px);
+}
+@keyframes slide-ciemny {
+  from {
+    background-color: hsl(235, 26%, 68%);
+    left: 32.5%;
+  }
+}
+.zmien-motyw:hover {
+  cursor: pointer;
 }
 #content-picker {
   position: fixed;
@@ -294,7 +319,7 @@
   transition: all 0.5s;
 }
 #big-buttons button:hover::after {
-  content: "Korepetycje";
+  content: attr(data-content);
   font-size: 1.5em;
   color: var(--purple);
   z-index: -1;
@@ -582,7 +607,7 @@ iframe {
   #big-buttons button::after {
     z-index: 1;
     color: var(--purple);
-    content: "Korepetycje";
+    content: attr(data-content);
     position: absolute;
     margin-top: 24vh;
   }
