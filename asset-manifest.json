@@ -1,28 +1,34 @@
 {
   "files": {
-    "main.css": "/matzone/static/css/main.d8e3f217.css",
-    "main.js": "/matzone/static/js/main.32a29d42.js",
+    "main.css": "/matzone/static/css/main.eed12669.css",
+    "main.js": "/matzone/static/js/main.f39c82eb.js",
     "static/js/787.4abb971b.chunk.js": "/matzone/static/js/787.4abb971b.chunk.js",
     "static/media/fa-solid-900.ttf": "/matzone/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/SzkolaGlownaHandlowaWWarszawie.png": "/matzone/static/media/SzkolaGlownaHandlowaWWarszawie.31dad5635871597e1608.png",
     "static/media/fa-brands-400.ttf": "/matzone/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/matzone/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/fa-brands-400.woff2": "/matzone/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/LogoStronyDarkMode.png": "/matzone/static/media/LogoStronyDarkMode.aebb3a1e0b6d2e410ead.png",
     "static/media/fa-regular-400.ttf": "/matzone/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/LogoStrony.jpg": "/matzone/static/media/LogoStrony.b03db216c0ffad72283f.jpg",
+    "static/media/ArkuszeDarkMode.png": "/matzone/static/media/ArkuszeDarkMode.fa11aa1d4fbb8d30ee8c.png",
+    "static/media/Arkusze.png": "/matzone/static/media/Arkusze.9f030c82c5df6f7ccc97.png",
     "static/media/fa-regular-400.woff2": "/matzone/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-    "static/media/Korepetycje.png": "/matzone/static/media/Korepetycje.9f40193af2163f75efa3.png",
-    "static/media/Studia.png": "/matzone/static/media/Studia.3c4da9377c612e993ed0.png",
-    "static/media/Materialy.png": "/matzone/static/media/Materialy.8d2756c27391ec4c7578.png",
-    "static/media/Arkusze.png": "/matzone/static/media/Arkusze.0ac233c21e9f4dd815f8.png",
+    "static/media/KorepetycjeDarkMode.png": "/matzone/static/media/KorepetycjeDarkMode.9f9ae04660384519d052.png",
+    "static/media/Korepetycje.png": "/matzone/static/media/Korepetycje.d2f74fbf0a034c68e70e.png",
+    "static/media/MaterialyDarkMode.png": "/matzone/static/media/MaterialyDarkMode.a05a6420d87015c0ac4b.png",
+    "static/media/Materialy.png": "/matzone/static/media/Materialy.3496df8597843d131883.png",
+    "static/media/StudiaDarkMode.png": "/matzone/static/media/StudiaDarkMode.8916d0236898e26b6ab8.png",
+    "static/media/Studia.png": "/matzone/static/media/Studia.39dfe24d122176d0a0f4.png",
     "static/media/fa-v4compatibility.ttf": "/matzone/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/matzone/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/matzone/index.html",
-    "main.d8e3f217.css.map": "/matzone/static/css/main.d8e3f217.css.map",
-    "main.32a29d42.js.map": "/matzone/static/js/main.32a29d42.js.map",
+    "main.eed12669.css.map": "/matzone/static/css/main.eed12669.css.map",
+    "main.f39c82eb.js.map": "/matzone/static/js/main.f39c82eb.js.map",
     "787.4abb971b.chunk.js.map": "/matzone/static/js/787.4abb971b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8e3f217.css",
-    "static/js/main.32a29d42.js"
+    "static/css/main.eed12669.css",
+    "static/js/main.f39c82eb.js"
   ]
 }
