@@ -9,7 +9,7 @@ function VideoPlayer(props) {
   });
   return (
     <div className="filmy-i-artykuly">
-      <ContentPicker updateState={props.updateState} klasa={props.klasa} zakres={props.zakres}/>
+      <ContentPicker updateState={props.updateState} klasa={props.klasa} zakres={props.zakres} temat={props.temat}/>
       <div className="filmy">
         {props.wypiszFilmy(
           props.filmyYTLinki,

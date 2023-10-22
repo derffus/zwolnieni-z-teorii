@@ -16,7 +16,7 @@ function NavBar(props) {
           {" "}
           <div>
             <img
-              src={require("../images/LogoStrony.jpg")}
+              src={!props.darkMode?require("../images/LogoStrony.jpg"):require("../images/LogoStronyDarkMode.png")}
               alt="Strona główna"
             />
           </div>

@@ -16,7 +16,7 @@ function HomePage(props) {
             props.updateState("arkusze", false);
           }}
         >
-          <img src={require("../images/Materialy.png")} alt="korepetycje" />
+          <img src={!props.darkMode?require("../images/Materialy.png"):require("../images/MaterialyDarkMode.png")} alt="korepetycje" />
         </button>
         <button
           data-content="Korepetycje"
@@ -28,7 +28,7 @@ function HomePage(props) {
             props.updateState("arkusze", false);
           }}
         >
-          <img src={require("../images/Korepetycje.png")} alt="korepetycje" />
+          <img src={!props.darkMode?require("../images/Korepetycje.png"):require("../images/KorepetycjeDarkMode.png")} alt="korepetycje" />
         </button>
         <button
           data-content="Studia"
@@ -40,7 +40,7 @@ function HomePage(props) {
             props.updateState("arkusze", false);
           }}
         >
-          <img src={require("../images/Studia.png")} alt="studia" />
+          <img src={!props.darkMode?require("../images/Studia.png"):require("../images/StudiaDarkMode.png")} alt="studia" />
         </button>
         <button
           data-content="Arkusze"
@@ -52,7 +52,7 @@ function HomePage(props) {
             props.updateState("arkusze", true);
           }}
         >
-          <img src={require("../images/Arkusze.png")} alt="arkusze" />
+          <img src={!props.darkMode?require("../images/Arkusze.png"):require("../images/ArkuszeDarkMode.png")} alt="arkusze" />
         </button>
       </div>
     </div>

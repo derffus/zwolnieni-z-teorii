@@ -84,6 +84,7 @@ class App extends React.Component {
         <NavBar
           updateState={this.updateState}
           showNavbar={this.state.showNavbar}
+          darkMode={this.state.darkMode}
           home={this.state.home}
         />
         {this.state.showNavbar ? (
@@ -98,6 +99,7 @@ class App extends React.Component {
           {this.state.home ? (
             <HomePage
               updateState={this.updateState}
+              darkMode={this.state.darkMode}
               segmentOpened={this.segmentOpened}
               segmentClosed={this.segmentClosed}
             />
@@ -109,6 +111,7 @@ class App extends React.Component {
               klasa={this.state.klasa}
               zakres={this.state.zakres}
               dzial={this.state.dzial}
+              temat={this.state.temat}
               zrodlo={this.state.zrodlo}
               wypiszFilmy={this.wypiszFilmy}
               filmyYTLinki={this.filmyYTLinki}
