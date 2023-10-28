@@ -11,7 +11,7 @@ function NavBar(props) {
         <button
           id="home-button"
           onClick={() => {
-            navigate("/");
+            navigate("/matzone");
             props.updateState("home", true);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);
@@ -38,7 +38,7 @@ function NavBar(props) {
         <button
           id="materialy"
           onClick={() => {
-            navigate("/materialy");
+            navigate("/matzone/materialy");
             props.updateState("home", false);
             props.updateState("materialy", true);
             props.updateState("klasa", "1");
@@ -54,7 +54,7 @@ function NavBar(props) {
         <button
           id="korepetycje"
           onClick={() => {
-            navigate("/korepetycje");
+            navigate("/matzone/korepetycje");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", true);
@@ -68,7 +68,7 @@ function NavBar(props) {
         <button
           id="studia"
           onClick={() => {
-            navigate("/studia");
+            navigate("/matzone/studia");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);
@@ -82,7 +82,7 @@ function NavBar(props) {
         <button
           id="arkusze"
           onClick={() => {
-            navigate("/arkusze");
+            navigate("/matzone/arkusze");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);

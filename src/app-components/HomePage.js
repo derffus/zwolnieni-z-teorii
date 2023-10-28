@@ -14,12 +14,12 @@ function HomePage(props) {
         <button
           data-content="Materiały"
           onClick={() => {
-            navigate("/materialy");
+            navigate("/matzone/materialy");
           }}
         >
           <img
             src={
-              motyw == "light"
+              motyw === "light"
                 ? require("../images/Materialy.png")
                 : require("../images/MaterialyDarkMode.png")
             }
@@ -30,12 +30,12 @@ function HomePage(props) {
         <button
           data-content="Korepetycje"
           onClick={() => {
-            navigate("/korepetycje");
+            navigate("/matzone/korepetycje");
           }}
         >
           <img
             src={
-              motyw == "light"
+              motyw === "light"
                 ? require("../images/Korepetycje.png")
                 : require("../images/KorepetycjeDarkMode.png")
             }
@@ -46,12 +46,12 @@ function HomePage(props) {
         <button
           data-content="Studia"
           onClick={() => {
-            navigate("/studia");
+            navigate("/matzone/studia");
           }}
         >
           <img
             src={
-              motyw == "light"
+              motyw === "light"
                 ? require("../images/Studia.png")
                 : require("../images/StudiaDarkMode.png")
             }
@@ -62,12 +62,12 @@ function HomePage(props) {
         <button
           data-content="Arkusze"
           onClick={() => {
-            navigate("/arkusze");
+            navigate("/matzone/arkusze");
           }}
         >
           <img
             src={
-              motyw == "light"
+              motyw === "light"
                 ? require("../images/Arkusze.png")
                 : require("../images/ArkuszeDarkMode.png")
             }

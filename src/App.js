@@ -106,9 +106,12 @@ function App() {
       {showNavbar ? <RightNav updateState={updateState} /> : ""}
       <div id="content">
         <Routes>
-          <Route path="/" element={<HomePage updateState={updateState} />} />
           <Route
-            path="materialy"
+            path="matzone"
+            element={<HomePage updateState={updateState} />}
+          />
+          <Route
+            path="matzone/materialy"
             element={
               <VideoPlayer
                 updateState={updateState}
@@ -123,7 +126,7 @@ function App() {
             }
           />
           <Route
-            path="korepetycje"
+            path="matzone/korepetycje"
             element={
               <Korepetycje
                 updateState={updateState}
@@ -132,9 +135,12 @@ function App() {
               />
             }
           />
-          <Route path="studia" element={<Studia updateState={updateState} />} />
           <Route
-            path="arkusze"
+            path="matzone/studia"
+            element={<Studia updateState={updateState} />}
+          />
+          <Route
+            path="matzone/arkusze"
             element={<Arkusze updateState={updateState} />}
           />
         </Routes>
