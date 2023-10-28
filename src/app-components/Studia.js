@@ -1,4 +1,4 @@
-import "../component-styles/Studia.css";
+import "../component-styles/Studia.scss";
 import React, { useEffect } from "react";
 function Studia(props) {
   useEffect(() => {
