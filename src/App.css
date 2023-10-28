@@ -1,20 +1,6 @@
 :root {
   font-family: "Open Sans", sans-serif;
-  --purple: hsl(235, 26%, 62%);
-  --purpleHovered: hsl(235, 26%, 87%);
-  --content: white;
-  --purpleClicked: hsl(235, 26%, 68%);
-  --blue: hsl(201, 43%, 25%);
-  --color-font: hsl(201, 43%, 25%);
   background-color: var(--content);
-}
-.website-dark-mode {
-  --content: hsl(235, 26%, 3%);
-  --purple: hsl(235, 26%, 40%);
-  --purpleClicked: hsl(235, 26%, 38%);
-  --purpleHovered: hsl(235, 26%, 12%);
-  --blue: hsl(201, 43%, 45%);
-  --color-font: #8c8c8c;
 }
 .website {
   font-size: 1em;
@@ -163,36 +149,11 @@
   align-items: center;
 }
 .zmien-motyw {
-  position: absolute;
-  height: 47px;
-  margin-left: 3px;
-  aspect-ratio: 1/1;
-
+  height: 100%;
+  width: 100%;
   border-radius: 50px;
   border: none;
   font-size: 1.5em;
-}
-.jasny-motyw {
-  background-color: var(--purpleClicked);
-  animation: slide-jasny 0.4s;
-  left: 32.5%;
-}
-@keyframes slide-jasny {
-  from {
-    background-color: hsl(235, 26%, 12%);
-    left: calc(67.5% - 53px);
-  }
-}
-.ciemny-motyw {
-  background-color: var(--purpleHovered);
-  animation: slide-ciemny 0.4s;
-  left: calc(67.5% - 53px);
-}
-@keyframes slide-ciemny {
-  from {
-    background-color: hsl(235, 26%, 68%);
-    left: 32.5%;
-  }
 }
 .zmien-motyw:hover {
   cursor: pointer;

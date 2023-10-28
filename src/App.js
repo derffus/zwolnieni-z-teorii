@@ -1,6 +1,9 @@
-import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { atom, useAtom } from "jotai";
+
+import "./App.css";
+import colors from "./colors";
 import NavBar from "./app-components/NavBar";
 import RightNav from "./app-components/RightNav";
 import HomePage from "./app-components/HomePage";
@@ -9,41 +12,50 @@ import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze";
 import filmyYtLinki from "./filmyYTLinki";
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showNavbar: false,
-      darkMode: false,
-      klasa: "1",
-      zakres: "podstawa",
-      dzial: "1",
-      temat: "",
-      zrodlo: "youtube",
-      lokalizacjaInput: "",
-      lokalizacjaSubmit: "",
-    };
-    this.updateState = this.updateState.bind(this);
-  }
-  updateState(prop, newValue) {
-    this.setState({
-      [prop]: newValue,
-    });
-  }
-  shuffle(array) {
-    let currentIndex = array.length,
-      randomIndex;
-    while (currentIndex > 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
+
+export const motywStrony = atom("light");
+function App() {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [klasa, setKlasa] = useState("1");
+  const [zakres, setZakres] = useState("podstawa");
+  const [dzial, setDzial] = useState("1");
+  const [temat, setTemat] = useState("");
+  const [zrodlo, setZrodlo] = useState("youtube");
+  const [lokalizacjaInput, setLokalizacjaInput] = useState("");
+  const [lokalizacjaSubmit, setLokalizacjaSubmit] = useState("");
+
+  const [motyw] = useAtom(motywStrony);
+  function updateState(prop, value) {
+    switch (prop) {
+      case "showNavbar":
+        setShowNavbar(value);
+        break;
+      case "klasa":
+        setKlasa(value);
+        break;
+      case "zakres":
+        setZakres(value);
+        break;
+      case "dzial":
+        setDzial(value);
+        break;
+      case "temat":
+        setTemat(value);
+        break;
+      case "zrodlo":
+        setZrodlo(value);
+        break;
+      case "lokalizacjaInput":
+        setLokalizacjaInput(value);
+        break;
+      case "lokalizacjaSubmit":
+        setLokalizacjaSubmit(value);
+        break;
+      default:
+        break;
     }
-    return array;
   }
-  wypiszFilmy(filmy, klasa, zakres, dzial, temat, zrodlo) {
+  function wypiszFilmy(filmy, klasa, zakres, dzial, temat, zrodlo) {
     return filmy
       .filter(
         (x) =>
@@ -63,83 +75,72 @@ class App extends React.Component {
         ></iframe>
       ));
   }
-  componentDidMount() {
-    this.filmyYTLinki = this.shuffle(this.filmyYTLinki);
-  }
-  filmyYTLinki = filmyYtLinki;
-  render() {
-    return (
-      <div className="website">
-        <NavBar
-          updateState={this.updateState}
-          showNavbar={this.state.showNavbar}
-          darkMode={this.state.darkMode}
-        />
-        {this.state.showNavbar ? (
-          <RightNav
-            updateState={this.updateState}
-            darkMode={this.state.darkMode}
+  let filmyYTLinki = filmyYtLinki;
+  return (
+    <div
+      className="website"
+      style={{
+        "--purple":
+          motyw === "light" ? colors.lightMode.purple : colors.darkMode.purple,
+        "--purpleHovered":
+          motyw === "light"
+            ? colors.lightMode.purpleHovered
+            : colors.darkMode.purpleHovered,
+        "--content":
+          motyw === "light"
+            ? colors.lightMode.content
+            : colors.darkMode.content,
+        " --purpleClicked":
+          motyw === "light"
+            ? colors.lightMode.purpleClicked
+            : colors.darkMode.purpleClicked,
+        "--blue":
+          motyw === "light" ? colors.lightMode.blue : colors.darkMode.blue,
+        "--colorFont":
+          motyw === "light"
+            ? colors.lightMode.colorFont
+            : colors.darkMode.colorFont,
+      }}
+    >
+      <NavBar showNavbar={showNavbar} updateState={updateState} />
+      {showNavbar ? <RightNav updateState={updateState} /> : ""}
+      <div id="content">
+        <Routes>
+          <Route path="/" element={<HomePage updateState={updateState} />} />
+          <Route
+            path="materialy"
+            element={
+              <VideoPlayer
+                updateState={updateState}
+                klasa={klasa}
+                zakres={zakres}
+                dzial={dzial}
+                temat={temat}
+                zrodlo={zrodlo}
+                wypiszFilmy={wypiszFilmy}
+                filmyYTLinki={filmyYTLinki}
+              />
+            }
           />
-        ) : (
-          ""
-        )}
-        <div id="content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <HomePage
-                  updateState={this.updateState}
-                  darkMode={this.state.darkMode}
-                />
-              }
-            />
-            <Route
-              path="materialy"
-              element={
-                <VideoPlayer
-                  updateState={this.updateState}
-                  klasa={this.state.klasa}
-                  zakres={this.state.zakres}
-                  dzial={this.state.dzial}
-                  temat={this.state.temat}
-                  zrodlo={this.state.zrodlo}
-                  wypiszFilmy={this.wypiszFilmy}
-                  filmyYTLinki={this.filmyYTLinki}
-                />
-              }
-            />
-            <Route
-              path="korepetycje"
-              element={
-                <Korepetycje
-                  updateState={this.updateState}
-                  lokalizacjaInput={this.state.lokalizacjaInput}
-                  lokalizacjaSubmit={this.state.lokalizacjaSubmit}
-                />
-              }
-            />
-            <Route
-              path="studia"
-              element={
-                <Studia
-                  updateState={this.updateState}
-                />
-              }
-            />
-            <Route
-              path="arkusze"
-              element={
-                <Arkusze
-                  updateState={this.updateState}
-                />
-              }
-            />
-          </Routes>
-        </div>
+          <Route
+            path="korepetycje"
+            element={
+              <Korepetycje
+                updateState={updateState}
+                lokalizacjaInput={lokalizacjaInput}
+                lokalizacjaSubmit={lokalizacjaSubmit}
+              />
+            }
+          />
+          <Route path="studia" element={<Studia updateState={updateState} />} />
+          <Route
+            path="arkusze"
+            element={<Arkusze updateState={updateState} />}
+          />
+        </Routes>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;

@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import $ from "jquery";
+import React from "react";
+import { useAtom } from "jotai";
+import { motywStrony } from "../App";
 function RightNav(props) {
-  useEffect(() => {
-    if (props.darkMode) {
-      $(".website").addClass("website-dark-mode");
-      $(".zmien-motyw").addClass("ciemny-motyw");
-      $(".zmien-motyw").removeClass("jasny-motyw");
-    } else {
-      $(".website").removeClass("website-dark-mode");
-      $(".zmien-motyw").removeClass("ciemny-motyw");
-      $(".zmien-motyw").addClass("jasny-motyw");
-    }
-  });
+  const [motyw,setMotyw] = useAtom(motywStrony);
+  const zmienMotyw = () => {
+    const nowyMotyw = motyw === "light" ? "dark" : "light";
+    setMotyw(nowyMotyw);
+  };
   return (
     <nav id="right-nav">
       <div id="zmien-motyw-div">
@@ -19,14 +14,14 @@ function RightNav(props) {
           <button
             className="zmien-motyw"
             onClick={() => {
-              props.updateState("darkMode", true);
+              zmienMotyw();
             }}
           ></button>
         ) : (
           <button
             className="zmien-motyw"
             onClick={() => {
-              props.updateState("darkMode", false);
+              zmienMotyw();
             }}
           ></button>
         )}

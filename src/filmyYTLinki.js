@@ -1,4 +1,4 @@
-const filmyYtLinki = [
+let filmyYtLinki = [
   [
     "https://www.youtube.com/embed/naq9D6jvnhA",
     ["film-podstawa2", "film-rozszerzenie2"],
@@ -221,4 +221,18 @@ const filmyYtLinki = [
     "youtube",
   ],
 ];
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+  return array;
+}
+filmyYtLinki = shuffle(filmyYtLinki);
 export default filmyYtLinki;

@@ -1,7 +1,10 @@
 import React from "react";
+import { useAtom } from "jotai";
 import { useNavigate } from "react-router-dom";
+import { motywStrony } from "../App";
 function NavBar(props) {
   const navigate = useNavigate();
+  const [motyw] = useAtom(motywStrony);
   return (
     <nav id="navbar-top">
       <div id="home">
@@ -19,7 +22,7 @@ function NavBar(props) {
           <div>
             <img
               src={
-                !props.darkMode
+                motyw === "light"
                   ? require("../images/LogoStrony.jpg")
                   : require("../images/LogoStronyDarkMode.png")
               }
