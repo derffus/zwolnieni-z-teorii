@@ -1,9 +1,10 @@
 import React from "react";
 import { useAtom } from "jotai";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motywStrony } from "../App";
 function NavBar(props) {
   const navigate = useNavigate();
+  const location = useLocation();
   const [motyw] = useAtom(motywStrony);
   return (
     <nav id="navbar-top">
@@ -12,11 +13,6 @@ function NavBar(props) {
           id="home-button"
           onClick={() => {
             navigate("/matzone");
-            props.updateState("home", true);
-            props.updateState("materialy", false);
-            props.updateState("korepetycje", false);
-            props.updateState("studia", false);
-            props.updateState("arkusze", false);
           }}
         >
           <div>
@@ -37,15 +33,11 @@ function NavBar(props) {
       <div id="top-buttons">
         <button
           id="materialy"
+          className={
+            location.pathname === "/matzone/materialy" ? "nav-clicked" : ""
+          }
           onClick={() => {
             navigate("/matzone/materialy");
-            props.updateState("home", false);
-            props.updateState("materialy", true);
-            props.updateState("klasa", "1");
-            props.updateState("zakres", "podstawa");
-            props.updateState("korepetycje", false);
-            props.updateState("studia", false);
-            props.updateState("arkusze", false);
           }}
         >
           Materiały
@@ -53,13 +45,11 @@ function NavBar(props) {
 
         <button
           id="korepetycje"
+          className={
+            location.pathname === "/matzone/korepetycje" ? "nav-clicked" : ""
+          }
           onClick={() => {
             navigate("/matzone/korepetycje");
-            props.updateState("home", false);
-            props.updateState("materialy", false);
-            props.updateState("korepetycje", true);
-            props.updateState("studia", false);
-            props.updateState("arkusze", false);
           }}
         >
           Korepetycje
@@ -67,13 +57,11 @@ function NavBar(props) {
 
         <button
           id="studia"
+          className={
+            location.pathname === "/matzone/studia" ? "nav-clicked" : ""
+          }
           onClick={() => {
             navigate("/matzone/studia");
-            props.updateState("home", false);
-            props.updateState("materialy", false);
-            props.updateState("korepetycje", false);
-            props.updateState("studia", true);
-            props.updateState("arkusze", false);
           }}
         >
           Studia
@@ -81,13 +69,11 @@ function NavBar(props) {
 
         <button
           id="arkusze"
+          className={
+            location.pathname === "/matzone/arkusze" ? "nav-clicked" : ""
+          }
           onClick={() => {
             navigate("/matzone/arkusze");
-            props.updateState("home", false);
-            props.updateState("materialy", false);
-            props.updateState("korepetycje", false);
-            props.updateState("studia", false);
-            props.updateState("arkusze", true);
           }}
         >
           Arkusze
