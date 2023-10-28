@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 function NavBar(props) {
+  const navigate = useNavigate();
   return (
     <nav id="navbar-top">
       <div id="home">
         <button
           id="home-button"
           onClick={() => {
+            navigate("/");
             props.updateState("home", true);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);
@@ -13,10 +16,13 @@ function NavBar(props) {
             props.updateState("arkusze", false);
           }}
         >
-          {" "}
           <div>
             <img
-              src={!props.darkMode?require("../images/LogoStrony.jpg"):require("../images/LogoStronyDarkMode.png")}
+              src={
+                !props.darkMode
+                  ? require("../images/LogoStrony.jpg")
+                  : require("../images/LogoStronyDarkMode.png")
+              }
               alt="Strona główna"
             />
           </div>
@@ -29,6 +35,7 @@ function NavBar(props) {
         <button
           id="materialy"
           onClick={() => {
+            navigate("/materialy");
             props.updateState("home", false);
             props.updateState("materialy", true);
             props.updateState("klasa", "1");
@@ -40,9 +47,11 @@ function NavBar(props) {
         >
           Materiały
         </button>
+
         <button
           id="korepetycje"
           onClick={() => {
+            navigate("/korepetycje");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", true);
@@ -52,9 +61,11 @@ function NavBar(props) {
         >
           Korepetycje
         </button>
+
         <button
           id="studia"
           onClick={() => {
+            navigate("/studia");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);
@@ -64,9 +75,11 @@ function NavBar(props) {
         >
           Studia
         </button>
+
         <button
           id="arkusze"
           onClick={() => {
+            navigate("/arkusze");
             props.updateState("home", false);
             props.updateState("materialy", false);
             props.updateState("korepetycje", false);

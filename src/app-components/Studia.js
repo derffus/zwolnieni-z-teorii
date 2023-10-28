@@ -1,12 +1,6 @@
-import "../component-styles/Studia.scss";
-import React, { useEffect } from "react";
+import "../component-styles/Studia.css";
+import React from "react";
 function Studia(props) {
-  useEffect(() => {
-    props.segmentOpened("studia");
-    return () => {
-      props.segmentClosed("studia");
-    };
-  });
   return (
     <div id="studia-segment">
       <div id="welcome-studia">

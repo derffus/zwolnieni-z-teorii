@@ -4,7 +4,7 @@
   --purpleHovered: hsl(235, 26%, 87%);
   --content: white;
   --purpleClicked: hsl(235, 26%, 68%);
-  --blue:hsl(201, 43%, 25%);
+  --blue: hsl(201, 43%, 25%);
   --color-font: hsl(201, 43%, 25%);
   background-color: var(--content);
 }
@@ -13,7 +13,7 @@
   --purple: hsl(235, 26%, 40%);
   --purpleClicked: hsl(235, 26%, 38%);
   --purpleHovered: hsl(235, 26%, 12%);
-  --blue:hsl(201, 43%, 45%);
+  --blue: hsl(201, 43%, 45%);
   --color-font: #8c8c8c;
 }
 .website {
@@ -48,7 +48,6 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
 }
 #top-buttons button {
   transition: background-color 0.3s, color 0.3s;
@@ -320,7 +319,6 @@
   content: attr(data-content);
   font-size: 1.5em;
   color: var(--purple);
-  z-index: -1;
   position: absolute;
   margin-top: 40vh;
   animation: napis 0.5s;
@@ -364,7 +362,6 @@ iframe {
 }
 #wpisz-lokalizacje {
   position: fixed;
-  animation: show-lokalizacja 0.8s;
   justify-self: center;
   grid-area: lokalizacja;
   padding-left: 5px;
@@ -428,7 +425,6 @@ iframe {
   position: fixed;
   top: 40vh;
   left: 70px;
-  animation: show-welcome-korepetycje 0.8s;
   text-align: center;
   grid-area: welcome;
   font-size: 4em;
@@ -449,12 +445,6 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: korepetytorzy 0.8s;
-}
-@keyframes korepetytorzy {
-  from {
-    margin-right: -50vh;
-  }
 }
 #korepetytor-div {
   color: var(--korep);
@@ -510,16 +500,7 @@ iframe {
   font-size: 0.5em;
   color: var(--blue);
 }
-@keyframes show-lokalizacja {
-  from {
-    margin-top: -30vh;
-  }
-}
-@keyframes show-welcome-korepetycje {
-  from {
-    margin-top: -30vh;
-  }
-}
+
 @media (max-width: 1750px) {
   .filmy {
     grid-template-columns: 1fr 1fr;
@@ -611,5 +592,8 @@ iframe {
   }
   #big-buttons button:hover {
     transition: all 0s;
+  }
+  #big-buttons button:hover::after {
+    content: none;
   }
 }

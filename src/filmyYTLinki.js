@@ -200,13 +200,6 @@ const filmyYtLinki = [
     "youtube",
   ],
   [
-    "https://www.youtube.com/embed/H9i1y9Hdtl4",
-    ["film-podstawa2", "film-rozszerzenie2"],
-    "Liceum. Klasa I. Symetria środkowa i osiowa w układzie współrzędnych",
-    "1",
-    "youtube",
-  ],
-  [
     "https://www.youtube.com/embed/dPZVFCuQCvI",
     ["film-podstawa2", "film-rozszerzenie2"],
     "Symetria środkowa. Symetria środkowa względem punktu (0,0) - definicje, przykłady",

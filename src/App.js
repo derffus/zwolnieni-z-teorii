@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./app-components/NavBar";
 import RightNav from "./app-components/RightNav";
 import HomePage from "./app-components/HomePage";
@@ -8,16 +9,10 @@ import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze";
 import filmyYtLinki from "./filmyYTLinki";
-import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      home: true,
-      materialy: false,
-      korepetycje: false,
-      studia: false,
-      arkusze: false,
       showNavbar: false,
       darkMode: false,
       klasa: "1",
@@ -34,12 +29,6 @@ class App extends React.Component {
     this.setState({
       [prop]: newValue,
     });
-  }
-  segmentOpened(segment) {
-    $(`#${segment}`).addClass("nav-clicked");
-  }
-  segmentClosed(segment) {
-    $(`#${segment}`).removeClass("nav-clicked");
   }
   shuffle(array) {
     let currentIndex = array.length,
@@ -85,7 +74,6 @@ class App extends React.Component {
           updateState={this.updateState}
           showNavbar={this.state.showNavbar}
           darkMode={this.state.darkMode}
-          home={this.state.home}
         />
         {this.state.showNavbar ? (
           <RightNav
@@ -96,47 +84,58 @@ class App extends React.Component {
           ""
         )}
         <div id="content">
-          {this.state.home ? (
-            <HomePage
-              updateState={this.updateState}
-              darkMode={this.state.darkMode}
-              segmentOpened={this.segmentOpened}
-              segmentClosed={this.segmentClosed}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  updateState={this.updateState}
+                  darkMode={this.state.darkMode}
+                />
+              }
             />
-          ) : this.state.materialy ? (
-            <VideoPlayer
-              updateState={this.updateState}
-              segmentOpened={this.segmentOpened}
-              segmentClosed={this.segmentClosed}
-              klasa={this.state.klasa}
-              zakres={this.state.zakres}
-              dzial={this.state.dzial}
-              temat={this.state.temat}
-              zrodlo={this.state.zrodlo}
-              wypiszFilmy={this.wypiszFilmy}
-              filmyYTLinki={this.filmyYTLinki}
+            <Route
+              path="materialy"
+              element={
+                <VideoPlayer
+                  updateState={this.updateState}
+                  klasa={this.state.klasa}
+                  zakres={this.state.zakres}
+                  dzial={this.state.dzial}
+                  temat={this.state.temat}
+                  zrodlo={this.state.zrodlo}
+                  wypiszFilmy={this.wypiszFilmy}
+                  filmyYTLinki={this.filmyYTLinki}
+                />
+              }
             />
-          ) : this.state.korepetycje ? (
-            <Korepetycje
-              updateState={this.updateState}
-              segmentOpened={this.segmentOpened}
-              segmentClosed={this.segmentClosed}
-              lokalizacjaInput={this.state.lokalizacjaInput}
-              lokalizacjaSubmit={this.state.lokalizacjaSubmit}
+            <Route
+              path="korepetycje"
+              element={
+                <Korepetycje
+                  updateState={this.updateState}
+                  lokalizacjaInput={this.state.lokalizacjaInput}
+                  lokalizacjaSubmit={this.state.lokalizacjaSubmit}
+                />
+              }
             />
-          ) : this.state.studia ? (
-            <Studia
-              updateState={this.updateState}
-              segmentOpened={this.segmentOpened}
-              segmentClosed={this.segmentClosed}
+            <Route
+              path="studia"
+              element={
+                <Studia
+                  updateState={this.updateState}
+                />
+              }
             />
-          ) : this.state.arkusze ? (
-            <Arkusze
-              updateState={this.updateState}
-              segmentOpened={this.segmentOpened}
-              segmentClosed={this.segmentClosed}
+            <Route
+              path="arkusze"
+              element={
+                <Arkusze
+                  updateState={this.updateState}
+                />
+              }
             />
-          ) : null}
+          </Routes>
         </div>
       </div>
     );

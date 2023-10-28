@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ClipboardJS from "clipboard";
 import korepetytorzy from "../korepetytorzy";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
-  useEffect(() => {
-    props.segmentOpened("korepetycje");
-    return () => {
-      props.segmentClosed("korepetycje");
-    };
-  });
   const clipboard = new ClipboardJS(".copy");
   function handleLokalizacjaInput(event) {
     props.updateState("lokalizacjaInput", event.target.value);
