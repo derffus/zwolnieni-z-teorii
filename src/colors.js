@@ -31,7 +31,7 @@ for (let color in colors.lightMode) {
       colors.lightMode[color] = "white";
       continue;
     case "purpleClicked":
-      colors.lightMode[color] = "hsl(235, 26%, 68%)";
+      colors.lightMode[color] = "hsl(235, 26%, 80%)";
       continue;
     case "blue":
       colors.lightMode[color] = "hsl(201, 43%, 25%)";

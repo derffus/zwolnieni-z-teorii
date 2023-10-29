@@ -1,7 +1,7 @@
 @import "../App.css";
 
 #studia-segment {
-  width: 100%;
+  width: 100vw;
   padding: 40px 60px 0 60px;
   color: var(--blue);
   display: flex;
@@ -29,8 +29,8 @@
   font-weight: bold;
   display: flex;
   flex-direction: row-reverse;
+  height: 100%;
   width: 90%;
-  height: fit-content;
   text-transform: uppercase;
 }
 #szkola-glowna-handlowa-text {
@@ -46,14 +46,18 @@
   font-size: 1.2em;
 }
 #szkola-glowna-handlowa-img {
-  margin-top: -60px;
+  margin-top: -100px;
+  height: 100%;
   img {
     display: block;
-    height: 70%;
+    height:400px;
   }
 }
 
 @media (max-width: 700px) {
+  #studia-segment{
+    padding:0;
+  }
   #welcome-studia {
     text-align: center;
     width: 100%;
@@ -64,9 +68,10 @@
     flex-direction: column;
   }
   #szkola-glowna-handlowa-img {
+    margin-top:-50px;
     align-self: center;
     img{
-      height: 50%;
+      height: 250px;
     }
   }
 }

@@ -7,6 +7,7 @@ function NavBar(props) {
   const navigate = useNavigate();
   const location = useLocation();
   const [motyw] = useAtom(motywStrony);
+  let width = window.innerWidth;
   return (
     <nav id="navbar-top">
       <div id="home">
@@ -31,7 +32,7 @@ function NavBar(props) {
           </div>
         </button>
       </div>
-      <div id="top-buttons">
+      {width>700?<div id="top-buttons">
         <button
           id="materialy"
           className={
@@ -79,7 +80,7 @@ function NavBar(props) {
         >
           Arkusze
         </button>
-      </div>
+      </div>:null}
 
       {!props.showNavbar ? (
         <div id="show-nav">

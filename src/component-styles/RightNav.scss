@@ -15,11 +15,29 @@
   justify-content: flex-start;
   align-items: center;
   animation: show-from-right 0.4s;
-  z-index: 2;
+  z-index: 3;
 }
 @keyframes show-from-right {
   from {
     margin-right: -300px;
+  }
+}
+#left-segment-buttons{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  button{
+    width: 100%;
+    border:none;
+    background-color: inherit;
+    color:white;
+    text-shadow: 2px 0 0 hsl(235, 26%, 30%), 0 2px 0 hsl(235, 26%, 30%);
+    font-size: 1.5em;
+    padding: 25px 0 25px 20px;
+    text-align: left;
+  }
+  .nav-clicked{
+    background-color:hsl(235, 26%, 68%) !important;
   }
 }
 #zmien-motyw-div {
