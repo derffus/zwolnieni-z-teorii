@@ -1,5 +1,5 @@
-import "../component-styles/Studia.css";
 import React from "react";
+import "../component-styles/Studia.scss";
 function Studia(props) {
   return (
     <div id="studia-segment">

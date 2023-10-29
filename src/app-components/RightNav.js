@@ -1,4 +1,5 @@
 import React from "react";
+import "../component-styles/RightNav.scss";
 import { useAtom } from "jotai";
 import { motywStrony } from "../App";
 function RightNav(props) {

@@ -1,0 +1,134 @@
+@import "../App.css";
+
+#navbar-top {
+  background-color: inherit;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  z-index: 3;
+  button {
+    &:hover {
+      cursor: pointer;
+      background-color: var(--purpleHovered);
+    }
+  }
+}
+#top-buttons {
+  margin-left: 7%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--blue);
+    font-size: 1.5em;
+    font-family: inherit;
+    border: none;
+    background-color: var(--content);
+    width: 25%;
+    min-width: fit-content;
+    height: 100%;
+  }
+}
+.nav-clicked {
+  background-color: var(--purpleHovered) !important;
+}
+#home {
+  height: 100%;
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 80px;
+    display: block;
+    height: 10vh;
+    aspect-ratio: 1/1;
+  }
+  button {
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: inherit;
+    font-size: 1.5em;
+    border: none;
+    background-color: var(--content);
+    height: 100%;
+    width: 100%;
+  }
+}
+#mat-zone {
+  letter-spacing: -1px;
+  color: var(--blue);
+  font-family: open sans;
+  font-weight: bold;
+  font-size: 1.9em;
+  span {
+    color: var(--purple);
+    margin-right: 6px;
+  }
+}
+#show-nav {
+  transition: background-color 0.3s, color 0.3s;
+  justify-self: flex-end;
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: var(--purpleHovered);
+  }
+  button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: inherit;
+    i {
+      color: var(--purple);
+      font-size: 4em;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #navbar-top {
+    height: 6vh;
+  }
+  #home {
+    button {
+      width: fit-content;
+    }
+    img {
+      height: 6vh;
+    }
+  }
+  #mat-zone {
+    font-size: 0.6em;
+    span {
+      margin: 0;
+    }
+  }
+  #top-buttons {
+    margin-left: 0;
+    button {
+      font-size: 1em;
+    }
+  }
+  #show-nav {
+    button {
+      width: fit-content;
+      font-size: 0.2em;
+    }
+  }
+}

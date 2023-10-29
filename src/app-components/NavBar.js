@@ -1,4 +1,5 @@
 import React from "react";
+import "../component-styles/NavBar.scss";
 import { useAtom } from "jotai";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motywStrony } from "../App";

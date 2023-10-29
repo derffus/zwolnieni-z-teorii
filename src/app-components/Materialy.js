@@ -1,8 +1,9 @@
 import React from "react";
 import ContentPicker from "./ContentPicker";
-function VideoPlayer(props) {
+import "../component-styles/Materialy.scss";
+function Materialy(props) {
   return (
-    <div className="filmy-i-artykuly">
+    <div className="materialy">
       <ContentPicker updateState={props.updateState} klasa={props.klasa} zakres={props.zakres} temat={props.temat}/>
       <div className="filmy">
         {props.wypiszFilmy(
@@ -17,4 +18,4 @@ function VideoPlayer(props) {
     </div>
   );
 }
-export default VideoPlayer;
+export default Materialy;

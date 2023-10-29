@@ -1,6 +1,7 @@
 import React from "react";
 import ClipboardJS from "clipboard";
 import korepetytorzy from "../korepetytorzy";
+import "../component-styles/Korepetycje.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
   const clipboard = new ClipboardJS(".copy");

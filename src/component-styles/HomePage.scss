@@ -1,0 +1,119 @@
+@import "../App.css";
+
+#home-page {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+}
+@keyframes show-welcome-page {
+  from {
+    margin-top: -30vh;
+  }
+}
+#welcome-home-page {
+  color: var(--blue);
+  animation: show-welcome-page 0.8s;
+  align-self: flex-start;
+  margin-left: 10vw;
+  font-size: 5.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  br {
+    content: "";
+    margin: -25px;
+    display: block;
+  }
+  span {
+    margin-left: 7vw;
+    align-self: center;
+    color: var(--purple);
+  }
+}
+#big-buttons {
+  height: fit-content;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  button {
+    z-index: 1;
+    box-shadow: 15px 15px 1px 1px var(--purpleHovered);
+    font-family: inherit;
+    font-size: 1.4em;
+    background-color: var(--content);
+    border-radius: 100%;
+    border: 3px solid var(--purpleHovered);
+    height: 31vh;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+      border-color: var(--purple);
+      box-shadow: 15px 15px 1px 1px var(--purple);
+      transition: all 0.5s;
+      &::after {
+        content: attr(data-content);
+        font-size: 1.5em;
+        color: var(--purple);
+        position: absolute;
+        margin-top: 40vh;
+        animation: napis 0.5s;
+      }
+    }
+    img {
+      display: block;
+      width: 70%;
+      aspect-ratio: 1/1;
+    }
+  }
+}
+@keyframes napis {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  #welcome-home-page {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    br {
+      margin: 0;
+    }
+    span {
+      margin: 0;
+    }
+  }
+  #big-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    row-gap: 50px;
+    button {
+      height: 40vw;
+      aspect-ratio: 1/1;
+      box-shadow: 11px 11px 1px 1px var(--purpleHovered);
+      &::after {
+        z-index: 1;
+        color: var(--purple);
+        content: attr(data-content);
+        position: absolute;
+        margin-top: 24vh;
+      }
+      &:hover {
+        transition: all 0s;
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

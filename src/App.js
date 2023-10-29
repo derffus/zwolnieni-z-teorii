@@ -7,7 +7,7 @@ import colors from "./colors";
 import NavBar from "./app-components/NavBar";
 import RightNav from "./app-components/RightNav";
 import HomePage from "./app-components/HomePage";
-import VideoPlayer from "./app-components/VideoPlayer";
+import Materialy from "./app-components/Materialy";
 import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze";
@@ -113,7 +113,7 @@ function App() {
           <Route
             path="matzone/materialy"
             element={
-              <VideoPlayer
+              <Materialy
                 updateState={updateState}
                 klasa={klasa}
                 zakres={zakres}

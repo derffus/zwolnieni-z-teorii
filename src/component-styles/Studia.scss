@@ -1,0 +1,72 @@
+@import "../App.css";
+
+#studia-segment {
+  width: 100%;
+  padding: 40px 60px 0 60px;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#welcome-studia {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: fit-content;
+  text-transform: uppercase;
+}
+#welcome-studia-start {
+  font-size: 3em;
+  font-weight: bold;
+}
+#welcome-studia-content {
+  color: var(--colorFont);
+  font-size: 1.2em;
+}
+
+#szkola-glowna-handlowa {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 90%;
+  height: fit-content;
+  text-transform: uppercase;
+}
+#szkola-glowna-handlowa-text {
+  display: flex;
+  flex-direction: column;
+}
+#szkola-glowna-handlowa-start {
+  font-size: 3em;
+  color: var(--blue);
+}
+#szkola-glowna-handlowa-content {
+  color: var(--colorFont);
+  font-size: 1.2em;
+}
+#szkola-glowna-handlowa-img {
+  margin-top: -60px;
+  img {
+    display: block;
+    height: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  #welcome-studia {
+    text-align: center;
+    width: 100%;
+  }
+  #szkola-glowna-handlowa {
+    align-self: center;
+    text-align:center;
+    flex-direction: column;
+  }
+  #szkola-glowna-handlowa-img {
+    align-self: center;
+    img{
+      height: 50%;
+    }
+  }
+}
