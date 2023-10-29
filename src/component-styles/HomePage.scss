@@ -51,11 +51,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s,box-shadow 0.3s, border 0.3s, background-color 0.3s;
     &:hover {
       cursor: pointer;
       border-color: var(--purple);
-      box-shadow: 15px 15px 1px 1px var(--purple);
-      transition: all 0.5s;
+      box-shadow: 1px 1px 1px 1px var(--purple);
+      transform: translate(15px, 15px);
       &::after {
         content: attr(data-content);
         font-size: 1.5em;

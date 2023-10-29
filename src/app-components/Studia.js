@@ -30,7 +30,7 @@ function Studia(props) {
           </ul>
         </div>
       </div>
-      <div id="szkola-glowna-handlowa">
+      <div id="szkola-glowna-handlowa" onClick={()=>{window.open("https://www.sgh.waw.pl/", '_blank')}}>
         <div id="szkola-glowna-handlowa-text">
           <div id="szkola-glowna-handlowa-start">
             <span>Szkoła główna handlowa w Warszawie</span>

@@ -50,7 +50,7 @@ for (let color in colors.darkMode) {
   }
   switch (color) {
     case "purple":
-      colors.darkMode[color] = "hsl(235, 26%, 40%)";
+      colors.darkMode[color] = "hsl(235, 26%, 25%)";
       continue;
     case "purpleHovered":
       colors.darkMode[color] = "hsl(235, 26%, 12%)";
