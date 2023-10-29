@@ -70,11 +70,11 @@
   }
 }
 #welcome-korepetycje {
-  width: 30vw;
+  width: 40vw;
   text-align: center;
   position: fixed;
   top: 40vh;
-  left: 70px;
+  left: 0;
   text-align: center;
   grid-area: welcome;
   font-size: 4em;
@@ -171,6 +171,14 @@
   #korepetytor-div {
     width: 75%;
     text-align: center;
+    br{
+      content: "";
+      display: block;
+      margin-top: -10px;
+    }
+  }
+  #imie-i-nazwisko{
+    font-size: 1.4em;
   }
   #miejscowosc {
     font-size: 0.6em;
