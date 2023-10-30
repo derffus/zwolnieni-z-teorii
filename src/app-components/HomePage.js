@@ -16,7 +16,7 @@ function HomePage(props) {
         <button
           data-content="Materiały"
           onClick={() => {
-            navigate("/matzone/materialy");
+            navigate("/materialy");
           }}
         >
           <img
@@ -32,7 +32,7 @@ function HomePage(props) {
         <button
           data-content="Korepetycje"
           onClick={() => {
-            navigate("/matzone/korepetycje");
+            navigate("/korepetycje");
           }}
         >
           <img
@@ -48,7 +48,7 @@ function HomePage(props) {
         <button
           data-content="Studia"
           onClick={() => {
-            navigate("/matzone/studia");
+            navigate("/studia");
           }}
         >
           <img
@@ -64,7 +64,7 @@ function HomePage(props) {
         <button
           data-content="Arkusze"
           onClick={() => {
-            navigate("/matzone/arkusze");
+            navigate("/arkusze");
           }}
         >
           <img

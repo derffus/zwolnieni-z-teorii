@@ -112,11 +112,11 @@ function App() {
       <div id="content">
         <Routes>
           <Route
-            path="matzone"
+            path="/"
             element={<HomePage updateState={updateState} />}
           />
           <Route
-            path="matzone/materialy"
+            path="/materialy"
             element={
               <Materialy
                 updateState={updateState}
@@ -131,7 +131,7 @@ function App() {
             }
           />
           <Route
-            path="matzone/korepetycje"
+            path="/korepetycje"
             element={
               <Korepetycje
                 updateState={updateState}
@@ -141,11 +141,11 @@ function App() {
             }
           />
           <Route
-            path="matzone/studia"
+            path="/studia"
             element={<Studia updateState={updateState} />}
           />
           <Route
-            path="matzone/arkusze"
+            path="/arkusze"
             element={<Arkusze updateState={updateState} />}
           />
         </Routes>
