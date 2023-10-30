@@ -5,17 +5,13 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 5vh;
   align-items: center;
-}
-@keyframes show-welcome-page {
-  from {
-    margin-top: -30vh;
-  }
 }
 #welcome-home-page {
   color: var(--blue);
   animation: show-welcome-page 0.8s;
+  margin-top: 5vh;
   align-self: flex-start;
   margin-left: 10vw;
   font-size: 5.5em;
@@ -30,6 +26,11 @@
     margin-left: 7vw;
     align-self: center;
     color: var(--purple);
+  }
+}
+@keyframes show-welcome-page {
+  from{
+    margin-top:-30vh;
   }
 }
 #big-buttons {
@@ -51,7 +52,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s,box-shadow 0.3s, border 0.3s, background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s,
+      background-color 0.3s;
     &:hover {
       cursor: pointer;
       border-color: var(--purple);
@@ -107,7 +109,7 @@
         color: var(--purple);
         content: attr(data-content);
         position: absolute;
-        margin-top: 24vh;
+        margin-top: 50%;
       }
       &:hover {
         transition: all 0s;

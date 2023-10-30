@@ -2,16 +2,18 @@
 
 .materialy {
   position: relative;
+  height: 100%;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
+  
 }
 #content-picker {
   position: fixed;
   top: 10vh;
   left: 0;
   color: var(--blue);
-  border: 1px solid black;
+  border: 1px solid var(--blue);
   box-sizing: border-box;
   background-color: var(--content);
   transition: background-color 0.3s, color 0.3s;
@@ -57,18 +59,29 @@
 }
 
 .filmy {
-  margin-top: 50px;
+  margin-top: 7vh;
+  height: 100%;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 30px;
   column-gap: 55px;
-  iframe {
-    width: 400px;
-    height: 270px;
+  .filmy-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    iframe {
+      width: 400px;
+      aspect-ratio: 1/0.5625;
+    }
+    div{
+      width: 400px;
+      font-size: 1.3em;
+      color: var(--contentInverted);
+      text-align: center;
+    }
   }
 }
-
 @media (max-width: 1600px) {
   .filmy {
     grid-template-columns: 1fr 1fr;
@@ -84,7 +97,7 @@
     flex-direction: column;
     height: fit-content;
     margin-top: -4vh;
-    button{
+    button {
       margin-top: 15px;
     }
   }

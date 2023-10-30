@@ -2,9 +2,10 @@ import React from "react";
 import "../component-styles/RightNav.scss";
 import { useAtom } from "jotai";
 import { useNavigate, useLocation } from "react-router-dom";
-import { motywStrony } from "../App";
+import { motywStrony, ShowRightNav } from "../App";
 function RightNav(props) {
   const [motyw, setMotyw] = useAtom(motywStrony);
+  const [showRightNav] = useAtom(ShowRightNav);
   const zmienMotyw = () => {
     const nowyMotyw = motyw === "light" ? "dark" : "light";
     setMotyw(nowyMotyw);
@@ -13,7 +14,7 @@ function RightNav(props) {
   const location = useLocation();
   let width = window.innerWidth;
   return (
-    <nav id="right-nav">
+    <nav className={`right-nav ${showRightNav ? "show-right-nav" : ""}`}>
       {width <= 700 ? (
         <div id="left-segment-buttons">
           <button

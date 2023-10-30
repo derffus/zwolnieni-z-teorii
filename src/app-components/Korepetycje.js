@@ -16,8 +16,25 @@ function Korepetycje(props) {
     }
   }
   function sortByLokalizacja(array, lokalizacja) {
-    let filteredArr = array.filter((x) => x.miejscowosc === lokalizacja);
-    let restOfArr = array.filter((x) => x.miejscowosc !== lokalizacja);
+    const unorm = require("unorm");
+    let regexLokalizacja = new RegExp(
+      unorm.nfkd(lokalizacja).replace(/[\u0300-\u036f]/g, ""),
+      "iu"
+    );
+    let filteredArr = array.filter(
+      (x) =>
+        regexLokalizacja.test(x.miejscowosc) ||
+        regexLokalizacja.test(
+          unorm.nfkd(x.miejscowosc).replace(/[\u0300-\u036f]/g, "")
+        )
+    );
+    let restOfArr = array.filter(
+      (x) =>
+        !regexLokalizacja.test(x.miejscowosc) &&
+        !regexLokalizacja.test(
+          unorm.nfkd(x.miejscowosc).replace(/[\u0300-\u036f]/g, "")
+        )
+    );
     return filteredArr.concat(restOfArr);
   }
   clipboard.on("success", (e) => {
@@ -50,7 +67,13 @@ function Korepetycje(props) {
             <br />
             <span id="miejscowosc">{x.miejscowosc}</span>
             <br />
-            <span id="numerTelefonu" class="copy" data-clipboard-text={x.numerTelefonu}>{x.numerTelefonu}</span>
+            <span
+              id="numerTelefonu"
+              class="copy"
+              data-clipboard-text={x.numerTelefonu}
+            >
+              {x.numerTelefonu}
+            </span>
             <br />
             <span id="mail" class="copy" data-clipboard-text={x.mail}>
               {x.mail}

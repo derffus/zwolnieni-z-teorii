@@ -1,11 +1,11 @@
 @import "../App.css";
 
-#right-nav {
+.right-nav {
   color: var(--blue);
   overflow: auto;
   position: fixed;
   opacity: 95%;
-  right: 0;
+  right: -300px;
   top: 10vh;
   width: 300px;
   height: max(85vh, 100%);
@@ -14,13 +14,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  animation: show-from-right 0.4s;
   z-index: 3;
+  transition: right 0.5s;
 }
-@keyframes show-from-right {
-  from {
-    margin-right: -300px;
-  }
+.show-right-nav{
+  right:0;
 }
 #left-segment-buttons{
   width: 100%;

@@ -165,8 +165,11 @@
     position: absolute;
     top: 6vh;
     width: 95vw;
-    left: 2.5vw;
+    left: 1.25vw;
     box-shadow: none;
+    &:hover{
+      transform: none;
+    }
   }
   #welcome-korepetycje {
     position: absolute;

@@ -1,8 +1,10 @@
 @import "../App.css";
 
 #studia-segment {
+  height: 100%;
+  min-height: 90vh;
   width: calc(100% - 120px);
-  padding: 40px 60px 60px 60px;
+  padding: 20px 60px 0 60px;
   color: var(--blue);
   display: flex;
   flex-direction: column;

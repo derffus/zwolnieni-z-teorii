@@ -14,8 +14,9 @@ import Arkusze from "./app-components/Arkusze";
 import filmyYtLinki from "./filmyYTLinki";
 
 export const motywStrony = atom("light");
+export const ShowRightNav = atom(false);
+
 function App() {
-  const [showNavbar, setShowNavbar] = useState(false);
   const [klasa, setKlasa] = useState("1");
   const [zakres, setZakres] = useState("podstawa");
   const [dzial, setDzial] = useState("1");
@@ -27,9 +28,6 @@ function App() {
   const [motyw] = useAtom(motywStrony);
   function updateState(prop, value) {
     switch (prop) {
-      case "showNavbar":
-        setShowNavbar(value);
-        break;
       case "klasa":
         setKlasa(value);
         break;
@@ -64,15 +62,18 @@ function App() {
           x[4] === zrodlo
       )
       .map((x) => (
-        <iframe
-          key={x}
-          className={x[1].join(" ")}
-          src={x[0]}
-          title={x[2]}
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen="true"
-        ></iframe>
+        <div className="filmy-div">
+          <iframe
+            key={x}
+            className={x[1].join(" ")}
+            src={x[0]}
+            title={x[2]}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="true"
+          ></iframe>
+          <div>{x[2]}</div>
+        </div>
       ));
   }
   let filmyYTLinki = filmyYtLinki;
@@ -100,10 +101,14 @@ function App() {
           motyw === "light"
             ? colors.lightMode.colorFont
             : colors.darkMode.colorFont,
+        "--contentInverted":
+          motyw === "light"
+            ? colors.lightMode.contentInverted
+            : colors.darkMode.contentInverted,
       }}
     >
-      <NavBar showNavbar={showNavbar} updateState={updateState} />
-      {showNavbar ? <RightNav updateState={updateState} /> : ""}
+      <NavBar updateState={updateState} />
+      <RightNav updateState={updateState} />
       <div id="content">
         <Routes>
           <Route
