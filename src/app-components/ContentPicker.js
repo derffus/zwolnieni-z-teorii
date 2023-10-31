@@ -1,23 +1,43 @@
 import React from "react";
+import { useAtom } from "jotai";
+import { ShowContentPicker } from "../App";
 function ContentPicker(props) {
+  const [showContentPicker, setShowContentPicker] = useAtom(ShowContentPicker);
+  const toggleShowContentPicker = () => {
+    const trueOrFalse = showContentPicker === true ? false : true;
+    setShowContentPicker(trueOrFalse);
+  };
+  let width = window.innerWidth;
   return (
-    <div id="content-picker">
+    <div
+      className={`content-picker ${
+        width > 700 ? "wide-content-picker" : "thin-content-picker"
+      } ${showContentPicker ? "show-content-picker" : ""}`}
+    >
+      {width <= 700 ? (
+        <button
+          id="show-content-picker-button"
+          onClick={toggleShowContentPicker}
+        >
+          <i className="fa-solid fa-chevron-down"></i>
+        </button>
+      ) : null}
       <div id="klasa-select" className="content-picker-section">
-        <div id="klasa">Klasa:</div>
+        <div id="klasa"></div>
         <select
           className="content-picker-select"
           onChange={(event) => {
             props.updateState("klasa", event.target.value);
           }}
         >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
+          <option value="1">Klasa 1</option>
+          <option value="2">Klasa 2</option>
+          <option value="3">Klasa 3</option>
+          <option value="4">Klasa 4</option>
         </select>
       </div>
       <div id="zakres-select" className="content-picker-section">
-        <div id="zakres">Zakres:</div>
+        <div id="zakres">Zakres</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
@@ -29,7 +49,7 @@ function ContentPicker(props) {
         </select>
       </div>
       <div id="temat-select" className="content-picker-section">
-        <div id="temat">Temat:</div>
+        <div id="temat">Temat</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
@@ -41,7 +61,7 @@ function ContentPicker(props) {
         </select>
       </div>
       <div id="dzial-select" className="content-picker-section">
-        <div id="dzial">Dział:</div>
+        <div id="dzial">Dział</div>
         {props.klasa === "1" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
@@ -185,7 +205,7 @@ function ContentPicker(props) {
         )}
       </div>
       <div id="zrodlo-select" className="content-picker-section">
-        <div id="zrodlo">Źródło:</div>
+        <div id="zrodlo">Źródło</div>
         <select
           className="content-picker-select"
           onChange={(event) => props.updateState("zrodlo", event.target.value)}

@@ -6,23 +6,41 @@
   margin-top: 75px;
   display: flex;
   flex-direction: column;
-  
 }
-#content-picker {
+.content-picker {
   position: fixed;
-  top: 10vh;
   left: 0;
+  top: -15vh;
   color: var(--blue);
-  border: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
   box-sizing: border-box;
   background-color: var(--content);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, top 0.6s;
   height: 7vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+.wide-content-picker {
+  top: 10vh;
+}
+.show-content-picker {
+  top: 10vh;
+}
+#show-content-picker-button {
+  position: fixed;
+  z-index: -1;
+  font-size: 1.5em;
+  background-color: var(--content);
+  border:none;
+  color: var(--blue);
+  right: 0;
+  top: 4vh;
+  width: 100%;
+  text-align: end;
+  height: 5%;
 }
 .content-picker-select {
   text-align: center;
@@ -74,7 +92,7 @@
       width: 400px;
       aspect-ratio: 1/0.5625;
     }
-    div{
+    div {
       width: 400px;
       font-size: 1.3em;
       color: var(--contentInverted);
@@ -82,30 +100,24 @@
     }
   }
 }
-@media (max-width: 1600px) {
+@media (max-width: 1550px) {
   .filmy {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .filmy {
     grid-template-columns: 1fr;
   }
 }
 @media (max-width: 700px) {
-  #content-picker {
+  .content-picker {
     flex-direction: column;
     height: fit-content;
     margin-top: -4vh;
     button {
       margin-top: 15px;
     }
-  }
-  #dzial-select {
-    flex-direction: column;
-  }
-  #zrodlo-select {
-    flex-direction: column;
   }
   iframe {
     width: 280px;

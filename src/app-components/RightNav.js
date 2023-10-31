@@ -20,10 +20,10 @@ function RightNav(props) {
           <button
             id="materialy"
             className={
-              location.pathname === "/matzone/materialy" ? "nav-clicked" : ""
+              location.pathname === "/materialy" ? "nav-clicked" : ""
             }
             onClick={() => {
-              navigate("/matzone/materialy");
+              navigate("/materialy");
             }}
           >
             Materiały
@@ -32,10 +32,10 @@ function RightNav(props) {
           <button
             id="korepetycje"
             className={
-              location.pathname === "/matzone/korepetycje" ? "nav-clicked" : ""
+              location.pathname === "/korepetycje" ? "nav-clicked" : ""
             }
             onClick={() => {
-              navigate("/matzone/korepetycje");
+              navigate("/korepetycje");
             }}
           >
             Korepetycje
@@ -44,10 +44,10 @@ function RightNav(props) {
           <button
             id="studia"
             className={
-              location.pathname === "/matzone/studia" ? "nav-clicked" : ""
+              location.pathname === "/studia" ? "nav-clicked" : ""
             }
             onClick={() => {
-              navigate("/matzone/studia");
+              navigate("/studia");
             }}
           >
             Studia
@@ -56,10 +56,10 @@ function RightNav(props) {
           <button
             id="arkusze"
             className={
-              location.pathname === "/matzone/arkusze" ? "nav-clicked" : ""
+              location.pathname === "/arkusze" ? "nav-clicked" : ""
             }
             onClick={() => {
-              navigate("/matzone/arkusze");
+              navigate("/arkusze");
             }}
           >
             Arkusze

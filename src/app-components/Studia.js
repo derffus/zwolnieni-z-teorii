@@ -56,6 +56,9 @@ function Studia(props) {
           />
         </div>
       </div>
+      <div>
+        <br/>inny tekst inny tekst
+      </div>
     </div>
   );
 }

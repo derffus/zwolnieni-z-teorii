@@ -15,6 +15,7 @@ import filmyYtLinki from "./filmyYTLinki";
 
 export const motywStrony = atom("light");
 export const ShowRightNav = atom(false);
+export const ShowContentPicker = atom(true);
 
 function App() {
   const [klasa, setKlasa] = useState("1");

@@ -4,7 +4,7 @@
   background-color: var(--content);
   transition: background-color 0.3s,color 0.3s;
   overflow-x: hidden;
-  margin-top: 7vh;
+  padding-top: 7vh;
   width: 70vw;
   align-self: flex-end;
   display: flex;
@@ -88,6 +88,7 @@
   font-size: 4em;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color .3s;
   br {
     content: "";
     margin: -20px;
@@ -95,6 +96,7 @@
   }
   span {
     color: var(--purple);
+    transition: color .3s;
   }
 }
 #korepetytorzy {

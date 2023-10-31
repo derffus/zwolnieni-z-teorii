@@ -61,8 +61,12 @@
 }
 
 @media (max-width: 700px) {
-  #right-nav {
+  .right-nav {
     margin-top: -4vh;
-    width: 100%;
+    width: 100vw;
+    right: -100vw;
+  }
+  .show-right-nav{
+    right:0;
   }
 }
