@@ -15,26 +15,28 @@ function Korepetycje(props) {
       props.updateState("lokalizacjaInput", "");
     }
   }
+
   function sortByLokalizacja(array, lokalizacja) {
-    const unorm = require("unorm");
-    let regexLokalizacja = new RegExp(
-      unorm.nfkd(lokalizacja).replace(/[\u0300-\u036f]/g, ""),
-      "iu"
-    );
-    let filteredArr = array.filter(
-      (x) =>
-        regexLokalizacja.test(x.miejscowosc) ||
-        regexLokalizacja.test(
-          unorm.nfkd(x.miejscowosc).replace(/[\u0300-\u036f]/g, "")
-        )
-    );
-    let restOfArr = array.filter(
-      (x) =>
-        !regexLokalizacja.test(x.miejscowosc) &&
-        !regexLokalizacja.test(
-          unorm.nfkd(x.miejscowosc).replace(/[\u0300-\u036f]/g, "")
-        )
-    );
+    const diacriticless = require("diacriticless");
+    const normalizedLokalizacja = diacriticless(lokalizacja);
+    let regexLokalizacja = new RegExp(normalizedLokalizacja, "iu");
+
+    let filteredArr = array.filter((x) => {
+      const normalizedMiejscowosc = diacriticless(x.miejscowosc);
+      return (
+        regexLokalizacja.test(normalizedMiejscowosc) ||
+        normalizedMiejscowosc.includes(normalizedLokalizacja)
+      );
+    });
+
+    let restOfArr = array.filter((x) => {
+      const normalizedMiejscowosc = diacriticless(x.miejscowosc);
+      return (
+        !regexLokalizacja.test(normalizedMiejscowosc) &&
+        !normalizedMiejscowosc.includes(normalizedLokalizacja)
+      );
+    });
+
     return filteredArr.concat(restOfArr);
   }
   clipboard.on("success", (e) => {

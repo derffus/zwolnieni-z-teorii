@@ -92,10 +92,10 @@ function App() {
           motyw === "light"
             ? colors.lightMode.content
             : colors.darkMode.content,
-        " --purpleClicked":
+        "--purpleDark":
           motyw === "light"
-            ? colors.lightMode.purpleClicked
-            : colors.darkMode.purpleClicked,
+            ? colors.lightMode.purpleDark
+            : colors.darkMode.purpleDark,
         "--blue":
           motyw === "light" ? colors.lightMode.blue : colors.darkMode.blue,
         "--colorFont":
@@ -112,10 +112,7 @@ function App() {
       <RightNav updateState={updateState} />
       <div id="content">
         <Routes>
-          <Route
-            path="/"
-            element={<HomePage updateState={updateState} />}
-          />
+          <Route path="/" element={<HomePage updateState={updateState} />} />
           <Route
             path="/materialy"
             element={
