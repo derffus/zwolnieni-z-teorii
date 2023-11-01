@@ -60,7 +60,7 @@ function RightNav(props) {
           </button>
         </div>
       ) : null}
-      <div id="zmien-motyw-div">
+      <div className="small-buttons">
         <button
           className={`zmien-motyw ${
             motyw === "light" ? "moon-button" : "sun-button"
@@ -70,24 +70,16 @@ function RightNav(props) {
           }}
         >
           {motyw === "light" ? (
-            <i
-              class="fa-solid fa-moon"
-              id="moon"
-              style={{
-                color: "hsl(44, 12%, 59%)",
-                textShadow: "3px 3px 2px black",
-              }}
-            ></i>
+            <i className="fa-solid fa-moon" id="moon"></i>
           ) : (
-            <i
-              class="fa-solid fa-sun"
-              id="sun"
-              style={{
-                color: "hsl(50, 13%, 50%)",
-                textShadow: "3px 3px 2px black",
-              }}
-            ></i>
+            <i className="fa-solid fa-sun" id="sun"></i>
           )}
+        </button>
+        <button className="instagram-button" onClick={()=>{window.open("https://instagram.com/", '_blank')}}>
+          <i className="fa-brands fa-instagram" id="instagram"></i>
+        </button>
+        <button className="tiktok-button" onClick={()=>{window.open("https://tiktok.com/", '_blank')}}>
+          <i className="fa-brands fa-tiktok fa-sm" id="tiktok"></i>
         </button>
       </div>
     </nav>

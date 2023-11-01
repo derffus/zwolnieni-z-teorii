@@ -1,11 +1,10 @@
 import React from "react";
 import "../component-styles/HomePage.scss";
 import { useAtom } from "jotai";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motywStrony } from "../App";
 function HomePage(props) {
   const navigate = useNavigate();
-  const location = useLocation();
   const [motyw] = useAtom(motywStrony);
   return (
     <div id="home-page" >

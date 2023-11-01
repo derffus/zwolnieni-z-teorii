@@ -34,7 +34,7 @@
   z-index: -1;
   font-size: 1.5em;
   background-color: var(--content);
-  border:none;
+  border: none;
   color: var(--blue);
   right: 0;
   top: 4vh;
@@ -113,14 +113,19 @@
 @media (max-width: 700px) {
   .content-picker {
     flex-direction: column;
-    height: fit-content;
+    height: 20vh;
+    min-height: fit-content;
     margin-top: -4vh;
     button {
       margin-top: 15px;
     }
   }
-  iframe {
-    width: 280px;
-    height: 200px;
+  .filmy {
+    .filmy-div {
+      iframe {
+        width: 350px;
+        aspect-ratio: 1/0.5625;
+      }
+    }
   }
 }
