@@ -10,7 +10,6 @@
 .content-picker {
   position: fixed;
   left: 0;
-  top: -15vh;
   color: var(--blue);
   border-bottom: 1px solid var(--blue);
   box-sizing: border-box;
@@ -20,7 +19,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .wide-content-picker {
@@ -51,19 +50,10 @@
   border: 2px solid var(--purpleHovered);
   border-radius: 5px;
   appearance: none;
-  width: fit-content;
+  width: 200px;
+  height: 100%;
   outline: none;
   transition: border 0.3s, background-color 0.3s, color 0.3s;
-}
-.content-picker-section {
-  height: 100%;
-  margin-left: 4%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.content-picker-select {
-  color: inherit;
   margin-left: 5px;
   padding: 3px;
   option {
@@ -111,20 +101,26 @@
 }
 @media (max-width: 700px) {
   .content-picker {
+    top:-25vh;
     flex-direction: column;
-    height: 20vh;
+    justify-content: space-around;
+    height: 25vh;
     min-height: fit-content;
     button {
       margin-top: 15px;
     }
   }
-  .wide-content-picker{
-    top:6vh;
+  .content-picker-select{
+    width: 70vw;
   }
-  .show-content-picker{
-    top:6vh;
+  .wide-content-picker {
+    top: 6vh;
+  }
+  .show-content-picker {
+    top: 6vh;
   }
   .filmy {
+    margin-top: 0;
     .filmy-div {
       iframe {
         width: 350px;

@@ -162,6 +162,7 @@
     width: 100%;
   }
   #wpisz-lokalizacje {
+    z-index: 1;
     border:2px solid var(--blue);
     box-sizing: border-box;
     position: absolute;
