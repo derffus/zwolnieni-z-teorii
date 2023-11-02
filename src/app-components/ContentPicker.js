@@ -30,6 +30,7 @@ function ContentPicker(props) {
             props.updateState("klasa", event.target.value);
           }}
         >
+          <option value="" disabled selected>Klasa</option>
           <option value="1">Klasa 1</option>
           <option value="2">Klasa 2</option>
           <option value="3">Klasa 3</option>
@@ -37,31 +38,32 @@ function ContentPicker(props) {
         </select>
       </div>
       <div id="zakres-select" className="content-picker-section">
-        <div id="zakres">Zakres</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
             props.updateState("zakres", event.target.value);
           }}
         >
+          <option value="" disabled selected>
+            Zakres
+          </option>
           <option value="podstawa">Podstawa</option>
           <option value="rozszerzenie">Rozszerzenie</option>
         </select>
       </div>
       <div id="temat-select" className="content-picker-section">
-        <div id="temat">Temat</div>
         <select
           className="content-picker-select"
           onChange={(event) => {
             props.updateState("temat", event.target.value);
           }}
         >
+          <option value="" disabled selected>Temat</option>
           <option value="jakistemat">jakistemat</option>
           <option value="innytemat">innytemat</option>
         </select>
       </div>
       <div id="dzial-select" className="content-picker-section">
-        <div id="dzial">Dział</div>
         {props.klasa === "1" && props.zakres === "podstawa" ? (
           <select
             className="content-picker-select"
@@ -69,6 +71,7 @@ function ContentPicker(props) {
               props.updateState("dzial", event.target.value);
             }}
           >
+            <option value="" disabled selected>Dzial</option>
             <option value="1">I</option>
             <option value="2">II</option>
             <option value="3">III</option>
@@ -205,11 +208,11 @@ function ContentPicker(props) {
         )}
       </div>
       <div id="zrodlo-select" className="content-picker-section">
-        <div id="zrodlo">Źródło</div>
         <select
           className="content-picker-select"
           onChange={(event) => props.updateState("zrodlo", event.target.value)}
         >
+          <option value="" disabled selected>Źródło</option>
           <option value="youtube">Youtube</option>
           <option value="artykul">Artykuł</option>
         </select>

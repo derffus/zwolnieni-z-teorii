@@ -38,6 +38,7 @@
   align-self:center;
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   height: 100%;
   width: 90%;
   text-transform: uppercase;
@@ -63,11 +64,13 @@
   font-size: 1.2em;
 }
 #szkola-glowna-handlowa-img {
-  margin-top: -50px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   img {
     display: block;
-    height:400px;
+    height:250px;
   }
 }
 
@@ -87,13 +90,12 @@
     align-self: center;
     text-align:center;
     flex-direction: column;
+    height: fit-content;
   }
   #szkola-glowna-handlowa-img {
-   
-    margin-top:-50px;
     align-self: center;
     img{
-      height: 250px;
+      height: 150px;
     }
   }
 }

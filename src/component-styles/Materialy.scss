@@ -75,7 +75,6 @@
     border-color: var(--purple);
   }
 }
-
 .filmy {
   margin-top: 7vh;
   height: 100%;
@@ -115,10 +114,15 @@
     flex-direction: column;
     height: 20vh;
     min-height: fit-content;
-    margin-top: -4vh;
     button {
       margin-top: 15px;
     }
+  }
+  .wide-content-picker{
+    top:6vh;
+  }
+  .show-content-picker{
+    top:6vh;
   }
   .filmy {
     .filmy-div {
