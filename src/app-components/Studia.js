@@ -38,12 +38,12 @@ function Studia(props) {
           <div id="szkola-glowna-handlowa-content">
             Rekrutacja na sgh nie jest prosta, oprócz zdania matur uczestnicy
             muszą podejsć do egzaminu wstępnego pod nazwą "test z wiedzy o
-            przedsiębiorczosci", który liczy sie tak samo jak matura z
+            przedsiębiorczosci", który liczy się tak samo jak matura z
             matematyki!
             <br /> Próg punktowy na rok 2023- 306 pkt
-            <br /> Sgh w warszawie to najstarsza I najbardziej prestizowa
-            uczelnia ekonomiczna w polsce, a takze jeden z najlepszych
-            uniwersytetów o tym profilu w europie, dlatego warto wziac go pod
+            <br /> Sgh w warszawie to najstarsza i najbardziej prestiżowa
+            uczelnia ekonomiczna w polsce, a także jeden z najlepszych
+            uniwersytetów o tym profilu w europie, dlatego warto wziąć go pod
             uwage.
             <br /> Myśląc o tej uczelni celuj w bardzo wysokie wyniki na
             maturze.

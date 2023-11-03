@@ -24,12 +24,8 @@ function NavBar(props) {
         >
           <div>
             <img
-              src={
-                motyw === "light"
-                  ? require("../images/LogoStrony.jpg")
-                  : require("../images/LogoStronyDarkMode.png")
-              }
-              alt="Strona główna"
+              src={require("../images/LogoStrony.png")}
+              alt="Logo MatZone"
             />
           </div>
           <div id="mat-zone">
