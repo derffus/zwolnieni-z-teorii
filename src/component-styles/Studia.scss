@@ -4,7 +4,7 @@
   height: 100%;
   min-height: 90vh;
   width: calc(100% - 120px);
-  padding: 20px 60px 0 60px;
+  padding: 20px 60px 20px 60px;
   color: var(--blue);
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   width: 90%;
   height: fit-content;
   text-transform: uppercase;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 #welcome-studia-start {
   font-size: 3em;
@@ -30,14 +30,12 @@
   width: 55%;
   font-size: 1.2em;
 }
-
-#szkola-glowna-handlowa {
+@mixin uczelnia-segment {
   padding: 20px;
   background-color: var(--purpleHovered);
   font-weight: bold;
-  align-self:center;
+  align-self: center;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
   height: 100%;
@@ -45,59 +43,125 @@
   text-transform: uppercase;
   box-shadow: 8px 8px 1px 1px var(--purple);
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  &:hover{
+  &:hover {
     cursor: pointer;
     background-color: var(--purple);
-    transform: translate(8px,8px);
+    transform: translate(8px, 8px);
     box-shadow: 1px 1px 1px 1px var(--purple);
   }
 }
-#szkola-glowna-handlowa-text {
-  width:60%;
-  display: flex;
-  flex-direction: column;
-}
-#szkola-glowna-handlowa-start {
-  font-size: 3em;
-  color: var(--blue);
-}
-#szkola-glowna-handlowa-content {
-  
-  color: var(--colorFont);
-  font-size: 1.2em;
-}
-#szkola-glowna-handlowa-img {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  img {
-    display: block;
-    height:250px;
+#szkola-glowna-handlowa {
+  @include uczelnia-segment();
+  flex-direction: row-reverse;
+  #szkola-glowna-handlowa-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  #szkola-glowna-handlowa-start {
+    font-size: 3em;
+    color: var(--blue);
+  }
+  #szkola-glowna-handlowa-content {
+    color: var(--colorFont);
+    font-size: 1.2em;
+  }
+  #szkola-glowna-handlowa-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      display: block;
+      height: 250px;
+    }
   }
 }
-
+#akademia-leone-kozminskiego {
+  margin-top: 80px;
+  @include uczelnia-segment();
+  flex-direction: row;
+  #akademia-leone-kozminskiego-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  #akademia-leone-kozminskiego-start {
+    font-size: 3em;
+    color: var(--blue);
+  }
+  #akademia-leone-kozminskiego-content {
+    color: var(--colorFont);
+    font-size: 1.2em;
+  }
+  #akademia-leone-kozminskiego-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      display: block;
+      height: 250px;
+    }
+  }
+}
 @media (max-width: 700px) {
-  #studia-segment{
-    padding:0;
+  #studia-segment {
+    padding: 0;
     width: 100%;
   }
   #welcome-studia {
     text-align: center;
     width: 100%;
   }
-  #welcome-studia-content{
-    width:100%;
+  #welcome-studia-content {
+    width: 100%;
   }
   #szkola-glowna-handlowa {
+    box-shadow: none;
+    width: 100vw;
     align-self: center;
-    text-align:center;
+    text-align: center;
     flex-direction: column;
     height: fit-content;
+    &:hover{
+      transform: none;
+    }
+    #szkola-glowna-handlowa-text {
+      width: 100%;
+      #szkola-glowna-handlowa-content{
+        align-self: center;
+        width:80%;
+      }
+    }
+    #szkola-glowna-handlowa-img {
+      align-self: center;
+      img {
+        height: 150px;
+      }
+    }
   }
-  #szkola-glowna-handlowa-img {
+  #akademia-leone-kozminskiego {
+    margin-top: 50px;
+    box-shadow: none;
+    width: 100vw;
     align-self: center;
-    img{
-      height: 150px;
+    text-align: center;
+    flex-direction: column;
+    height: fit-content;
+    &:hover{
+      transform: none;
+    }
+    #akademia-leone-kozminskiego-text {
+      width: 100%;
+      #akademia-leone-kozminskiego-content{
+        align-self: center;
+        width: 80%;
+      }
+    }
+    #akademia-leone-kozminskiego {
+      align-self: center;
+      img {
+        height: 150px;
+      }
     }
   }
 }

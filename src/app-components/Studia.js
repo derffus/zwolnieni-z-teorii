@@ -30,7 +30,12 @@ function Studia(props) {
           </ul>
         </div>
       </div>
-      <div id="szkola-glowna-handlowa" onClick={()=>{window.open("https://www.sgh.waw.pl/", '_blank')}}>
+      <div
+        id="szkola-glowna-handlowa"
+        onClick={() => {
+          window.open("https://www.sgh.waw.pl/", "_blank");
+        }}
+      >
         <div id="szkola-glowna-handlowa-text">
           <div id="szkola-glowna-handlowa-start">
             <span>Szkoła główna handlowa w Warszawie</span>
@@ -56,8 +61,28 @@ function Studia(props) {
           />
         </div>
       </div>
-      <div>
-        <br/>inny tekst inny tekst
+      <div id="akademia-leone-kozminskiego">
+        <div id="akademia-leone-kozminskiego-text">
+          <div id="akademia-leone-kozminskiego-start">
+            <span>Akademia Leona Koźmińskiego</span>
+          </div>
+          <div id="akademia-leone-kozminskiego-content">
+            Akademia Leona Koźmińskiego uznawana jest za najlepszą szkołę biznesu
+            w Europię centralnej. Specjalizuje się głównie w dziedzinie nauk
+            społecznych, oferując zróżnicowany wybór programów z zakresu
+            ekonomii, zarządzania, prawa, administracji oraz nauk społecznych.
+            Uczelnia ma reputację zaangażowania w badania naukowe, a także silną
+            współpracę z międzynarodowymi instytucjami. Na studia w języku
+            polskim zostają przyjęci kandydaci, którzy osiągneli co najmniej 300
+            punktów w rekrutacji (1% na maturze podstawowej - 1,5pkt 1% na
+            maturze rozszerzonej - 2pkt 1% na maturze rozszerzonej z matematyki
+            3pkt!) dla finalistów i laureatów olimpiady "Zwolnieni z Teorii"
+            przypada również dodatkowe 30pkt.
+          </div>
+        </div>
+        <div id="akademia-leone-kozminskiego-img">
+          <img src="" alt="Akademia Leona Koźmińskiego" />
+        </div>
       </div>
     </div>
   );
