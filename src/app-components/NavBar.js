@@ -33,7 +33,26 @@ function NavBar(props) {
             />
           </div>
           <div id="mat-zone">
-            <span>Mat</span>Zone
+            <span
+              id="mat"
+              style={
+                motyw === "light"
+                  ? { color: "hsl(235, 26%, 62%)" }
+                  : { color: "hsl(235, 26%, 25%)" }
+              }
+            >
+              Mat
+            </span>
+            <span
+              id="zone"
+              style={
+                motyw === "light"
+                  ? { color: "hsl(201, 43%, 25%)" }
+                  : { color: "hsl(201, 43%, 45%)" }
+              }
+            >
+              Zone
+            </span>
           </div>
         </button>
       </div>
@@ -41,9 +60,7 @@ function NavBar(props) {
         <div id="top-buttons">
           <button
             id="materialy"
-            className={
-              location.pathname === "/materialy" ? "nav-clicked" : ""
-            }
+            className={location.pathname === "/materialy" ? "nav-clicked" : ""}
             onClick={() => {
               navigate("/materialy");
             }}
@@ -65,9 +82,7 @@ function NavBar(props) {
 
           <button
             id="studia"
-            className={
-              location.pathname === "/studia" ? "nav-clicked" : ""
-            }
+            className={location.pathname === "/studia" ? "nav-clicked" : ""}
             onClick={() => {
               navigate("/studia");
             }}
@@ -77,9 +92,7 @@ function NavBar(props) {
 
           <button
             id="arkusze"
-            className={
-              location.pathname === "/arkusze" ? "nav-clicked" : ""
-            }
+            className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
             onClick={() => {
               navigate("/arkusze");
             }}

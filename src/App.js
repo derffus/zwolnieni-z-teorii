@@ -18,11 +18,11 @@ export const ShowRightNav = atom(false);
 export const ShowContentPicker = atom(true);
 
 function App() {
-  const [klasa, setKlasa] = useState("1");
-  const [zakres, setZakres] = useState("podstawa");
-  const [dzial, setDzial] = useState("1");
+  const [klasa, setKlasa] = useState("");
+  const [zakres, setZakres] = useState("");
+  const [dzial, setDzial] = useState("");
   const [temat, setTemat] = useState("");
-  const [zrodlo, setZrodlo] = useState("youtube");
+  const [zrodlo, setZrodlo] = useState("");
   const [lokalizacjaInput, setLokalizacjaInput] = useState("");
   const [lokalizacjaSubmit, setLokalizacjaSubmit] = useState("");
 

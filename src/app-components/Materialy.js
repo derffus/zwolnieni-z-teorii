@@ -4,7 +4,14 @@ import "../component-styles/Materialy.scss";
 function Materialy(props) {
   return (
     <div className="materialy">
-      <ContentPicker updateState={props.updateState} klasa={props.klasa} zakres={props.zakres} temat={props.temat}/>
+      <ContentPicker
+        updateState={props.updateState}
+        klasa={props.klasa}
+        zakres={props.zakres}
+        temat={props.temat}
+        dzial={props.dzial}
+        zrodlo={props.zrodlo}
+      />
       <div className="filmy">
         {props.wypiszFilmy(
           props.filmyYTLinki,
