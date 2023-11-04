@@ -31,16 +31,16 @@ function Studia(props) {
         </div>
       </div>
       <div
-        id="szkola-glowna-handlowa"
+        className="uczelnia-segment szkola-glowna-handlowa"
         onClick={() => {
           window.open("https://www.sgh.waw.pl/", "_blank");
         }}
       >
-        <div id="szkola-glowna-handlowa-text">
-          <div id="szkola-glowna-handlowa-start">
+        <div className="uczelnia-segment-text szkola-glowna-handlowa-text">
+          <div className="uczelnia-segment-start szkola-glowna-handlowa-start">
             <span>Szkoła główna handlowa w Warszawie</span>
           </div>
-          <div id="szkola-glowna-handlowa-content">
+          <div className="uczelnia-segment-content szkola-glowna-handlowa-content">
             Rekrutacja na sgh nie jest prosta, oprócz zdania matur uczestnicy
             muszą podejsć do egzaminu wstępnego pod nazwą "test z wiedzy o
             przedsiębiorczosci", który liczy się tak samo jak matura z
@@ -54,34 +54,43 @@ function Studia(props) {
             maturze.
           </div>
         </div>
-        <div id="szkola-glowna-handlowa-img">
+        <div className="uczelnia-segment-img szkola-glowna-handlowa-img">
           <img
             src={require("../images/SzkolaGlownaHandlowaWWarszawie.png")}
             alt="Szkola Glowna Handlowa W Warszawie"
           />
         </div>
       </div>
-      <div id="akademia-leone-kozminskiego">
-        <div id="akademia-leone-kozminskiego-text">
-          <div id="akademia-leone-kozminskiego-start">
+      <div
+        className="uczelnia-segment akademia-leona-kozminskiego"
+        onClick={() => {
+          window.open("https://www.kozminski.edu.pl/", "_blank");
+        }}
+      >
+        <div className="uczelnia-segment-text akademia-leona-kozminskiego-text">
+          <div className="uczelnia-segment-start akademia-leona-kozminskiego-start">
             <span>Akademia Leona Koźmińskiego</span>
           </div>
-          <div id="akademia-leone-kozminskiego-content">
+          <div className="uczelnia-segment-content akademia-leona-kozminskiego-content">
             Akademia Leona Koźmińskiego uznawana jest za najlepszą szkołę biznesu
             w Europię centralnej. Specjalizuje się głównie w dziedzinie nauk
             społecznych, oferując zróżnicowany wybór programów z zakresu
             ekonomii, zarządzania, prawa, administracji oraz nauk społecznych.
             Uczelnia ma reputację zaangażowania w badania naukowe, a także silną
-            współpracę z międzynarodowymi instytucjami. Na studia w języku
-            polskim zostają przyjęci kandydaci, którzy osiągneli co najmniej 300
-            punktów w rekrutacji (1% na maturze podstawowej - 1,5pkt 1% na
-            maturze rozszerzonej - 2pkt 1% na maturze rozszerzonej z matematyki
-            3pkt!) dla finalistów i laureatów olimpiady "Zwolnieni z Teorii"
+            współpracę z międzynarodowymi instytucjami.
+            <br /> Na studia w języku polskim zostają przyjęci kandydaci, którzy
+            osiągneli conajmniej 300 punktów w rekrutacji (1% na maturze
+            podstawowej - 1,5pkt 1% na maturze rozszerzonej - 2pkt 1% na maturze
+            rozszerzonej z matematyki 3pkt!)
+            <br /> Dla finalistów i laureatów olimpiady "Zwolnieni z Teorii"
             przypada również dodatkowe 30pkt.
           </div>
         </div>
-        <div id="akademia-leone-kozminskiego-img">
-          <img src="" alt="Akademia Leona Koźmińskiego" />
+        <div className="uczelnia-segment-img akademia-leona-kozminskiego-img">
+          <img
+            src={require("../images/AkademiaLeonaKozminskiego.png")}
+            alt="Akademia Leona Koźmińskiego"
+          />
         </div>
       </div>
     </div>

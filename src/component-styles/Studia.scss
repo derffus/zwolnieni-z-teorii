@@ -30,13 +30,14 @@
   width: 55%;
   font-size: 1.2em;
 }
-@mixin uczelnia-segment {
+.uczelnia-segment {
   padding: 20px;
   background-color: var(--purpleHovered);
   font-weight: bold;
   align-self: center;
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   height: 100%;
   width: 90%;
@@ -49,24 +50,19 @@
     transform: translate(8px, 8px);
     box-shadow: 1px 1px 1px 1px var(--purple);
   }
-}
-#szkola-glowna-handlowa {
-  @include uczelnia-segment();
-  flex-direction: row-reverse;
-  #szkola-glowna-handlowa-text {
-    width: 60%;
+  .uczelnia-segment-text {
     display: flex;
     flex-direction: column;
   }
-  #szkola-glowna-handlowa-start {
+  .uczelnia-segment-start {
     font-size: 3em;
     color: var(--blue);
   }
-  #szkola-glowna-handlowa-content {
+  .uczelnia-segment-content {
     color: var(--colorFont);
     font-size: 1.2em;
   }
-  #szkola-glowna-handlowa-img {
+  .uczelnia-segment-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,30 +72,22 @@
     }
   }
 }
-#akademia-leone-kozminskiego {
-  margin-top: 80px;
-  @include uczelnia-segment();
-  flex-direction: row;
-  #akademia-leone-kozminskiego-text {
+.szkola-glowna-handlowa {
+  flex-direction: row-reverse;
+  .szkola-glowna-handlowa-text {
     width: 60%;
-    display: flex;
-    flex-direction: column;
   }
-  #akademia-leone-kozminskiego-start {
-    font-size: 3em;
-    color: var(--blue);
+}
+.akademia-leona-kozminskiego {
+  margin-top: 80px;
+  flex-direction: row;
+  .akademia-leona-kozminskiego-text {
+    width: 55%;
   }
-  #akademia-leone-kozminskiego-content {
-    color: var(--colorFont);
-    font-size: 1.2em;
-  }
-  #akademia-leone-kozminskiego-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .akademia-leona-kozminskiego-img {
     img {
-      display: block;
-      height: 250px;
+      transform: rotate(-4deg);
+      margin-top: 25px;
     }
   }
 }
@@ -115,52 +103,39 @@
   #welcome-studia-content {
     width: 100%;
   }
-  #szkola-glowna-handlowa {
+  .uczelnia-segment {
     box-shadow: none;
     width: 100vw;
     align-self: center;
     text-align: center;
     flex-direction: column;
     height: fit-content;
-    &:hover{
+    &:hover {
       transform: none;
     }
-    #szkola-glowna-handlowa-text {
+    .uczelnia-segment-text {
       width: 100%;
-      #szkola-glowna-handlowa-content{
+      .uczelnia-segment-content {
         align-self: center;
-        width:80%;
+        width: 80%;
       }
     }
-    #szkola-glowna-handlowa-img {
+    .uczelnia-segment-img {
       align-self: center;
+    }
+  }
+  .szkola-glowna-handlowa {
+    .szkola-glowna-handlowa-img {
       img {
         height: 150px;
       }
     }
   }
-  #akademia-leone-kozminskiego {
+  .akademia-leona-kozminskiego {
     margin-top: 50px;
-    box-shadow: none;
-    width: 100vw;
-    align-self: center;
-    text-align: center;
-    flex-direction: column;
-    height: fit-content;
-    &:hover{
-      transform: none;
-    }
-    #akademia-leone-kozminskiego-text {
-      width: 100%;
-      #akademia-leone-kozminskiego-content{
-        align-self: center;
-        width: 80%;
-      }
-    }
-    #akademia-leone-kozminskiego {
-      align-self: center;
+    .akademia-leona-kozminskiego-img {
       img {
-        height: 150px;
+        height: 120px;
       }
     }
   }
