@@ -12,54 +12,55 @@ function RightNav(props) {
   };
   const navigate = useNavigate();
   const location = useLocation();
-  let width = window.innerWidth;
   return (
     <nav className={`right-nav ${showRightNav ? "show-right-nav" : ""}`}>
-      {width <= 700 ? (
-        <div id="right-segment-buttons">
-          <button
-            id="materialy"
-            className={location.pathname === "/materialy" ? "nav-clicked" : ""}
-            onClick={() => {
-              navigate("/materialy");
-            }}
-          >
-            Materiały
-          </button>
-
-          <button
-            id="korepetycje"
-            className={
-              location.pathname === "/korepetycje" ? "nav-clicked" : ""
-            }
-            onClick={() => {
-              navigate("/korepetycje");
-            }}
-          >
-            Korepetycje
-          </button>
-
-          <button
-            id="studia"
-            className={location.pathname === "/studia" ? "nav-clicked" : ""}
-            onClick={() => {
-              navigate("/studia");
-            }}
-          >
-            Studia
-          </button>
-
-          <button
-            id="arkusze"
-            className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
-            onClick={() => {
-              navigate("/arkusze");
-            }}
-          >
-            Arkusze
-          </button>
-        </div>
-      ) : null}
+      <div id="right-segment-buttons">
+        <button
+          id="strona-glowna"
+          className={location.pathname === "/" ? "nav-clicked" : ""}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Strona główna
+        </button>
+        <button
+          id="materialy"
+          className={location.pathname === "/materialy" ? "nav-clicked" : ""}
+          onClick={() => {
+            navigate("/materialy");
+          }}
+        >
+          Materiały
+        </button>
+        <button
+          id="korepetycje"
+          className={location.pathname === "/korepetycje" ? "nav-clicked" : ""}
+          onClick={() => {
+            navigate("/korepetycje");
+          }}
+        >
+          Korepetycje
+        </button>
+        <button
+          id="studia"
+          className={location.pathname === "/studia" ? "nav-clicked" : ""}
+          onClick={() => {
+            navigate("/studia");
+          }}
+        >
+          Studia
+        </button>
+        <button
+          id="arkusze"
+          className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
+          onClick={() => {
+            navigate("/arkusze");
+          }}
+        >
+          Arkusze
+        </button>
+      </div>
       <div className="small-buttons">
         <button
           className={`zmien-motyw ${
@@ -74,12 +75,6 @@ function RightNav(props) {
           ) : (
             <i className="fa-solid fa-sun" id="sun"></i>
           )}
-        </button>
-        <button className="instagram-button" onClick={()=>{window.open("https://instagram.com/", '_blank')}}>
-          <i className="fa-brands fa-instagram" id="instagram"></i>
-        </button>
-        <button className="tiktok-button" onClick={()=>{window.open("https://tiktok.com/", '_blank')}}>
-          <i className="fa-brands fa-tiktok fa-sm" id="tiktok"></i>
         </button>
       </div>
     </nav>

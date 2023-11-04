@@ -3,119 +3,193 @@
 #home-page {
   height: 100%;
   width: 100vw;
+}
+#home-header {
+  height: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   gap: 5vh;
   align-items: center;
-}
-#welcome-home-page {
-  color: var(--blue);
-  animation: show-welcome-page 0.8s;
-  margin-top: 5vh;
-  align-self: flex-start;
-  margin-left: 10vw;
-  font-size: 5.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  br {
-    content: "";
-    margin: -25px;
-    display: block;
+  #welcome-home-page {
+    color: var(--blue);
+    animation: show-welcome-page 0.8s;
+    margin-top: 5vh;
+    align-self: flex-start;
+    margin-left: 10vw;
+    font-size: 5.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    br {
+      content: "";
+      margin: -25px;
+      display: block;
+    }
+    span {
+      margin-left: 7vw;
+      align-self: center;
+      color: var(--purple);
+    }
   }
-  span {
-    margin-left: 7vw;
-    align-self: center;
-    color: var(--purple);
+  @keyframes show-welcome-page {
+    from {
+      margin-top: -30vh;
+    }
   }
-}
-@keyframes show-welcome-page {
-  from{
-    margin-top:-30vh;
-  }
-}
-#big-buttons {
-  height: fit-content;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  button {
-    z-index: 1;
-    box-shadow: 15px 15px 1px 1px var(--purpleHovered);
-    font-family: inherit;
-    font-size: 1.4em;
-    background-color: var(--content);
-    border-radius: 100%;
-    border: 3px solid var(--purpleHovered);
-    height: 31vh;
-    aspect-ratio: 1/1;
+  #big-buttons {
+    height: fit-content;
+    width: 70%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s, border 0.3s,
-      background-color 0.3s;
-    &:hover {
-      cursor: pointer;
-      border-color: var(--purple);
-      box-shadow: 1px 1px 1px 1px var(--purple);
-      transform: translate(15px, 15px);
-      &::after {
-        content: attr(data-content);
-        font-size: 1.5em;
-        color: var(--purple);
-        position: absolute;
-        margin-top: 40vh;
-        animation: napis 0.5s;
+    flex-direction: row;
+    justify-content: space-around;
+    button {
+      z-index: 1;
+      position: relative;
+      box-shadow: 15px 15px 1px 1px var(--purpleHovered);
+      font-family: inherit;
+      font-size: 1.4em;
+      background-color: var(--content);
+      border-radius: 100%;
+      border: 3px solid var(--purpleHovered);
+      height: 31vh;
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s, border 0.3s,
+        background-color 0.3s;
+      &:hover {
+        cursor: pointer;
+        border-color: var(--purple);
+        box-shadow: 1px 1px 1px 1px var(--purple);
+        transform: translate(15px, 15px);
+        &::after {
+          content: attr(data-content);
+          font-size: 1.5em;
+          color: var(--purple);
+          position: absolute;
+          top: 35vh;
+          animation: napis 0.5s;
+        }
+      }
+      img {
+        display: block;
+        width: 70%;
+        aspect-ratio: 1/1;
       }
     }
-    img {
-      display: block;
-      width: 70%;
-      aspect-ratio: 1/1;
+  }
+  @keyframes napis {
+    from {
+      opacity: 0;
     }
   }
 }
-@keyframes napis {
-  from {
-    opacity: 0;
+
+#home-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  width: 100vw;
+  padding: 100px;
+  background-color: var(--purpleHovered);
+  transition: background-color 0.3s, color 0.3s;
+  .kontakt-welcome {
+    width: 50%;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .kontakt-linki {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 40%;
+    button {
+      margin-bottom: 3vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 5px solid black;
+      border-radius:40%;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: var(--content);
+      color: var(--contentInverted);
+      font-size: 5em;
+      width: 14vh;
+      aspect-ratio: 1/1;
+      &::after{
+        content:attr(data-content);
+        align-self:center;
+        position: absolute;
+        left:15vh;
+        font-size: 0.3em;
+      }
+    }
   }
 }
 
 @media (max-width: 700px) {
-  #welcome-home-page {
-    animation: none;
-    width: 100%;
-    text-align: center;
-    font-size: 2.5em;
-    margin: 0;
-    br {
+  #home-header {
+    height:90%;
+    #welcome-home-page {
+      animation: none;
+      width: 100%;
+      text-align: center;
+      font-size: 2.5em;
       margin: 0;
+      br {
+        margin: 0;
+      }
+      span {
+        margin: 0;
+      }
     }
-    span {
-      margin: 0;
+    #big-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 15px;
+      row-gap: 50px;
+      button {
+        height: 40vw;
+        aspect-ratio: 1/1;
+        box-shadow: 11px 11px 1px 1px var(--purpleHovered);
+        &::after {
+          z-index: 1;
+          color: var(--purple);
+          content: attr(data-content);
+          position: absolute;
+          top: 19vh;
+        }
+        &:hover {
+          transition: all 0s;
+          &::after {
+            content: none;
+          }
+        }
+      }
     }
   }
-  #big-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 15px;
-    row-gap: 50px;
-    button {
-      height: 40vw;
-      aspect-ratio: 1/1;
-      box-shadow: 11px 11px 1px 1px var(--purpleHovered);
-      &::after {
-        z-index: 1;
-        color: var(--purple);
-        content: attr(data-content);
-        position: absolute;
-        margin-top: 50%;
-      }
-      &:hover {
-        transition: all 0s;
-        &::after {
-          content: none;
+  #home-footer{
+    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    .kontakt-welcome{
+      width: 100%;
+      font-size: 3em;
+      text-align: center;
+    }
+    .kontakt-linki{
+      width: 100%;
+      align-items: center;
+      button{
+        margin-top: 5vh;
+        align-items: center;
+        &::after{
+          left: 0;
+          top:15vh;
         }
       }
     }

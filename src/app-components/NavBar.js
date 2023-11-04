@@ -6,11 +6,15 @@ import { motywStrony, ShowRightNav } from "../App";
 function NavBar(props) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [motyw] = useAtom(motywStrony);
+  const [motyw, setMotyw] = useAtom(motywStrony);
   const [showRightNav, setShowRightNav] = useAtom(ShowRightNav);
   const toggleRightNav = () => {
     const trueOrFalse = showRightNav === true ? false : true;
     setShowRightNav(trueOrFalse);
+  };
+  const zmienMotyw = () => {
+    const nowyMotyw = motyw === "light" ? "dark" : "light";
+    setMotyw(nowyMotyw);
   };
   let width = window.innerWidth;
   return (
@@ -20,13 +24,11 @@ function NavBar(props) {
           id="home-button"
           onClick={() => {
             navigate("/");
+            setShowRightNav(false);
           }}
         >
           <div>
-            <img
-              src={require("../images/LogoStrony.png")}
-              alt="Logo MatZone"
-            />
+            <img src={require("../images/LogoStrony.png")} alt="Logo MatZone" />
           </div>
           <div id="mat-zone">
             <span
@@ -97,11 +99,24 @@ function NavBar(props) {
           </button>
         </div>
       ) : null}
-      <div id="show-nav">
-        <button onClick={toggleRightNav}>
-          <i className="fa fa-bars"></i>
+      {width < 700 ? (
+        <div id="show-nav">
+          <button onClick={toggleRightNav}>
+            <i className="fa fa-bars"></i>
+          </button>
+        </div>
+      ) : (
+        <button
+          className={`zmien-motyw ${
+            motyw === "light" ? "moon-button" : "sun-button"
+          }`}
+          onClick={() => {
+            zmienMotyw();
+          }}
+        >
+          <i className="fa-solid fa-moon" id="moon"></i>
         </button>
-      </div>
+      )}
     </nav>
   );
 }
