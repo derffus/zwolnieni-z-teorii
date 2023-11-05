@@ -1,13 +1,14 @@
-import React from "react";
-import { useAtom } from "jotai";
-import { ShowContentPicker } from "../App";
+import React, { useState } from "react";
 function ContentPicker(props) {
-  const [showContentPicker, setShowContentPicker] = useAtom(ShowContentPicker);
+  const [showContentPicker, setShowContentPicker] = useState(true);
+
+  const width = window.innerWidth;
+
   const toggleShowContentPicker = () => {
     const trueOrFalse = showContentPicker === true ? false : true;
     setShowContentPicker(trueOrFalse);
   };
-  let width = window.innerWidth;
+
   return (
     <div
       className={`content-picker ${
@@ -16,7 +17,9 @@ function ContentPicker(props) {
     >
       {width <= 700 ? (
         <button
-          className={`show-content-picker-button ${showContentPicker ? "show" : "dont-show"}`}
+          className={`show-content-picker-button ${
+            showContentPicker ? "show" : "dont-show"
+          }`}
           onClick={toggleShowContentPicker}
         >
           <i className="fa-solid fa-chevron-down"></i>
@@ -26,7 +29,7 @@ function ContentPicker(props) {
         value={props.klasa}
         className="content-picker-select"
         onChange={(event) => {
-          props.updateState("klasa", event.target.value);
+          props.setKlasa(event.target.value);
         }}
       >
         <option value="" disabled>
@@ -41,7 +44,7 @@ function ContentPicker(props) {
         value={props.zakres}
         className="content-picker-select"
         onChange={(event) => {
-          props.updateState("zakres", event.target.value);
+          props.setZakres(event.target.value);
         }}
       >
         <option value="" disabled>
@@ -55,7 +58,7 @@ function ContentPicker(props) {
         value={props.dzial}
         className="content-picker-select"
         onChange={(event) => {
-          props.updateState("dzial", event.target.value);
+          props.setDzial(event.target.value);
         }}
       >
         <option value="" disabled>
@@ -169,7 +172,7 @@ function ContentPicker(props) {
         value={props.temat}
         className="content-picker-select"
         onChange={(event) => {
-          props.updateState("temat", event.target.value);
+          props.setTemat(event.target.value);
         }}
       >
         <option value="" disabled>
@@ -179,9 +182,9 @@ function ContentPicker(props) {
         <option value="innytemat">innytemat</option>
       </select>
       <select
-      value={props.zrodlo}
+        value={props.zrodlo}
         className="content-picker-select"
-        onChange={(event) => props.updateState("zrodlo", event.target.value)}
+        onChange={(event) => props.setZrodlo(event.target.value)}
       >
         <option value="" disabled>
           Źródło

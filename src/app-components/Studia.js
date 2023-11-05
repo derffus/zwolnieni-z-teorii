@@ -56,7 +56,10 @@ function Studia(props) {
         </div>
         <div className="uczelnia-segment-img szkola-glowna-handlowa-img">
           <img
-            src={require("../images/SzkolaGlownaHandlowaWWarszawie.png")}
+            src={
+              process.env.PUBLIC_URL +
+              "/images/SzkolaGlownaHandlowaWWarszawie.png"
+            }
             alt="Szkola Glowna Handlowa W Warszawie"
           />
         </div>
@@ -72,9 +75,9 @@ function Studia(props) {
             <span>Akademia Leona Koźmińskiego</span>
           </div>
           <div className="uczelnia-segment-content akademia-leona-kozminskiego-content">
-            Akademia Leona Koźmińskiego uznawana jest za najlepszą szkołę biznesu
-            w Europię centralnej. Specjalizuje się głównie w dziedzinie nauk
-            społecznych, oferując zróżnicowany wybór programów z zakresu
+            Akademia Leona Koźmińskiego uznawana jest za najlepszą szkołę
+            biznesu w Europię centralnej. Specjalizuje się głównie w dziedzinie
+            nauk społecznych, oferując zróżnicowany wybór programów z zakresu
             ekonomii, zarządzania, prawa, administracji oraz nauk społecznych.
             Uczelnia ma reputację zaangażowania w badania naukowe, a także silną
             współpracę z międzynarodowymi instytucjami.
@@ -88,7 +91,9 @@ function Studia(props) {
         </div>
         <div className="uczelnia-segment-img akademia-leona-kozminskiego-img">
           <img
-            src={require("../images/AkademiaLeonaKozminskiego.png")}
+            src={
+              process.env.PUBLIC_URL + "/images/AkademiaLeonaKozminskiego.png"
+            }
             alt="Akademia Leona Koźmińskiego"
           />
         </div>

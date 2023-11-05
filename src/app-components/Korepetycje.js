@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import ClipboardJS from "clipboard";
-import korepetytorzy from "../korepetytorzy";
+import korepetytorzy from "../korepetytorzy.js";
 import "../component-styles/Korepetycje.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
+  const [lokalizacjaInput, setLokalizacjaInput] = useState("");
+  const [lokalizacjaSubmit, setLokalizacjaSubmit] = useState("");
+
   const clipboard = new ClipboardJS(".copy");
+  
   function handleLokalizacjaInput(event) {
-    props.updateState("lokalizacjaInput", event.target.value);
+    setLokalizacjaInput(event.target.value);
   }
   function handleLokalizacjaSubmit(event) {
     event.preventDefault();
-    if (props.lokalizacjaInput !== "") {
-      props.updateState("lokalizacjaSubmit", props.lokalizacjaInput);
-      props.updateState("lokalizacjaInput", "");
+    if (lokalizacjaInput !== "") {
+      setLokalizacjaSubmit(lokalizacjaInput);
+      setLokalizacjaInput("");
     }
   }
 
@@ -39,17 +43,19 @@ function Korepetycje(props) {
 
     return filteredArr.concat(restOfArr);
   }
+
   clipboard.on("success", (e) => {
     e.clearSelection();
   });
+
   return (
     <div id="korepetycje-segment">
       <div id="wpisz-lokalizacje">
         <span>Lokalizacja:</span>
         <form onSubmit={handleLokalizacjaSubmit}>
           <input
-            placeholder={props.lokalizacjaSubmit}
-            value={props.lokalizacjaInput}
+            placeholder={lokalizacjaSubmit}
+            value={lokalizacjaInput}
             onChange={handleLokalizacjaInput}
           />
           <button type="submit">
@@ -63,7 +69,7 @@ function Korepetycje(props) {
         <span>korepetytora!</span>
       </div>
       <div id="korepetytorzy">
-        {sortByLokalizacja(korepetytorzy, props.lokalizacjaSubmit).map((x) => (
+        {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x) => (
           <div id="korepetytor-div">
             <span id="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
             <br />

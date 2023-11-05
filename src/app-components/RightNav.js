@@ -2,18 +2,20 @@ import React from "react";
 import "../component-styles/RightNav.scss";
 import { useAtom } from "jotai";
 import { useNavigate, useLocation } from "react-router-dom";
-import { motywStrony, ShowRightNav } from "../App";
+import { motywStrony } from "../App";
 function RightNav(props) {
   const [motyw, setMotyw] = useAtom(motywStrony);
-  const [showRightNav] = useAtom(ShowRightNav);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const zmienMotyw = () => {
     const nowyMotyw = motyw === "light" ? "dark" : "light";
     setMotyw(nowyMotyw);
   };
-  const navigate = useNavigate();
-  const location = useLocation();
+
   return (
-    <nav className={`right-nav ${showRightNav ? "show-right-nav" : ""}`}>
+    <nav className={`right-nav ${props.showRightNav ? "show-right-nav" : ""}`}>
       <div id="right-segment-buttons">
         <button
           id="strona-glowna"

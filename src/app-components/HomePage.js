@@ -4,8 +4,10 @@ import { useAtom } from "jotai";
 import { useNavigate } from "react-router-dom";
 import { motywStrony } from "../App";
 function HomePage(props) {
-  const navigate = useNavigate();
   const [motyw] = useAtom(motywStrony);
+
+  const navigate = useNavigate();
+
   return (
     <div id="home-page">
       <header id="home-header">
@@ -23,10 +25,10 @@ function HomePage(props) {
             <img
               src={
                 motyw === "light"
-                  ? require("../images/Materialy.png")
-                  : require("../images/MaterialyDarkMode.png")
+                  ? process.env.PUBLIC_URL + "/images/Materialy.png"
+                  : process.env.PUBLIC_URL + "/images/MaterialyDarkMode.png"
               }
-              alt="korepetycje"
+              alt="materialy"
             />
           </button>
 
@@ -39,8 +41,8 @@ function HomePage(props) {
             <img
               src={
                 motyw === "light"
-                  ? require("../images/Korepetycje.png")
-                  : require("../images/KorepetycjeDarkMode.png")
+                  ? process.env.PUBLIC_URL + "/images/Korepetycje.png"
+                  : process.env.PUBLIC_URL + "/images/KorepetycjeDarkMode.png"
               }
               alt="korepetycje"
             />
@@ -55,8 +57,8 @@ function HomePage(props) {
             <img
               src={
                 motyw === "light"
-                  ? require("../images/Studia.png")
-                  : require("../images/StudiaDarkMode.png")
+                  ? process.env.PUBLIC_URL + "/images/Studia.png"
+                  : process.env.PUBLIC_URL + "/images/StudiaDarkMode.png"
               }
               alt="studia"
             />
@@ -71,8 +73,8 @@ function HomePage(props) {
             <img
               src={
                 motyw === "light"
-                  ? require("../images/Arkusze.png")
-                  : require("../images/ArkuszeDarkMode.png")
+                  ? process.env.PUBLIC_URL + "/images/Arkusze.png"
+                  : process.env.PUBLIC_URL + "/images/ArkuszeDarkMode.png"
               }
               alt="arkusze"
             />
