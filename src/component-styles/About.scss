@@ -1,0 +1,47 @@
+@import "../App.css";
+
+#about-segment {
+  color: var(--contentInverted);
+  height: fit-content;
+  width: 90vw;
+  margin-left: 5vw;
+  text-transform: uppercase;
+  border-top: 1px solid var(--contentInverted);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    nav {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        display: block;
+        width: 50px;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+  .inne {
+    display: flex;
+    flex-direction: column;
+    div {
+      font-weight: 600;
+      font-size: 1.15em;
+    }
+    .inne-div {
+      font-weight: 900;
+    }
+  }
+  .projekt-w-ramach-zwolnieni {
+    img {
+      display: block;
+      height: 10vh;
+    }
+  }
+}

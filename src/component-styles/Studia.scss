@@ -1,9 +1,12 @@
 @import "../App.css";
 
-#studia-segment {
+#studia {
   height: 100%;
+  width: 100vw;
+}
+.studia-segment {
+  height: calc(100% + 40vh + 50px);
   min-height: 90vh;
-  width: calc(100% - 120px);
   padding: 20px 60px 20px 60px;
   color: var(--blue);
   display: flex;
@@ -86,13 +89,12 @@
   }
   .akademia-leona-kozminskiego-img {
     img {
-      transform: rotate(-4deg);
       margin-top: 25px;
     }
   }
 }
 @media (max-width: 700px) {
-  #studia-segment {
+  .studia-segment {
     padding: 0;
     width: 100%;
   }

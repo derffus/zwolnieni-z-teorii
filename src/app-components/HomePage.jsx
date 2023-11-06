@@ -1,5 +1,6 @@
 import React from "react";
 import "../component-styles/HomePage.scss";
+import About from "./About";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router-dom";
 import { motywStrony } from "../App";
@@ -81,20 +82,7 @@ function HomePage(props) {
           </button>
         </div>
       </header>
-      <footer id="home-footer">
-        <div className="kontakt-welcome">Skontaktuj się z nami</div>
-        <div className="kontakt-linki">
-          <button data-content="matZone">
-            <i className="fa-brands fa-instagram"></i>
-          </button>
-          <button data-content="matzone.kontakt@gmail.com">
-            <i className="fa-regular fa-envelope"></i>
-          </button>
-          <button data-content="MatZone">
-            <i className="fa-brands fa-tiktok fa-sm"></i>
-          </button>
-        </div>
-      </footer>
+      <About />
     </div>
   );
 }

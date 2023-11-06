@@ -85,51 +85,6 @@
     }
   }
 }
-
-#home-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 4vw;
-  width: 100vw;
-  padding: 100px;
-  background-color: var(--purpleHovered);
-  transition: background-color 0.3s, color 0.3s;
-  .kontakt-welcome {
-    width: 50%;
-    font-size: 4.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .kontakt-linki {
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-    width: 40%;
-    button {
-      margin-bottom: 3vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 5px solid black;
-      border-radius:40%;
-      transition: background-color 0.3s, color 0.3s;
-      background-color: var(--content);
-      color: var(--contentInverted);
-      font-size: 5em;
-      width: 14vh;
-      aspect-ratio: 1/1;
-      &::after{
-        content:attr(data-content);
-        align-self:center;
-        position: absolute;
-        left:15vh;
-        font-size: 0.3em;
-      }
-    }
-  }
-}
-
 @media (max-width: 700px) {
   #home-header {
     padding-top: 40px;
@@ -168,28 +123,6 @@
           &::after {
             content: none;
           }
-        }
-      }
-    }
-  }
-  #home-footer{
-    padding: 0;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    .kontakt-welcome{
-      width: 100%;
-      font-size: 3em;
-      text-align: center;
-    }
-    .kontakt-linki{
-      width: 100%;
-      align-items: center;
-      button{
-        margin-top: 5vh;
-        align-items: center;
-        &::after{
-          left: 0;
-          top:15vh;
         }
       }
     }

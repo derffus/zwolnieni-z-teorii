@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ContentPicker from "./ContentPicker";
+import About from "./About";
 import "../component-styles/Materialy.scss";
 import filmyYtLinki from "../filmyYTLinki";
 function Materialy(props) {
@@ -34,22 +35,25 @@ function Materialy(props) {
   }
 
   return (
-    <div className="materialy">
-      <ContentPicker
-        klasa={klasa}
-        setKlasa={setKlasa}
-        zakres={zakres}
-        setZakres={setZakres}
-        temat={temat}
-        setTemat={setTemat}
-        dzial={dzial}
-        setDzial={setDzial}
-        zrodlo={zrodlo}
-        setZrodlo={setZrodlo}
-      />
-      <div className="filmy">
-        {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
+    <div id="materialy">
+      <div className="materialy">
+        <ContentPicker
+          klasa={klasa}
+          setKlasa={setKlasa}
+          zakres={zakres}
+          setZakres={setZakres}
+          temat={temat}
+          setTemat={setTemat}
+          dzial={dzial}
+          setDzial={setDzial}
+          zrodlo={zrodlo}
+          setZrodlo={setZrodlo}
+        />
+        <div className="filmy">
+          {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
+        </div>
       </div>
+      <About />
     </div>
   );
 }

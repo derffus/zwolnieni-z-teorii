@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ClipboardJS from "clipboard";
 import korepetytorzy from "../korepetytorzy.js";
+import About from "./About.jsx";
 import "../component-styles/Korepetycje.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
@@ -8,7 +9,7 @@ function Korepetycje(props) {
   const [lokalizacjaSubmit, setLokalizacjaSubmit] = useState("");
 
   const clipboard = new ClipboardJS(".copy");
-  
+
   function handleLokalizacjaInput(event) {
     setLokalizacjaInput(event.target.value);
   }
@@ -49,46 +50,49 @@ function Korepetycje(props) {
   });
 
   return (
-    <div id="korepetycje-segment">
-      <div id="wpisz-lokalizacje">
-        <span>Lokalizacja:</span>
-        <form onSubmit={handleLokalizacjaSubmit}>
-          <input
-            placeholder={lokalizacjaSubmit}
-            value={lokalizacjaInput}
-            onChange={handleLokalizacjaInput}
-          />
-          <button type="submit">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
+    <div id="korepetycje">
+      <div className="korepetycje-segment">
+        <div id="wpisz-lokalizacje">
+          <span>Lokalizacja:</span>
+          <form onSubmit={handleLokalizacjaSubmit}>
+            <input
+              placeholder={lokalizacjaSubmit}
+              value={lokalizacjaInput}
+              onChange={handleLokalizacjaInput}
+            />
+            <button type="submit">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div id="welcome-korepetycje">
+          znajdź swojego
+          <br />
+          <span>korepetytora!</span>
+        </div>
+        <div id="korepetytorzy">
+          {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x) => (
+            <div id="korepetytor-div">
+              <span id="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
+              <br />
+              <span id="miejscowosc">{x.miejscowosc}</span>
+              <br />
+              <span
+                id="numerTelefonu"
+                class="copy"
+                data-clipboard-text={x.numerTelefonu}
+              >
+                {x.numerTelefonu}
+              </span>
+              <br />
+              <span id="mail" class="copy" data-clipboard-text={x.mail}>
+                {x.mail}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
-      <div id="welcome-korepetycje">
-        znajdź swojego
-        <br />
-        <span>korepetytora!</span>
-      </div>
-      <div id="korepetytorzy">
-        {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x) => (
-          <div id="korepetytor-div">
-            <span id="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
-            <br />
-            <span id="miejscowosc">{x.miejscowosc}</span>
-            <br />
-            <span
-              id="numerTelefonu"
-              class="copy"
-              data-clipboard-text={x.numerTelefonu}
-            >
-              {x.numerTelefonu}
-            </span>
-            <br />
-            <span id="mail" class="copy" data-clipboard-text={x.mail}>
-              {x.mail}
-            </span>
-          </div>
-        ))}
-      </div>
+      <About />
     </div>
   );
 }

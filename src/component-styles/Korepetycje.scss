@@ -1,12 +1,16 @@
 @import "../App.css";
 
-#korepetycje-segment {
+#korepetycje {
+  width: 100vw;
+  height: 100%;
+}
+.korepetycje-segment {
   background-color: var(--content);
-  transition: background-color 0.3s,color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
   padding-top: 7vh;
+  margin-left: 30vw;
   width: 70vw;
-  align-self: flex-end;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,8 +32,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition:all 0.3s;
-  &:hover{
+  transition: all 0.3s;
+  &:hover {
     box-shadow: 2px 2px 1px 0 var(--purpleHovered);
     transform: translate(10px, 10px);
   }
@@ -88,7 +92,7 @@
   font-size: 4em;
   font-weight: bold;
   text-transform: uppercase;
-  transition: color .3s;
+  transition: color 0.3s;
   br {
     content: "";
     margin: -20px;
@@ -96,7 +100,7 @@
   }
   span {
     color: var(--purple);
-    transition: color .3s;
+    transition: color 0.3s;
   }
 }
 #korepetytorzy {
@@ -157,20 +161,21 @@
 }
 
 @media (max-width: 700px) {
-  #korepetycje-segment {
+  .korepetycje-segment {
     position: static;
     width: 100%;
+    margin-left: 0;
   }
   #wpisz-lokalizacje {
     z-index: 1;
-    border:2px solid var(--blue);
+    border: 2px solid var(--blue);
     box-sizing: border-box;
     position: absolute;
     top: 6vh;
     width: 95vw;
     left: 1.25vw;
     box-shadow: none;
-    &:hover{
+    &:hover {
       transform: none;
     }
   }
@@ -185,13 +190,13 @@
   #korepetytor-div {
     width: 75%;
     text-align: center;
-    br{
+    br {
       content: "";
       display: block;
       margin-top: -10px;
     }
   }
-  #imie-i-nazwisko{
+  #imie-i-nazwisko {
     font-size: 1.4em;
   }
   #miejscowosc {

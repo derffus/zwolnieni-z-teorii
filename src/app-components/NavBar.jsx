@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../component-styles/NavBar.scss";
-import RightNav from "../app-components/RightNav";
+import RightNav from "./RightNav";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAtom } from "jotai";
 import { motywStrony } from "../App";

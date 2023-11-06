@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { atom, useAtom } from "jotai";
 
 import "./App.css";
+import "./component-styles/About.scss"
 import colors from "./colors";
 import NavBar from "./app-components/NavBar";
 import HomePage from "./app-components/HomePage";
