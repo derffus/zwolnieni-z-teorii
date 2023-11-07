@@ -1,5 +1,4 @@
 import React from "react";
-import About from "./About";
 import "../component-styles/Studia.scss";
 function Studia(props) {
   return (
@@ -101,7 +100,6 @@ function Studia(props) {
           </div>
         </div>
       </div>
-      <About />
     </div>
   );
 }

@@ -66,7 +66,6 @@ function NavBar(props) {
         {width > 700 ? (
           <div id="top-buttons">
             <button
-              id="materialy"
               className={
                 location.pathname === "/materialy" ? "nav-clicked" : ""
               }
@@ -78,7 +77,6 @@ function NavBar(props) {
             </button>
 
             <button
-              id="korepetycje"
               className={
                 location.pathname === "/korepetycje" ? "nav-clicked" : ""
               }
@@ -90,7 +88,6 @@ function NavBar(props) {
             </button>
 
             <button
-              id="studia"
               className={location.pathname === "/studia" ? "nav-clicked" : ""}
               onClick={() => {
                 navigate("/studia");
@@ -100,7 +97,6 @@ function NavBar(props) {
             </button>
 
             <button
-              id="arkusze"
               className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
               onClick={() => {
                 navigate("/arkusze");

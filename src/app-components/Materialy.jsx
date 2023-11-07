@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ContentPicker from "./ContentPicker";
-import About from "./About";
 import "../component-styles/Materialy.scss";
 import filmyYtLinki from "../filmyYTLinki";
 function Materialy(props) {
@@ -53,7 +52,6 @@ function Materialy(props) {
           {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
         </div>
       </div>
-      <About />
     </div>
   );
 }

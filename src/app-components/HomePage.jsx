@@ -1,6 +1,5 @@
 import React from "react";
 import "../component-styles/HomePage.scss";
-import About from "./About";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router-dom";
 import { motywStrony } from "../App";
@@ -82,7 +81,6 @@ function HomePage(props) {
           </button>
         </div>
       </header>
-      <About />
     </div>
   );
 }

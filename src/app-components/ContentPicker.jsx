@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import tematy from "../dzialyTematy.js";
 function ContentPicker(props) {
   const [showContentPicker, setShowContentPicker] = useState(true);
 
@@ -122,18 +123,16 @@ function ContentPicker(props) {
           </>
         ) : props.klasa === "3" && props.zakres === "podstawa" ? (
           <>
-            <option value="1">I</option>
-            <option value="2">II</option>
-            <option value="3">III</option>
-            <option value="4">IV</option>
-            <option value="5">V</option>
-            <option value="6">VI</option>
-            <option value="7">VII</option>
-            <option value="8">VIII</option>
+            <option value="1">Ułamki algebraiczne. Równania wymierne</option>
+            <option value="2">Ciągi</option>
+            <option value="3">Kombinatoryka</option>
+            <option value="4">Czworokąty</option>
+            <option value="5">Geometria płaska - pole czworokąta</option>
+            <option value="6">Geometria analityczna</option>
           </>
         ) : props.klasa === "3" && props.zakres === "rozszerzenie" ? (
           <>
-            <option value="1">Ułamki algebraiczne</option>
+            <option value="1">Ułamki algebraiczne. Równania wymierne</option>
             <option value="2">Ciągi</option>
             <option value="3">Kombinatoryka</option>
             <option value="4">Geometria płaska - czworokąty</option>
@@ -144,14 +143,12 @@ function ContentPicker(props) {
           </>
         ) : props.klasa === "4" && props.zakres === "podstawa" ? (
           <>
-            <option value="1">I</option>
-            <option value="2">II</option>
-            <option value="3">III</option>
-            <option value="4">IV</option>
-            <option value="5">V</option>
-            <option value="6">VI</option>
-            <option value="7">VII</option>
-            <option value="8">VIII</option>
+            <option value="1">Funkcja wykładnicza</option>
+            <option value="2">Funkcja logarytmiczna</option>
+            <option value="3">Elementy statystyki</option>
+            <option value="4">Rachunek prawdopodobieństwa</option>
+            <option value="5">Geometria przestrzenna. Wielościany</option>
+            <option value="6">Geometria przestrzenna. Bryły obrotowe</option>
           </>
         ) : props.klasa === "4" && props.zakres === "rozszerzenie" ? (
           <>
@@ -178,8 +175,22 @@ function ContentPicker(props) {
         <option value="" disabled>
           Temat
         </option>
-        <option value="jakistemat">jakistemat</option>
-        <option value="innytemat">innytemat</option>
+        {props.dzial !== "" &&
+        tematy[props.klasa][props.zakres][props.dzial] ? (
+          <>
+            {Object.values(tematy[props.klasa][props.zakres][props.dzial]).map(
+              (x, index) => (
+                <option key={x + index} value={x}>
+                  {x}
+                </option>
+              )
+            )}
+          </>
+        ) : (
+          <option value="" disabled>
+            Wybierz klasę, zakres i dział
+          </option>
+        )}
       </select>
       <select
         value={props.zrodlo}

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ClipboardJS from "clipboard";
 import korepetytorzy from "../korepetytorzy.js";
-import About from "./About.jsx";
 import "../component-styles/Korepetycje.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
@@ -92,7 +91,6 @@ function Korepetycje(props) {
           ))}
         </div>
       </div>
-      <About />
     </div>
   );
 }

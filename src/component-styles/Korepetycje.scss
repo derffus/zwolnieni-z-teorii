@@ -33,10 +33,6 @@
   flex-direction: row;
   align-items: center;
   transition: all 0.3s;
-  &:hover {
-    box-shadow: 2px 2px 1px 0 var(--purpleHovered);
-    transform: translate(10px, 10px);
-  }
   form {
     width: 100%;
     height: 100%;
@@ -175,9 +171,6 @@
     width: 95vw;
     left: 1.25vw;
     box-shadow: none;
-    &:hover {
-      transform: none;
-    }
   }
   #welcome-korepetycje {
     position: absolute;

@@ -221,7 +221,7 @@ let filmyYtLinki = [
     "youtube",
   ],
 ];
-function shuffle(array) {
+export function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
   while (currentIndex > 0) {

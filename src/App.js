@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { atom, useAtom } from "jotai";
 
 import "./App.css";
-import "./component-styles/About.scss"
+import "./component-styles/About.scss";
 import colors from "./colors";
 import NavBar from "./app-components/NavBar";
 import HomePage from "./app-components/HomePage";
@@ -11,7 +11,7 @@ import Materialy from "./app-components/Materialy";
 import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze";
-
+import About from "./app-components/About";
 export const motywStrony = atom("light");
 
 function App() {
@@ -55,6 +55,7 @@ function App() {
           <Route path="/studia" element={<Studia />} />
           <Route path="/arkusze" element={<Arkusze />} />
         </Routes>
+        <About />
       </main>
     </div>
   );

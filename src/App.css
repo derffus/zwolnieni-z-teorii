@@ -14,12 +14,12 @@
 #content {
   transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden;
-  height: 90vh;
+  height: 100%;
   width: 100%;
   color: var(--blue);
   font-family: inherit;
   background-color: var(--content);
-  padding-top: 10vh;
+  margin-top: 10vh;
   min-height: calc(90vh - 20px);
   display: flex;
   flex-direction: column;
