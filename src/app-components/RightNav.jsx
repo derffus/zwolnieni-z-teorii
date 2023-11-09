@@ -18,7 +18,6 @@ function RightNav(props) {
     <nav className={`right-nav ${props.showRightNav ? "show-right-nav" : ""}`}>
       <div id="right-segment-buttons">
         <button
-          id="strona-glowna"
           className={location.pathname === "/" ? "nav-clicked" : ""}
           onClick={() => {
             navigate("/");
@@ -27,7 +26,6 @@ function RightNav(props) {
           Strona główna
         </button>
         <button
-          id="materialy"
           className={location.pathname === "/materialy" ? "nav-clicked" : ""}
           onClick={() => {
             navigate("/materialy");
@@ -36,7 +34,6 @@ function RightNav(props) {
           Materiały
         </button>
         <button
-          id="korepetycje"
           className={location.pathname === "/korepetycje" ? "nav-clicked" : ""}
           onClick={() => {
             navigate("/korepetycje");
@@ -45,7 +42,6 @@ function RightNav(props) {
           Korepetycje
         </button>
         <button
-          id="studia"
           className={location.pathname === "/studia" ? "nav-clicked" : ""}
           onClick={() => {
             navigate("/studia");
@@ -54,7 +50,6 @@ function RightNav(props) {
           Studia
         </button>
         <button
-          id="arkusze"
           className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
           onClick={() => {
             navigate("/arkusze");

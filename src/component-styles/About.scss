@@ -3,8 +3,8 @@
 #about-segment {
   color: var(--contentInverted);
   height: fit-content;
-  width: 90vw;
-  margin-left: 5vw;
+  width: 80vw;
+  margin-left: 10vw;
   text-transform: uppercase;
   border-top: 1px solid var(--contentInverted);
   display: flex;
@@ -39,9 +39,38 @@
     }
   }
   .projekt-w-ramach-zwolnieni {
+    display: flex;
+    flex-direction: column;
     img {
       display: block;
-      height: 8vh;
+      height: 9vh;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #about-segment {
+    flex-direction: column;
+    .social-media {
+      margin-top: 10px;
+      nav {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+    .inne{
+      align-items: center;
+    }
+    .projekt-w-ramach-zwolnieni {
+      font-size: 0.8em;
+      text-align: center;
+      align-items: center;
+      width: 100vw;
+      img {
+        height: auto;
+        width: 70%;
+      }
     }
   }
 }

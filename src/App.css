@@ -30,8 +30,4 @@
   transition: color 0.3s;
 }
 @media(max-width:700px){
-  #content{
-    height: 94vh;
-    padding-top: 6vh;
-  }
 }
