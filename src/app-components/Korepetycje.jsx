@@ -67,7 +67,7 @@ function Korepetycje(props) {
         <div id="welcome-korepetycje">
           znajdź swojego
           <br />
-          <span>korepetytora!</span>
+          <span className="purple-text">korepetytora!</span>
         </div>
         <div id="korepetytorzy">
           {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x) => (

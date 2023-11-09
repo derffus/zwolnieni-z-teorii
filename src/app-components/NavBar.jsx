@@ -35,7 +35,7 @@ function NavBar(props) {
           >
             <div>
               <img
-                src={process.env.PUBLIC_URL +"/images/LogoStrony.png"}
+                src={process.env.PUBLIC_URL + "/images/LogoStrony.png"}
                 alt="Logo MatZone"
               />
             </div>
@@ -113,16 +113,23 @@ function NavBar(props) {
             </button>
           </div>
         ) : (
-          <button
-            className={`zmien-motyw ${
-              motyw === "light" ? "moon-button" : "sun-button"
-            }`}
-            onClick={() => {
-              zmienMotyw();
-            }}
-          >
-            <i className="fa-solid fa-moon" id="moon"></i>
-          </button>
+          <div className="zmien-motyw-div">
+            <button
+              className={`zmien-motyw ${
+                motyw === "light" ? "moon-button" : "sun-button"
+              }`}
+              onClick={() => {
+                zmienMotyw();
+              }}
+            >
+              <i
+                className={`fa-solid ${
+                  motyw === "light" ? "fa-moon" : "fa-sun"
+                }`}
+                id="moon"
+              />
+            </button>
+          </div>
         )}
       </nav>
     </>

@@ -25,6 +25,10 @@
   flex-direction: column;
   justify-content: center;
 }
+.purple-text {
+  color: var(--purple);
+  transition: color 0.3s;
+}
 @media(max-width:700px){
   #content{
     height: 94vh;

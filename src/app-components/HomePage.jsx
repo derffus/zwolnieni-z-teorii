@@ -13,7 +13,7 @@ function HomePage(props) {
       <header id="home-header">
         <div id="welcome-home-page">
           Cała wiedza w <br />
-          <span>jednym miejscu!</span>
+          <span className="purple-text">jednym miejscu!</span>
         </div>
         <div id="big-buttons">
           <button
