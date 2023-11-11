@@ -45,13 +45,13 @@
   height: 100%;
   width: 90%;
   text-transform: uppercase;
-  box-shadow: 8px 8px 1px 1px var(--purple);
+  box-shadow: 8px 8px 1px 1px var(--purpleDarker);
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   &:hover {
     cursor: pointer;
-    background-color: var(--purple);
+    background-color: var(--purpleDarker);
     transform: translate(8px, 8px);
-    box-shadow: 1px 1px 1px 1px var(--purple);
+    box-shadow: 1px 1px 1px 1px var(--purpleDarker);
   }
   .uczelnia-segment-text {
     display: flex;

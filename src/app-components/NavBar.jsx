@@ -45,7 +45,7 @@ function NavBar(props) {
                 style={
                   motyw === "light"
                     ? { color: "hsl(235, 26%, 62%)" }
-                    : { color: "hsl(235, 26%, 25%)" }
+                    : { color: "#D9D9D9" }
                 }
               >
                 Mat
@@ -55,7 +55,7 @@ function NavBar(props) {
                 style={
                   motyw === "light"
                     ? { color: "hsl(201, 43%, 25%)" }
-                    : { color: "hsl(201, 43%, 45%)" }
+                    : { color: "#7F7FB0" }
                 }
               >
                 Zone

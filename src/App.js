@@ -10,7 +10,8 @@ import HomePage from "./app-components/HomePage";
 import Materialy from "./app-components/Materialy";
 import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
-import Arkusze from "./app-components/Arkusze";
+import Arkusze from "./app-components/Arkusze/Arkusze";
+import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista";
 import About from "./app-components/About";
 export const motywStrony = atom("light");
 
@@ -26,14 +27,14 @@ function App() {
           motyw === "light"
             ? colors.lightMode.purpleHovered
             : colors.darkMode.purpleHovered,
+        "--purpleDarker":
+          motyw === "light"
+            ? colors.lightMode.purpleDarker
+            : colors.darkMode.purpleDarker,
         "--content":
           motyw === "light"
             ? colors.lightMode.content
             : colors.darkMode.content,
-        "--purpleDark":
-          motyw === "light"
-            ? colors.lightMode.purpleDark
-            : colors.darkMode.purpleDark,
         "--blue":
           motyw === "light" ? colors.lightMode.blue : colors.darkMode.blue,
         "--colorFont":
@@ -54,6 +55,7 @@ function App() {
           <Route path="/korepetycje" element={<Korepetycje />} />
           <Route path="/studia" element={<Studia />} />
           <Route path="/arkusze" element={<Arkusze />} />
+          <Route path="/arkusze/lista" element={<ArkuszeLista />} />
         </Routes>
         <About />
       </main>

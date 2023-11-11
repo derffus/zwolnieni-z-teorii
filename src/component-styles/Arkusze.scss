@@ -5,18 +5,19 @@
   height: 100%;
   min-height: 90vh;
   .welcome-arkusze {
+    margin-top:20px;
     height: 100%;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     .img-and-start {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       img {
         display: block;
         height: calc(15vw + 10vh);
-        aspect-ratio: 1/1;
       }
       .welcome-arkusze-start {
         text-transform: uppercase;
@@ -24,34 +25,185 @@
         font-size: 5em;
       }
     }
-    .welcome-arkusze-content{
-        width: 80%;
-        font-size: 2em;
-        text-transform: uppercase;
-        br{
-            display: block;
-            content: "s";
-            height: 15px;
+    .welcome-arkusze-content {
+      width: 80%;
+      font-size: 2em;
+      text-transform: uppercase;
+      br {
+        display: block;
+        content: "s";
+        height: 15px;
+      }
+    }
+    .arrows {
+      margin-top: -20px;
+      height: 80px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-size: 30px;
+      i {
+        display: block;
+        position: absolute;
+        color: var(--blue);
+        transition: color 0.3s;
+      }
+      .first {
+        top: 0;
+        animation: first 1.5s infinite;
+      }
+      @keyframes first {
+        0% {
+          color: var(--purple);
         }
+      }
+      .second {
+        top: 12px;
+        animation: second 1.5s infinite;
+      }
+      @keyframes second {
+        25% {
+          color: var(--purple);
+        }
+      }
+      .third {
+        top: 24px;
+        animation: third 1.5s infinite;
+      }
+      @keyframes third {
+        50% {
+          color: var(--purple);
+        }
+      }
+      .fourth {
+        top: 36px;
+        animation: fourth 1.5s infinite;
+      }
+      @keyframes fourth {
+        75% {
+          color: var(--purple);
+        }
+      }
+    }
+  }
+  .wybierz-poziom {
+    height: 100%;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .wybierz-swoj-poziom {
+      font-size: 5em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .wybierz-poziom-buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      button {
+        transition: filter 0.3s, background-color 0.3s, color 0.3s, border 0.3s;
+        height: 30vh;
+        width: 30%;
+        color: var(--blue);
+        padding: 0;
+        border: 1px solid var(--purple);
+        background-color: var(--content);
+        .matematyka {
+          transition: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 50%;
+          background-color: var(--purple);
+          text-transform: uppercase;
+          font-size: 5em;
+          color: var(--content);
+        }
+        .poziom {
+          transition: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 50%;
+          padding: 5;
+          background-color: var(--content);
+          font-size: 4em;
+          color: var(--purple);
+        }
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(60%);
+        }
+      }
     }
   }
 }
-
-@media (max-width:700px) {
-    #arkusze{
-        .welcome-arkusze{
-            .img-and-start{
-                img{
-                    display: none;
-                }
-                .welcome-arkusze-start{
-                    font-size: 4em;
-                    text-align: center;
-                }
-            }
-            .welcome-arkusze-content{
-                font-size: 1.5em;
-            }
-        }
+#arkusze-lista{
+  width: 100vw;
+  height: 100%;
+  min-height: 90vh;
+  .lista{
+    margin-top: 10vh;
+    width: 80%;
+    margin-left:10%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    button{
+      background-color: lightgray;
+      border: none;
+      border-radius: 50px;
+      height: 100px;
     }
+  }
+}
+@media (max-width: 700px) {
+  #arkusze {
+    .welcome-arkusze {
+      .img-and-start {
+        img {
+          display: none;
+        }
+        .welcome-arkusze-start {
+          font-size: 4em;
+          text-align: center;
+        }
+      }
+      .welcome-arkusze-content {
+        font-size: 1.5em;
+      }
+    }
+    .wybierz-poziom{
+      align-items: center;
+      .wybierz-swoj-poziom{
+        text-align: center;
+      }
+      .wybierz-poziom-buttons{
+        flex-direction: column;
+        align-items: center;
+        button{
+          width: 100%;
+          .matematyka{
+            font-size:3.5em;
+          }
+          .poziom{
+            font-size:2.8em;
+          }
+        }
+      }
+    }
+  }
+  #arkusze-lista{
+    .lista{
+      grid-template-columns: 1fr;
+    }
+  }
 }
