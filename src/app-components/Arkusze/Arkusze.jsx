@@ -1,13 +1,15 @@
 import React from "react";
 import "../../component-styles/Arkusze.scss";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useAtom } from "jotai";
 import { motywStrony } from "../../App";
+
 function Arkusze(props) {
   const [motyw] = useAtom(motywStrony);
   const navigate = useNavigate();
   return (
     <div id="arkusze">
+      <Outlet />
       <div className="arkusze-segment">
         <div className="welcome-arkusze">
           <div className="img-and-start">
@@ -68,4 +70,5 @@ function Arkusze(props) {
     </div>
   );
 }
+
 export default Arkusze;

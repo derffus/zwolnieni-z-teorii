@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../component-styles/NavBar.scss";
 import RightNav from "./RightNav";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -21,6 +21,12 @@ function NavBar(props) {
     setMotyw(nowyMotyw);
   };
 
+  useEffect(() => {
+    if (width < 700) {
+      setShowRightNav(false);
+    }
+  }, [location, width]);
+
   return (
     <>
       <RightNav showRightNav={showRightNav} />
@@ -30,12 +36,15 @@ function NavBar(props) {
             id="home-button"
             onClick={() => {
               navigate("/");
-              setShowRightNav(false);
             }}
           >
             <div>
               <img
-                src={process.env.PUBLIC_URL + "/images/LogoStrony.png"}
+                src={
+                  motyw === "light"
+                    ? process.env.PUBLIC_URL + "/images/LogoStrony.png"
+                    : process.env.PUBLIC_URL + "/images/LogoStronyDarkMode.png"
+                }
                 alt="Logo MatZone"
               />
             </div>
@@ -114,21 +123,21 @@ function NavBar(props) {
           </div>
         ) : (
           <div className="zmien-motyw-div">
-            <button
-              className={`zmien-motyw ${
-                motyw === "light" ? "moon-button" : "sun-button"
-              }`}
+            <input type="checkbox" id="zmien-motyw-input" />
+            <label
+              for="zmien-motyw-input"
+              className={"zmien-motyw"}
               onClick={() => {
                 zmienMotyw();
               }}
             >
-              <i
+              {/*<i
                 className={`fa-solid ${
                   motyw === "light" ? "fa-moon" : "fa-sun"
                 }`}
                 id="moon"
-              />
-            </button>
+              />*/}
+            </label>
           </div>
         )}
       </nav>

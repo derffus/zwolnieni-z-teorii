@@ -43,12 +43,12 @@
     button {
       z-index: 1;
       position: relative;
-      box-shadow: 15px 15px 1px 1px var(--purple);
+      box-shadow: 15px 15px 1px 1px var(--purpleHovered);
       font-family: inherit;
       font-size: 1.4em;
       background-color: var(--content);
       border-radius: 100%;
-      border: 3px solid var(--purple);
+      border: 3px solid var(--purpleHovered);
       height: 31vh;
       aspect-ratio: 1/1;
       display: flex;
@@ -58,8 +58,8 @@
         background-color 0.3s;
       &:hover {
         cursor: pointer;
-        border-color: var(--blue);
-        box-shadow: 1px 1px 1px 1px var(--blue);
+        border-color: var(--purple);
+        box-shadow: 1px 1px 1px 1px var(--purple);
         transform: translate(15px, 15px);
         &::after {
           content: attr(data-content);
@@ -108,13 +108,13 @@
       button {
         height: 40vw;
         aspect-ratio: 1/1;
-        box-shadow: 5px 5px 1px 1px var(--purple);
+        box-shadow: 5px 5px 1px 1px var(--purpleHovered);
         &::after {
           z-index: 1;
           color: var(--purple);
           content: attr(data-content);
           position: absolute;
-          top: 19vh;
+          top: 40vw;
         }
         &:hover {
           transition: all 0s;

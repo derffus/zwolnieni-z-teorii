@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { atom, useAtom } from "jotai";
 
 import "./App.css";
@@ -17,6 +17,10 @@ export const motywStrony = atom("light");
 
 function App() {
   const [motyw] = useAtom(motywStrony);
+  const location = useLocation();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [location]);
   return (
     <div
       className="website"
@@ -51,11 +55,12 @@ function App() {
       <main id="content">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/materialy" element={<Materialy />} />
-          <Route path="/korepetycje" element={<Korepetycje />} />
-          <Route path="/studia" element={<Studia />} />
-          <Route path="/arkusze" element={<Arkusze />} />
-          <Route path="/arkusze/lista" element={<ArkuszeLista />} />
+          <Route path="materialy" element={<Materialy />} />
+          <Route path="korepetycje" element={<Korepetycje />} />
+          <Route path="studia" element={<Studia />} />
+          <Route path="arkusze" element={<Arkusze />}>
+            <Route path="lista" element={<ArkuszeLista />} />
+          </Route>
         </Routes>
         <About />
       </main>
