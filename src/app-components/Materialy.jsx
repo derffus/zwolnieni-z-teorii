@@ -48,9 +48,18 @@ function Materialy(props) {
           zrodlo={zrodlo}
           setZrodlo={setZrodlo}
         />
-        <div className="filmy">
-          {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
-        </div>
+        {klasa !== "" && zakres !== "" && dzial !== "" && zrodlo !== "" ? (
+          <div className="filmy">
+            {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
+          </div>
+        ) : (
+          <div className="materialy-img">
+            <img
+              src={process.env.PUBLIC_URL + "/images/MaterialyStart.png"}
+              alt=""
+            />
+          </div>
+        )}
       </div>
     </div>
   );

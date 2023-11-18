@@ -131,12 +131,6 @@ function NavBar(props) {
                 zmienMotyw();
               }}
             >
-              {/*<i
-                className={`fa-solid ${
-                  motyw === "light" ? "fa-moon" : "fa-sun"
-                }`}
-                id="moon"
-              />*/}
             </label>
           </div>
         )}

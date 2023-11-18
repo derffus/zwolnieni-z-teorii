@@ -12,6 +12,7 @@ import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze/Arkusze";
 import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista";
+import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart";
 import About from "./app-components/About";
 export const motywStrony = atom("light");
 
@@ -19,7 +20,7 @@ function App() {
   const [motyw] = useAtom(motywStrony);
   const location = useLocation();
   useEffect(() => {
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [location]);
   return (
     <div
@@ -59,6 +60,7 @@ function App() {
           <Route path="korepetycje" element={<Korepetycje />} />
           <Route path="studia" element={<Studia />} />
           <Route path="arkusze" element={<Arkusze />}>
+            <Route path="" element={<ArkuszeStart />}/>
             <Route path="lista" element={<ArkuszeLista />} />
           </Route>
         </Routes>

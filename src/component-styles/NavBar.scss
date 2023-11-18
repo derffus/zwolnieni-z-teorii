@@ -92,20 +92,25 @@
     border: 2px solid var(--contentInverted);
     border-radius: 50px;
     background-color: inherit;
-    color: var(--contentInverted);
+    color: var(--content);
     font-size: 1.5em;
     cursor: pointer;
     transition: 0.3s;
     &::before {
       position: absolute;
-      transition: 0.3s;
-      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Font Awesome 5 Free";
+      font-size: 4vh;
+      font-weight: 900;
+      transition: transform 0.3s;
+      content: "\f186";
       background-color: var(--purple);
-      border:2px solid var(--purpleHovered);
       box-sizing: border-box;
       height: 95%;
       aspect-ratio: 1/1;
-      margin: 1.25%;
+      margin: 1.5%;
       border-radius: 50px;
     }
   }
@@ -113,6 +118,7 @@
     display: none;
     &:checked + .zmien-motyw {
       &::before {
+        content: "\f185";
         transform: translateX(6.2vh);
       }
     }
