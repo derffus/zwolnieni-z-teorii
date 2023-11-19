@@ -136,6 +136,14 @@
   }
 }
 @media (max-width: 700px) {
+  .materialy {
+    .materialy-img {
+      margin-top: 50%;
+      img {
+        width: 70vw;
+      }
+    }
+  }
   .content-picker {
     top: -25vh;
     flex-direction: column;

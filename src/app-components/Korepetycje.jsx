@@ -78,13 +78,17 @@ function Korepetycje(props) {
               <br />
               <span
                 id="numerTelefonu"
-                class="copy"
+                className={`copy `}
                 data-clipboard-text={x.numerTelefonu}
               >
                 {x.numerTelefonu}
               </span>
               <br />
-              <span id="mail" class="copy" data-clipboard-text={x.mail}>
+              <span
+                id="mail"
+                className={`copy `}
+                data-clipboard-text={x.mail}
+              >
                 {x.mail}
               </span>
             </div>

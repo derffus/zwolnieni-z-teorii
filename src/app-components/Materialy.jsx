@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ContentPicker from "./ContentPicker";
 import "../component-styles/Materialy.scss";
 import filmyYtLinki from "../filmyYTLinki";
@@ -9,6 +9,28 @@ function Materialy(props) {
   const [temat, setTemat] = useState("");
   const [zrodlo, setZrodlo] = useState("");
 
+  const targetRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("Element is in the viewport!");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, []);
   function wypiszFilmy(filmy, klasa, zakres, dzial, temat, zrodlo) {
     return filmy
       .filter(
@@ -19,7 +41,7 @@ function Materialy(props) {
       )
       .map((x) => (
         <div className="filmy-div">
-          <iframe
+          <iframe ref={targetRef}
             key={x}
             className={x[1].join(" ")}
             src={x[0]}

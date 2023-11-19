@@ -10,7 +10,7 @@
   width: 300px;
   height: max(85vh, 100%);
   background-color: var(--purple);
-  border:1px solid black;
+  border: 1px solid black;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -49,14 +49,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   button {
     border: 2px solid var(--content);
     background-color: inherit;
     width: 30%;
     aspect-ratio: 1/1;
     border-radius: 35px;
-    transition: background-color 0.3s,border 0.3s;
+    transition: background-color 0.3s, border 0.3s;
     color: white;
     font-size: 3em;
     &:hover {
