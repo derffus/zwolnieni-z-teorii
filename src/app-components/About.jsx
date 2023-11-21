@@ -7,17 +7,18 @@ function About(props) {
   return (
     <footer id="about-segment">
       <div className="social-media">
+        <div className="social-media-welcome">Nasze social media</div>
         <nav className="instagram">
           <>
             <img src={ process.env.PUBLIC_URL + "/images/Instagram.png"} alt="instagram logo" />
           </>
-          <h1>Odwiedź nas na instagramie!</h1>
+          <h1>Instagram</h1>
         </nav>
         <nav className="tiktok">
           <>
             <img src={ process.env.PUBLIC_URL + "/images/TikTok.png"} alt="tiktok logo" />
           </>
-          <h1>Odwiedź nas na tiktoku!</h1>
+          <h1>TikTok</h1>
         </nav>
       </div>
       <div className="inne">
