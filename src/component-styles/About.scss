@@ -2,7 +2,7 @@
 
 #about-segment {
   color: var(--contentInverted);
-  height: fit-content;
+  height: 20vh;
   width: 80vw;
   margin-left: 10vw;
   margin-top: 5%;
@@ -13,22 +13,28 @@
   justify-content: space-between;
   align-items: center;
   .social-media {
+    height: 100%;
+    margin-left: 4vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     .social-media-welcome {
       text-align: center;
-      font-weight: 600;
-      font-size: 2em;
+      font-weight: 900;
+      font-size: 2.1em;
     }
     nav {
-      height: 100%;
+      height: 30px;
       display: flex;
       flex-direction: row;
       align-items: center;
+      font-size: 0.9em;
+      h1 {
+        font-weight: 600;
+      }
       img {
         display: block;
-        width: 50px;
+        width: 30px;
         aspect-ratio: 1/1;
       }
     }
@@ -36,18 +42,25 @@
   .inne {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
     div {
-      font-weight: 500;
-      font-size: 1.2em;
+      font-weight: 600;
+      font-size: 1.4em;
     }
     .inne-div {
       font-weight: 900;
-      font-size: 1.7em;
+      font-size: 2.1em;
     }
   }
   .projekt-w-ramach-zwolnieni {
+    height: 100%;
+    margin-right: 4vw;
     display: flex;
     flex-direction: column;
+    h1 {
+      font-weight: 900;
+    }
     img {
       display: block;
       height: 8vh;
@@ -59,24 +72,38 @@
   #about-segment {
     flex-direction: column;
     .social-media {
-      margin-top: 10px;
+      margin-top: 40px;
       align-items: center;
+      .social-media-welcome {
+        font-size: 1.5em;
+      }
       nav {
         text-align: center;
-        font-size: 0.8em;
+
+        h1 {
+          font-size: 1em;
+        }
       }
     }
     .inne {
+      margin-top: 40px;
       align-items: center;
+      div{
+        font-size: 1.1em;
+      }
+      .inne-div{
+        font-size: 1.5em;
+      }
     }
     .projekt-w-ramach-zwolnieni {
-      font-size: 0.8em;
+      margin-top: 40px;
+      font-size: 0.75em;
       text-align: center;
       align-items: center;
       width: 100vw;
       img {
         height: auto;
-        width: 70%;
+        width: 60%;
       }
     }
   }

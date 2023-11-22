@@ -1,18 +1,9 @@
 import React from "react";
 import "../component-styles/RightNav.scss";
-import { useAtom } from "jotai";
 import { useNavigate, useLocation } from "react-router-dom";
-import { motywStrony } from "../App";
 function RightNav(props) {
-  const [motyw, setMotyw] = useAtom(motywStrony);
-
   const navigate = useNavigate();
   const location = useLocation();
-
-  const zmienMotyw = () => {
-    const nowyMotyw = motyw === "light" ? "dark" : "light";
-    setMotyw(nowyMotyw);
-  };
 
   return (
     <nav className={`right-nav ${props.showRightNav ? "show-right-nav" : ""}`}>
@@ -56,22 +47,6 @@ function RightNav(props) {
           }}
         >
           Arkusze
-        </button>
-      </div>
-      <div className="small-buttons">
-        <button
-          className={`zmien-motyw ${
-            motyw === "light" ? "moon-button" : "sun-button"
-          }`}
-          onClick={() => {
-            zmienMotyw();
-          }}
-        >
-          {motyw === "light" ? (
-            <i className="fa-solid fa-moon" id="moon"></i>
-          ) : (
-            <i className="fa-solid fa-sun" id="sun"></i>
-          )}
         </button>
       </div>
     </nav>

@@ -1,9 +1,5 @@
 const tematy = {
   1: {
-    podstawa: {},
-    rozszerzenie: {},
-  },
-  2: {
     podstawa: {
       1: {
         1: "Zbiór. Działania na zbiorach",
@@ -82,6 +78,10 @@ const tematy = {
         3: "Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego",
       },
     },
+    rozszerzenie: {},
+  },
+  2: {
+    podstawa: {},
     rozszerzenie: {},
   },
   3: {

@@ -20,6 +20,12 @@ function About(props) {
           </>
           <h1>TikTok</h1>
         </nav>
+        <nav className="youtube">
+          <>
+            <img src={ process.env.PUBLIC_URL + "/images/Youtube.png"} alt="youtube logo" />
+          </>
+          <h1>Youtube</h1>
+        </nav>
       </div>
       <div className="inne">
         <div className="inne-div">Inne</div>

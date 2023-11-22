@@ -148,13 +148,14 @@
     top: -25vh;
     flex-direction: column;
     justify-content: space-around;
-    height: 25vh;
+    height: 17vh;
     min-height: fit-content;
     button {
       margin-top: 15px;
     }
     .content-picker-select {
-      width: 70vw;
+      font-size: 0.8em;
+      width: 60vw;
       height: 18%;
     }
   }

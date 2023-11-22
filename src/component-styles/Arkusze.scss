@@ -5,7 +5,7 @@
   height: 100%;
   min-height: 90vh;
   .welcome-arkusze {
-    margin-top:20px;
+    margin-top: 20px;
     height: 100%;
     min-height: 90vh;
     display: flex;
@@ -53,39 +53,27 @@
       }
       .first {
         top: 0;
-        animation: first 1.5s infinite;
+        animation: arrowshade 2s infinite;
       }
-      @keyframes first {
+      @keyframes arrowshade {
         0% {
           color: var(--purple);
         }
       }
       .second {
         top: 12px;
-        animation: second 1.5s infinite;
-      }
-      @keyframes second {
-        25% {
-          color: var(--purple);
-        }
+        animation: arrowshade 2s infinite;
+        animation-delay: 0.5s;
       }
       .third {
         top: 24px;
-        animation: third 1.5s infinite;
-      }
-      @keyframes third {
-        50% {
-          color: var(--purple);
-        }
+        animation: arrowshade 2s infinite;
+        animation-delay: 1s;
       }
       .fourth {
         top: 36px;
-        animation: fourth 1.5s infinite;
-      }
-      @keyframes fourth {
-        75% {
-          color: var(--purple);
-        }
+        animation: arrowshade 2s infinite;
+        animation-delay: 1.5s;
       }
     }
   }
@@ -148,19 +136,19 @@
     }
   }
 }
-#arkusze-lista{
+#arkusze-lista {
   width: 100vw;
   height: 100%;
   min-height: 90vh;
-  .lista{
+  .lista {
     margin-top: 10vh;
     width: 80%;
-    margin-left:10%;
+    margin-left: 10%;
     height: 100%;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
-    button{
+    button {
       background-color: lightgray;
       border: none;
       border-radius: 50px;
@@ -171,41 +159,62 @@
 @media (max-width: 700px) {
   #arkusze {
     .welcome-arkusze {
+      min-height: auto;
+      padding-bottom: 5vh;
       .img-and-start {
         img {
           display: none;
         }
         .welcome-arkusze-start {
-          font-size: 4em;
+          font-size: 1.8em;
           text-align: center;
         }
       }
       .welcome-arkusze-content {
-        font-size: 1.5em;
+        font-size: 0.75em;
+      }
+      .arrows {
+        height: 0px;
+        margin-top: -10px;
+        font-size: 20px;
+        .second {
+          top: 9px;
+        }
+        .third {
+          top: 18px;
+        }
+        .fourth {
+          top: 27px;
+        }
       }
     }
-    .wybierz-poziom{
+    .wybierz-poziom {
       align-items: center;
-      .wybierz-swoj-poziom{
+      margin-top: 0;
+      .wybierz-swoj-poziom {
         text-align: center;
+        font-size: 2.5em;
       }
-      .wybierz-poziom-buttons{
+      .wybierz-poziom-buttons {
         flex-direction: column;
         align-items: center;
-        button{
-          width: 100%;
-          .matematyka{
-            font-size:3.5em;
+        
+        button {
+          width: 75%;
+          height: 20vh;
+          margin-bottom: 20px;
+          .matematyka {
+            font-size: 2em;
           }
-          .poziom{
-            font-size:2.8em;
+          .poziom {
+            font-size: 1.5em;
           }
         }
       }
     }
   }
-  #arkusze-lista{
-    .lista{
+  #arkusze-lista {
+    .lista {
       grid-template-columns: 1fr;
     }
   }

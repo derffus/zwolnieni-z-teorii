@@ -115,13 +115,7 @@ function NavBar(props) {
             </button>
           </div>
         ) : null}
-        {width < 700 ? (
-          <div id="show-nav">
-            <button onClick={toggleRightNav}>
-              <i className="fa fa-bars"></i>
-            </button>
-          </div>
-        ) : (
+        <div className="toggle-buttons">
           <div className="zmien-motyw-div">
             <input type="checkbox" id="zmien-motyw-input" />
             <label
@@ -130,10 +124,16 @@ function NavBar(props) {
               onClick={() => {
                 zmienMotyw();
               }}
-            >
-            </label>
+            />
           </div>
-        )}
+          {width < 700 ? (
+            <div id="show-nav">
+              <button onClick={toggleRightNav}>
+                <i className="fa fa-bars"></i>
+              </button>
+            </div>
+          ) : null}
+        </div>
       </nav>
     </>
   );

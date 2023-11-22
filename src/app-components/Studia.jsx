@@ -73,7 +73,7 @@ function Studia(props) {
         >
           <div className="uczelnia-segment-text akademia-leona-kozminskiego-text">
             <div className="uczelnia-segment-start akademia-leona-kozminskiego-start">
-              <span>Akademia Leona Koźmińskiego</span>
+              <span>Akademia Leona Koźmińskiego w Warszawie</span>
             </div>
             <div className="uczelnia-segment-content akademia-leona-kozminskiego-content">
               Akademia Leona Koźmińskiego uznawana jest za najlepszą szkołę
@@ -96,6 +96,67 @@ function Studia(props) {
                 process.env.PUBLIC_URL + "/images/AkademiaLeonaKozminskiego.png"
               }
               alt="Akademia Leona Koźmińskiego"
+            />
+          </div>
+        </div>
+        <div
+          className="uczelnia-segment akademia-gorniczo-hutnicza"
+          onClick={() => {
+            window.open("https://www.agh.edu.pl/", "_blank");
+          }}
+        >
+          <div className="uczelnia-segment-text akademia-gorniczo-hutnicza-text">
+            <div className="uczelnia-segment-start akademia-gorniczo-hutnicza-start">
+              <span>Akademia Górniczo Hutnicza w Krakowie</span>
+            </div>
+            <div className="uczelnia-segment-content akademia-gorniczo-hutnicza-content">
+              Agh jest jedną z topowych polskich publicznych uczelni
+              technicznych. Prowadzi się tam nauczanie w kierunkach ścisłych,
+              technicznych, biznesowych i wiele więcej. Uczelnia ma bogatą
+              historię zaczynającą się od 1919 roku. Samo otoczenie agh jest
+              dodatkowo zachęcające dla chcących tam studiować. Maksymalna
+              wartość wskaźnika rekrutacji tej uczelni wynosi 1000 pkt.
+              Kandydaci na pierwszy rok studiów stacjonarnych muszą uzyskać
+              wynik co najmniej 300 pkt.
+            </div>
+          </div>
+          <div className="uczelnia-segment-img akademia-gorniczo-hutnicza-img">
+            <img
+              src={
+                process.env.PUBLIC_URL + "/images/AkademiaGorniczoHutnicza.png"
+              }
+              alt="Szkola Glowna Handlowa W Warszawie"
+            />
+          </div>
+        </div>
+        <div
+          className="uczelnia-segment politechnika-warszawska"
+          onClick={() => {
+            window.open("https://www.pw.edu.pl/", "_blank");
+          }}
+        >
+          <div className="uczelnia-segment-text politechnika-warszawska-text">
+            <div className="uczelnia-segment-start politechnika-warszawska-start">
+              <span>Politechnika Warszawska</span>
+            </div>
+            <div className="uczelnia-segment-content politechnika-warszawska-content">
+              Politechnika warszawska to ceniona publiczna uczelnia techniczna w
+              Polsce. Oferuje doskonałą edukację w inżynierii, naukach ścisłych
+              i społecznych. Studenci chwalą profesjonalizm kadry i bogate
+              zaplecze badawcze. Jednak dostanie się jest wymagające, z wysoką
+              konkurencją i egzaminami wiedzy. Reputacja uczelni przyciąga, ale
+              proces rekrutacyjny stanowi wyzwanie. Podczas rekrutacji pod uwagę
+              jest brany wynik z matury z matematyki, języka i obcego i innego
+              przedmiotu wybranego w zależności od kierunku. Wyniki z matury
+              ustnej nie są brane pod uwagę.
+            </div>
+          </div>
+          <div className="uczelnia-segment-img politechnika-warszawska-img">
+            <img
+              src={
+                process.env.PUBLIC_URL + "/images/PolitechnikaWarszawska.png"
+              }
+              alt="Szkola Glowna Handlowa W Warszawie"
             />
           </div>
         </div>

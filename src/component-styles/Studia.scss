@@ -27,7 +27,7 @@
 #welcome-studia-start {
   font-size: 3.5em;
   font-weight: bold;
-  color:var(--purple);
+  color: var(--purple);
 }
 #welcome-studia-content {
   color: var(--colorFont);
@@ -35,6 +35,7 @@
   font-size: 1.2em;
 }
 .uczelnia-segment {
+  margin-top: 80px;
   padding: 20px;
   background-color: var(--purpleHovered);
   font-weight: bold;
@@ -55,6 +56,7 @@
     box-shadow: 1px 1px 1px 1px var(--purpleDarker);
   }
   .uczelnia-segment-text {
+    width: 55%;
     display: flex;
     flex-direction: column;
   }
@@ -83,7 +85,6 @@
   }
 }
 .akademia-leona-kozminskiego {
-  margin-top: 80px;
   flex-direction: row;
   .akademia-leona-kozminskiego-text {
     width: 55%;
@@ -94,30 +95,41 @@
     }
   }
 }
+.akademia-gorniczo-hutnicza {
+  flex-direction: row-reverse;
+  .akademia-gorniczo-hutnicza-text {
+    width: 57%;
+  }
+}
+.politechnika-warszawska{
+  .politechnika-warszawska-text{
+    width: 60%;
+  }
+}
 @media (max-width: 700px) {
   .studia-segment {
     padding: 0;
     width: 100%;
   }
   #welcome-studia {
-    text-align: center;
-    width: 100%;
-  }
-  #welcome-studia-start{
-    font-size: 2em;
-  }
-  #welcome-studia-content {
-    font-size:1em;
-    width: 100%;
-    ul{
-      display:flex;
-      flex-direction: column;
-      width: fit-content;
-      margin-left: 50%;
-      transform: translateX(-60%);
+    width: 90%;
+    margin-top: 20px;
+    #welcome-studia-start {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    #welcome-studia-content {
+      font-size: 0.7em;
+      width: 100%;
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+      }
     }
   }
   .uczelnia-segment {
+    margin-top: 40px;
     box-shadow: none;
     width: 100vw;
     align-self: center;
@@ -127,13 +139,13 @@
     &:hover {
       transform: none;
     }
-    .uczelnia-segment-start{
-      font-size:2em;
+    .uczelnia-segment-start {
+      font-size: 1.5em;
     }
     .uczelnia-segment-text {
       width: 100%;
       .uczelnia-segment-content {
-        font-size:1em;
+        font-size: 0.75em;
         align-self: center;
         width: 80%;
       }
@@ -150,10 +162,23 @@
     }
   }
   .akademia-leona-kozminskiego {
-    margin-top: 50px;
     .akademia-leona-kozminskiego-img {
       img {
         height: 120px;
+      }
+    }
+  }
+  .akademia-gorniczo-hutnicza {
+    .akademia-gorniczo-hutnicza-img {
+      img {
+        height: 180px;
+      }
+    }
+  }
+  .politechnika-warszawska {
+    .politechnika-warszawska-img {
+      img {
+        height: 180px;
       }
     }
   }

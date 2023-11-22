@@ -126,7 +126,7 @@
     cursor: pointer;
     color: var(--purple);
     &::after {
-      content: 'skopiuj';
+      content: "skopiuj";
       position: absolute;
       top: 30%;
       margin-left: 3%;
@@ -159,42 +159,48 @@
     margin-left: 0;
   }
   #wpisz-lokalizacje {
+    align-self: center;
     z-index: 1;
     border: 2px solid var(--blue);
     box-sizing: border-box;
     position: absolute;
-    top: 6vh;
-    width: 95vw;
-    left: 1.25vw;
+    top: 8vh;
+    height: fit-content;
+    width: 65vw;
+    left: 17.5vw;
     box-shadow: none;
+    font-size: 1.2em;
+    button {
+      font-size: 0.4em;
+    }
   }
   #welcome-korepetycje {
     position: absolute;
     display: none;
   }
   #korepetytorzy {
-    margin-top: 5vh;
+    margin-top: 7vh;
     width: 100vw;
-  }
-  #korepetytor-div {
-    width: 75%;
-    text-align: center;
-    br {
-      content: "";
-      display: block;
-      margin-top: -10px;
+    #korepetytor-div {
+      width: 65%;
+      text-align: center;
+      br {
+        content: "";
+        display: block;
+        margin-top: -30px;
+      }
+      #imie-i-nazwisko {
+        font-size: 0.8em;
+      }
+      #miejscowosc {
+        font-size: 0.4em;
+      }
+      #numerTelefonu {
+        font-size: 0.4em;
+      }
+      #mail {
+        font-size: 0.4em;
+      }
     }
-  }
-  #imie-i-nazwisko {
-    font-size: 1.4em;
-  }
-  #miejscowosc {
-    font-size: 0.6em;
-  }
-  #numerTelefonu {
-    font-size: 0.6em;
-  }
-  #mail {
-    font-size: 0.6em;
   }
 }
