@@ -7,7 +7,7 @@ import "./component-styles/About.scss";
 import colors from "./colors";
 import NavBar from "./app-components/NavBar";
 import HomePage from "./app-components/HomePage";
-import Materialy from "./app-components/Materialy";
+import Materialy from "./app-components/Materialy/Materialy";
 import Korepetycje from "./app-components/Korepetycje";
 import Studia from "./app-components/Studia";
 import Arkusze from "./app-components/Arkusze/Arkusze";

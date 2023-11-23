@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import tematy from "../dzialyTematy.js";
+import tematy from "./dzialyTematy.js";
 function ContentPicker(props) {
   const [showContentPicker, setShowContentPicker] = useState(true);
 
@@ -71,9 +71,13 @@ function ContentPicker(props) {
             <option value="2">Wyrażenia algebraiczne</option>
             <option value="3">Funkcja i jej własności</option>
             <option value="4">Funkcja linowa</option>
-            <option value="5">Układy równań liniowych z dwiema niewiadomymi</option>
+            <option value="5">
+              Układy równań liniowych z dwiema niewiadomymi
+            </option>
             <option value="6">Podstawowe własności wybranych funkcji</option>
-            <option value="7">Geometria płaska - pojęcia wstępne. Trójkąty</option>
+            <option value="7">
+              Geometria płaska - pojęcia wstępne. Trójkąty
+            </option>
             <option value="8">Trygonometria kąta ostrego</option>
           </>
         ) : props.klasa === "1" && props.zakres === "rozszerzenie" ? (
@@ -178,6 +182,7 @@ function ContentPicker(props) {
         {props.dzial !== "" &&
         tematy[props.klasa][props.zakres][props.dzial] ? (
           <>
+            <option value="wszystkie" className="wszystkie">Wszystkie tematy</option>
             {Object.values(tematy[props.klasa][props.zakres][props.dzial]).map(
               (x, index) => (
                 <option key={x + index} value={x}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContentPicker from "./ContentPicker";
-import "../component-styles/Materialy.scss";
-import filmyYtLinki from "../filmyYTLinki";
+import "../../component-styles/Materialy.scss";
+import filmyYtLinki from "./filmyYTLinki";
 function Materialy(props) {
   const [klasa, setKlasa] = useState("");
   const [zakres, setZakres] = useState("");

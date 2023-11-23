@@ -96,6 +96,10 @@
     background-color: var(--purpleHovered);
     color: inherit;
   }
+  .wszystkie{
+    background-color: var(--purpleDarker);
+    text-transform: uppercase;
+  }
   &:hover {
     cursor: pointer;
     border-color: var(--purple);

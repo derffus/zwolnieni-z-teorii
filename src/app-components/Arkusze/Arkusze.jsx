@@ -6,7 +6,6 @@ function Arkusze(props) {
   return (
     <div id="arkusze">
       <Outlet />
-      
     </div>
   );
 }

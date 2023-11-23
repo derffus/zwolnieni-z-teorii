@@ -220,6 +220,48 @@ let filmyYtLinki = [
     "1",
     "youtube",
   ],
+  [
+    "https://www.youtube.com/embed/uMRFEP8yQTg",
+    ["film-rozszerzenie2"],
+    "Własności wartości bezwzględnej LEKCJE Z FSOREM #82 ROZSZERZENIE",
+    "2",
+    "youtube",
+    ["Własności wartości bezwzględnej"],
+  ],
+
+  [
+    "https://www.youtube.com/embed/ByV7VITIEzA",
+    ["film-rozszerzenie2"],
+    "Matematyka - Własności wartości bezwzględnej",
+    "2",
+    "youtube",
+    ["Własności wartości bezwzględnej"],
+  ],
+  [
+    "https://www.youtube.com/embed/R3um24WEGvU",
+    ["film-rozszerzenie2"],
+    "Wartość bezwzględna na ROZSZERZENIU: Równania i nierówności z JEDNYM modułem",
+    "2",
+    "youtube",
+    ["Równania z wartością bezwzględną", "Nierówności z wartością bezwzględną"],
+  ],
+
+  [
+    "https://www.youtube.com/embed/JWYCRqjReDo",
+    ["film-rozszerzenie2"],
+    "Wartość bezwzględna na ROZSZERZENIU: Równania i nierówności z DWOMA modułami",
+    "2",
+    "youtube",
+    ["Równania z wartością bezwzględną", "Nierówności z wartością bezwzględną"],
+  ],
+  [
+    "https://www.youtube.com/embed/SvhWh9DeHI4",
+    ["film-podstawa1", "film-rozszerzenie1"],
+    "Działania na zbiorach",
+    "1",
+    "youtube",
+    ["Zbiór. Działania na zbiorach"],
+  ],
 ];
 export function shuffle(array) {
   let currentIndex = array.length,
