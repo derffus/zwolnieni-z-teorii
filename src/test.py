@@ -1,5 +1,4 @@
-let filmyYtLinki = [
-  [
+data = [[
     "https://www.youtube.com/embed/naq9D6jvnhA",
     ["film-podstawa2", "film-rozszerzenie2"],
     "Matematyka - Wielomiany jednej zmiennej (część I)",
@@ -815,20 +814,23 @@ let filmyYtLinki = [
     "1",
     "youtube",
     ["Przybliżenia, błąd bezwzględny i błąd względny, szacowanie"],
-  ],
-];
-export function shuffle(array) {
-  let currentIndex = array.length,
-    randomIndex;
-  while (currentIndex > 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-  return array;
-}
-filmyYtLinki = shuffle(filmyYtLinki);
-export default filmyYtLinki;
+  ]]
+# Function to remove duplicate arrays based on URL
+def remove_duplicates(data):
+    seen_urls = set()
+    unique_data = []
+
+    for item in data:
+        url = item[0]
+        if url not in seen_urls:
+            seen_urls.add(url)
+            unique_data.append(item)
+
+    return unique_data
+
+# Removing duplicates
+unique_data = remove_duplicates(data)
+
+# Printing the unique data
+for item in unique_data:
+    print(item)
