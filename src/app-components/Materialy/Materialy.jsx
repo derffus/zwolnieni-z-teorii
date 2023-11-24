@@ -14,7 +14,8 @@ function Materialy(props) {
         (x) =>
           x[1].indexOf("film-" + zakres + klasa) !== -1 &&
           x[3] === dzial &&
-          x[4] === zrodlo
+          x[4] === zrodlo &&
+          (x[5] ? x[5].indexOf(temat) !== -1 || temat === "wszystkie" : true)
       )
       .map((x) => (
         <div className="filmy-div">

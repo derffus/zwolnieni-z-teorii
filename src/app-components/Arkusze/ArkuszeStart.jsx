@@ -44,6 +44,16 @@ function ArkuszeStart(props) {
       </div>
       <div className="wybierz-poziom">
         <div className="wybierz-swoj-poziom">Wybierz</div>
+        <div className="strzalka1">
+          <img
+            src={
+              motyw === "light"
+                ? process.env.PUBLIC_URL + "/images/ArkuszeStrzalka.png"
+                : process.env.PUBLIC_URL + "/images/ArkuszeStrzalkaDarkMode.png"
+            }
+            alt=""
+          />
+        </div>
         <div className="wybierz-poziom-buttons">
           <button
             onClick={() => {
@@ -61,6 +71,16 @@ function ArkuszeStart(props) {
             <div className="matematyka">Matematyka</div>
             <div className="poziom">Poziom rozszerzony</div>
           </button>
+        </div>
+        <div className="strzalka2">
+          <img
+            src={
+              motyw === "light"
+                ? process.env.PUBLIC_URL + "/images/ArkuszeStrzalka.png"
+                : process.env.PUBLIC_URL + "/images/ArkuszeStrzalkaDarkMode.png"
+            }
+            alt=""
+          />
         </div>
         <div className="wybierz-swoj-poziom">swój poziom</div>
       </div>

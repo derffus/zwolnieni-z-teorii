@@ -152,15 +152,15 @@
     top: -25vh;
     flex-direction: column;
     justify-content: space-around;
-    height: 17vh;
+    height: fit-content;
     min-height: fit-content;
     button {
       margin-top: 15px;
     }
     .content-picker-select {
-      font-size: 0.8em;
+      font-size: 1em;
       width: 60vw;
-      height: 18%;
+      height: fit-content;
     }
   }
 
