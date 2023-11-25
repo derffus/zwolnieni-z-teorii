@@ -21,7 +21,7 @@ function NavBar(props) {
   };
 
   useEffect(() => {
-    if (width < 700) {
+    if (width < 767) {
       setShowRightNav(false);
     }
   }, [location, width]);
@@ -69,7 +69,7 @@ function NavBar(props) {
             </div>
           </NavLink>
         </div>
-        {width > 700 ? (
+        {width > 767 ? (
           <div id="top-buttons">
             <NavLink
               className={
@@ -119,7 +119,7 @@ function NavBar(props) {
               }}
             />
           </div>
-          {width < 700 ? (
+          {width < 767 ? (
             <div id="show-nav">
               <button onClick={toggleRightNav}>
                 <i className="fa fa-bars"></i>

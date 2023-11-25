@@ -60,7 +60,7 @@ function App() {
           <Route path="korepetycje" element={<Korepetycje />} />
           <Route path="studia" element={<Studia />} />
           <Route path="arkusze" element={<Arkusze />}>
-            <Route path="" element={<ArkuszeStart />}/>
+            <Route path="" element={<ArkuszeStart />} />
             <Route path="lista" element={<ArkuszeLista />} />
           </Route>
         </Routes>

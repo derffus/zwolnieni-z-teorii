@@ -13,10 +13,10 @@ function ContentPicker(props) {
   return (
     <div
       className={`content-picker ${
-        width > 700 ? "wide-content-picker" : "thin-content-picker"
+        width > 767 ? "wide-content-picker" : "thin-content-picker"
       } ${showContentPicker ? "show-content-picker" : ""}`}
     >
-      {width <= 700 ? (
+      {width <= 767 ? (
         <button
           className={`show-content-picker-button ${
             showContentPicker ? "show" : "dont-show"

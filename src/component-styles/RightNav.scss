@@ -29,7 +29,7 @@
       transition: border 0.3s;
       background-color: inherit;
       color: white;
-      font-size: 1.5em;
+      font-size: 1.1em;
       text-decoration: none;
       padding: 25px 0 25px 20px;
       text-align: left;
@@ -46,8 +46,8 @@
 @media (max-width: 767px) {
   .right-nav {
     margin-top: -4vh;
-    width: 100vw;
-    right: -100vw;
+    width: 50%;
+    right: -50%;
   }
   .show-right-nav {
     right: 0;
