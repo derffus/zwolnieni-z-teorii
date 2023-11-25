@@ -8,8 +8,8 @@
   background-color: var(--content);
   transition: background-color 0.3s, color 0.3s;
   padding-top: 7vh;
-  margin-left: 30vw;
-  width: 70vw;
+  margin-left: 30%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -100,53 +100,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#korepetytor-div {
-  color: var(--korep);
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 2.5em;
-  border-left: 3px solid var(--blue);
-  border-right: 3px solid var(--blue);
-  width: 50%;
-  height: fit-content;
-  margin-bottom: 10%;
-}
-#imie-i-nazwisko {
-  font-size: 1.5em;
-}
-#miejscowosc {
-  font-size: 0.8em;
-}
-#numerTelefonu {
-  position: relative;
-  font-size: 0.8em;
-  &:hover {
-    cursor: pointer;
-    color: var(--purple);
-    &::after {
-      content: "skopiuj";
-      position: absolute;
-      top: 30%;
-      margin-left: 3%;
-      font-size: 0.5em;
+  #korepetytor-div {
+    color: var(--blue);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 2.5em;
+    border-left: 3px solid var(--blue);
+    border-right: 3px solid var(--blue);
+    width: 50%;
+    height: fit-content;
+    margin-bottom: 10%;
+  }
+  #imie-i-nazwisko {
+    font-size: 1.5em;
+  }
+  #miejscowosc {
+    font-size: 0.8em;
+  }
+  #numerTelefonu {
+    position: relative;
+    font-size: 0.8em;
+    &:hover {
+      cursor: pointer;
       color: var(--purple);
+      &::after {
+        content: "skopiuj";
+        position: absolute;
+        top: 30%;
+        margin-left: 3%;
+        font-size: 0.5em;
+        color: var(--purple);
+      }
     }
   }
-}
-#mail {
-  position: relative;
-  font-size: 0.8em;
-  &:hover {
-    cursor: pointer;
-    color: var(--purple);
-    &::after {
-      content: "skopiuj";
-      position: absolute;
-      top: 30%;
-      margin-left: 3%;
-      font-size: 0.5em;
+  #mail {
+    position: relative;
+    font-size: 0.8em;
+    &:hover {
+      cursor: pointer;
       color: var(--purple);
+      &::after {
+        content: "skopiuj";
+        position: absolute;
+        top: 30%;
+        margin-left: 3%;
+        font-size: 0.5em;
+        color: var(--purple);
+      }
     }
   }
 }

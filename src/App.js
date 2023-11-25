@@ -14,14 +14,25 @@ import Arkusze from "./app-components/Arkusze/Arkusze";
 import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista";
 import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart";
 import About from "./app-components/About";
-export const motywStrony = atom("light");
 
+export const motywStrony = atom("light");
+export const windowWidth = atom(window.innerWidth);
 function App() {
   const [motyw] = useAtom(motywStrony);
+  const [width, setWidth] = useAtom(windowWidth);
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', updateWindowWidth);
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
   return (
     <div
       className="website"
