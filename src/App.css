@@ -1,7 +1,7 @@
 :root {
   font-family: "Open Sans", sans-serif;
   background-color: var(--content);
-  font-size:0.8vw;
+  font-size: 0.8vw;
 }
 .website {
   font-size: 1em;
@@ -30,11 +30,11 @@
   color: var(--purple);
   transition: color 0.3s;
 }
-@media(max-width:700px){
-  :root{
-    font-size:16px;
+@media (max-width: 767px) {
+  :root {
+    font-size: 16px;
   }
-  #content{
+  #content {
     margin-top: 6vh;
   }
 }

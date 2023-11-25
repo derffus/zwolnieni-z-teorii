@@ -7,7 +7,6 @@
 .korepetycje-segment {
   background-color: var(--content);
   transition: background-color 0.3s, color 0.3s;
-  overflow-x: hidden;
   padding-top: 7vh;
   margin-left: 30vw;
   width: 70vw;
@@ -152,7 +151,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .korepetycje-segment {
     position: static;
     width: 100%;

@@ -70,8 +70,8 @@ function Korepetycje(props) {
           <span className="purple-text">korepetytora!</span>
         </div>
         <div id="korepetytorzy">
-          {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x) => (
-            <div id="korepetytor-div">
+          {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x,index) => (
+            <div id="korepetytor-div" key={x + index}>
               <span id="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
               <br />
               <span id="miejscowosc">{x.miejscowosc}</span>
