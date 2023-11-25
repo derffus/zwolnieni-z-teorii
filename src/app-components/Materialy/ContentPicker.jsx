@@ -197,17 +197,6 @@ function ContentPicker(props) {
           </option>
         )}
       </select>
-      <select
-        value={props.zrodlo}
-        className="content-picker-select"
-        onChange={(event) => props.setZrodlo(event.target.value)}
-      >
-        <option value="" disabled>
-          Źródło
-        </option>
-        <option value="youtube">Youtube</option>
-        <option value="artykul">Artykuł</option>
-      </select>
     </div>
   );
 }

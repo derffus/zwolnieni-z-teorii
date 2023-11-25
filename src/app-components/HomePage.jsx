@@ -1,12 +1,11 @@
 import React from "react";
 import "../component-styles/HomePage.scss";
 import { useAtom } from "jotai";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motywStrony } from "../App";
 function HomePage(props) {
   const [motyw] = useAtom(motywStrony);
 
-  const navigate = useNavigate();
 
   return (
     <div id="home-page">
@@ -16,11 +15,10 @@ function HomePage(props) {
           <span className="purple-text">jednym miejscu!</span>
         </div>
         <div id="big-buttons">
-          <button
+          <NavLink
+            className="big-buttons-button"
+            to="/materialy"
             data-content="Materiały"
-            onClick={() => {
-              navigate("/materialy");
-            }}
           >
             <img
               src={
@@ -30,13 +28,12 @@ function HomePage(props) {
               }
               alt="materialy"
             />
-          </button>
+          </NavLink>
 
-          <button
+          <NavLink
+            className="big-buttons-button"
+            to="/korepetycje"
             data-content="Korepetycje"
-            onClick={() => {
-              navigate("/korepetycje");
-            }}
           >
             <img
               src={
@@ -46,13 +43,12 @@ function HomePage(props) {
               }
               alt="korepetycje"
             />
-          </button>
+          </NavLink>
 
-          <button
+          <NavLink
+            className="big-buttons-button"
+            to="/studia"
             data-content="Studia"
-            onClick={() => {
-              navigate("/studia");
-            }}
           >
             <img
               src={
@@ -62,13 +58,12 @@ function HomePage(props) {
               }
               alt="studia"
             />
-          </button>
+          </NavLink>
 
-          <button
+          <NavLink
+            className="big-buttons-button"
+            to="/arkusze"
             data-content="Arkusze"
-            onClick={() => {
-              navigate("/arkusze");
-            }}
           >
             <img
               src={
@@ -78,7 +73,7 @@ function HomePage(props) {
               }
               alt="arkusze"
             />
-          </button>
+          </NavLink>
         </div>
       </header>
     </div>

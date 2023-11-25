@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    button {
+    .big-buttons-button {
       z-index: 1;
       position: relative;
       box-shadow: 15px 15px 1px 1px var(--purpleHovered);
@@ -105,7 +105,7 @@
       grid-template-rows: 1fr 1fr;
       grid-gap: 15px;
       row-gap: 50px;
-      button {
+      .big-buttons-button {
         height: 40vw;
         aspect-ratio: 1/1;
         box-shadow: 5px 5px 1px 1px var(--purpleHovered);

@@ -1,53 +1,25 @@
 import React from "react";
 import "../component-styles/RightNav.scss";
-import { useNavigate, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function RightNav(props) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
   return (
     <nav className={`right-nav ${props.showRightNav ? "show-right-nav" : ""}`}>
-      <div id="right-segment-buttons">
-        <button
-          className={location.pathname === "/" ? "nav-clicked" : ""}
-          onClick={() => {
-            navigate("/");
-          }}
-        >
+      <div className="right-segment-buttons">
+        <NavLink to="/" className="right-nav-link">
           Strona główna
-        </button>
-        <button
-          className={location.pathname === "/materialy" ? "nav-clicked" : ""}
-          onClick={() => {
-            navigate("/materialy");
-          }}
-        >
+        </NavLink>
+        <NavLink to="/materialy" className="right-nav-link">
           Materiały
-        </button>
-        <button
-          className={location.pathname === "/korepetycje" ? "nav-clicked" : ""}
-          onClick={() => {
-            navigate("/korepetycje");
-          }}
-        >
+        </NavLink>
+        <NavLink to="/korepetycje" className="right-nav-link">
           Korepetycje
-        </button>
-        <button
-          className={location.pathname === "/studia" ? "nav-clicked" : ""}
-          onClick={() => {
-            navigate("/studia");
-          }}
-        >
+        </NavLink>
+        <NavLink to="/studia" className="right-nav-link">
           Studia
-        </button>
-        <button
-          className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
-          onClick={() => {
-            navigate("/arkusze");
-          }}
-        >
+        </NavLink>
+        <NavLink to="/arkusze" className="right-nav-link">
           Arkusze
-        </button>
+        </NavLink>
       </div>
     </nav>
   );

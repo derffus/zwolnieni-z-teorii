@@ -7,14 +7,12 @@ function Materialy(props) {
   const [zakres, setZakres] = useState("");
   const [dzial, setDzial] = useState("");
   const [temat, setTemat] = useState("");
-  const [zrodlo, setZrodlo] = useState("");
-  function wypiszFilmy(filmy, klasa, zakres, dzial, temat, zrodlo) {
+  function wypiszFilmy(filmy, klasa, zakres, dzial, temat) {
     return filmy
       .filter(
         (x) =>
           x[1].indexOf("film-" + zakres + klasa) !== -1 &&
           x[3] === dzial &&
-          x[4] === zrodlo &&
           (x[5] ? x[5].indexOf(temat) !== -1 || temat === "wszystkie" : true)
       )
       .map((x) => (
@@ -45,12 +43,10 @@ function Materialy(props) {
           setTemat={setTemat}
           dzial={dzial}
           setDzial={setDzial}
-          zrodlo={zrodlo}
-          setZrodlo={setZrodlo}
         />
-        {klasa !== "" && zakres !== "" && dzial !== "" && zrodlo !== "" ? (
+        {klasa !== "" && zakres !== "" && dzial !== "" && temat !== "" ? (
           <div className="filmy">
-            {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat, zrodlo)}
+            {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat)}
           </div>
         ) : (
           <div className="materialy-img">

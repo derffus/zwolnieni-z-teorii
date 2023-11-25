@@ -125,7 +125,7 @@ function Studia(props) {
               src={
                 process.env.PUBLIC_URL + "/images/AkademiaGorniczoHutnicza.png"
               }
-              alt="Szkola Glowna Handlowa W Warszawie"
+              alt="Akademia Górniczo Hutnicza"
             />
           </div>
         </div>
@@ -156,7 +156,7 @@ function Studia(props) {
               src={
                 process.env.PUBLIC_URL + "/images/PolitechnikaWarszawska.png"
               }
-              alt="Szkola Glowna Handlowa W Warszawie"
+              alt="Politechnika Warszawska"
             />
           </div>
         </div>

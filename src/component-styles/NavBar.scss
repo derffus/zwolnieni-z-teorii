@@ -11,6 +11,9 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--blue);
   z-index: 3;
+  .active{
+    background-color: var(--purpleHovered) !important;
+  }
 }
 #home {
   height: 100%;
@@ -19,7 +22,7 @@
   display: flex;
   align-items: center;
   margin-right: 15vw;
-  button {
+  .home-button {
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     flex-direction: row;
@@ -27,6 +30,7 @@
     justify-content: flex-start;
     font-family: inherit;
     font-size: 1.5em;
+    text-decoration: none;
     border: none;
     background-color: var(--content);
     height: 100%;
@@ -59,24 +63,26 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  button {
+  .navtop-button {
     transition: background-color 0.3s, color 0.3s;
     color: var(--blue);
     font-size: 1.5em;
     font-family: inherit;
+    text-decoration: none;
     border: none;
     background-color: var(--content);
     width: 25%;
     min-width: fit-content;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &:hover {
       cursor: pointer;
       background-color: var(--purpleHovered);
     }
   }
-}
-.nav-clicked {
-  background-color: var(--purpleHovered) !important;
 }
 .toggle-buttons {
   display: flex;
@@ -156,7 +162,7 @@
     height: 6vh;
     #home {
       margin-right: 0;
-      button {
+      .home-button {
         width: fit-content;
         img {
           height: 6vh;

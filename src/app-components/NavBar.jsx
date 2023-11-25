@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../component-styles/NavBar.scss";
 import RightNav from "./RightNav";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import { useAtom } from "jotai";
 import { motywStrony } from "../App";
 function NavBar(props) {
   const [showRightNav, setShowRightNav] = useState(false);
   const [motyw, setMotyw] = useAtom(motywStrony);
 
-  const navigate = useNavigate();
   const location = useLocation();
   const width = window.innerWidth;
 
@@ -32,11 +31,9 @@ function NavBar(props) {
       <RightNav showRightNav={showRightNav} />
       <nav id="navbar-top">
         <div id="home">
-          <button
-            id="home-button"
-            onClick={() => {
-              navigate("/");
-            }}
+          <NavLink
+            className="home-button"
+            to="/"
           >
             <div>
               <img
@@ -70,49 +67,45 @@ function NavBar(props) {
                 Zone
               </span>
             </div>
-          </button>
+          </NavLink>
         </div>
         {width > 700 ? (
           <div id="top-buttons">
-            <button
+            <NavLink
               className={
-                location.pathname === "/materialy" ? "nav-clicked" : ""
+                "navtop-button"
               }
-              onClick={() => {
-                navigate("/materialy");
-              }}
+              to="/materialy"
             >
               Materiały
-            </button>
+            </NavLink>
 
-            <button
+            <NavLink
               className={
-                location.pathname === "/korepetycje" ? "nav-clicked" : ""
+                "navtop-button"
               }
-              onClick={() => {
-                navigate("/korepetycje");
-              }}
+              to="/korepetycje"
             >
               Korepetycje
-            </button>
+            </NavLink>
 
-            <button
-              className={location.pathname === "/studia" ? "nav-clicked" : ""}
-              onClick={() => {
-                navigate("/studia");
-              }}
+            <NavLink
+              className={
+                "navtop-button"
+              }
+              to="/studia"
             >
               Studia
-            </button>
+            </NavLink>
 
-            <button
-              className={location.pathname === "/arkusze" ? "nav-clicked" : ""}
-              onClick={() => {
-                navigate("/arkusze");
-              }}
+            <NavLink
+              className={
+                "navtop-button"
+              }
+              to="/arkusze"
             >
               Arkusze
-            </button>
+            </NavLink>
           </div>
         ) : null}
         <div className="toggle-buttons">
