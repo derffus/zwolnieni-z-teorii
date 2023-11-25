@@ -8,6 +8,8 @@
   margin-top: 5%;
   text-transform: uppercase;
   border-top: 1px solid var(--contentInverted);
+  background-color: var(--content);
+  transition: background-color 0.3s, color 0.3s;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -71,6 +73,7 @@
 @media (max-width: 767px) {
   #about-segment {
     flex-direction: column;
+    height: fit-content;
     .social-media {
       margin-top: 40px;
       align-items: center;
