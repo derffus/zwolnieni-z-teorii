@@ -28,9 +28,9 @@ function App() {
     const updateWindowWidth = () => {
       setWidth(window.innerWidth);
     };
-    window.addEventListener('resize', updateWindowWidth);
+    window.addEventListener("resize", updateWindowWidth);
     return () => {
-      window.removeEventListener('resize', updateWindowWidth);
+      window.removeEventListener("resize", updateWindowWidth);
     };
   }, []);
   return (

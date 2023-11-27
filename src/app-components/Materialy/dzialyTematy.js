@@ -4,7 +4,7 @@ const tematy = {
       1: {
         1: "Zbiór. Działania na zbiorach",
         2: "Zbiory liczbowe. Oś liczbowa",
-        3: "Prawa działania w zbiorze liczb rzeczywistych",
+        3: "Prawa działań w zbiorze liczb rzeczywistych",
         4: "Przedziały",
         5: "Zbiór liczb naturalnych i zbiór liczb całkowitych",
         6: "Przypomnienie i uzupełnienie wiadomości o równaniach",
@@ -83,7 +83,7 @@ const tematy = {
       1: {
         1: "Zbiór. Działania na zbiorach",
         2: "Zbiory liczbowe. Oś liczbowa",
-        3: "Prawa działania w zbiorze liczb rzeczywistych",
+        3: "Prawa działań w zbiorze liczb rzeczywistych",
         4: "Przedziały",
         5: "Zbiór liczb naturalnych i zbiór liczb całkowitych",
         6: "Przypomnienie i uzupełnienie wiadomości o równaniach",
