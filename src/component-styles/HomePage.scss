@@ -95,7 +95,7 @@
       text-align: center;
       width: 100%;
       background-color: var(--content);
-      font-size: 5em;
+      font-size: 4em;
       z-index: 1;
       font-weight: bold;
       margin-bottom: 50px;
@@ -133,6 +133,22 @@
           text-align: center;
           font-size: 3.5em;
           font-weight: 600;
+        }
+        &:hover {
+          img,
+          div {
+            display: none;
+          }
+          &::before {
+            content: attr(data-content);
+            font-size: 1.5em;
+            font-weight: 600;
+            display: block;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 80%;
+          }
         }
       }
     }
@@ -206,6 +222,14 @@
           div {
             width: 100%;
             font-size: 1.3em;
+          }
+          &:hover {
+            &::before {
+              font-size: 0.9em;
+              display: flex;
+              align-items: center;
+              height: 50vw;
+            }
           }
         }
       }

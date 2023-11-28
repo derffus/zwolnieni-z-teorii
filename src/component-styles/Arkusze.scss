@@ -6,8 +6,7 @@
   min-height: 90vh;
   .welcome-arkusze {
     margin-top: 20px;
-    height: 100%;
-    min-height: 90vh;
+    height: calc(90vh - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,48 +37,51 @@
         height: 15px;
       }
     }
-    .arrows {
+    .arrows-div {
       margin-top: -20px;
-      height: 80px;
-      position: relative;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       font-size: 30px;
-      i {
-        display: block;
-        position: absolute;
-        color: var(--blue);
-        transition: color 0.3s;
-      }
-      .first {
-        top: 0;
-        animation: arrowshade 2s infinite;
-      }
-      @keyframes arrowshade {
-        0% {
-          color: var(--purple);
+      .arrows {
+        height: 50%;
+        width: 30px;
+        position: relative;
+        i {
+          display: block;
+          position: absolute;
+          color: var(--blue);
+          transition: color 0.3s;
+          animation: arrowshade 2s infinite;
         }
-      }
-      .second {
-        top: 12px;
-        animation: arrowshade 2s infinite;
-        animation-delay: 0.5s;
-      }
-      .third {
-        top: 24px;
-        animation: arrowshade 2s infinite;
-        animation-delay: 1s;
-      }
-      .fourth {
-        top: 36px;
-        animation: arrowshade 2s infinite;
-        animation-delay: 1.5s;
+        .first {
+          top: 0;
+        }
+        @keyframes arrowshade {
+          0% {
+            color: var(--purple);
+          }
+        }
+        .second {
+          top: 12px;
+          animation-delay: 0.5s;
+        }
+        .third {
+          top: 24px;
+          animation-delay: 1s;
+        }
+        .fourth {
+          top: 36px;
+          animation-delay: 1.5s;
+        }
       }
     }
   }
   .wybierz-poziom {
     position: relative;
-
     height: 100%;
     min-height: 80vh;
     width: 100%;
@@ -181,7 +183,7 @@
 @media (max-width: 767px) {
   #arkusze {
     .welcome-arkusze {
-      min-height: auto;
+      height: 65vh;
       padding-bottom: 5vh;
       .img-and-start {
         flex-direction: column-reverse;
@@ -196,18 +198,19 @@
       .welcome-arkusze-content {
         font-size: 0.75em;
       }
-      .arrows {
-        height: 0px;
-        margin-top: -10px;
-        font-size: 20px;
-        .second {
-          top: 9px;
-        }
-        .third {
-          top: 18px;
-        }
-        .fourth {
-          top: 27px;
+      .arrows-div {
+        margin-top:10px;
+        .arrows {
+          font-size: 20px;
+          .second {
+            top: 9px;
+          }
+          .third {
+            top: 18px;
+          }
+          .fourth {
+            top: 27px;
+          }
         }
       }
     }

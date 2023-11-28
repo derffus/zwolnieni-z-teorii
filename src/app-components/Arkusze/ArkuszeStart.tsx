@@ -35,11 +35,13 @@ function ArkuszeStart(props) {
           <strong> wszystkie zeszłoroczne matury</strong> oraz przygotowaliśmy
           ich <strong>rozwiązania wraz objaśnieniami</strong>!
         </p>
-        <div className="arrows">
-          <i className="fa-solid fa-chevron-down first" />
-          <i className="fa-solid fa-chevron-down second" />
-          <i className="fa-solid fa-chevron-down third" />
-          <i className="fa-solid fa-chevron-down fourth" />
+        <div className="arrows-div">
+          <div className="arrows">
+            <i className="fa-solid fa-chevron-down first" />
+            <i className="fa-solid fa-chevron-down second" />
+            <i className="fa-solid fa-chevron-down third" />
+            <i className="fa-solid fa-chevron-down fourth" />
+          </div>
         </div>
       </div>
       <div className="wybierz-poziom">

@@ -77,31 +77,39 @@ function HomePage(props) {
       </header>
       <div className="o-stronie-div">
         <header className="o-stronie-welcome">
-          <span className="sss">Co wyróżnia{" "}
-          <span className={`mat ${motyw === "light" ? "purple-text" : ""}`}>
-            Mat
+          <span className="sss">
+            Co wyróżnia{" "}
+            <span className={`mat ${motyw === "light" ? "purple-text" : ""}`}>
+              Mat
+            </span>
+            <span className={`zone ${motyw === "light" ? "" : "purple-text"}`}>
+              Zone
+            </span>
+            ?
           </span>
-          <span className={`zone ${motyw === "light" ? "" : "purple-text"}`}>
-            Zone
-          </span>
-          ?</span>
         </header>
         <nav className="o-stronie-nav">
-          <div className="o-stronie-nav-item materialy-video">
+          <div
+            className="o-stronie-nav-item materialy-video"
+            data-content="Na naszej stronie znajdziesz wiele wartościowych filmików dopasowanych do konkretnych zagadnień, które z pewnością pomogą Ci opanować materiał szkolny. "
+          >
             <img
               src={process.env.PUBLIC_URL + "/images/MaterialyVideo.png"}
               alt=""
             />
             <div>Materiały video</div>
           </div>
-          <div className="o-stronie-nav-item rozwiazania-matur">
+          <div
+            className="o-stronie-nav-item rozwiazania-matur"
+            data-content="Chcesz jak najlepiej przygotować się do matury? Przerób arkusze z poprzednich lat. Na naszej stronie masz je wszystkie w jednym miejscu wraz z odpowiedziami i wyjaśnieniami zadań."
+          >
             <img
               src={process.env.PUBLIC_URL + "/images/RozwiazaniaMatur.png"}
               alt=""
             />
             <div>Rozwiązania matur</div>
           </div>
-          <div className="o-stronie-nav-item teoria-i-artykuly">
+          <div className="o-stronie-nav-item teoria-i-artykuly" data-content="">
             <img
               src={process.env.PUBLIC_URL + "/images/TeoriaIArtykuly.png"}
               alt=""
