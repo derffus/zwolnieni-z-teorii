@@ -8,24 +8,35 @@ function About(props) {
     <footer id="about-segment">
       <div className="social-media">
         <div className="social-media-welcome">Nasze social media</div>
-        <nav className="instagram">
-          <>
-            <img src={ process.env.PUBLIC_URL + "/images/Instagram.png"} alt="instagram logo" />
-          </>
-          <h1>Instagram</h1>
-        </nav>
-        <nav className="tiktok">
-          <>
-            <img src={ process.env.PUBLIC_URL + "/images/TikTok.png"} alt="tiktok logo" />
-          </>
-          <h1>TikTok</h1>
-        </nav>
-        <nav className="youtube">
-          <>
-            <img src={ process.env.PUBLIC_URL + "/images/Youtube.png"} alt="youtube logo" />
-          </>
-          <h1>Youtube</h1>
-        </nav>
+        <div className="social-media-links">
+          <nav className="instagram">
+            <>
+              <img
+                src={process.env.PUBLIC_URL + "/images/Instagram.png"}
+                alt="instagram logo"
+              />
+            </>
+            <h1>Instagram</h1>
+          </nav>
+          <nav className="tiktok">
+            <>
+              <img
+                src={process.env.PUBLIC_URL + "/images/TikTok.png"}
+                alt="tiktok logo"
+              />
+            </>
+            <h1>TikTok</h1>
+          </nav>
+          <nav className="youtube">
+            <>
+              <img
+                src={process.env.PUBLIC_URL + "/images/Youtube.png"}
+                alt="youtube logo"
+              />
+            </>
+            <h1>Youtube</h1>
+          </nav>
+        </div>
       </div>
       <div className="inne">
         <div className="inne-div">Inne</div>

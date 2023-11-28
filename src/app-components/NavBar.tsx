@@ -47,7 +47,7 @@ function NavBar(props) {
             </div>
             <div id="mat-zone">
               <span
-                id="mat"
+                className="mat"
                 style={
                   motyw === "light"
                     ? { color: "hsl(235, 26%, 62%)" }
@@ -57,7 +57,7 @@ function NavBar(props) {
                 Mat
               </span>
               <span
-                id="zone"
+                className="zone"
                 style={
                   motyw === "light"
                     ? { color: "hsl(201, 43%, 25%)" }

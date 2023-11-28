@@ -36,7 +36,7 @@
       }
       img {
         display: block;
-        width: 30px;
+        height: 1.3em;
         aspect-ratio: 1/1;
       }
     }
@@ -75,14 +75,20 @@
     flex-direction: column;
     height: fit-content;
     .social-media {
+      width: 100%;
       margin-top: 40px;
       align-items: center;
       .social-media-welcome {
         font-size: 1.5em;
       }
+      .social-media-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
       nav {
         text-align: center;
-
         h1 {
           font-size: 1em;
         }

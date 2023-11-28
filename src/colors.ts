@@ -7,6 +7,7 @@ const colors = {
     blue: "hsl(201, 43%, 25%)",
     colorFont: "hsl(201, 43%, 25%)",
     contentInverted: "#171515",
+    gray: "hsl(0, 0%, 85%)",
   },
   darkMode: {
     purple: "#7F7FB0",
@@ -16,6 +17,7 @@ const colors = {
     blue: "#D9D9D9",
     colorFont: "#8c8c8c",
     contentInverted: "white",
+    gray: "hsl(0, 0%, 15%)",
   },
 };
 export default colors;

@@ -6,15 +6,14 @@ import { motywStrony } from "../App.tsx";
 function HomePage(props) {
   const [motyw] = useAtom(motywStrony);
 
-
   return (
     <div id="home-page">
-      <header id="home-header">
-        <div id="welcome-home-page">
+      <header className="home-header">
+        <div className="welcome-home-page">
           Cała wiedza w <br />
           <span className="purple-text">jednym miejscu!</span>
         </div>
-        <div id="big-buttons">
+        <div className="big-buttons">
           <NavLink
             className="big-buttons-button"
             to="/materialy"
@@ -76,6 +75,41 @@ function HomePage(props) {
           </NavLink>
         </div>
       </header>
+      <div className="o-stronie-div">
+        <header className="o-stronie-welcome">
+          Co wyróżnia{" "}
+          <span className={`mat ${motyw === "light" ? "purple-text" : ""}`}>
+            Mat
+          </span>
+          <span className={`zone ${motyw === "light" ? "" : "purple-text"}`}>
+            Zone
+          </span>
+          ?
+        </header>
+        <nav className="o-stronie-nav">
+          <div className="o-stronie-nav-item materialy-video">
+            <img
+              src={process.env.PUBLIC_URL + "/images/MaterialyVideo.png"}
+              alt=""
+            />
+            <div>Materiały video</div>
+          </div>
+          <div className="o-stronie-nav-item rozwiazania-matur">
+            <img
+              src={process.env.PUBLIC_URL + "/images/RozwiazaniaMatur.png"}
+              alt=""
+            />
+            <div>Rozwiązania matur</div>
+          </div>
+          <div className="o-stronie-nav-item teoria-i-artykuly">
+            <img
+              src={process.env.PUBLIC_URL + "/images/TeoriaIArtykuly.png"}
+              alt=""
+            />
+            <div>Teoria i artykuły</div>
+          </div>
+        </nav>
+      </div>
     </div>
   );
 }
