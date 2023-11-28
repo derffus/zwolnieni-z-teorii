@@ -5,6 +5,7 @@
   width: 100%;
   .home-header {
     min-height: 90vh;
+    margin-bottom: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -90,13 +91,26 @@
     flex-direction: column;
     align-items: center;
     .o-stronie-welcome {
+      transition: background-color 0.3s;
+      text-align: center;
+      width: 100%;
+      background-color: var(--content);
       font-size: 5em;
+      z-index: 1;
       font-weight: bold;
       margin-bottom: 50px;
+      border-bottom: 2px solid #000;
+      line-height: 0.1em;
+      margin: 10px 0 100px;
+      .sss {
+        transition: background-color 0.3s, color 0.3s;
+        background: var(--content);
+        padding: 0 50px;
+      }
     }
     .o-stronie-nav {
       transition: inherit;
-      width: 90%;
+      width: 85%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -104,18 +118,18 @@
         cursor: pointer;
         border-radius: 25px;
         padding: 10px;
-        width: 25vw;
+        width: 22vw;
         transition: inherit;
         background-color: var(--gray);
         display: flex;
         flex-direction: column;
         align-items: center;
         img {
-          width: 22vw;
+          width: 16vw;
           display: block;
         }
         div {
-          width: 22vw;
+          width: 21vw;
           text-align: center;
           font-size: 3.5em;
           font-weight: 600;
@@ -129,11 +143,12 @@
   #home-page {
     .home-header {
       padding-top: 40px;
+      margin-bottom: 0;
       .welcome-home-page {
         animation: none;
         width: 100%;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2.2em;
         margin: 0;
         br {
           margin: 0;
@@ -172,18 +187,23 @@
     .o-stronie-div {
       text-align: center;
       .o-stronie-welcome {
-        font-size: 2.5em;
+        width: 100%;
+        font-size: 1.2em;
+        margin: 20px 0 50px;
+        .sss {
+          padding: 0 15px;
+        }
       }
       .o-stronie-nav {
         flex-direction: column;
         align-items: center;
-        gap:30px;
+        gap: 30px;
         .o-stronie-nav-item {
           width: 80%;
-          img{
+          img {
             width: 50vw;
           }
-          div{
+          div {
             width: 100%;
             font-size: 1.3em;
           }

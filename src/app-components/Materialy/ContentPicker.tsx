@@ -63,6 +63,7 @@ function ContentPicker(props) {
         onChange={(event) => {
           props.setDzial(event.target.value);
         }}
+        disabled={props.klasa === "" || props.zakres === "" ? true : false}
       >
         <option value="" disabled>
           Dział
@@ -165,11 +166,7 @@ function ContentPicker(props) {
             <option value="5">Geometria przestrzenna. Wielościany</option>
             <option value="6">Geometria przestrzenna. Bryły obrotowe</option>
           </>
-        ) : (
-          <option value="" disabled>
-            Wybierz klasę i zakres
-          </option>
-        )}
+        ) : null}
       </select>
       <select
         value={props.temat}
@@ -177,26 +174,26 @@ function ContentPicker(props) {
         onChange={(event) => {
           props.setTemat(event.target.value);
         }}
+        disabled={props.dzial === "" ? true : false}
       >
         <option value="" disabled>
           Temat
         </option>
-        {props.dzial !== "" &&
-        tematy[props.klasa][props.zakres][props.dzial] ? (
+        {props.dzial !== "" ? (
           <>
-            <option value="wszystkie" className="wszystkie">Wszystkie tematy</option>
+            <option value="wszystkie" className="wszystkie">
+              Wszystkie tematy
+            </option>
             {Object.values(tematy[props.klasa][props.zakres][props.dzial]).map(
-              (x:unknown, index:number) => (
-                <option key={x as string + index} value={x as string}>
+              (x: unknown, index: number) => (
+                <option key={(x as string) + index} value={x as string}>
                   {x as string}
                 </option>
               )
             )}
           </>
         ) : (
-          <option value="" disabled>
-            Wybierz klasę, zakres i dział
-          </option>
+          null
         )}
       </select>
     </div>

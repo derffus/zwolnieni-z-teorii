@@ -96,13 +96,19 @@
     background-color: var(--purpleHovered);
     color: inherit;
   }
-  .wszystkie{
+  .wszystkie {
     background-color: var(--purpleDarker);
     text-transform: uppercase;
   }
   &:hover {
     cursor: pointer;
     border-color: var(--purple);
+  }
+  &:disabled {
+    &:hover {
+      cursor: not-allowed;
+      border-color: var(--purpleHovered);
+    }
   }
 }
 .filmy {

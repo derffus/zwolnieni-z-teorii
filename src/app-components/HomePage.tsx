@@ -77,14 +77,14 @@ function HomePage(props) {
       </header>
       <div className="o-stronie-div">
         <header className="o-stronie-welcome">
-          Co wyróżnia{" "}
+          <span className="sss">Co wyróżnia{" "}
           <span className={`mat ${motyw === "light" ? "purple-text" : ""}`}>
             Mat
           </span>
           <span className={`zone ${motyw === "light" ? "" : "purple-text"}`}>
             Zone
           </span>
-          ?
+          ?</span>
         </header>
         <nav className="o-stronie-nav">
           <div className="o-stronie-nav-item materialy-video">
