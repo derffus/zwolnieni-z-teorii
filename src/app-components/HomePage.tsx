@@ -2,7 +2,7 @@ import React from "react";
 import "../component-styles/HomePage.scss";
 import { useAtom } from "jotai";
 import { NavLink } from "react-router-dom";
-import { motywStrony } from "../App";
+import { motywStrony } from "../App.tsx";
 function HomePage(props) {
   const [motyw] = useAtom(motywStrony);
 

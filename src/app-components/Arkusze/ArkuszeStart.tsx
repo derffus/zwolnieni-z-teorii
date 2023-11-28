@@ -2,7 +2,7 @@ import React from "react";
 import "../../component-styles/Arkusze.scss";
 import { useNavigate } from "react-router-dom";
 import { useAtom } from "jotai";
-import { motywStrony } from "../../App";
+import { motywStrony } from "../../App.tsx";
 
 function ArkuszeStart(props) {
   const [motyw] = useAtom(motywStrony);

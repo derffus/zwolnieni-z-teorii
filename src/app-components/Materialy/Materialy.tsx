@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import ContentPicker from "./ContentPicker";
+import ContentPicker from "./ContentPicker.tsx";
 import "../../component-styles/Materialy.scss";
-import filmyYtLinki from "./filmyYTLinki";
+import filmyYtLinki from "./filmyYTLinki.ts";
 function Materialy(props) {
   const [klasa, setKlasa] = useState("");
   const [zakres, setZakres] = useState("");
   const [dzial, setDzial] = useState("");
   const [temat, setTemat] = useState("");
-  function wypiszFilmy(filmy, klasa, zakres, dzial, temat) {
+  function wypiszFilmy(filmy, klasa:string, zakres:string, dzial:string, temat:string) {
     return filmy
       .filter(
         (x) =>
@@ -22,9 +22,9 @@ function Materialy(props) {
             className={x[1].join(" ")}
             src={x[0]}
             title={x[2]}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen="true"
+            allowFullScreen={true}
           ></iframe>
           <div>{x[2]}</div>
         </div>

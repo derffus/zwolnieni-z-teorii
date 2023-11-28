@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ClipboardJS from "clipboard";
-import korepetytorzy from "../korepetytorzy.js";
-import "../component-styles/Korepetycje.scss";
+import korepetytorzy from "./korepetytorzy.ts";
+import "../../component-styles/Korepetycje.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 function Korepetycje(props) {
   const [lokalizacjaInput, setLokalizacjaInput] = useState("");

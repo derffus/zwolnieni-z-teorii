@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../component-styles/NavBar.scss";
-import RightNav from "./RightNav";
+import RightNav from "./RightNav.tsx";
 import { useLocation, NavLink } from "react-router-dom";
 import { useAtom } from "jotai";
-import { motywStrony, windowWidth } from "../App";
+import { motywStrony, windowWidth } from "../App.tsx";
 function NavBar(props) {
   const [showRightNav, setShowRightNav] = useState(false);
   const [motyw, setMotyw] = useAtom(motywStrony);
@@ -112,7 +112,7 @@ function NavBar(props) {
           <div className="zmien-motyw-div">
             <input type="checkbox" id="zmien-motyw-input" />
             <label
-              for="zmien-motyw-input"
+              htmlFor="zmien-motyw-input"
               className={"zmien-motyw"}
               onClick={() => {
                 zmienMotyw();

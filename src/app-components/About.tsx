@@ -1,7 +1,7 @@
 import React from "react";
 import "../component-styles/About.scss";
 import { useAtom } from "jotai";
-import { motywStrony } from "../App";
+import { motywStrony } from "../App.tsx";
 function About(props) {
   const [motyw] = useAtom(motywStrony);
   return (

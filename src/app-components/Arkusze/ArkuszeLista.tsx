@@ -2,7 +2,7 @@ import React from "react";
 import "../../component-styles/Arkusze.scss";
 
 function ArkuszeLista(props) {
-  const downloadPDF = (fileName) => {
+  const downloadPDF = (fileName:string) => {
     /*const pdfPath = `./ArkuszePDF/${fileName}.pdf`;
     const link = document.createElement("a");
     link.href = pdfPath;

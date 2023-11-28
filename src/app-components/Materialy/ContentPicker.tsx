@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAtom } from "jotai";
-import { windowWidth } from "../../App.js";
-import tematy from "./dzialyTematy.js";
+import { windowWidth } from "../../App.tsx";
+import tematy from "./dzialyTematy.ts";
 function ContentPicker(props) {
   const [showContentPicker, setShowContentPicker] = useState(true);
 
@@ -186,9 +186,9 @@ function ContentPicker(props) {
           <>
             <option value="wszystkie" className="wszystkie">Wszystkie tematy</option>
             {Object.values(tematy[props.klasa][props.zakres][props.dzial]).map(
-              (x, index) => (
-                <option key={x + index} value={x}>
-                  {x}
+              (x:unknown, index:number) => (
+                <option key={x as string + index} value={x as string}>
+                  {x as string}
                 </option>
               )
             )}

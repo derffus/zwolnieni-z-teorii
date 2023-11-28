@@ -4,22 +4,36 @@ import { atom, useAtom } from "jotai";
 
 import "./App.css";
 import "./component-styles/About.scss";
-import colors from "./colors";
-import NavBar from "./app-components/NavBar";
-import HomePage from "./app-components/HomePage";
-import Materialy from "./app-components/Materialy/Materialy";
-import Korepetycje from "./app-components/Korepetycje";
-import Studia from "./app-components/Studia";
-import Arkusze from "./app-components/Arkusze/Arkusze";
-import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista";
-import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart";
-import About from "./app-components/About";
+import colors from "./colors.ts";
+import NavBar from "./app-components/NavBar.tsx";
+import HomePage from "./app-components/HomePage.tsx";
+import Materialy from "./app-components/Materialy/Materialy.tsx";
+import Korepetycje from "./app-components/Korepetytorzy/Korepetycje.tsx";
+import Studia from "./app-components/Studia.tsx";
+import Arkusze from "./app-components/Arkusze/Arkusze.tsx";
+import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista.tsx";
+import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart.tsx";
+import About from "./app-components/About.tsx";
 
 export const motywStrony = atom("light");
 export const windowWidth = atom(window.innerWidth);
+
+declare module 'react' {
+  interface CSSProperties {
+    '--purple'?: string;
+    '--purpleHovered'?: string;
+    '--purpleDarker'?: string;
+    '--content'?: string;
+    '--blue'?: string;
+    '--colorFont'?: string;
+    '--contentInverted'?: string;
+  }
+}
+
 function App() {
   const [motyw] = useAtom(motywStrony);
   const [width, setWidth] = useAtom(windowWidth);
+  
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -37,27 +51,26 @@ function App() {
     <div
       className="website"
       style={{
-        "--purple":
+        '--purple':
           motyw === "light" ? colors.lightMode.purple : colors.darkMode.purple,
-        "--purpleHovered":
+        '--purpleHovered':
           motyw === "light"
             ? colors.lightMode.purpleHovered
             : colors.darkMode.purpleHovered,
-        "--purpleDarker":
+        '--purpleDarker':
           motyw === "light"
             ? colors.lightMode.purpleDarker
             : colors.darkMode.purpleDarker,
-        "--content":
+        '--content':
           motyw === "light"
             ? colors.lightMode.content
             : colors.darkMode.content,
-        "--blue":
-          motyw === "light" ? colors.lightMode.blue : colors.darkMode.blue,
-        "--colorFont":
+        '--blue': motyw === "light" ? colors.lightMode.blue : colors.darkMode.blue,
+        '--colorFont':
           motyw === "light"
             ? colors.lightMode.colorFont
             : colors.darkMode.colorFont,
-        "--contentInverted":
+        '--contentInverted':
           motyw === "light"
             ? colors.lightMode.contentInverted
             : colors.darkMode.contentInverted,

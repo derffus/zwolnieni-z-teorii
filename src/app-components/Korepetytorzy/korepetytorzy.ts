@@ -1,4 +1,4 @@
-import { shuffle } from "./app-components/Materialy/filmyYTLinki";
+import { shuffle } from "../Materialy/filmyYTLinki.ts";
 let korepetytorzy = [
   {
     imie: "Alicja",
