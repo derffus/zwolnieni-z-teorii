@@ -166,17 +166,30 @@
   min-height: 90vh;
   .lista {
     margin-top: 10vh;
-    width: 80%;
-    margin-left: 10%;
+    width: 85%;
+    margin-left: 7.5%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    button {
-      background-color: lightgray;
-      border: none;
-      border-radius: 50px;
-      height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .lista-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .lista-button {
+        transition: color 0.3s, background-color 0.3s;
+        color: var(--contentInverted);
+        font-size: 1.7em;
+        background-color: var(--gray);
+        border: none;
+        border-radius: 50px;
+        height: 100px;
+        width: 47%;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--purpleHovered);
+        }
+      }
     }
   }
 }
@@ -199,7 +212,7 @@
         font-size: 0.75em;
       }
       .arrows-div {
-        margin-top:10px;
+        margin-top: 10px;
         .arrows {
           font-size: 20px;
           .second {
@@ -245,7 +258,20 @@
   }
   #arkusze-lista {
     .lista {
-      grid-template-columns: 1fr;
+      gap:20px;
+      .lista-div {
+        flex-direction: column;
+        .lista-button {
+          width: 100%;
+          &:nth-child(1) {
+            border-radius: 25px 25px 0 0;
+            border-bottom: 2px solid var(--content);
+          }
+          &:nth-child(2) {
+            border-radius: 0 0 25px 25px;
+          }
+        }
+      }
     }
   }
 }
