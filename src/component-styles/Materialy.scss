@@ -108,6 +108,7 @@
     &:hover {
       cursor: not-allowed;
       border-color: var(--purpleHovered);
+      opacity: 0.7;
     }
   }
 }

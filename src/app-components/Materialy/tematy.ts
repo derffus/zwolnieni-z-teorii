@@ -48,11 +48,10 @@ const tematy = {
       },
       5: {
         1: "Równania pierwszego stopnia z dwiema niewiadomymi",
-        2: "Układy równań pierwszego stopnia z dwiema niewiadomymi",
-        3: "Graficzne rozwiązywanie układów równań",
-        4: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą podstawiania",
-        5: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą przeciwnych współczynników",
-        6: "Zastosowanie układów równań do rozwiązywania zadań",
+        2: "Układy równań pierwszego stopnia z dwiema niewiadomymi. Graficzne rozwiązywanie układów równań",
+        3: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą podstawiania",
+        4: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą przeciwnych współczynników",
+        5: "Zastosowanie układów równań do rozwiązywania zadań",
       },
       6: {
         1: "Funkcja kwadratowa",
@@ -132,11 +131,10 @@ const tematy = {
       },
       5: {
         1: "Równania pierwszego stopnia z dwiema niewiadomymi",
-        2: "Układy równań pierwszego stopnia z dwiema niewiadomymi",
-        3: "Graficzne rozwiązywanie układów równań",
-        4: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą podstawiania",
-        5: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą przeciwnych współczynników",
-        6: "Zastosowanie układów równań do rozwiązywania zadań",
+        2: "Układy równań pierwszego stopnia z dwiema niewiadomymi. Graficzne rozwiązywanie układów równań",
+        3: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą podstawiania",
+        4: "Rozwiązywanie układów równań pierwszego stopnia z dwiema niewiadomymi metodą przeciwnych współczynników",
+        5: "Zastosowanie układów równań do rozwiązywania zadań",
       },
       6: {
         1: "Funkcja kwadratowa",

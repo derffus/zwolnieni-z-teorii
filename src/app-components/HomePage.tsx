@@ -2,9 +2,9 @@ import React from "react";
 import "../component-styles/HomePage.scss";
 import { useAtom } from "jotai";
 import { NavLink } from "react-router-dom";
-import { motywStrony } from "../App.tsx";
+import { MotywStrony } from "../App.tsx";
 function HomePage(props) {
-  const [motyw] = useAtom(motywStrony);
+  const [motyw] = useAtom(MotywStrony);
 
   return (
     <div id="home-page">

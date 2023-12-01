@@ -1,11 +1,13 @@
 import React from "react";
 import "../../component-styles/Arkusze.scss";
 import { useNavigate } from "react-router-dom";
-import { useAtom } from "jotai";
-import { motywStrony } from "../../App.tsx";
-
+import { useAtomValue, useSetAtom } from "jotai";
+import { MotywStrony } from "../../App.tsx";
+import { ZakresArkusze } from "./Arkusze.tsx";
 function ArkuszeStart(props) {
-  const [motyw] = useAtom(motywStrony);
+  const setZakresArkusze = useSetAtom(ZakresArkusze);
+
+  const motyw = useAtomValue(MotywStrony);
   const navigate = useNavigate();
 
   return (
@@ -26,14 +28,15 @@ function ArkuszeStart(props) {
           </div>
         </div>
         <p className="welcome-arkusze-content">
-          Odpowiedź to <strong>zadania</strong>!<br />
+          Odpowiedź to <strong>zadania!</strong>
+          <br />
           Mimo, że istnieje wiele porad i sposobów jak przygotować się do
           egzaminu dojrzałości, czyli tak zwanej matury to z pewnością jednym z
-          podstawowych kroków jakie powinien podiąć każdy maturzysta jest
+          podstawowych kroków jakie powinien podjąć każdy maturzysta jest
           przerobionie arkuszy z poprzednich lat.
           <br />W związku z tym zebraliśmy dla was
           <strong> wszystkie zeszłoroczne matury</strong> oraz przygotowaliśmy
-          ich <strong>rozwiązania wraz objaśnieniami</strong>!
+          ich <strong>rozwiązania wraz z objaśnieniami!</strong>
         </p>
         <div className="arrows-div">
           <div className="arrows">
@@ -60,6 +63,7 @@ function ArkuszeStart(props) {
           <button
             onClick={() => {
               navigate("/arkusze/lista");
+              setZakresArkusze("podstawa");
             }}
           >
             <div className="matematyka">Matematyka</div>
@@ -68,6 +72,7 @@ function ArkuszeStart(props) {
           <button
             onClick={() => {
               navigate("/arkusze/lista");
+              setZakresArkusze("rozszerzenie");
             }}
           >
             <div className="matematyka">Matematyka</div>

@@ -1,38 +1,45 @@
 import React from "react";
+import { useAtomValue } from "jotai";
 import "../../component-styles/Arkusze.scss";
+import { ZakresArkusze } from "./Arkusze.tsx";
 function ArkuszeLista(props) {
+  const zakresArkusze = useAtomValue(ZakresArkusze);
+
   const openPDF = (fileName: string) => {
     window.open(require(`./ArkuszePDF/${fileName}.pdf`), "_blank");
   };
+
   return (
     <div id="arkusze-lista">
       <div className="lista">
-        <div className="lista-div maturaPodstawowaMaj2023Formula2015">
-          <button
-            className="lista-button"
-            onClick={() => {
-              openPDF("MaturaPodstawowaMaj2023Formula2015");
-            }}
-          >
-            Matura podstawowa maj 2023 formuła 2015
-          </button>
-          <button
-            className="lista-button"
-            onClick={() => {
-              openPDF("MaturaPodstawowaMaj2023Formula2015Odpowiedzi");
-            }}
-          >
-            Matura podstawowa maj 2023 formuła 2015 - odpowiedzi
-          </button>
-        </div>
-        <div className="lista-div">
-          <button className="lista-button">Matura x</button>
-          <button className="lista-button">Matura x odpowiedzi</button>
-        </div>
-        <div className="lista-div">
-          <button className="lista-button">Matura y</button>
-          <button className="lista-button">Matura y odpowiedzi</button>
-        </div>
+          {[
+            [
+              "MaturaPodstawowaMaj2023Formula2015",
+              "MaturaPodstawowaMaj2023Formula2015Odpowiedzi",
+            ],
+          ]
+            .filter((x) =>
+              new RegExp(
+                zakresArkusze === "podstawa" ? "podstawowa" : "rozszerzona",
+                "i"
+              ).test(x[0])
+            )
+            .map((x, index) => (
+              <div className="lista-div">
+                <button
+                  className="lista-button"
+                  onClick={() => {
+                    openPDF(x[0]);
+                  }}
+                >{x[0].replace(/([A-Z][a-z]*|\d+)/g, '$1 ').replace(/l/,'ł')}</button>
+                <button
+                  className="lista-button"
+                  onClick={() => {
+                    openPDF(x[1]);
+                  }}
+                >{x[1].replace(/([A-Z][a-z]*|\d+)/g, '$1 ').replace(/l/,'ł')}</button>
+              </div>
+            ))}
       </div>
     </div>
   );

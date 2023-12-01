@@ -15,8 +15,8 @@ import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista.tsx";
 import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart.tsx";
 import About from "./app-components/About.tsx";
 
-export const motywStrony = atom("light");
-export const windowWidth = atom(window.innerWidth);
+export const MotywStrony = atom("light");
+export const WindowWidth = atom(window.innerWidth);
 
 declare module "react" {
   interface CSSProperties {
@@ -32,8 +32,8 @@ declare module "react" {
 }
 
 function App() {
-  const [motyw] = useAtom(motywStrony);
-  const [width, setWidth] = useAtom(windowWidth);
+  const [motyw] = useAtom(MotywStrony);
+  const [width, setWidth] = useAtom(WindowWidth);
 
   const location = useLocation();
   useEffect(() => {

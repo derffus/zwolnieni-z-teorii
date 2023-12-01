@@ -1,9 +1,9 @@
 import React from "react";
 import "../component-styles/About.scss";
 import { useAtom } from "jotai";
-import { motywStrony } from "../App.tsx";
+import { MotywStrony } from "../App.tsx";
 function About(props) {
-  const [motyw] = useAtom(motywStrony);
+  const [motyw] = useAtom(MotywStrony);
   return (
     <footer id="about-segment">
       <div className="social-media">

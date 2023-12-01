@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useAtom } from "jotai";
-import { windowWidth } from "../../App.tsx";
-import tematy from "./dzialyTematy.ts";
+import { WindowWidth } from "../../App.tsx";
+import tematy from "./tematy.ts";
 function ContentPicker(props) {
   const [showContentPicker, setShowContentPicker] = useState(true);
 
-  const [width] = useAtom(windowWidth);
+  const [width] = useAtom(WindowWidth);
 
   const toggleShowContentPicker = () => {
     const trueOrFalse = showContentPicker === true ? false : true;

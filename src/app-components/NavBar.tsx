@@ -3,13 +3,13 @@ import "../component-styles/NavBar.scss";
 import RightNav from "./RightNav.tsx";
 import { useLocation, NavLink } from "react-router-dom";
 import { useAtom } from "jotai";
-import { motywStrony, windowWidth } from "../App.tsx";
+import { MotywStrony, WindowWidth } from "../App.tsx";
 function NavBar(props) {
   const [showRightNav, setShowRightNav] = useState(false);
-  const [motyw, setMotyw] = useAtom(motywStrony);
+  const [motyw, setMotyw] = useAtom(MotywStrony);
 
   const location = useLocation();
-  const [width] = useAtom(windowWidth);
+  const [width] = useAtom(WindowWidth);
 
   const toggleRightNav = () => {
     const trueOrFalse = showRightNav === true ? false : true;
