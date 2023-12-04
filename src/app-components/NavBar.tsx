@@ -110,10 +110,10 @@ function NavBar(props) {
         ) : null}
         <div className="toggle-buttons">
           <div className="zmien-motyw-div">
-            <input type="checkbox" id="zmien-motyw-input" />
+            <input type="checkbox" checked={motyw==='light'?false:true} id="zmien-motyw-input" />
             <label
               htmlFor="zmien-motyw-input"
-              className={"zmien-motyw"}
+              className="zmien-motyw"
               onClick={() => {
                 zmienMotyw();
               }}

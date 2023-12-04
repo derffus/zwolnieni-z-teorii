@@ -15,7 +15,7 @@ import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista.tsx";
 import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart.tsx";
 import About from "./app-components/About.tsx";
 
-export const MotywStrony = atom("light");
+export const MotywStrony = atom("");
 export const WindowWidth = atom(window.innerWidth);
 
 declare module "react" {
