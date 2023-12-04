@@ -302,6 +302,27 @@ let filmyYtLinki = [
 ["https://www.youtube.com/embed/wQeAzgttOUM",["film-rozszerzenie1"],"WEKTORY NA PŁASZCZYŹNIE [#59]",'7',"youtube", ["Wektor na płaszczyźnie"]],
 ["https://www.youtube.com/embed/LqBrQp-f2I0",["film-rozszerzenie1"]," Wektory - Wprowadzenie Odc.1 (na szybko bo wychodzę za 5 min) (Udostępnij na Grupce Klasowej)",'7',"youtube", ["Wektor na płaszczyźnie"]],
 ["https://www.youtube.com/embed/9agT9Lu6pJQ",["film-rozszerzenie1"]," Liceum. Klasa I. Wektor w układzie współrzędnych",'7',"youtube", ["Wektor na płaszczyźnie"]],
+["https://www.youtube.com/embed/aivTB9ly-tw",["film-podstawa1","film-rozszerzenie1"],"SINUS / COSINUS / TANGENS / COTANGENS - FUNKCJE TRYGONOMETRYCZNE [#60]","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/qX232RNzZ_M",["film-podstawa1","film-rozszerzenie1"],"Trygonometria kąta ostrego - część 1 - podstawy","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/tZk4LdG_1rU",["film-podstawa1","film-rozszerzenie1"],"Trygonometria kąta ostrego - część 2","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/lGcuKPtOTEk",["film-podstawa1","film-rozszerzenie1"],"Sinus, cosinus i tangens w trójkącie prostokątnym #1 [ Trygonometria ]","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/XYMK7H9712Q",["film-podstawa1","film-rozszerzenie1"],"Wyznaczanie boków trójkąta znając sinus, cosinus lub tangens #2 [ Trygonometria ]","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/TRNiRkB1llA",["film-podstawa1","film-rozszerzenie1"],"Korzystanie z tablic trygonometrycznych #3 [ Trygonometria ]","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym"]],
+["https://www.youtube.com/embed/lsmzRf830zE",["film-podstawa1","film-rozszerzenie1"]," Liceum. Klasa I. Wstęp do trygonometrii","8","youtube",["Określenie sinusa, cosinusa, tangensa i cotangensa w trójkącie prostokątnym", "Wartości sinusa, cosinusa, tangensa i cotangensa kątów 30°, 45° i 60°"]],
+["https://www.youtube.com/embed/fBptK4ev4ho",["film-podstawa1","film-rozszerzenie1"]," WARTOŚCI SINUSA / COSIUNA / TANGENSA / COTANGENSA DLA KĄTÓW 30°, 45°, 60° [#61]","8","youtube",["Wartości sinusa, cosinusa, tangensa i cotangensa kątów 30°, 45° i 60°"]],
+["https://www.youtube.com/embed/_JhMCrCtw9M",["film-podstawa1","film-rozszerzenie1"],"Wartości sinusa, cosinusa, tangensa dla kątów 30 i 60 stopni #4 [ Trygonometria ]","8","youtube",["Wartości sinusa, cosinusa, tangensa i cotangensa kątów 30°, 45° i 60°"]],
+["https://www.youtube.com/embed/9dIGRWSq6AM",["film-podstawa1","film-rozszerzenie1"],"Wartości sinusa, cosinusa, tangensa dla kątów 45 stopni #5 [ Trygonometria ]","8","youtube",["Wartości sinusa, cosinusa, tangensa i cotangensa kątów 30°, 45° i 60°"]],
+["https://www.youtube.com/embed/1WSjWvdFCsk",["film-podstawa1","film-rozszerzenie1"],"ZALEŻNOŚCI MIĘDZY FUNKCJAMI TRYGONOMETRYCZNYMI [#62]","8","youtube",["Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego"]],
+["https://www.youtube.com/embed/zvZltxwb1hc",["film-podstawa1","film-rozszerzenie1"]," Trygonometria kąta ostrego - część 3","8","youtube",["Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego"]],
+["https://www.youtube.com/embed/S0nexv9bhKI",["film-podstawa1","film-rozszerzenie1"]," Trygonometria kąta ostrego - część 5","8","youtube",["Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego"]],
+["https://www.youtube.com/embed/qWv_tcmikcM",["film-podstawa1","film-rozszerzenie1"],"Funkcje Trygonometryczne Wstęp + Zadanie Maturalne (Udostępnij na Grupce Klasowej)","8","youtube",["Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego"]],
+["https://www.youtube.com/embed/X__SR4HHDuU",["film-podstawa1","film-rozszerzenie1"],"Trygonometria","8","youtube",["Zależności między funkcjami trygonometrycznymi tego samego kąta ostrego"]],
+["https://www.youtube.com/embed/-U6xBu8PfZY",["film-podstawa4", "film-rozszerzenie4"],"Zadanie maturalne - wartości funkcji wykładniczej.",'1',"youtube",["Potęga o wykładniku rzeczywistym - powtórzenie"]],
+["https://www.youtube.com/embed/Ubn1hMYpiCc",["film-podstawa4", "film-rozszerzenie4"],"Potęgi, logarytmy i funkcja wykładnicza",'1',"youtube",["Funkcja wykładnicza i jej właściwości","Przekształcenia wykresów funkcji wykładniczych"]],
+["https://www.youtube.com/embed/zOxq_iNX7ao",["film-rozszerzenie4"],"Funkcja wykładnicza na poziomie rozszerzonym",'1',"youtube",["Funkcja wykładnicza i jej właściwości","Nierówności wykładnicze","Zastosowanie własności funkcji wykładniczej w zadaniach"]],
+["https://www.youtube.com/embed/vT2DSNsvLCs",["film-podstawa4", "film-rozszerzenie4"],"FUNKCJA WYKŁADNICZA [#47]",'1',"youtube",["Funkcja wykładnicza i jej właściwości"]],
+["https://www.youtube.com/embed/zzeQjqaoRME",["film-podstawa4", "film-rozszerzenie4"],"Działania na potęgach o wykładniku ujemnym #3 [ Notacja wykładnicza ]",'1',"youtube",["Potęga o wykładniku rzeczywistym - powtórzenie"]],
+
 ];
 
 

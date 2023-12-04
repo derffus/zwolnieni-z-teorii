@@ -4,11 +4,11 @@ function Studia(props) {
   return (
     <div id="studia">
       <div className="studia-segment">
-        <div id="welcome-studia">
-          <div id="welcome-studia-start">
+        <div className="welcome-studia">
+          <div className="welcome-studia-start">
             Studia po <span>matematyce rozszerzonej</span>
           </div>
-          <div id="welcome-studia-content">
+          <div className="welcome-studia-content">
             Obecnie zdając matematykę rozszerzoną masz szeroki wybór kierunków
             studiów i uczelni w całej Polsce. Nauki, na które możesz się
             zdecydować, to między innymi:
@@ -24,7 +24,7 @@ function Studia(props) {
                 "Architektura",
                 "Geologia",
               ].map((x, index) => (
-                <li id={x + "-list"} key={index}>
+                <li className={x + "-list"} key={index}>
                   {x}
                 </li>
               ))}
@@ -155,6 +155,68 @@ function Studia(props) {
             <img
               src={
                 process.env.PUBLIC_URL + "/images/PolitechnikaWarszawska.png"
+              }
+              alt="Politechnika Warszawska"
+            />
+          </div>
+        </div>
+        <div
+          className="uczelnia-segment uniwersytet-warszawski"
+          onClick={() => {
+            window.open("https://www.pw.edu.pl/", "_blank");
+          }}
+        >
+          <div className="uczelnia-segment-text uniwersytet-warszawski-text">
+            <div className="uczelnia-segment-start uniwersytet-warszawski-start">
+              <span>Uniwersytet Warszawski</span>
+            </div>
+            <div className="uczelnia-segment-content uniwersytet-warszawski-content">
+              Uniwersytet Warszawski (UW) to renomowana uczelnia w Polsce,
+              zajmująca czołowe miejsce w rankingach edukacyjnych. Znany z
+              konkurencyjnej rekrutacji, uniwersytet stawia wysokie wymagania, w
+              tym próg punktowy wynoszący 320 PKT. Wydział Matematyki,
+              Informatyki i Mechaniki UW cieszy się szczególnie silną reputacją
+              w dziedzinie matematyki. UW oferuje wysoką jakość kształcenia,
+              dostęp do bogatych zasobów naukowych oraz możliwość współpracy z
+              partnerami międzynarodowymi, co czyni go atrakcyjnym miejscem
+              nauki i rozwoju zawodowego.
+            </div>
+          </div>
+          <div className="uczelnia-segment-img uniwersytet-warszawski-img">
+            <img
+              src={
+                process.env.PUBLIC_URL + "/images/UniwersytetWarszawski.png"
+              }
+              alt="Uniwersytet Warszawski"
+            />
+          </div>
+        </div>
+        <div
+          className="uczelnia-segment uniwersytet-jagiellonski"
+          onClick={() => {
+            window.open("https://www.pw.edu.pl/", "_blank");
+          }}
+        >
+          <div className="uczelnia-segment-text uniwersytet-jagiellonski-text">
+            <div className="uczelnia-segment-start uniwersytet-jagiellonski-start">
+              <span>Uniwersytet Jagielloński</span>
+            </div>
+            <div className="uczelnia-segment-content uniwersytet-jagiellonski-content">
+              Uniwersytet Jagielloński (UJ) to najstarsza uczelnia w Polsce
+              ciesząca się wieloletnią tradycją i prestiżem. UJ oferuje wysokiej
+              jakości kształcenie, dostęp do rozbudowanych zasobów naukowych i
+              współpracę z międzynarodowymi instytucjami. Rekrutacja obejmuje
+              różnorodne kierunki studiów w tym Matematyke czy Informatyke.
+              Opinie studentów podkreślają wysoki poziom nauczania, a minimalny
+              próg 310 punktów tworzy rygorystyczne warunki przyjęcia.
+              Uniwersytet Jagielloński niezmiennie zajmuje czołowe miejsca w
+              zestawieniach najlepszych uczelni w Polsce
+            </div>
+          </div>
+          <div className="uczelnia-segment-img uniwersytet-jagiellonski-img">
+            <img
+              src={
+                process.env.PUBLIC_URL + "/images/UniwersytetJagiellonski.png"
               }
               alt="Politechnika Warszawska"
             />

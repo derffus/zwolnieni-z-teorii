@@ -30,7 +30,7 @@ function NavBar(props) {
     <>
       <RightNav showRightNav={showRightNav} />
       <nav id="navbar-top">
-        <div id="home">
+        <div className="home">
           <NavLink
             className="home-button"
             to="/"
@@ -45,7 +45,7 @@ function NavBar(props) {
                 alt="Logo MatZone"
               />
             </div>
-            <div id="mat-zone">
+            <div className="mat-zone">
               <span
                 className="mat"
                 style={
@@ -70,7 +70,7 @@ function NavBar(props) {
           </NavLink>
         </div>
         {width > 767 ? (
-          <div id="top-buttons">
+          <div className="top-buttons">
             <NavLink
               className={
                 "navtop-button"
@@ -120,7 +120,7 @@ function NavBar(props) {
             />
           </div>
           {width < 767 ? (
-            <div id="show-nav">
+            <div className="show-nav">
               <button onClick={toggleRightNav}>
                 <i className="fa fa-bars"></i>
               </button>

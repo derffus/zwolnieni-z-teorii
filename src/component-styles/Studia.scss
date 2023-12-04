@@ -12,171 +12,197 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-}
-#welcome-studia {
-  align-self: center;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: fit-content;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-#welcome-studia-start {
-  font-size: 3.5em;
-  font-weight: bold;
-  color: var(--purple);
-}
-#welcome-studia-content {
-  color: var(--colorFont);
-  width: 55%;
-  font-size: 1.2em;
-}
-.uczelnia-segment {
-  margin-top: 80px;
-  padding: 20px;
-  background-color: var(--purpleHovered);
-  font-weight: bold;
-  align-self: center;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  width: 90%;
-  text-transform: uppercase;
-  box-shadow: 8px 8px 1px 1px var(--purpleDarker);
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  &:hover {
-    cursor: pointer;
-    background-color: var(--purpleDarker);
-    transform: translate(8px, 8px);
-    box-shadow: 1px 1px 1px 1px var(--purpleDarker);
-  }
-  .uczelnia-segment-text {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-  }
-  .uczelnia-segment-start {
-    font-size: 3em;
-    color: var(--blue);
-  }
-  .uczelnia-segment-content {
-    color: var(--colorFont);
-    font-size: 1.2rem;
-  }
-  .uczelnia-segment-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    img {
-      display: block;
-      height: 250px;
-    }
-  }
-}
-.szkola-glowna-handlowa {
-  flex-direction: row-reverse;
-  .szkola-glowna-handlowa-text {
-    width: 60%;
-  }
-}
-.akademia-leona-kozminskiego {
-  flex-direction: row;
-  .akademia-leona-kozminskiego-text {
-    width: 55%;
-  }
-  .akademia-leona-kozminskiego-img {
-    img {
-      margin-top: 25px;
-    }
-  }
-}
-.akademia-gorniczo-hutnicza {
-  flex-direction: row-reverse;
-  .akademia-gorniczo-hutnicza-text {
-    width: 57%;
-  }
-}
-.politechnika-warszawska{
-  .politechnika-warszawska-text{
-    width: 60%;
-  }
-}
-@media (max-width: 767px) {
-  .studia-segment {
-    padding: 0;
-    width: 100%;
-  }
-  #welcome-studia {
-    width: 90%;
-    margin-top: 20px;
-    #welcome-studia-start {
-      text-align: center;
-      font-size: 1.5em;
-    }
-    #welcome-studia-content {
-      font-size: 0.7em;
-      width: 100%;
-      ul {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-      }
-    }
-  }
-  .uczelnia-segment {
-    margin-top: 40px;
-    box-shadow: none;
+  .welcome-studia {
     align-self: center;
-    text-align: center;
+    font-weight: bold;
+    display: flex;
     flex-direction: column;
+    width: 90%;
     height: fit-content;
-    &:hover {
-      transform: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    .welcome-studia-start {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: var(--purple);
     }
-    .uczelnia-segment-start {
-      font-size: 1.5em;
+    .welcome-studia-content {
+      color: var(--colorFont);
+      width: 55%;
+      font-size: 1.2em;
+    }
+  }
+
+  .uczelnia-segment {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: var(--purpleHovered);
+    font-weight: bold;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    box-shadow: 8px 8px 1px 1px var(--purpleDarker);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--purpleDarker);
+      transform: translate(8px, 8px);
+      box-shadow: 1px 1px 1px 1px var(--purpleDarker);
     }
     .uczelnia-segment-text {
-      width: 100%;
-      .uczelnia-segment-content {
-        font-size: 0.75em;
-        align-self: center;
-        width: 80%;
-      }
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+    }
+    .uczelnia-segment-start {
+      font-size: 3em;
+      color: var(--blue);
+    }
+    .uczelnia-segment-content {
+      color: var(--colorFont);
+      font-size: 1.2rem;
     }
     .uczelnia-segment-img {
-      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        display: block;
+        height: 250px;
+      }
     }
   }
   .szkola-glowna-handlowa {
-    .szkola-glowna-handlowa-img {
-      img {
-        height: 150px;
-      }
+    flex-direction: row-reverse;
+    .szkola-glowna-handlowa-text {
+      width: 60%;
     }
   }
   .akademia-leona-kozminskiego {
+    flex-direction: row;
+    .akademia-leona-kozminskiego-text {
+      width: 55%;
+    }
     .akademia-leona-kozminskiego-img {
       img {
-        height: 120px;
+        margin-top: 25px;
       }
     }
   }
   .akademia-gorniczo-hutnicza {
-    .akademia-gorniczo-hutnicza-img {
-      img {
-        height: 150px;
-      }
+    flex-direction: row-reverse;
+    .akademia-gorniczo-hutnicza-text {
+      width: 57%;
     }
   }
   .politechnika-warszawska {
-    .politechnika-warszawska-img {
-      img {
-        height: 180px;
+    .politechnika-warszawska-text {
+      width: 60%;
+    }
+  }
+  .uniwersytet-warszawski {
+    flex-direction: row-reverse;
+    .uniwersytet-warszawski-text {
+      width: 70%;
+    }
+  }
+  .uniwersytet-jagiellonski {
+    .uniwersytet-jagiellonski-text {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .studia-segment {
+    padding: 0;
+    width: 100%;
+    .welcome-studia {
+      width: 90%;
+      margin-top: 20px;
+      .welcome-studia-start {
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .welcome-studia-content {
+        font-size: 0.7em;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+        }
+      }
+    }
+    .uczelnia-segment {
+      margin-top: 40px;
+      box-shadow: none;
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+      height: fit-content;
+      &:hover {
+        transform: none;
+      }
+      .uczelnia-segment-start {
+        font-size: 1.5em;
+      }
+      .uczelnia-segment-text {
+        width: 100%;
+        .uczelnia-segment-content {
+          font-size: 0.75em;
+          align-self: center;
+          width: 80%;
+        }
+      }
+      .uczelnia-segment-img {
+        align-self: center;
+      }
+    }
+    .szkola-glowna-handlowa {
+      .szkola-glowna-handlowa-img {
+        img {
+          height: 150px;
+        }
+      }
+    }
+    .akademia-leona-kozminskiego {
+      .akademia-leona-kozminskiego-img {
+        img {
+          height: 120px;
+        }
+      }
+    }
+    .akademia-gorniczo-hutnicza {
+      .akademia-gorniczo-hutnicza-img {
+        img {
+          height: 150px;
+        }
+      }
+    }
+    .politechnika-warszawska {
+      .politechnika-warszawska-img {
+        img {
+          height: 180px;
+        }
+      }
+    }
+    .uniwersytet-warszawski{
+      .uniwersytet-warszawski-img{
+        img{
+          height: 200px;
+        }
+      }
+    }
+    .uniwersytet-jagiellonski {
+      .uniwersytet-jagiellonski-img {
+        img {
+          height: 200px;
+        }
       }
     }
   }

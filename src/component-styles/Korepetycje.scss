@@ -3,202 +3,205 @@
 #korepetycje {
   width: 100%;
   height: 100%;
-}
-.korepetycje-segment {
-  background-color: var(--content);
-  transition: background-color 0.3s, color 0.3s;
-  padding-top: 7vh;
-  margin-left: 30%;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-#wpisz-lokalizacje {
-  position: fixed;
-  justify-self: center;
-  grid-area: lokalizacja;
-  padding-left: 5px;
-  border: 2px solid var(--purpleHovered);
-  border-radius: 5px;
-  box-shadow: 10px 10px 1px 0 var(--purpleHovered);
-  background-color: var(--content);
-  transition: background-color 0.3s, color 0.3s;
-  font-size: 2em;
-  height: 10vh;
-  width: 30vw;
-  left: 70px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 0.3s;
-  form {
-    width: 100%;
-    height: 100%;
+  .korepetycje-segment {
+    background-color: var(--content);
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 7vh;
+    margin-left: 30%;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    input {
-      font-size: inherit;
-      color: inherit;
-      box-sizing: border-box;
+    justify-content: center;
+    .wpisz-lokalizacje {
+      position: fixed;
+      justify-self: center;
+      grid-area: lokalizacja;
+      padding-left: 5px;
+      border: 2px solid var(--purpleHovered);
+      border-radius: 5px;
+      box-shadow: 10px 10px 1px 0 var(--purpleHovered);
       background-color: var(--content);
       transition: background-color 0.3s, color 0.3s;
+      font-size: 2em;
+      height: 10vh;
+      width: 30vw;
+      left: 70px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: all 0.3s;
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        input {
+          font-size: inherit;
+          color: inherit;
+          box-sizing: border-box;
+          background-color: var(--content);
+          transition: background-color 0.3s, color 0.3s;
+          height: 100%;
+          width: 75%;
+          border: none;
+          outline: none;
+          &::placeholder {
+            opacity: 0.8;
+            color: var(--blue);
+          }
+          &:focus {
+            border: none;
+          }
+        }
+        button {
+          border: none;
+          display: block;
+          border-radius: inherit;
+          background-color: var(--content);
+          height: 100%;
+          aspect-ratio: 1/1;
+          transition: background-color 0.3s, color 0.3s;
+          &:hover {
+            cursor: pointer;
+            background-color: var(--purpleHovered);
+          }
+          i {
+            color: var(--blue);
+            font-size: 3.5em;
+          }
+        }
+      }
+    }
+    .welcome-korepetycje {
+      width: 40vw;
+      text-align: center;
+      position: fixed;
+      top: 40vh;
+      left: 0;
+      text-align: center;
+      grid-area: welcome;
+      font-size: 4em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      br {
+        content: "";
+        margin: -20px;
+        display: block;
+      }
+    }
+    .korepetytorzy {
       height: 100%;
-      width: 75%;
-      border: none;
-      outline: none;
-      &::placeholder {
-        opacity: 0.8;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .korepetytor-div {
         color: var(--blue);
-      }
-      &:focus {
-        border: none;
-      }
-    }
-    button {
-      border: none;
-      display: block;
-      border-radius: inherit;
-      background-color: var(--content);
-      height: 100%;
-      aspect-ratio: 1/1;
-      transition: background-color 0.3s, color 0.3s;
-      &:hover {
-        cursor: pointer;
-        background-color: var(--purpleHovered);
-      }
-      i {
-        color: var(--blue);
-        font-size: 3.5em;
-      }
-    }
-  }
-}
-#welcome-korepetycje {
-  width: 40vw;
-  text-align: center;
-  position: fixed;
-  top: 40vh;
-  left: 0;
-  text-align: center;
-  grid-area: welcome;
-  font-size: 4em;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 0.3s;
-  br {
-    content: "";
-    margin: -20px;
-    display: block;
-  }
-}
-#korepetytorzy {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  #korepetytor-div {
-    color: var(--blue);
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 2.5em;
-    border-left: 3px solid var(--blue);
-    border-right: 3px solid var(--blue);
-    width: 50%;
-    height: fit-content;
-    margin-bottom: 10%;
-  }
-  #imie-i-nazwisko {
-    font-size: 1.5em;
-  }
-  #miejscowosc {
-    font-size: 0.8em;
-  }
-  #numerTelefonu {
-    position: relative;
-    font-size: 0.8em;
-    &:hover {
-      cursor: pointer;
-      color: var(--purple);
-      &::after {
-        content: "skopiuj";
-        position: absolute;
-        top: 30%;
-        margin-left: 3%;
-        font-size: 0.5em;
-        color: var(--purple);
-      }
-    }
-  }
-  #mail {
-    position: relative;
-    font-size: 0.8em;
-    &:hover {
-      cursor: pointer;
-      color: var(--purple);
-      &::after {
-        content: "skopiuj";
-        position: absolute;
-        top: 30%;
-        margin-left: 3%;
-        font-size: 0.5em;
-        color: var(--purple);
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 2.5em;
+        border-left: 3px solid var(--blue);
+        border-right: 3px solid var(--blue);
+        width: 50%;
+        height: fit-content;
+        margin-bottom: 10%;
+
+        .imie-i-nazwisko {
+          font-size: 1.5em;
+        }
+        .miejscowosc {
+          font-size: 0.8em;
+        }
+        .numerTelefonu {
+          position: relative;
+          font-size: 0.8em;
+          &:hover {
+            cursor: pointer;
+            color: var(--purple);
+            &::after {
+              content: "skopiuj";
+              position: absolute;
+              top: 30%;
+              margin-left: 3%;
+              font-size: 0.5em;
+              color: var(--purple);
+            }
+          }
+        }
+        .mail {
+          position: relative;
+          font-size: 0.8em;
+          &:hover {
+            cursor: pointer;
+            color: var(--purple);
+            &::after {
+              content: "skopiuj";
+              position: absolute;
+              top: 30%;
+              margin-left: 3%;
+              font-size: 0.5em;
+              color: var(--purple);
+            }
+          }
+        }
       }
     }
   }
 }
 
 @media (max-width: 767px) {
-  .korepetycje-segment {
-    position: static;
-    width: 100%;
-    margin-left: 0;
-  }
-  #wpisz-lokalizacje {
-    align-self: center;
-    z-index: 1;
-    border: 2px solid var(--blue);
-    box-sizing: border-box;
-    position: absolute;
-    top: 8vh;
-    height: fit-content;
-    width: 65vw;
-    left: 17.5vw;
-    box-shadow: none;
-    font-size: 1.2em;
-    button {
-      font-size: 0.4em;
-    }
-  }
-  #welcome-korepetycje {
-    position: absolute;
-    display: none;
-  }
-  #korepetytorzy {
-    margin-top: 7vh;
-    width: 100%;
-    #korepetytor-div {
-      width: 65%;
-      text-align: center;
-      br {
-        content: "";
-        display: block;
-        margin-top: -30px;
+  #korepetycje {
+    .korepetycje-segment {
+      position: static;
+      width: 100%;
+      margin-left: 0;
+      .wpisz-lokalizacje {
+        align-self: center;
+        z-index: 1;
+        border: 2px solid var(--blue);
+        box-sizing: border-box;
+        position: absolute;
+        top: 8vh;
+        height: fit-content;
+        width: 65vw;
+        left: 17.5vw;
+        box-shadow: none;
+        font-size: 1.2em;
+        button {
+          font-size: 0.4em;
+        }
       }
-      #imie-i-nazwisko {
-        font-size: 0.8em;
+      .welcome-korepetycje {
+        position: absolute;
+        display: none;
       }
-      #miejscowosc {
-        font-size: 0.4em;
-      }
-      #numerTelefonu {
-        font-size: 0.4em;
-      }
-      #mail {
-        font-size: 0.4em;
+      .korepetytorzy {
+        margin-top: 7vh;
+        width: 100%;
+        .korepetytor-div {
+          width: 65%;
+          text-align: center;
+          br {
+            content: "";
+            display: block;
+            margin-top: -32px;
+          }
+          .imie-i-nazwisko {
+            font-size: 0.8em;
+          }
+          .miejscowosc {
+            font-size: 0.4em;
+          }
+          .numerTelefonu {
+            font-size: 0.4em;
+          }
+          .mail {
+            font-size: 0.3em;
+          }
+        }
       }
     }
   }

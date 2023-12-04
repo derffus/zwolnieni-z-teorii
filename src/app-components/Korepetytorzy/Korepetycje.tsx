@@ -20,7 +20,7 @@ function Korepetycje(props) {
     }
   }
 
-  function sortByLokalizacja(array, lokalizacja) {
+  function sortByLokalizacja(array, lokalizacja:string) {
     const diacriticless = require("diacriticless");
     const normalizedLokalizacja = diacriticless(lokalizacja);
     let regexLokalizacja = new RegExp(normalizedLokalizacja, "iu");
@@ -51,7 +51,7 @@ function Korepetycje(props) {
   return (
     <div id="korepetycje">
       <div className="korepetycje-segment">
-        <div id="wpisz-lokalizacje">
+        <div className="wpisz-lokalizacje">
           <span>Lokalizacja:</span>
           <form onSubmit={handleLokalizacjaSubmit}>
             <input
@@ -64,29 +64,27 @@ function Korepetycje(props) {
             </button>
           </form>
         </div>
-        <div id="welcome-korepetycje">
+        <div className="welcome-korepetycje">
           znajdź swojego
           <br />
           <span className="purple-text">korepetytora!</span>
         </div>
-        <div id="korepetytorzy">
+        <div className="korepetytorzy">
           {sortByLokalizacja(korepetytorzy, lokalizacjaSubmit).map((x,index) => (
-            <div id="korepetytor-div" key={x + index}>
-              <span id="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
+            <div className="korepetytor-div" key={x + index}>
+              <span className="imie-i-nazwisko">{x.imie + " " + x.nazwisko}</span>
               <br />
-              <span id="miejscowosc">{x.miejscowosc}</span>
+              <span className="miejscowosc">{x.miejscowosc}</span>
               <br />
               <span
-                id="numerTelefonu"
-                className={`copy `}
+                className="numerTelefonu copy "
                 data-clipboard-text={x.numerTelefonu}
               >
                 {x.numerTelefonu}
               </span>
               <br />
               <span
-                id="mail"
-                className={`copy `}
+                className="mail copy "
                 data-clipboard-text={x.mail}
               >
                 {x.mail}

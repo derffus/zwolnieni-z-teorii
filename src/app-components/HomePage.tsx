@@ -109,7 +109,10 @@ function HomePage(props) {
             />
             <div>Rozwiązania matur</div>
           </div>
-          <div className="o-stronie-nav-item teoria-i-artykuly" data-content="">
+          <div
+            className="o-stronie-nav-item teoria-i-artykuly"
+            data-content="Oprócz materiałów video znajdziesz u nas też całą potrzebną teorię i wzory do każdego tematu (nawet te których nie znajdziesz w karcie wzorów). Co więcej możesz przeczytać wiele ciekawych i wartościowych artykułów edukacyjnych i nowinkowych takich jak na przykład najnowszych zmianach wymagań maturalnych."
+          >
             <img
               src={process.env.PUBLIC_URL + "/images/TeoriaIArtykuly.png"}
               alt=""
