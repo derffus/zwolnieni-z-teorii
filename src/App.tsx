@@ -32,13 +32,14 @@ declare module "react" {
 }
 
 function App() {
-  const [motyw] = useAtom(MotywStrony);
+  const [motyw, setMotyw] = useAtom(MotywStrony);
   const [width, setWidth] = useAtom(WindowWidth);
 
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+  
   useEffect(() => {
     const updateWindowWidth = () => {
       setWidth(window.innerWidth);
@@ -48,6 +49,14 @@ function App() {
       window.removeEventListener("resize", updateWindowWidth);
     };
   }, [width, setWidth]);
+
+  useEffect(() => {
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setMotyw(prefersDarkMode ? "dark" : "light");
+  }, [setMotyw]);
+
   return (
     <div
       className="website"
