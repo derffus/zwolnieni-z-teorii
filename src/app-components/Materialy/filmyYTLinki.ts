@@ -1,4 +1,6 @@
-let filmyYtLinki = [
+export type filmy = [string, string[], string, string, string, string[]];
+
+let filmyYtLinki:filmy[] = [
 /*['https://www.youtube.com/embed/naq9D6jvnhA', ['film-podstawa2', 'film-rozszerzenie2'], 'Matematyka - Wielomiany jednej zmiennej (część I)', '8', 'youtube'],
 ['https://www.youtube.com/embed/ev_-R-3W_yo', ['film-podstawa2', 'film-rozszerzenie2'], 'Co to jest wielomian? #1 [ Wielomiany ]', '8', 'youtube'],
 ['https://www.youtube.com/embed/V2D8wYNpAk8', ['film-podstawa2', 'film-rozszerzenie2'], 'Dodawanie i odejmowanie wielomianów', '8', 'youtube'],
@@ -324,7 +326,6 @@ let filmyYtLinki = [
 ["https://www.youtube.com/embed/zzeQjqaoRME",["film-podstawa4", "film-rozszerzenie4"],"Działania na potęgach o wykładniku ujemnym #3 [ Notacja wykładnicza ]",'1',"youtube",["Potęga o wykładniku rzeczywistym - powtórzenie"]],
 
 ];
-
 
 export function shuffle(array) {
   let currentIndex = array.length,

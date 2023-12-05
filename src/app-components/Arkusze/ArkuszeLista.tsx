@@ -2,7 +2,7 @@ import React from "react";
 import { useAtomValue } from "jotai";
 import "../../component-styles/Arkusze.scss";
 import { ZakresArkusze } from "./Arkusze.tsx";
-function ArkuszeLista(props) {
+function ArkuszeLista() {
   const zakresArkusze = useAtomValue(ZakresArkusze);
 
   const openPDF = (fileName: string) => {
@@ -24,7 +24,7 @@ function ArkuszeLista(props) {
                 "i"
               ).test(x[0])
             )
-            .map((x, index) => (
+            .map((x) => (
               <div className="lista-div">
                 <button
                   className="lista-button"
@@ -37,7 +37,7 @@ function ArkuszeLista(props) {
                   onClick={() => {
                     openPDF(x[1]);
                   }}
-                >{x[1].replace(/([A-Z][a-z]*|\d+)/g, '$1 ').replace(/l/,'ł')}</button>
+                >{x[1].replace(/([A-Z][a-z]*|\d+)/g, '$1 ').replace(/Formula/,'Formuła')}</button>
               </div>
             ))}
       </div>

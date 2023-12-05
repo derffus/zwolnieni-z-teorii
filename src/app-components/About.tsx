@@ -2,7 +2,7 @@ import React from "react";
 import "../component-styles/About.scss";
 import { useAtom } from "jotai";
 import { MotywStrony } from "../App.tsx";
-function About(props) {
+function About() {
   const [motyw] = useAtom(MotywStrony);
   return (
     <footer id="about-segment">

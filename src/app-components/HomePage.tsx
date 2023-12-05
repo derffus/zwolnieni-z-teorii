@@ -3,7 +3,7 @@ import "../component-styles/HomePage.scss";
 import { useAtom } from "jotai";
 import { NavLink } from "react-router-dom";
 import { MotywStrony } from "../App.tsx";
-function HomePage(props) {
+function HomePage() {
   const [motyw] = useAtom(MotywStrony);
 
   return (

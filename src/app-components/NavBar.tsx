@@ -4,8 +4,8 @@ import RightNav from "./RightNav.tsx";
 import { useLocation, NavLink } from "react-router-dom";
 import { useAtom } from "jotai";
 import { MotywStrony, WindowWidth } from "../App.tsx";
-function NavBar(props) {
-  const [showRightNav, setShowRightNav] = useState(false);
+function NavBar() {
+  const [showRightNav, setShowRightNav] = useState<boolean>(false);
   const [motyw, setMotyw] = useAtom(MotywStrony);
 
   const location = useLocation();

@@ -1,5 +1,14 @@
 import { shuffle } from "../Materialy/filmyYTLinki.ts";
-let korepetytorzy = [
+
+export interface Korepetytor {
+  imie: string;
+  nazwisko: string;
+  miejscowosc: string;
+  numerTelefonu: string;
+  mail: string;
+}
+
+let korepetytorzy: Korepetytor[] = [
   {
     imie: "Alicja",
     nazwisko: "Kras",

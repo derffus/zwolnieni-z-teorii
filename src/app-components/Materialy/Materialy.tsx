@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import ContentPicker from "./ContentPicker.tsx";
 import "../../component-styles/Materialy.scss";
-import filmyYtLinki from "./filmyYTLinki.ts";
-function Materialy(props) {
-  const [klasa, setKlasa] = useState("");
-  const [zakres, setZakres] = useState("");
-  const [dzial, setDzial] = useState("");
-  const [temat, setTemat] = useState("");
-  function wypiszFilmy(filmy, klasa:string, zakres:string, dzial:string, temat:string) {
+import filmyYtLinki, { filmy } from "./filmyYTLinki.ts";
+function Materialy() {
+  const [klasa, setKlasa] = useState<string>("");
+  const [zakres, setZakres] = useState<string>("");
+  const [dzial, setDzial] = useState<string>("");
+  const [temat, setTemat] = useState<string>("");
+  function wypiszFilmy(
+    filmy: filmy[],
+    klasa: string,
+    zakres: string,
+    dzial: string,
+    temat: string
+  ) {
     return filmy
       .filter(
         (x) =>
@@ -18,13 +24,12 @@ function Materialy(props) {
       .map((x) => (
         <div className="filmy-div">
           <iframe
-            key={x}
-            className={x[1].join(" ")}
+            key={x + '-film'}
+            className={x.join(" ")}
             src={x[0]}
             title={x[2]}
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen={true}
+            allowFullScreen
           ></iframe>
           <div>{x[2]}</div>
         </div>

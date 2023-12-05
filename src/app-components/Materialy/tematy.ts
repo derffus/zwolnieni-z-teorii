@@ -1,4 +1,13 @@
-const tematy = {
+interface Temat {
+  podstawa: Record<number, Record<number, Record<number, string>>>;
+  rozszerzenie: Record<number, Record<number, Record<number, string>>>;
+}
+
+interface Tematy {
+  [key: number]: Temat;
+}
+
+const tematy: Tematy = {
   1: {
     podstawa: {
       1: {

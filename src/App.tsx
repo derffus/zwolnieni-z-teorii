@@ -15,8 +15,8 @@ import ArkuszeLista from "./app-components/Arkusze/ArkuszeLista.tsx";
 import ArkuszeStart from "./app-components/Arkusze/ArkuszeStart.tsx";
 import About from "./app-components/About.tsx";
 
-export const MotywStrony = atom("");
-export const WindowWidth = atom(window.innerWidth);
+export const MotywStrony = atom<string>("");
+export const WindowWidth = atom<number>(window.innerWidth);
 
 declare module "react" {
   interface CSSProperties {

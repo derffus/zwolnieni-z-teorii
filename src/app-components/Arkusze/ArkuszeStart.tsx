@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAtomValue, useSetAtom } from "jotai";
 import { MotywStrony } from "../../App.tsx";
 import { ZakresArkusze } from "./Arkusze.tsx";
-function ArkuszeStart(props) {
+function ArkuszeStart() {
   const setZakresArkusze = useSetAtom(ZakresArkusze);
 
   const motyw = useAtomValue(MotywStrony);

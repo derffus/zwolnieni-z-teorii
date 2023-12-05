@@ -8,6 +8,7 @@
 .materialy {
   position: relative;
   height: 100%;
+  width: 100%;
   margin-top: 75px;
   display: flex;
   flex-direction: column;
@@ -53,7 +54,6 @@
   transition: background-color 0.3s;
   border: none;
   color: var(--blue);
-  right: 0;
   top: 4vh;
   width: 100%;
   text-align: end;
@@ -128,6 +128,7 @@
     iframe {
       width: 400px;
       aspect-ratio: 1/0.5625;
+      border: none;
     }
     div {
       width: 400px;
@@ -182,7 +183,6 @@
     margin-top: 0;
     .filmy-div {
       font-size: 0.8em;
-      width: 100%;
       iframe {
         width: 350px;
         aspect-ratio: 1/0.5625;

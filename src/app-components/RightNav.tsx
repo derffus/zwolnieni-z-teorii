@@ -1,7 +1,7 @@
 import React from "react";
 import "../component-styles/RightNav.scss";
 import { NavLink } from "react-router-dom";
-function RightNav(props) {
+function RightNav(props:any) {
   return (
     <nav className={`right-nav ${props.showRightNav ? "show-right-nav" : ""}`}>
       <div className="right-segment-buttons">

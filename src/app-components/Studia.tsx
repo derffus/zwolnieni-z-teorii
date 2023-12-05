@@ -1,6 +1,6 @@
 import React from "react";
 import "../component-styles/Studia.scss";
-function Studia(props) {
+function Studia() {
   return (
     <div id="studia">
       <div className="studia-segment">
