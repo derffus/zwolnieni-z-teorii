@@ -50,6 +50,7 @@
   z-index: -1;
   font-size: 1.5em;
   background-color: var(--content);
+  transition: background-color 0.3s;
   border: none;
   color: var(--blue);
   right: 0;
@@ -166,7 +167,7 @@
     }
     .content-picker-select {
       font-size: 1em;
-      width: 60vw;
+      width: 60%;
       height: fit-content;
     }
   }
@@ -180,6 +181,8 @@
   .filmy {
     margin-top: 0;
     .filmy-div {
+      font-size: 0.8em;
+      width: 100%;
       iframe {
         width: 350px;
         aspect-ratio: 1/0.5625;

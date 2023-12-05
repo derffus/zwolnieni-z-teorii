@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { WindowWidth } from "../../App.tsx";
 import tematy from "./tematy.ts";
 function ContentPicker(props) {
-  const [showContentPicker, setShowContentPicker] = useState(true);
+  const [showContentPicker, setShowContentPicker] = useState(false);
 
   const [width] = useAtom(WindowWidth);
 
@@ -11,6 +11,9 @@ function ContentPicker(props) {
     const trueOrFalse = showContentPicker === true ? false : true;
     setShowContentPicker(trueOrFalse);
   };
+  useEffect(() => {
+    setShowContentPicker(false);
+  },[props.temat])
 
   return (
     <div
