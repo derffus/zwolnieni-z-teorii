@@ -115,6 +115,12 @@
       width: 65%;
     }
   }
+  .uniwersytet-wroclawski{
+    flex-direction: row-reverse;
+    .uniwersytet-wroclawski-text {
+      width: 50%;
+    }
+  }
 }
 
 @media (max-width: 767px) {

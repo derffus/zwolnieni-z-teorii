@@ -24,7 +24,7 @@ function Studia() {
                 "Architektura",
                 "Geologia",
               ].map((x, index) => (
-                <li className={x + "-list"} key={index}>
+                <li className={x + "-list"} key={x + index}>
                   {x}
                 </li>
               ))}
@@ -163,7 +163,7 @@ function Studia() {
         <div
           className="uczelnia-segment uniwersytet-warszawski"
           onClick={() => {
-            window.open("https://www.pw.edu.pl/", "_blank");
+            window.open("https://www.uw.edu.pl/", "_blank");
           }}
         >
           <div className="uczelnia-segment-text uniwersytet-warszawski-text">
@@ -184,9 +184,7 @@ function Studia() {
           </div>
           <div className="uczelnia-segment-img uniwersytet-warszawski-img">
             <img
-              src={
-                process.env.PUBLIC_URL + "/images/UniwersytetWarszawski.png"
-              }
+              src={process.env.PUBLIC_URL + "/images/UniwersytetWarszawski.png"}
               alt="Uniwersytet Warszawski"
             />
           </div>
@@ -194,12 +192,12 @@ function Studia() {
         <div
           className="uczelnia-segment uniwersytet-jagiellonski"
           onClick={() => {
-            window.open("https://www.pw.edu.pl/", "_blank");
+            window.open("https://www.uj.edu.pl/", "_blank");
           }}
         >
           <div className="uczelnia-segment-text uniwersytet-jagiellonski-text">
             <div className="uczelnia-segment-start uniwersytet-jagiellonski-start">
-              <span>Uniwersytet Jagielloński</span>
+              <span>Uniwersytet Jagielloński w Krakowie</span>
             </div>
             <div className="uczelnia-segment-content uniwersytet-jagiellonski-content">
               Uniwersytet Jagielloński (UJ) to najstarsza uczelnia w Polsce
@@ -218,6 +216,37 @@ function Studia() {
               src={
                 process.env.PUBLIC_URL + "/images/UniwersytetJagiellonski.png"
               }
+              alt="Politechnika Warszawska"
+            />
+          </div>
+        </div>
+        <div
+          className="uczelnia-segment uniwersytet-wroclawski"
+          onClick={() => {
+            window.open("https://www.uwr.edu.pl/", "_blank");
+          }}
+        >
+          <div className="uczelnia-segment-text uniwersytet-wroclawski-text">
+            <div className="uczelnia-segment-start uniwersytet-wroclawski-start">
+              <span>Uniwersytet Wrocławski</span>
+            </div>
+            <div className="uczelnia-segment-content uniwersytet-wroclawski-content">
+              Uniwersytet Wrocławski to ceniona instytucja edukacyjna w Polsce,
+              z bogatą historią i różnorodną ofertą akademicką. Próg punktowy -
+              320 PKT stanowi wyzwanie, jednak gwarantuje wysoką jakość
+              nauczania oraz zaawansowane możliwości rozwoju intelektualnego.
+              Uczelnia wyróżnia się zaangażowaniem w rozwój kompetencji
+              krytycznego myślenia, umacniając pozycję jako instytucja, gdzie
+              studenci rozwijają nie tylko wiedzę, ale także umiejętności
+              analityczne. To miejsce, gdzie pasjonaci matematyki znajdą
+              inspirujące wyzwania i dogodne warunki do rozwoju. To wszystko
+              sprawia, że Uniwersytet Wrocławski jest postrzegany jako jeden z
+              liderów w dziedzinie matematyki w Polsce.
+            </div>
+          </div>
+          <div className="uczelnia-segment-img uniwersytet-wroclawski-img">
+            <img
+              src={process.env.PUBLIC_URL + "/images/UniwersytetWroclawski.png"}
               alt="Politechnika Warszawska"
             />
           </div>
