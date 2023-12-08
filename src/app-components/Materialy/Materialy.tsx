@@ -5,8 +5,8 @@ import filmyYtLinki, { filmy } from "./filmyYTLinki.ts";
 function Materialy() {
   const [klasa, setKlasa] = useState<string>("");
   const [zakres, setZakres] = useState<string>("");
-  const [dzial, setDzial] = useState<string>("");
-  const [temat, setTemat] = useState<string>("");
+  const [dzial, setDzial] = useState<string>("wszystkie");
+  const [temat, setTemat] = useState<string>("wszystkie");
   function wypiszFilmy(
     filmy: filmy[],
     klasa: string,
@@ -18,7 +18,7 @@ function Materialy() {
       .filter(
         (x) =>
           x[1].indexOf("film-" + zakres + klasa) !== -1 &&
-          x[3] === dzial &&
+          (dzial !== "wszystkie" ? x[3] === dzial : true) &&
           (x[5] ? x[5].indexOf(temat) !== -1 || temat === "wszystkie" : true)
       )
       .map((x) => (
@@ -49,7 +49,7 @@ function Materialy() {
           dzial={dzial}
           setDzial={setDzial}
         />
-        {klasa !== "" && zakres !== "" && dzial !== "" && temat !== "" ? (
+        {klasa !== "" && zakres !== ""? (
           <div className="filmy">
             {wypiszFilmy(filmyYtLinki, klasa, zakres, dzial, temat)}
           </div>

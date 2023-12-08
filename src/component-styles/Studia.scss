@@ -118,7 +118,7 @@
   .uniwersytet-wroclawski{
     flex-direction: row-reverse;
     .uniwersytet-wroclawski-text {
-      width: 50%;
+      width: 60%;
     }
   }
 }
@@ -208,6 +208,13 @@
       .uniwersytet-jagiellonski-img {
         img {
           height: 200px;
+        }
+      }
+    }
+    .uniwersytet-wroclawski{
+      .uniwersytet-wroclawski-img{
+        img{
+          height: 150px;
         }
       }
     }

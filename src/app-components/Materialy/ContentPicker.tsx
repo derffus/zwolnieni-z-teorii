@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { WindowWidth } from "../../App.tsx";
 import tematy from "./tematy.ts";
-function ContentPicker(props:any) {
+function ContentPicker(props: any) {
   const [showContentPicker, setShowContentPicker] = useState<boolean>(false);
 
   const [width] = useAtom(WindowWidth);
@@ -13,7 +13,7 @@ function ContentPicker(props:any) {
   };
   useEffect(() => {
     setShowContentPicker(false);
-  },[props.temat])
+  }, [props.temat]);
 
   return (
     <div
@@ -70,6 +70,9 @@ function ContentPicker(props:any) {
       >
         <option value="" disabled>
           Dział
+        </option>
+        <option value="wszystkie" className="wszystkie">
+          Wszystkie działy
         </option>
         {props.klasa === "1" && props.zakres === "podstawa" ? (
           <>
@@ -177,16 +180,18 @@ function ContentPicker(props:any) {
         onChange={(event) => {
           props.setTemat(event.target.value);
         }}
-        disabled={props.dzial === "" ? true : false}
+        disabled={
+          props.dzial === "" || props.dzial === "wszystkie" ? true : false
+        }
       >
         <option value="" disabled>
           Temat
         </option>
-        {props.dzial !== "" ? (
+        <option value="wszystkie" className="wszystkie">
+          Wszystkie tematy
+        </option>
+        {props.dzial !== "wszystkie" && props.dzial !== "" ? (
           <>
-            <option value="wszystkie" className="wszystkie">
-              Wszystkie tematy
-            </option>
             {Object.values(tematy[props.klasa][props.zakres][props.dzial]).map(
               (x: unknown, index: number) => (
                 <option key={(x as string) + index} value={x as string}>
@@ -195,9 +200,7 @@ function ContentPicker(props:any) {
               )
             )}
           </>
-        ) : (
-          null
-        )}
+        ) : null}
       </select>
     </div>
   );
