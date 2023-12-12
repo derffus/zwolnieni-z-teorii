@@ -42,12 +42,12 @@ function Studia() {
               <span>Szkoła główna handlowa w Warszawie</span>
             </div>
             <div className="uczelnia-segment-content szkola-glowna-handlowa-content">
-              Rekrutacja na sgh nie jest prosta, oprócz zdania matur uczestnicy
+              Rekrutacja na SGH nie jest prosta, oprócz zdania matur uczestnicy
               muszą podejsć do egzaminu wstępnego pod nazwą "test z wiedzy o
               przedsiębiorczosci", który liczy się tak samo jak matura z
               matematyki!
               <br /> Próg punktowy na rok 2023- 306 pkt
-              <br /> Sgh w warszawie to najstarsza i najbardziej prestiżowa
+              <br /> SGH w warszawie to najstarsza i najbardziej prestiżowa
               uczelnia ekonomiczna w polsce, a także jeden z najlepszych
               uniwersytetów o tym profilu w europie, dlatego warto wziąć go pod
               uwage.
@@ -110,7 +110,7 @@ function Studia() {
               <span>Akademia Górniczo Hutnicza w Krakowie</span>
             </div>
             <div className="uczelnia-segment-content akademia-gorniczo-hutnicza-content">
-              Agh jest jedną z topowych polskich publicznych uczelni
+              AGH jest jedną z topowych polskich publicznych uczelni
               technicznych. Prowadzi się tam nauczanie w kierunkach ścisłych,
               technicznych, biznesowych i wiele więcej. Uczelnia ma bogatą
               historię zaczynającą się od 1919 roku. Samo otoczenie agh jest
@@ -140,7 +140,7 @@ function Studia() {
               <span>Politechnika Warszawska</span>
             </div>
             <div className="uczelnia-segment-content politechnika-warszawska-content">
-              Politechnika warszawska to ceniona publiczna uczelnia techniczna w
+              Politechnika Warszawska to ceniona publiczna uczelnia techniczna w
               Polsce. Oferuje doskonałą edukację w inżynierii, naukach ścisłych
               i społecznych. Studenci chwalą profesjonalizm kadry i bogate
               zaplecze badawcze. Jednak dostanie się jest wymagające, z wysoką

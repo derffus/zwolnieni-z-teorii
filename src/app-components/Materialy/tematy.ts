@@ -214,7 +214,7 @@ const tematy: Tematy = {
       },
       5: {
         1: "Trygonometria kąta ostrego - powtórzenie wiadomości z klasy 1.",
-        2: "Sinus, cosinus, tangens i cotangens dowolnego kąta ostrym",
+        2: "Sinus, cosinus, tangens i cotangens dowolnego kąta płaskiego",
         3: "Podstawowe tożsamości trygonometryczne",
         4: "Wybrane wzory redukcyjne",
       },
@@ -305,7 +305,7 @@ const tematy: Tematy = {
       },
       5: {
         1: "Trygonometria kąta ostrego - powtórzenie wiadomości z klasy 1.",
-        2: "Sinus, cosinus, tangens i cotangens dowolnego kąta ostrym",
+        2: "Sinus, cosinus, tangens i cotangens dowolnego kąta płaskiego",
         3: "Podstawowe tożsamości trygonometryczne",
         4: "Wybrane wzory redukcyjne",
         5: "Kąt skierowany. Miara łukowa kąta",
