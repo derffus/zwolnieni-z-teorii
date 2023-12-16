@@ -435,6 +435,23 @@ let filmyYtLinki:filmy[] = [
 ["https://www.youtube.com/embed/loITLluuWG8",["film-rozszerzenie2"],"Wykresy funkcji trygonometrycznych","5","youtube",["Wykresy funkcji trygonometrycznych"]],
 ["https://www.youtube.com/embed/j3aAEgZvUkQ",["film-rozszerzenie2"],"Dziedzina, zbiór wartości i wykres funkcji sinus","5","youtube",["Wykresy funkcji trygonometrycznych"]],
 ["https://www.youtube.com/embed/-KZsMNL6pS4",["film-rozszerzenie2"],"Wykres funkcji cosinus","5","youtube",["Wykresy funkcji trygonometrycznych"]],
+["https://www.youtube.com/embed/t89s-H-QHeA",["film-podstawa2","film-rozszerzenie2"],"Długość odcinka- geometria analityczna.", "6", "youtube",["Odcinek w układzie współrzędnych"]],
+["https://www.youtube.com/embed/WLEJMrGIfsg",["film-podstawa2","film-rozszerzenie2"],"Wektor w układzie współrzędnych -definicje, przykłady", "6", "youtube",["Odcinek w układzie współrzędnych"]],
+["https://www.youtube.com/embed/LKZiXAKia7g",["film-podstawa2","film-rozszerzenie2"],"Środek odcinka- geometria analityczna.", "6", "youtube",["Odcinek w układzie współrzędnych"]],
+["https://www.youtube.com/embed/bloPPXEDUK4",["film-podstawa2","film-rozszerzenie2"],"Geometria Analityczna wprowadzenie + zadania", "6", "youtube",["Odcinek w układzie współrzędnych"]],
+["https://www.youtube.com/embed/10OPCP4SnY8",["film-podstawa2","film-rozszerzenie2"],"Równanie kierunkowe prostej.","6","youtube",["Równanie kierunkowe prostej"]],
+["https://www.youtube.com/embed/ZeGevXIOVDo",["film-podstawa2","film-rozszerzenie2"],"Równanie ogólne prostej.","6","youtube",["Równanie ogólne prostej"]],
+["https://www.youtube.com/embed/fyjUJ758tA0",["film-podstawa2","film-rozszerzenie2"],"Równanie prostej w postaci ogólnej","6","youtube",["Równanie ogólne prostej"]],
+["https://www.youtube.com/embed/_q3yeKjr_uI",["film-podstawa2","film-rozszerzenie2"],"Równanie okręgu","6","youtube",["Równanie okręgu"]],
+["https://www.youtube.com/embed/1A--OvBIq8s",["film-podstawa2","film-rozszerzenie2"],"Równanie okręgu","6","youtube",["Równanie okręgu"]],
+["https://www.youtube.com/embed/lsdkLaMoFBo",["film-podstawa2","film-rozszerzenie2"],"Równanie okręgu w pigułce - jak wygląda w zadaniach, rodzaje równania, na co uważać","6","youtube",["Równanie okręgu"]],
+["https://www.youtube.com/embed/NMvofh7ciTo",["film-podstawa2","film-rozszerzenie2"],"Wyznacz punkty przecięcia paraboli i prostej","6","youtube",["Wyznaczanie w układzie współrzędnych punktów wspólnych prostych, okręgów i parabol"]],
+["https://www.youtube.com/embed/rZB4MLW_Udo",["film-podstawa2","film-rozszerzenie2"],"PROSTA PRZECINA OKRĄG - WYZNACZ PUNKTY","6","youtube",["Wyznaczanie w układzie współrzędnych punktów wspólnych prostych, okręgów i parabol"]],
+["https://www.youtube.com/embed/bo08Pyt-DGU",["film-podstawa2","film-rozszerzenie2"],"Wyznacz punkty wspólne prostej i paraboli","6","youtube",["Wyznaczanie w układzie współrzędnych punktów wspólnych prostych, okręgów i parabol"]],
+["https://www.youtube.com/embed/R69V3vmNxS8",["film-podstawa2","film-rozszerzenie2"],"Wszystko co musisz wiedzieć o geometrii analitycznej KURS MATURA PODSTAWOWA cz.1","6","youtube",["Zastosowanie układów równań do rozwiązywania zadań z geometrii analitycznej"]],
+["https://www.youtube.com/embed/Ig47g8-3X0M",["film-podstawa2","film-rozszerzenie2"],"Wszystko co musisz wiedzieć o geometrii analitycznej KURS MATURA PODSTAWOWA cz.2","6","youtube",["Zastosowanie układów równań do rozwiązywania zadań z geometrii analitycznej"]],
+["https://www.youtube.com/embed/Om1KCOJ4Ais",["film-podstawa2","film-rozszerzenie2"],"Geometria analityczna 4 zadania","6","youtube",["Zastosowanie układów równań do rozwiązywania zadań z geometrii analitycznej"]],
+["https://www.youtube.com/embed/11TaEb4Sctc",["film-podstawa2","film-rozszerzenie2"],"Geometria analityczna - zadania z matury podstawowej","6","youtube",["Zastosowanie układów równań do rozwiązywania zadań z geometrii analitycznej"]],
 ];
 
 export function shuffle(array) {
