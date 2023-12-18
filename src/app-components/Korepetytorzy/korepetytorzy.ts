@@ -37,27 +37,6 @@ let korepetytorzy: Korepetytor[] = [
     numerTelefonu: "123555999",
     mail: "hejkaTuZosia@wp.pl",
   },
-  {
-    imie: "Monika",
-    nazwisko: "Kociołek",
-    miejscowosc: "Władysławowo",
-    numerTelefonu: "251909555",
-    mail: "moniaDzieloSztuki@gmail.com",
-  },
-  {
-    imie: "Czaro",
-    nazwisko: "NBA",
-    miejscowosc: "Łódź",
-    numerTelefonu: "509315872",
-    mail: "czaro.to.kox@wp.pl",
-  },
-  {
-    imie: "Friz",
-    nazwisko: "Wiśniewski",
-    miejscowosc: "Kraków",
-    numerTelefonu: "665544332",
-    mail: "friz.kontakt@gmail.com",
-  },
 ];
 korepetytorzy = shuffle(korepetytorzy);
 export default korepetytorzy;
