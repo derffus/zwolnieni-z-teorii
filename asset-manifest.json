@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/matzone/static/css/main.83463bca.css",
-    "main.js": "/matzone/static/js/main.e9e9aad6.js",
-    "static/js/787.3d35bd81.chunk.js": "/matzone/static/js/787.3d35bd81.chunk.js",
-    "static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.pdf": "/matzone/static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.f82b41116330834b4c9d.pdf",
-    "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/matzone/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
-    "static/media/fa-solid-900.ttf": "/matzone/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
-    "static/media/fa-brands-400.ttf": "/matzone/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
-    "static/media/fa-solid-900.woff2": "/matzone/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
-    "static/media/fa-brands-400.woff2": "/matzone/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
-    "static/media/fa-regular-400.ttf": "/matzone/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
-    "static/media/fa-regular-400.woff2": "/matzone/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-    "static/media/fa-v4compatibility.ttf": "/matzone/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
-    "static/media/fa-v4compatibility.woff2": "/matzone/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
-    "index.html": "/matzone/index.html",
-    "main.83463bca.css.map": "/matzone/static/css/main.83463bca.css.map",
-    "main.e9e9aad6.js.map": "/matzone/static/js/main.e9e9aad6.js.map",
-    "787.3d35bd81.chunk.js.map": "/matzone/static/js/787.3d35bd81.chunk.js.map"
+    "main.css": "/static/css/main.b11d732a.css",
+    "main.js": "/static/js/main.92be29d3.js",
+    "static/js/787.3d35bd81.chunk.js": "/static/js/787.3d35bd81.chunk.js",
+    "static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.f82b41116330834b4c9d.pdf",
+    "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/index.html",
+    "main.b11d732a.css.map": "/static/css/main.b11d732a.css.map",
+    "main.92be29d3.js.map": "/static/js/main.92be29d3.js.map",
+    "787.3d35bd81.chunk.js.map": "/static/js/787.3d35bd81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83463bca.css",
-    "static/js/main.e9e9aad6.js"
+    "static/css/main.b11d732a.css",
+    "static/js/main.92be29d3.js"
   ]
 }
