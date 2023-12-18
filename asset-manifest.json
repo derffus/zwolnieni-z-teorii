@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matzone/static/css/main.83463bca.css",
-    "main.js": "/matzone/static/js/main.95feb1d4.js",
+    "main.js": "/matzone/static/js/main.e9e9aad6.js",
     "static/js/787.3d35bd81.chunk.js": "/matzone/static/js/787.3d35bd81.chunk.js",
     "static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.pdf": "/matzone/static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.f82b41116330834b4c9d.pdf",
     "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/matzone/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
@@ -15,11 +15,11 @@
     "static/media/fa-v4compatibility.woff2": "/matzone/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/matzone/index.html",
     "main.83463bca.css.map": "/matzone/static/css/main.83463bca.css.map",
-    "main.95feb1d4.js.map": "/matzone/static/js/main.95feb1d4.js.map",
+    "main.e9e9aad6.js.map": "/matzone/static/js/main.e9e9aad6.js.map",
     "787.3d35bd81.chunk.js.map": "/matzone/static/js/787.3d35bd81.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83463bca.css",
-    "static/js/main.95feb1d4.js"
+    "static/js/main.e9e9aad6.js"
   ]
 }
