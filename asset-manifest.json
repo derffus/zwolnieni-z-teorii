@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.51cd2d93.css",
-    "main.js": "/static/js/main.dc6f0561.js",
+    "main.css": "/static/css/main.31b60707.css",
+    "main.js": "/static/js/main.fe716740.js",
     "static/js/787.3d35bd81.chunk.js": "/static/js/787.3d35bd81.chunk.js",
     "static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.f82b41116330834b4c9d.pdf",
     "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
@@ -14,12 +14,12 @@
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/index.html",
-    "main.51cd2d93.css.map": "/static/css/main.51cd2d93.css.map",
-    "main.dc6f0561.js.map": "/static/js/main.dc6f0561.js.map",
+    "main.31b60707.css.map": "/static/css/main.31b60707.css.map",
+    "main.fe716740.js.map": "/static/js/main.fe716740.js.map",
     "787.3d35bd81.chunk.js.map": "/static/js/787.3d35bd81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51cd2d93.css",
-    "static/js/main.dc6f0561.js"
+    "static/css/main.31b60707.css",
+    "static/js/main.fe716740.js"
   ]
 }
