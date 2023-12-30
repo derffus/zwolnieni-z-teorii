@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e653a59.css",
-    "main.js": "/static/js/main.5811cf35.js",
+    "main.css": "/static/css/main.f08bc047.css",
+    "main.js": "/static/js/main.fa3645e5.js",
     "static/js/787.3d35bd81.chunk.js": "/static/js/787.3d35bd81.chunk.js",
     "static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015Odpowiedzi.f82b41116330834b4c9d.pdf",
+    "static/media/MaturaPodstawowaMaj2022Formula2015Odpowiedzi.pdf": "/static/media/MaturaPodstawowaMaj2022Formula2015Odpowiedzi.db5434efde2e81ac0597.pdf",
     "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
+    "static/media/MaturaPodstawowaMaj2022Formula2015.pdf": "/static/media/MaturaPodstawowaMaj2022Formula2015.50be323f7d1c7d81a1bc.pdf",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
@@ -14,12 +16,12 @@
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/index.html",
-    "main.1e653a59.css.map": "/static/css/main.1e653a59.css.map",
-    "main.5811cf35.js.map": "/static/js/main.5811cf35.js.map",
+    "main.f08bc047.css.map": "/static/css/main.f08bc047.css.map",
+    "main.fa3645e5.js.map": "/static/js/main.fa3645e5.js.map",
     "787.3d35bd81.chunk.js.map": "/static/js/787.3d35bd81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e653a59.css",
-    "static/js/main.5811cf35.js"
+    "static/css/main.f08bc047.css",
+    "static/js/main.fa3645e5.js"
   ]
 }
