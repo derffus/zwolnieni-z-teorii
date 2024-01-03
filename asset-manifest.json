@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0211a093.css",
-    "main.js": "/static/js/main.5121feae.js",
+    "main.css": "/static/css/main.58ce2484.css",
+    "main.js": "/static/js/main.03630bc8.js",
     "static/js/787.3d35bd81.chunk.js": "/static/js/787.3d35bd81.chunk.js",
     "static/media/MaturaPodstawowaMaj2023Formula2023Odpowiedzi.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2023Odpowiedzi.a313823f92d9c4ee7992.pdf",
     "static/media/MaturaRozszerzonaMaj2023Formula2023Odpowiedzi.pdf": "/static/media/MaturaRozszerzonaMaj2023Formula2023Odpowiedzi.c9dec5877ffbdfa64204.pdf",
@@ -11,6 +11,7 @@
     "static/media/MaturaRozszerzonaMaj2023Formula2023.pdf": "/static/media/MaturaRozszerzonaMaj2023Formula2023.425de5e33e2d16b854cc.pdf",
     "static/media/MaturaPodstawowaMaj2023Formula2023.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2023.e5ece708aa273fa8dbfe.pdf",
     "static/media/MaturaPodstawowaMaj2023Formula2015.pdf": "/static/media/MaturaPodstawowaMaj2023Formula2015.4921a40a780a5d6663dd.pdf",
+    "static/media/MaturaPodstawowaGrudzien2023Formula2023.pdf": "/static/media/MaturaPodstawowaGrudzien2023Formula2023.4025b655547e6baec02d.pdf",
     "static/media/MaturaPodstawowaMaj2022.pdf": "/static/media/MaturaPodstawowaMaj2022.50be323f7d1c7d81a1bc.pdf",
     "static/media/MaturaPodstawowaMaj2021.pdf": "/static/media/MaturaPodstawowaMaj2021.efc0394a869ffe6bb33a.pdf",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
@@ -22,12 +23,12 @@
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/index.html",
-    "main.0211a093.css.map": "/static/css/main.0211a093.css.map",
-    "main.5121feae.js.map": "/static/js/main.5121feae.js.map",
+    "main.58ce2484.css.map": "/static/css/main.58ce2484.css.map",
+    "main.03630bc8.js.map": "/static/js/main.03630bc8.js.map",
     "787.3d35bd81.chunk.js.map": "/static/js/787.3d35bd81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0211a093.css",
-    "static/js/main.5121feae.js"
+    "static/css/main.58ce2484.css",
+    "static/js/main.03630bc8.js"
   ]
 }
